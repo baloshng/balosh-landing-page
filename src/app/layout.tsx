@@ -39,9 +39,52 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/plugins/slick-slider.css" />
         <link rel="stylesheet" href="/assets/css/plugins/nice-select.css" />
         <link rel="stylesheet" href="/assets/css/main.css" />
+        <style>{`
+          .preloader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .preloader .loading-container {
+            margin: 0 !important;
+          }
+          .preloader #loading-icon {
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+          }
+          .preloader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+          }
+        `}</style>
       </head>
       <body className="min-h-full flex flex-col homepage3-body">
         {children}
+        <Script id="preloader-fallback" strategy="afterInteractive">{`
+          (() => {
+            const hidePreloader = () => {
+              const preloader = document.querySelector('.preloader');
+              if (!preloader) return;
+              preloader.classList.add('is-hidden');
+              window.setTimeout(() => {
+                if (preloader && preloader.parentNode) {
+                  preloader.parentNode.removeChild(preloader);
+                }
+              }, 350);
+            };
+
+            if (document.readyState === 'complete') {
+              hidePreloader();
+            } else {
+              window.addEventListener('load', hidePreloader, { once: true });
+            }
+
+            window.setTimeout(hidePreloader, 1800);
+          })();
+        `}</Script>
         <Script src="/assets/js/plugins/jquery-3-6-0.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/plugins/waypoints.js" strategy="afterInteractive" />
         <Script src="/assets/js/plugins/bootstrap.min.js" strategy="afterInteractive" />

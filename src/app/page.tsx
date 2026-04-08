@@ -1,3 +1,6 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+
 export default function Home() {
   const html = `<!--===== PRELOADER STARTS =======-->
 <div class="preloader">
@@ -51,136 +54,7 @@ export default function Home() {
    </div>
  <!--===== PROGRESS ENDS=======-->
 
-   <!--=====HEADER START=======-->
-   <header>
-    <div class="header-area homepage3 single-page3 header header-sticky d-none d-lg-block " id="header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <nav id="navbar-example2" class="navbar">
-            <div class="header-elements">
-              <div class="site-logo">
-                <a href="#home"><img src="/assets/img/logo/logo3.png" alt=""></a>
-              </div>
-              <div class="main-menu">
-                <ul>
-                    <li class="nav-item"><a href="#about" class="nav-link active"><span>About</span></a></li>
-                    <li class="nav-item"><a href="#service" class="nav-link"><span>Services</span></a></li>
-                    <li class="nav-item"><a href="#pricing" class="nav-link"><span>Pricing</span></a></li>
-                    <li class="nav-item"><a href="#project" class="nav-link"><span>Projects</span></a></li>
-                    <li class="nav-item"><a href="#faq" class="nav-link"><span>FAQ</span></a></li>
-                    <li class="nav-item"><a href="#blog" class="nav-link"><span>Blogs</span></a></li>
-                </ul>
-              </div>
-              <div class="btn-area">
-                <a href="#contact" class="header-btn4">Contact Us<span><i class="fa-solid fa-arrow-right"></i></span></a>
-              </div>
-            </div>
-        </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!--=====HEADER END =======-->
-
-  <!--===== MOBILE HEADER STARTS =======-->
- <div class="mobile-header mobile-haeder3 d-block d-lg-none">
-  <div class="container-fluid">
-    <div class="col-12">
-      <div class="mobile-header-elements">
-        <div class="mobile-logo">
-          <a href="#home"><img src="/assets/img/logo/logo3.png" alt=""></a>
-        </div>
-        <div class="mobile-nav-icon dots-menu">
-          <i class="fa-solid fa-bars-staggered"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="mobile-sidebar mobile-sidebar3">
-  <div class="logosicon-area">
-    <div class="logos">
-      <img src="/assets/img/logo/logo3.png" alt="">
-    </div>
-    <div class="menu-close">
-      <i class="fa-solid fa-xmark"></i>
-    </div>
-   </div>
-  <div class="mobile-nav mobile-nav1">
-    <ul class="mobile-nav-list nav-list1">
-      <li><a href="#" >Home </a>
-        <ul class="sub-menu">
-          <li><a href="#home">Home One</a></li>
-          <li><a href="#home">Home Two</a></li>
-          <li><a href="#home">Home Three</a></li>
-          <li><a href="#home">Home Four</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a href="#about" class="nav-link active"><span>About</span></a></li>
-      <li class="nav-item"><a href="#service" class="nav-link"><span>Services</span></a></li>
-      <li class="nav-item"><a href="#pricing" class="nav-link"><span>Pricing</span></a></li>
-      <li class="nav-item"><a href="#project" class="nav-link"><span>Projects</span></a></li>
-      <li class="nav-item"><a href="#faq" class="nav-link"><span>FAQ</span></a></li>
-      <li class="nav-item"><a href="#blog" class="nav-link"><span>Blogs</span></a></li>
-    </ul>
-
-    <div class="allmobilesection">
-      <a href="#contact"  class="header-btn4">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
-      <div class="single-footer">
-        <h3>Contact Info</h3>
-        <div class="footer1-contact-info">
-          <div class="contact-info-single">
-            <div class="contact-info-icon">
-              <i class="fa-solid fa-phone-volume"></i>
-            </div>
-            <div class="contact-info-text">
-              <a href="tel:+3(924)4596512">+3(924)4596512</a>
-            </div>
-          </div>
-
-          <div class="contact-info-single">
-            <div class="contact-info-icon">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="contact-info-text">
-              <a href="mailto:info@example.com">info@example.com</a>
-            </div>
-          </div>
-
-          <div class="single-footer">
-            <h3>Our Location</h3>
-
-            <div class="contact-info-single">
-              <div class="contact-info-icon">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="contact-info-text">
-                <a href="mailto:info@example.com" >55 East Birchwood Ave.Brooklyn, <br> New York 11201,United States</a>
-              </div>
-            </div>
-
-          </div>
-          <div class="single-footer">
-            <h3>Social Links</h3>
-
-            <div class="social-links-mobile-menu">
-              <ul>
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-     </div>
-  </div>
-</div>
-<!--===== MOBILE HEADER STARTS =======-->
+   
 
 <!--===== HERO AREA STARTS =======-->
 <div id="home" class="carousel-area owl-carousel">
@@ -1173,92 +1047,15 @@ export default function Home() {
 </div>
 <!--===== CTA AREA ENDS =======-->
 
-<!--===== FOOTER AREA STARTS =======-->
-<div class="footer3-section-area">
-  <img src="/assets/img/bg/bg1.png" alt="" class="bg1">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-6">
-        <div class="logo-content">
-          <img src="/assets/img/logo/logo4.png" alt="">
-          <p>Our goal is to demystify the process, address your concerns, and empower you with the knowledge to embark.</p>
-          <ul>
-            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-          </ul>
-        </div>
-        <div class="space30 d-lg-none d-block"></div>
-      </div>
-      <div class="col-lg-1 d-lg-block d-none"></div>
-      <div class="col-lg-2 col-md-6">
-        <div class="footer-list">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#">Cyber Security Specialist </a></li>
-            <li><a href="#"> Institute CCTV Security  </a></li>
-            <li><a href="#">Banking Sector Outside</a></li>
-            <li><a href="#">Private Sector Security </a></li>
-            <li><a href="#">School & Hospital Security </a></li>
-          </ul>
-        </div>
-        <div class="space30 d-lg-none d-block"></div>
-      </div>
-      <div class="col-lg-1 d-lg-block d-none"></div>
-      <div class="col-lg-2 col-md-6">
-        <div class="footer-list">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="#home">Home </a></li>
-            <li><a href="#about"> About Us  </a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#project">Testimonial </a></li>
-            <li><a href="#contact">Contact US</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="head">
-          <h4>Contact Us </h4>
-        </div>
-        <div class="location-area">
-          <div class="img1">
-            <a href="#"><i class="fa-solid fa-phone"></i></a>
-          </div>
-          <div class="text">
-            <a href="tel:+880123456789">+880 123 456 789</a>
-          </div>
-        </div>
-        <div class="location-area">
-          <div class="img1">
-            <a href="#"><i class="fa-regular fa-envelope"></i></a>
-          </div>
-          <div class="text">
-            <a href="mailto:info@mail.com">info@mail.com</a>
-          </div>
-        </div>
-        <div class="location-area">
-          <div class="img1">
-            <a href="#"><i class="fa-solid fa-location-dot"></i></a>
-          </div>
-          <div class="text">
-            <a href="tel:+880123456789">8502 Preston Rd. <br class="d-lg-block d-none"> Inglewoo Maine 98380</a>
-          </div>
-        </div>
-      </div>
-      <div class="space50"></div>
-      <div class="col-lg-12 m-auto">
-        <div class="copyright text-center">
-          <p>© Copyright 2024 -Securix. All Right Reserved</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--===== FOOTER AREA ENDS =======-->
+
 </div>
 <!--===== JS SCRIPT LINK =======-->`;
 
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <>
+      <Header />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Footer />
+    </>
+  );
 }
