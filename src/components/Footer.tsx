@@ -38,11 +38,11 @@ export default function Footer() {
             <div className="footer-list">
               <h4>Explore</h4>
               <ul>
-                <li><a href="#home">Home&nbsp;</a></li>
-                <li><a href="#about">&nbsp;About Us&nbsp;&nbsp;</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#project">Testimonial&nbsp;</a></li>
-                <li><a href="#contact">Contact US</a></li>
+                <li><a href="/#home">Home&nbsp;</a></li>
+                <li><a href="/#about">&nbsp;About Us&nbsp;&nbsp;</a></li>
+                <li><a href="/#service">Service</a></li>
+                <li><a href="/#project">Testimonial&nbsp;</a></li>
+                <li><a href="/#contact">Contact US</a></li>
               </ul>
             </div>
           </div>

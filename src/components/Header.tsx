@@ -10,20 +10,20 @@ export default function Header() {
                 <nav id="navbar-example2" className="navbar">
                   <div className="header-elements">
                     <div className="site-logo">
-                      <a href="#home"><img src="/assets/img/logo/logo3.png" alt="" /></a>
+                      <a href="/#home"><img src="/assets/img/logo/balosh.png" alt="" /></a>
                     </div>
                     <div className="main-menu">
                       <ul>
-                        <li className="nav-item"><a href="#about" className="nav-link active"><span>About</span></a></li>
-                        <li className="nav-item"><a href="#service" className="nav-link"><span>Services</span></a></li>
-                        <li className="nav-item"><a href="#pricing" className="nav-link"><span>Pricing</span></a></li>
-                        <li className="nav-item"><a href="#project" className="nav-link"><span>Projects</span></a></li>
-                        <li className="nav-item"><a href="#faq" className="nav-link"><span>FAQ</span></a></li>
-                        <li className="nav-item"><a href="#blog" className="nav-link"><span>Blogs</span></a></li>
+                        <li className="nav-item"><a href="/#about" className="nav-link active"><span>About</span></a></li>
+                        <li className="nav-item"><a href="/#service" className="nav-link"><span>Services</span></a></li>
+                        <li className="nav-item"><a href="/#pricing" className="nav-link"><span>Pricing</span></a></li>
+                        <li className="nav-item"><a href="/#project" className="nav-link"><span>Projects</span></a></li>
+                        <li className="nav-item"><a href="/#faq" className="nav-link"><span>FAQ</span></a></li>
+                        <li className="nav-item"><a href="/#blog" className="nav-link"><span>Blogs</span></a></li>
                       </ul>
                     </div>
                     <div className="btn-area">
-                      <a href="#contact" className="header-btn4">Contact Us<span><i className="fa-solid fa-arrow-right" /></span></a>
+                      <a href="/#contact" className="header-btn4">Contact Us<span><i className="fa-solid fa-arrow-right" /></span></a>
                     </div>
                   </div>
                 </nav>
@@ -39,7 +39,7 @@ export default function Header() {
           <div className="col-12">
             <div className="mobile-header-elements">
               <div className="mobile-logo">
-                <a href="#home"><img src="/assets/img/logo/logo3.png" alt="" /></a>
+                <a href="/#home"><img src="/assets/img/logo/balosh.png" alt="" /></a>
               </div>
               <div className="mobile-nav-icon dots-menu">
                 <i className="fa-solid fa-bars-staggered" />
@@ -51,7 +51,7 @@ export default function Header() {
       <div className="mobile-sidebar mobile-sidebar3">
         <div className="logosicon-area">
           <div className="logos">
-            <img src="/assets/img/logo/logo3.png" alt="" />
+            <img src="/assets/img/logo/balosh.png" alt="" />
           </div>
           <div className="menu-close">
             <i className="fa-solid fa-xmark" />
@@ -61,21 +61,21 @@ export default function Header() {
           <ul className="mobile-nav-list nav-list1">
             <li><a href="#">Home </a>
               <ul className="sub-menu">
-                <li><a href="#home">Home One</a></li>
-                <li><a href="#home">Home Two</a></li>
-                <li><a href="#home">Home Three</a></li>
-                <li><a href="#home">Home Four</a></li>
+                <li><a href="/#home">Home One</a></li>
+                <li><a href="/#home">Home Two</a></li>
+                <li><a href="/#home">Home Three</a></li>
+                <li><a href="/#home">Home Four</a></li>
               </ul>
             </li>
-            <li className="nav-item"><a href="#about" className="nav-link active"><span>About</span></a></li>
-            <li className="nav-item"><a href="#service" className="nav-link"><span>Services</span></a></li>
-            <li className="nav-item"><a href="#pricing" className="nav-link"><span>Pricing</span></a></li>
-            <li className="nav-item"><a href="#project" className="nav-link"><span>Projects</span></a></li>
-            <li className="nav-item"><a href="#faq" className="nav-link"><span>FAQ</span></a></li>
-            <li className="nav-item"><a href="#blog" className="nav-link"><span>Blogs</span></a></li>
+            <li className="nav-item"><a href="/#about" className="nav-link active"><span>About</span></a></li>
+            <li className="nav-item"><a href="/#service" className="nav-link"><span>Services</span></a></li>
+            <li className="nav-item"><a href="/#pricing" className="nav-link"><span>Pricing</span></a></li>
+            <li className="nav-item"><a href="/#project" className="nav-link"><span>Projects</span></a></li>
+            <li className="nav-item"><a href="/#faq" className="nav-link"><span>FAQ</span></a></li>
+            <li className="nav-item"><a href="/#blog" className="nav-link"><span>Blogs</span></a></li>
           </ul>
           <div className="allmobilesection">
-            <a href="#contact" className="header-btn4">Get Started <span><i className="fa-solid fa-arrow-right" /></span></a>
+            <a href="/#contact" className="header-btn4">Get Started <span><i className="fa-solid fa-arrow-right" /></span></a>
             <div className="single-footer">
               <h3>Contact Info</h3>
               <div className="footer1-contact-info">
