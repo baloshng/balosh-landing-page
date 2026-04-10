@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.service3-section-area .service-carousel-area .service-boxarea .img1 {
+  aspect-ratio: 370 / 500;
+}

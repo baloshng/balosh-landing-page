@@ -262,15 +262,15 @@ export default function Home() {
         <div class="service-carousel-area owl-carousel">
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img4.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/Access-Control_3.jpg" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-img7.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">24/7 Surveillance Solutions</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Tripod Bridge Turnstiles</a>
+                <p>Integrated access control solution for secure and controlled movement.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
@@ -278,15 +278,15 @@ export default function Home() {
 
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img5.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/ASC.png" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-icons8.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">Remote Monitoring Services</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Linear Tripod Turnstiles</a>
+                <p>Integrated access control solution for secure and controlled movement.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
@@ -294,15 +294,15 @@ export default function Home() {
 
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img6.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/carpark.jpg" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-icons9.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">Alarm Integration & Monitoring</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Automated Ticketing Terminals</a>
+                <p>Smart car park solution for automated vehicle entry, ticketing, and exit.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
@@ -310,15 +310,15 @@ export default function Home() {
 
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img4.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/CarPark-1.jpg" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-img7.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">24/7 Surveillance Solutions</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Structured Parking Arrangements</a>
+                <p>Smart car park solution for automated vehicle entry, ticketing, and exit.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
@@ -326,15 +326,15 @@ export default function Home() {
 
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img5.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/Digital-Door-Access.jpg" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-icons8.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">Remote Monitoring Services</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Digital Door Access</a>
+                <p>Secure entrance control system with digital authentication access points.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
@@ -342,15 +342,15 @@ export default function Home() {
 
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img6.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/Access-Control_2.jpg" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-icons9.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">Alarm Integration & Monitoring</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Entrance Control</a>
+                <p>Secure entrance control system with digital authentication access points.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
@@ -358,15 +358,15 @@ export default function Home() {
 
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img4.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/evm.png" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-img7.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">24/7 Surveillance Solutions</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Rentals</a>
+                <p>Short-term and event-based security equipment rental services.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
@@ -374,15 +374,15 @@ export default function Home() {
 
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img5.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/maintenance.png" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-icons8.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">Remote Monitoring Services</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Maintenance Service</a>
+                <p>Preventive and corrective maintenance for deployed security systems.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
@@ -390,15 +390,15 @@ export default function Home() {
 
           <div class="service-boxarea">
             <div class="img1">
-              <img src="/assets/img/all-images/service-img6.png" alt="">
+              <img src="/assets/img/all-images/balosh-solutions/Wings_m_ee.jpg" alt="">
             </div>
             <div class="content-area">
               <div class="icons">
                 <img src="/assets/img/icons/service-icons9.svg" alt="">
               </div>
               <div class="content-area-pera">
-                <a href="#service">Alarm Integration & Monitoring</a>
-                <p>Whether you're looking for basic monitoring or a fully integrated security system,</p>
+                <a href="#service">Toll roads &amp; Traffic Management</a>
+                <p>Traffic control solutions for toll operations and roadway flow management.</p>
                 <a href="#service" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
