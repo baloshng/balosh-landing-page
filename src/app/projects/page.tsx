@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import InternalHeader from "@/components/InternalHeader";
 import ProjectsHeroSection from "@/components/projects/ProjectsHeroSection";
 import ProjectsListSection from "@/components/projects/ProjectsListSection";
 import { projects } from "@/data/projects";
@@ -7,7 +7,7 @@ import { projects } from "@/data/projects";
 export default function ProjectsPage() {
   return (
     <>
-      <Header />
+      <InternalHeader />
       <ProjectsHeroSection title="Our Projects" breadcrumbLabel="Our Projects" />
       <ProjectsListSection projects={projects} />
       <Footer />

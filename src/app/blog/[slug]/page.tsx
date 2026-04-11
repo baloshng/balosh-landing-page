@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import InternalHeader from "@/components/InternalHeader";
 import BlogDetailContentSection from "@/components/blog/BlogDetailContentSection";
 import BlogHeroSection from "@/components/blog/BlogHeroSection";
 import BlogRelatedSection from "@/components/blog/BlogRelatedSection";
@@ -26,7 +26,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
   return (
     <>
-      <Header />
+      <InternalHeader />
       <BlogHeroSection title={post.title} breadcrumbLabel="Blog Details" titleColumnClassName="col-lg-9" />
       <BlogDetailContentSection post={post} />
       <BlogRelatedSection posts={relatedPosts} />

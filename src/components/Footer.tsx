@@ -11,10 +11,10 @@ export default function Footer() {
               <img src="/assets/img/logo/logo4.png" alt="" />
               <p>Our goal is to demystify the process, address your concerns, and empower you with the knowledge to embark.</p>
               <ul>
-                <li><a href="#"><i className="fa-brands fa-facebook-f" /></a></li>
-                <li><a href="#"><i className="fa-brands fa-linkedin-in" /></a></li>
-                <li><a href="#"><i className="fa-brands fa-instagram" /></a></li>
-                <li><a href="#"><i className="fa-brands fa-youtube" /></a></li>
+                <li><a href="https://www.facebook.com/balosh1/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f" /></a></li>
+                <li><a href="https://www.linkedin.com/company/balosh-integrated-services" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in" /></a></li>
+                <li><a href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram" /></a></li>
+                <li><a href="https://x.com/baloshng" target="_blank" rel="noreferrer"><i className="fa-brands fa-youtube" /></a></li>
               </ul>
             </div>
             <div className="space30 d-lg-none d-block" />
@@ -55,7 +55,7 @@ export default function Footer() {
                 <a href="#"><i className="fa-solid fa-phone" /></a>
               </div>
               <div className="text">
-                <a href="tel:+880123456789">+880 123 456 789</a>
+                <a href="tel:+2348022596060">0802 259 6060</a>
               </div>
             </div>
             <div className="location-area">
@@ -63,7 +63,7 @@ export default function Footer() {
                 <a href="#"><i className="fa-regular fa-envelope" /></a>
               </div>
               <div className="text">
-                <a href="mailto:info@mail.com">info@mail.com</a>
+                <a href="mailto:info@balosh.com">info@balosh.com</a>
               </div>
             </div>
             <div className="location-area">
@@ -71,7 +71,7 @@ export default function Footer() {
                 <a href="#"><i className="fa-solid fa-location-dot" /></a>
               </div>
               <div className="text">
-                <a href="tel:+880123456789">8502 Preston Rd. <br className="d-lg-block d-none" /> Inglewoo Maine 98380</a>
+                <a href="#">9, Osaro Isokpan Street, <br className="d-lg-block d-none" /> Lekki Phase 1, Lagos.</a>
               </div>
             </div>
           </div>

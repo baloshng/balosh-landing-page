@@ -6,10 +6,10 @@ export default function HomeAboutSection() {
           <div className="col-lg-6">
             <div className="about-images-area">
               <div className="img1 reveal">
-                <img src="/assets/img/all-images/about-img4.png" alt="" />
+                <img src="/assets/img/all-images/balosh-solutions/Access-Control_3.jpg" alt="Balosh Access Control" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               <div className="img2 reveal">
-                <img src="/assets/img/all-images/about-img5.png" alt="" />
+                <img src="/assets/img/all-images/balosh-solutions/CarPark-1.jpg" alt="Balosh Car Park Solution" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               <div className="about-pera">
                 <p>WE ARE TRUSTED BY MORE THAN 3500&nbsp;CLIENTS</p>

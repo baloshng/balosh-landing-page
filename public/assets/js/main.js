@@ -311,10 +311,9 @@ $('.testimonial-author-slider').owlCarousel({
 $('.blog-slider-area').owlCarousel({
   loop:true,
   margin:30,
-  nav:true,
+  nav:false,
   dots:false,
   items:10,
-  navText:["<i class='fa-solid fa-arrow-left'></i>","<i class='fa-solid fa-arrow-right'></i>"],
   autoplay:true,
   smartSpeed:2000,
   autoplayTimeout:3000,
@@ -322,7 +321,7 @@ $('.blog-slider-area').owlCarousel({
   responsive:{
       0:{
           items:1,
-          nav:true,
+          nav:false,
       },
       600:{
           items:2,

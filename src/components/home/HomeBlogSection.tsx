@@ -38,7 +38,7 @@ export default function HomeBlogSection({ posts }: HomeBlogSectionProps) {
               <h5 data-aos="fade-up" data-aos-duration={800}><img src="/assets/img/icons/finger2.svg" alt="" />Our Blogs</h5>
               <h2 className="text-anime-style-3">Surveillance Stories Exploring Security Solutions</h2>
               <p data-aos="fade-up" data-aos-duration={1000}>Welcome to our Security and CCTV Blog, your go-to resource for staying updated on the latest trends, tips, and insights in the world of security.</p>
-              <div className="btn-area" data-aos="fade-up" data-aos-duration={1100}>
+              <div className="btn-area mt-8" data-aos="fade-up" data-aos-duration={1100}>
                 <a href="/blog" className="header-btn4">View All <i className="fa-solid fa-arrow-right" /></a>
               </div>
             </div>

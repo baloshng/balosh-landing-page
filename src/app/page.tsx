@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import HomeHeader from "@/components/HomeHeader";
 import HomeAboutSection from "@/components/home/HomeAboutSection";
 import HomeBlogSection from "@/components/home/HomeBlogSection";
 import HomeContactSection from "@/components/home/HomeContactSection";
@@ -16,19 +16,12 @@ import { projects } from "@/data/projects";
 export default function Home() {
   return (
     <>
-      <Header />
+      <HomeHeader />
       <div>
         <HomePreloaderProgress />
         <HomeHeroSection />
 
-        <div
-          data-bs-spy="scroll"
-          data-bs-target="#navbar-example2"
-          data-bs-root-margin="0px 0px -40%"
-          data-bs-smooth-scroll="true"
-          className="scrollspy-example bg-body-tertiary rounded-2"
-          tabIndex={0}
-        >
+        <div>
           <HomeAboutSection />
           <HomeServicesSection />
           <HomePricingSection />

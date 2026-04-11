@@ -17,7 +17,7 @@ export default function HomeContactSection() {
                       </div>
                       <div className="content">
                         <p>Phone</p>
-                        <a href="tel:1234567890">123 456 7890</a>
+                        <a href="tel:+2348022596060">0802 259 6060</a>
                       </div>
                     </div>
                   </div>
@@ -30,7 +30,7 @@ export default function HomeContactSection() {
                       </div>
                       <div className="content">
                         <p>Email</p>
-                        <a href="mailto:Securix@gmail.com">Securix@gmail.com</a>
+                        <a href="mailto:info@balosh.com">info@balosh.com</a>
                       </div>
                     </div>
                   </div>
@@ -43,7 +43,7 @@ export default function HomeContactSection() {
                       </div>
                       <div className="content">
                         <p>Address</p>
-                        <a href="#">London Eye ,London</a>
+                        <a href="#">9, Osaro Isokpan Street, Lekki Phase 1, Lagos.</a>
                       </div>
                     </div>
                   </div>
@@ -56,7 +56,7 @@ export default function HomeContactSection() {
                       </div>
                       <div className="content">
                         <p>Instagram</p>
-                        <a href="#">Fleexstudio</a>
+                        <a href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">@baloshng</a>
                       </div>
                     </div>
                   </div>

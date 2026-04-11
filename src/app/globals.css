@@ -71,3 +71,22 @@ body {
     transform: rotate(-360deg);
   }
 }
+
+.contact2-section-area .contact-header .contact-boxarea .all-content .img1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.contact2-section-area .contact-header .contact-boxarea .all-content .img1 img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Home blog carousel: hide Owl prev/next (nav disabled in main.js; belt-and-suspenders) */
+.blog3-section-area .blog-slider-area .owl-nav {
+  display: none !important;
+}

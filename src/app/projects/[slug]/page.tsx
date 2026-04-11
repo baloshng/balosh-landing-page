@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import InternalHeader from "@/components/InternalHeader";
 import ProjectDetailContentSection from "@/components/projects/ProjectDetailContentSection";
 import ProjectsHeroSection from "@/components/projects/ProjectsHeroSection";
 import ProjectsRelatedSection from "@/components/projects/ProjectsRelatedSection";
@@ -26,7 +26,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
 
   return (
     <>
-      <Header />
+      <InternalHeader />
       <ProjectsHeroSection title={project.title} breadcrumbLabel={project.title} titleColumnClassName="col-lg-7" />
       <ProjectDetailContentSection project={project} />
       <ProjectsRelatedSection projects={relatedProjects} />
