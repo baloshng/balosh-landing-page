@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -29,11 +30,19 @@ export default function InternalHeader() {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <nav className="navbar">
-                  <div className="header-elements">
+                <nav id="navbar-example2" className="navbar">
+                  <div className="header-elements internal-header-elements">
                     <div className="site-logo">
                       <Link href="/">
-                        <img src="/assets/img/logo/balosh.png" alt="" style={{ width: "200px" }} />
+                        <Image
+                          src="/assets/img/logo/balosh.png"
+                          alt=""
+                          width={100}
+                          height={36}
+                          className="w-[100px] h-auto"
+                          style={{ width: "100px", height: "auto" }}
+                          unoptimized
+                        />
                       </Link>
                     </div>
                     <div className="main-menu">
@@ -44,19 +53,19 @@ export default function InternalHeader() {
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <a href="/#about" className="nav-link">
+                          <Link href="/#about" className="nav-link">
                             <span>About</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="nav-item">
-                          <a href="/#service" className="nav-link">
+                          <Link href="/#service" className="nav-link">
                             <span>Services</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="nav-item">
-                          <a href="/#market" className="nav-link">
+                          <Link href="/#market" className="nav-link">
                             <span>Our Market</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="nav-item">
                           <Link href="/projects" className={linkClass(active === "projects")}>
@@ -64,9 +73,9 @@ export default function InternalHeader() {
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <a href="/#faq" className="nav-link">
+                          <Link href="/#faq" className="nav-link">
                             <span>FAQ</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="nav-item">
                           <Link href="/blog" className={linkClass(active === "blog")}>
@@ -76,12 +85,12 @@ export default function InternalHeader() {
                       </ul>
                     </div>
                     <div className="btn-area">
-                      <a href="/#contact" className="header-btn4">
+                      <Link href="/#contact" className="header-btn4">
                         Contact Us
                         <span>
                           <i className="fa-solid fa-arrow-right" />
                         </span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </nav>
@@ -96,7 +105,15 @@ export default function InternalHeader() {
             <div className="mobile-header-elements">
               <div className="mobile-logo">
                 <Link href="/">
-                  <img src="/assets/img/logo/balosh.png" alt="" style={{ width: "200px" }} />
+                  <Image
+                    src="/assets/img/logo/balosh.png"
+                    alt=""
+                    width={100}
+                    height={36}
+                    className="w-[100px] h-auto"
+                    style={{ width: "100px", height: "auto" }}
+                    unoptimized
+                  />
                 </Link>
               </div>
               <div className="mobile-nav-icon dots-menu">
@@ -109,7 +126,15 @@ export default function InternalHeader() {
       <div className="mobile-sidebar mobile-sidebar3">
         <div className="logosicon-area">
           <div className="logos">
-            <img src="/assets/img/logo/balosh.png" alt="" style={{ width: "200px" }} />
+            <Image
+              src="/assets/img/logo/balosh.png"
+              alt=""
+              width={100}
+              height={36}
+              className="w-[100px] h-auto"
+              style={{ width: "100px", height: "auto" }}
+              unoptimized
+            />
           </div>
           <div className="menu-close">
             <i className="fa-solid fa-xmark" />
@@ -123,19 +148,19 @@ export default function InternalHeader() {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="/#about" className="nav-link">
+              <Link href="/#about" className="nav-link">
                 <span>About</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/#service" className="nav-link">
+              <Link href="/#service" className="nav-link">
                 <span>Services</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/#market" className="nav-link">
+              <Link href="/#market" className="nav-link">
                 <span>Our Market</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link href="/projects" className={linkClass(active === "projects")}>
@@ -143,9 +168,9 @@ export default function InternalHeader() {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="/#faq" className="nav-link">
+              <Link href="/#faq" className="nav-link">
                 <span>FAQ</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link href="/blog" className={linkClass(active === "blog")}>
@@ -154,12 +179,12 @@ export default function InternalHeader() {
             </li>
           </ul>
           <div className="allmobilesection">
-            <a href="/#contact" className="header-btn4">
+            <Link href="/#contact" className="header-btn4">
               Get Started{" "}
               <span>
                 <i className="fa-solid fa-arrow-right" />
               </span>
-            </a>
+            </Link>
             <div className="single-footer">
               <h3>Contact Info</h3>
               <div className="footer1-contact-info">
@@ -168,7 +193,7 @@ export default function InternalHeader() {
                     <i className="fa-solid fa-phone-volume" />
                   </div>
                   <div className="contact-info-text">
-                    <a href="tel:+2348022596060">0802 259 6060</a>
+                    <Link href="tel:+2348022596060">0802 259 6060</Link>
                   </div>
                 </div>
                 <div className="contact-info-single">
@@ -176,7 +201,7 @@ export default function InternalHeader() {
                     <i className="fa-solid fa-envelope" />
                   </div>
                   <div className="contact-info-text">
-                    <a href="mailto:info@balosh.com">info@balosh.com</a>
+                    <Link href="mailto:info@balosh.com">info@balosh.com</Link>
                   </div>
                 </div>
                 <div className="single-footer">
@@ -186,9 +211,9 @@ export default function InternalHeader() {
                       <i className="fa-solid fa-location-dot" />
                     </div>
                     <div className="contact-info-text">
-                      <a href="#">
+                      <Link href="/#contact">
                         9, Osaro Isokpan Street, <br /> Lekki Phase 1, Lagos.
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -197,24 +222,24 @@ export default function InternalHeader() {
                   <div className="social-links-mobile-menu">
                     <ul>
                       <li>
-                        <a href="https://www.facebook.com/balosh1/" target="_blank" rel="noreferrer">
+                        <Link href="https://www.facebook.com/balosh1/" target="_blank" rel="noreferrer">
                           <i className="fa-brands fa-facebook-f" />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">
+                        <Link href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">
                           <i className="fa-brands fa-instagram" />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="https://www.linkedin.com/company/balosh-integrated-services" target="_blank" rel="noreferrer">
+                        <Link href="https://www.linkedin.com/company/balosh-integrated-services" target="_blank" rel="noreferrer">
                           <i className="fa-brands fa-linkedin-in" />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="https://x.com/baloshng" target="_blank" rel="noreferrer">
+                        <Link href="https://x.com/baloshng" target="_blank" rel="noreferrer">
                           <i className="fa-brands fa-youtube" />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

@@ -63,28 +63,6 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col homepage3-body">
         {children}
-        <Script id="preloader-fallback" strategy="afterInteractive">{`
-          (() => {
-            const hidePreloader = () => {
-              const preloader = document.querySelector('.preloader');
-              if (!preloader) return;
-              preloader.classList.add('is-hidden');
-              window.setTimeout(() => {
-                if (preloader && preloader.parentNode) {
-                  preloader.parentNode.removeChild(preloader);
-                }
-              }, 350);
-            };
-
-            if (document.readyState === 'complete') {
-              hidePreloader();
-            } else {
-              window.addEventListener('load', hidePreloader, { once: true });
-            }
-
-            window.setTimeout(hidePreloader, 1800);
-          })();
-        `}</Script>
         <Script src="/assets/js/plugins/jquery-3-6-0.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/plugins/waypoints.js" strategy="afterInteractive" />
         <Script src="/assets/js/plugins/bootstrap.min.js" strategy="afterInteractive" />

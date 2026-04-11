@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function HomeFaqSection() {
   return (
     <div className="faq-section-area sp1" id="faq">
@@ -5,7 +7,10 @@ export default function HomeFaqSection() {
         <div className="row">
           <div className="col-lg-6 m-auto">
             <div className="faq-header-area text-center heading6">
-              <h5 data-aos="fade-up" data-aos-duration={800} data-aos-delay={600} data-aos-offset={40}><img src="/assets/img/icons/finger2.svg" alt="" />FAQ’s</h5>
+              <h5 data-aos="fade-up" data-aos-duration={800} data-aos-delay={600} data-aos-offset={40}>
+                <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="mr-2 inline-block align-middle" unoptimized />
+                FAQ’s
+              </h5>
               <h2 className="text-anime-style-3">Your Guide to Security &amp; CCTV</h2>
               <p data-aos="fade-up" data-aos-duration={1000} data-aos-delay={600} data-aos-offset={40}>Have questions about our security and CCTV services? Explore our FAQ section below to find answers to commonly asked questions.</p>
             </div>
@@ -77,7 +82,7 @@ export default function HomeFaqSection() {
               <div className="row">
                 <div className="col-lg-8">
                   <div className="img1 reveal">
-                    <img src="/assets/img/all-images/faq-img1.png" alt="" />
+                    <Image src="/assets/img/all-images/faq-img1.png" alt="" width={800} height={900} className="h-auto w-full" unoptimized />
                   </div>
                 </div>
                 <div className="col-lg-4">

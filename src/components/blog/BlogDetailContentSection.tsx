@@ -1,8 +1,10 @@
-import { BlogPost } from "@/data/blogPosts";
+import Image from "next/image"
+import Link from "next/link"
+import { BlogPost } from "@/data/blogPosts"
 
 type BlogDetailContentSectionProps = {
-  post: BlogPost;
-};
+  post: BlogPost
+}
 
 export default function BlogDetailContentSection({ post }: BlogDetailContentSectionProps) {
   return (
@@ -12,14 +14,28 @@ export default function BlogDetailContentSection({ post }: BlogDetailContentSect
           <div className="col-lg-8 m-auto">
             <div className="blog-right-single-area">
               <div className="img1">
-                <img src={post.image} alt={post.title} />
+                <Image src={post.image} alt={post.title} width={1200} height={675} className="h-auto w-full object-cover" unoptimized />
               </div>
               <div className="space32" />
               <div className="blog-auhtor-area">
                 <ul>
-                  <li><a href="#"><img src={post.authorImage} alt={post.author} />{post.author}</a></li>
-                  <li><a href="#"><i className="fa-regular fa-calendar" /> {post.date}</a></li>
-                  <li><a href="#"><img src="/assets/img/icons/comments1.svg" alt="" />{post.category}</a></li>
+                  <li>
+                    <Link href={`/blog/${post.slug}`}>
+                      <Image src={post.authorImage} alt={post.author} width={40} height={40} className="mr-2 inline-block rounded-full" unoptimized />
+                      {post.author}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/blog/${post.slug}`}>
+                      <i className="fa-regular fa-calendar" /> {post.date}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog">
+                      <Image src="/assets/img/icons/comments1.svg" alt="" width={16} height={16} className="mr-1 inline-block" unoptimized />
+                      {post.category}
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className="space24" />
@@ -37,15 +53,29 @@ export default function BlogDetailContentSection({ post }: BlogDetailContentSect
                 <div className="posts">
                   <ul>
                     <li>Post Tags:</li>
-                    <li><a href="#">{post.category}</a></li>
+                    <li>
+                      <Link href="/blog">{post.category}</Link>
+                    </li>
                   </ul>
                 </div>
                 <div className="share">
                   <ul>
                     <li>Social Share:</li>
-                    <li><a href="#"><i className="fa-brands fa-twitter" /></a></li>
-                    <li><a href="#"><i className="fa-brands fa-facebook-f" /></a></li>
-                    <li><a href="#"><i className="fa-brands fa-instagram" /></a></li>
+                    <li>
+                      <Link href="https://x.com/baloshng" target="_blank" rel="noreferrer">
+                        <i className="fa-brands fa-twitter" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="https://www.facebook.com/balosh1/" target="_blank" rel="noreferrer">
+                        <i className="fa-brands fa-facebook-f" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">
+                        <i className="fa-brands fa-instagram" />
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -54,5 +84,5 @@ export default function BlogDetailContentSection({ post }: BlogDetailContentSect
         </div>
       </div>
     </div>
-  );
+  )
 }

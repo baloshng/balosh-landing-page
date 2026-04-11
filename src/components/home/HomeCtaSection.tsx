@@ -1,8 +1,10 @@
+import Image from "next/image"
+
 export default function HomeCtaSection() {
   return (
     <div className="cta3-section-area">
-      <img src="/assets/img/elements/elements23.png" alt="" className="elements23" />
-      <img src="/assets/img/elements/elements24.png" alt="" className="elements24" />
+      <Image src="/assets/img/elements/elements23.png" alt="" width={400} height={400} className="elements23" unoptimized />
+      <Image src="/assets/img/elements/elements24.png" alt="" width={400} height={400} className="elements24" unoptimized />
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -14,7 +16,9 @@ export default function HomeCtaSection() {
                     <div className="space16" />
                     <form>
                       <input type="text" placeholder="Email Address.." />
-                      <button>Subscribe Now <i className="fa-solid fa-arrow-right" /></button>
+                      <button type="button">
+                        Subscribe Now <i className="fa-solid fa-arrow-right" />
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -22,10 +26,10 @@ export default function HomeCtaSection() {
                 <div className="col-lg-5">
                   <div className="cta-images">
                     <div className="img1 reveal">
-                      <img src="/assets/img/all-images/cta-img1.png" alt="" />
+                      <Image src="/assets/img/all-images/cta-img1.png" alt="" width={600} height={500} className="h-auto max-w-full" unoptimized />
                     </div>
                     <div className="img2">
-                      <img src="/assets/img/bg/cta-bg1.png" alt="" />
+                      <Image src="/assets/img/bg/cta-bg1.png" alt="" width={800} height={600} className="h-auto max-w-full" unoptimized />
                     </div>
                   </div>
                 </div>
@@ -35,5 +39,5 @@ export default function HomeCtaSection() {
         </div>
       </div>
     </div>
-  );
+  )
 }

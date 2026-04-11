@@ -1,11 +1,13 @@
-import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage";
-import { ProjectItem } from "@/data/projects";
+import Image from "next/image"
+import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage"
+import { ProjectItem } from "@/data/projects"
 
 type ProjectDetailContentSectionProps = {
-  project: ProjectItem;
-};
+  project: ProjectItem
+}
 
 export default function ProjectDetailContentSection({ project }: ProjectDetailContentSectionProps) {
+  const heroSrc = projectDetailPlaceholderImage(project.slug)
   return (
     <div className="service-single-inner-area sp8">
       <div className="container">
@@ -13,19 +15,31 @@ export default function ProjectDetailContentSection({ project }: ProjectDetailCo
           <div className="col-lg-8 m-auto">
             <div className="service-right-single-area">
               <div className="img1">
-                <img src={projectDetailPlaceholderImage(project.slug)} alt={project.title} />
+                <Image
+                  src={heroSrc}
+                  alt={project.title}
+                  width={1200}
+                  height={675}
+                  className="h-auto w-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                />
               </div>
               <div className="space24" />
               <h2>{project.title}</h2>
               <div className="space16" />
-              <p><strong>Client:</strong> {project.client}</p>
+              <p>
+                <strong>Client:</strong> {project.client}
+              </p>
               <div className="space16" />
               <h3>Products Used</h3>
               <div className="lista-area" style={{ padding: 0, border: "none" }}>
                 <div className="space16" />
                 <ul>
                   {project.products.map((product) => (
-                    <li key={product}><img src="/assets/img/icons/check3.svg" alt="" />{product}</li>
+                    <li key={product}>
+                      <Image src="/assets/img/icons/check3.svg" alt="" width={18} height={18} className="mr-2 inline-block align-middle" unoptimized />
+                      {product}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -43,5 +57,5 @@ export default function ProjectDetailContentSection({ project }: ProjectDetailCo
         </div>
       </div>
     </div>
-  );
+  )
 }

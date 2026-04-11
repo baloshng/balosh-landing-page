@@ -1,3 +1,6 @@
+import Image from "next/image"
+import Link from "next/link"
+
 export default function HomeContactSection() {
   return (
     <div className="contact2-section-area sp1" id="contact">
@@ -5,19 +8,24 @@ export default function HomeContactSection() {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <div className="contact-header heading6">
-              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={600} data-aos-offset={40}><img src="/assets/img/icons/finger2.svg" alt="" />Contact Us</h5>
+              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={600} data-aos-offset={40}>
+                <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                Contact Us
+              </h5>
               <h2 className="text-anime-style-3">Reach Out for Reliable Security Solutions We&apos;re Here to Help</h2>
-              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={700} data-aos-offset={40}>Ready to take the next step in securing your property? Our team is here to assist you every step of the way. Whether you have questions about </p>
+              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={700} data-aos-offset={40}>
+                Ready to take the next step in securing your property? Our team is here to assist you every step of the way. Whether you have questions about{" "}
+              </p>
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration={800} data-aos-delay={600} data-aos-offset={40}>
                   <div className="contact-boxarea">
                     <div className="all-content">
                       <div className="img1">
-                        <img src="/assets/img/icons/call-icons3.svg" alt="" />
+                        <Image src="/assets/img/icons/call-icons3.svg" alt="" width={22} height={22} unoptimized />
                       </div>
                       <div className="content">
                         <p>Phone</p>
-                        <a href="tel:+2348022596060">0802 259 6060</a>
+                        <Link href="tel:+2348022596060">0802 259 6060</Link>
                       </div>
                     </div>
                   </div>
@@ -26,11 +34,11 @@ export default function HomeContactSection() {
                   <div className="contact-boxarea">
                     <div className="all-content">
                       <div className="img1">
-                        <img src="/assets/img/icons/email-icons3.svg" alt="" />
+                        <Image src="/assets/img/icons/email-icons3.svg" alt="" width={22} height={22} unoptimized />
                       </div>
                       <div className="content">
                         <p>Email</p>
-                        <a href="mailto:info@balosh.com">info@balosh.com</a>
+                        <Link href="mailto:info@balosh.com">info@balosh.com</Link>
                       </div>
                     </div>
                   </div>
@@ -39,11 +47,11 @@ export default function HomeContactSection() {
                   <div className="contact-boxarea">
                     <div className="all-content">
                       <div className="img1">
-                        <img src="/assets/img/icons/location-icons2.svg" alt="" />
+                        <Image src="/assets/img/icons/location-icons2.svg" alt="" width={22} height={22} unoptimized />
                       </div>
                       <div className="content">
                         <p>Address</p>
-                        <a href="#">9, Osaro Isokpan Street, Lekki Phase 1, Lagos.</a>
+                        <Link href="/#contact">9, Osaro Isokpan Street, Lekki Phase 1, Lagos.</Link>
                       </div>
                     </div>
                   </div>
@@ -52,11 +60,13 @@ export default function HomeContactSection() {
                   <div className="contact-boxarea">
                     <div className="all-content">
                       <div className="img1">
-                        <img src="/assets/img/icons/linkedin-icons1.svg" alt="" />
+                        <Image src="/assets/img/icons/linkedin-icons1.svg" alt="" width={22} height={22} unoptimized />
                       </div>
                       <div className="content">
                         <p>Instagram</p>
-                        <a href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">@baloshng</a>
+                        <Link href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">
+                          @baloshng
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -90,13 +100,15 @@ export default function HomeContactSection() {
                   </div>
                   <div className="col-lg-12">
                     <div className="input-area">
-                      <p>Additional Details  (Optional)</p>
+                      <p>Additional Details (Optional)</p>
                       <textarea placeholder="Message" defaultValue={""} />
                     </div>
                   </div>
                   <div className="col-lg-12">
                     <div className="input-area text-start">
-                      <button type="submit" className="header-btn3">Submit Now <i className="fa-solid fa-arrow-right" /></button>
+                      <button type="submit" className="header-btn3">
+                        Submit Now <i className="fa-solid fa-arrow-right" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -106,5 +118,5 @@ export default function HomeContactSection() {
         </div>
       </div>
     </div>
-  );
+  )
 }

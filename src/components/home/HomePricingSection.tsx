@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function HomePricingSection() {
   const markets = [
     {
@@ -30,7 +32,7 @@ export default function HomePricingSection() {
       image: "/assets/img/all-images/balosh-solutions/Wings_m_ee.jpg",
       description: "Traffic and tolling control systems for roadway flow management and vehicle access regulation.",
     },
-  ];
+  ]
 
   return (
     <div className="pricing-section-area sp2" id="market">
@@ -38,9 +40,14 @@ export default function HomePricingSection() {
         <div className="row">
           <div className="col-lg-6 m-auto">
             <div className="pricing-header text-center heading6">
-              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={300}><img src="/assets/img/icons/finger2.svg" alt="" />Our Market</h5>
+              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={300}>
+                <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="mr-2 inline-block align-middle" unoptimized />
+                Our Market
+              </h5>
               <h2 className="text-anime-style-3">Industries We Serve</h2>
-              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={500}>Balosh solutions serve multiple market segments, from controlled facility access to traffic and event operations.</p>
+              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={500}>
+                Balosh solutions serve multiple market segments, from controlled facility access to traffic and event operations.
+              </p>
             </div>
           </div>
         </div>
@@ -49,14 +56,22 @@ export default function HomePricingSection() {
             <div
               className="col-lg-4 col-md-6"
               data-aos="fade-up"
-              data-aos-duration={800 + (index * 100)}
+              data-aos-duration={800 + index * 100}
               data-aos-delay={600}
               data-aos-offset={40}
               key={market.title}
             >
               <div className="pricing-boxarea">
                 <div className="img1">
-                  <img src={market.image} alt={market.title} style={{ width: "100%", height: "220px", objectFit: "cover", borderRadius: "8px" }} />
+                  <Image
+                    src={market.image}
+                    alt={market.title}
+                    width={800}
+                    height={440}
+                    className="rounded-[8px] object-cover"
+                    style={{ width: "100%", height: "220px", objectFit: "cover", borderRadius: "8px" }}
+                    unoptimized
+                  />
                 </div>
                 <div className="space20" />
                 <h3>{market.title}</h3>
@@ -67,5 +82,5 @@ export default function HomePricingSection() {
         </div>
       </div>
     </div>
-  );
+  )
 }

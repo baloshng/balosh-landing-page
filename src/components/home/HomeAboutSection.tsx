@@ -1,3 +1,6 @@
+import Image from "next/image"
+import Link from "next/link"
+
 export default function HomeAboutSection() {
   return (
     <div className="about3-section-area sp1" id="about">
@@ -6,21 +9,45 @@ export default function HomeAboutSection() {
           <div className="col-lg-6">
             <div className="about-images-area">
               <div className="img1 reveal">
-                <img src="/assets/img/all-images/balosh-solutions/Access-Control_3.jpg" alt="Balosh Access Control" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <Image
+                  src="/assets/img/all-images/balosh-solutions/Access-Control_3.jpg"
+                  alt="Balosh Access Control"
+                  width={800}
+                  height={600}
+                  className="h-full w-full object-cover"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  unoptimized
+                />
               </div>
               <div className="img2 reveal">
-                <img src="/assets/img/all-images/balosh-solutions/CarPark-1.jpg" alt="Balosh Car Park Solution" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <Image
+                  src="/assets/img/all-images/balosh-solutions/CarPark-1.jpg"
+                  alt="Balosh Car Park Solution"
+                  width={800}
+                  height={600}
+                  className="h-full w-full object-cover"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  unoptimized
+                />
               </div>
               <div className="about-pera">
-                <p>WE ARE TRUSTED BY MORE THAN 3500&nbsp;CLIENTS</p>
+                <p>WE ARE TRUSTED BY MORE THAN 3500&nbsp;CLIENTS</p>
               </div>
             </div>
           </div>
           <div className="col-lg-6">
             <div className="about-header-area heading6">
-              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={300}><img src="/assets/img/icons/finger2.svg" alt="" />Why Choose Us</h5>
-              <h2 className="text-anime-style-3">Innovating Security Partner  <br className="d-lg-block d-none" />In Protection</h2>
-              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={400}>With years of experience &amp; passion for innovation, our team committed to delivering top-notch security and CCTV solutions tailored to your unique needs.</p>
+              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={300}>
+                <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                Why Choose Us
+              </h5>
+              <h2 className="text-anime-style-3">
+                Innovating Security Partner <br className="d-lg-block d-none" />
+                In Protection
+              </h2>
+              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={400}>
+                With years of experience &amp; passion for innovation, our team committed to delivering top-notch security and CCTV solutions tailored to your unique needs.
+              </p>
               <div className="space32" />
               <div className="all-progress-area" data-aos="fade-left" data-aos-duration={1200} data-aos-delay={0}>
                 <div className="progres-section-area">
@@ -66,12 +93,14 @@ export default function HomeAboutSection() {
                 </div>
               </div>
               <div className="btn-area" data-aos="fade-left" data-aos-duration={1300} data-aos-delay={500}>
-                <a href="#about" className="header-btn4">Learn About Us <i className="fa-solid fa-arrow-right" /></a>
+                <Link href="/#about" className="header-btn4">
+                  Learn About Us <i className="fa-solid fa-arrow-right" />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

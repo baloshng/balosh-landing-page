@@ -1,10 +1,11 @@
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
 type BlogHeroSectionProps = {
-  title: string;
-  breadcrumbLabel: string;
-  titleColumnClassName?: string;
-};
+  title: string
+  breadcrumbLabel: string
+  titleColumnClassName?: string
+}
 
 export default function BlogHeroSection({
   title,
@@ -13,21 +14,23 @@ export default function BlogHeroSection({
 }: BlogHeroSectionProps) {
   return (
     <div className="hero-inner-section-area">
-      <img src="/assets/img/elements/elements1.png" alt="" className="elements1 aniamtion-key-5" />
-      <img src="/assets/img/elements/elements2.png" alt="" className="elements2 aniamtion-key-1" />
-      <img src="/assets/img/elements/elements3.png" alt="" className="elements3 aniamtion-key-5" />
-      <img src="/assets/img/elements/elements4.png" alt="" className="elements4 aniamtion-key-1" />
-      <img src="/assets/img/elements/elements5.png" alt="" className="elements5 keyframe5" />
+      <Image src="/assets/img/elements/elements1.png" alt="" width={300} height={300} className="elements1 aniamtion-key-5" unoptimized />
+      <Image src="/assets/img/elements/elements2.png" alt="" width={300} height={300} className="elements2 aniamtion-key-1" unoptimized />
+      <Image src="/assets/img/elements/elements3.png" alt="" width={300} height={300} className="elements3 aniamtion-key-5" unoptimized />
+      <Image src="/assets/img/elements/elements4.png" alt="" width={300} height={300} className="elements4 aniamtion-key-1" unoptimized />
+      <Image src="/assets/img/elements/elements5.png" alt="" width={300} height={300} className="elements5 keyframe5" unoptimized />
       <div className="container">
         <div className="row align-items-center">
           <div className={`${titleColumnClassName} m-auto`}>
             <div className="hero-main-area heading1 text-center">
               <h1 className="text-anime-style-3">{title}</h1>
-              <Link href="/">Home <i className="fa-solid fa-angle-right" /> <span>{breadcrumbLabel}</span></Link>
+              <Link href="/">
+                Home <i className="fa-solid fa-angle-right" /> <span>{breadcrumbLabel}</span>
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

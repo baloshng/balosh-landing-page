@@ -41,10 +41,10 @@ body.homepage3-body .service3-section-area .service-carousel-area .service-boxar
 }
 
 .spinner {
-  width: 80px;
-  height: 80px;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
+  width: 240px;
+  height: 240px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
   border-radius: 50%;
   animation: spin 2s linear infinite;
   display: flex;
@@ -52,9 +52,13 @@ body.homepage3-body .service3-section-area .service-carousel-area .service-boxar
   align-items: center;
 }
 
+/* Wide logo: keep natural aspect ratio (no square crop) */
 .loader-logo {
-  width: 40px;
-  height: 40px;
+  width: auto !important;
+  height: auto !important;
+  max-width: 200px;
+  max-height: 72px;
+  object-fit: contain;
   animation: spin-reverse 2s linear infinite;
 }
 
@@ -139,4 +143,41 @@ body .footer3-section-area .location-area .img1 a {
 /* Home blog carousel: hide Owl prev/next (nav disabled in main.js; belt-and-suspenders) */
 .blog3-section-area .blog-slider-area .owl-nav {
   display: none !important;
+}
+
+/* Internal pages header (blog, projects): logo left, nav centered, Contact right */
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .site-logo {
+  flex: 0 0 auto;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .main-menu {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .main-menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .main-menu > ul > li {
+  display: inline-block;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .btn-area {
+  flex: 0 0 auto;
 }

@@ -1,10 +1,11 @@
-import Link from "next/link";
-import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage";
-import { ProjectItem } from "@/data/projects";
+import Image from "next/image"
+import Link from "next/link"
+import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage"
+import { ProjectItem } from "@/data/projects"
 
 type ProjectsRelatedSectionProps = {
-  projects: ProjectItem[];
-};
+  projects: ProjectItem[]
+}
 
 export default function ProjectsRelatedSection({ projects }: ProjectsRelatedSectionProps) {
   return (
@@ -24,12 +25,21 @@ export default function ProjectsRelatedSection({ projects }: ProjectsRelatedSect
             <div className="col-lg-4 col-md-6" key={item.id}>
               <div className="project-boxarea-inner">
                 <div className="img1">
-                  <img src={projectDetailPlaceholderImage(item.slug)} alt={item.title} />
+                  <Image
+                    src={projectDetailPlaceholderImage(item.slug)}
+                    alt={item.title}
+                    width={1200}
+                    height={675}
+                    className="h-auto w-full object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
                 </div>
                 <div className="content-area">
                   <div className="all-content">
                     <div className="icons">
-                      <Link href={`/projects/${item.slug}`}><i className="fa-solid fa-arrow-right" /></Link>
+                      <Link href={`/projects/${item.slug}`}>
+                        <i className="fa-solid fa-arrow-right" />
+                      </Link>
                     </div>
                     <Link href={`/projects/${item.slug}`}>{item.title}</Link>
                     <p>{item.excerpt}</p>
@@ -41,5 +51,5 @@ export default function ProjectsRelatedSection({ projects }: ProjectsRelatedSect
         </div>
       </div>
     </div>
-  );
+  )
 }
