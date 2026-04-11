@@ -1,3 +1,4 @@
+import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage";
 import { ProjectItem } from "@/data/projects";
 
 type ProjectDetailContentSectionProps = {
@@ -12,7 +13,7 @@ export default function ProjectDetailContentSection({ project }: ProjectDetailCo
           <div className="col-lg-8 m-auto">
             <div className="service-right-single-area">
               <div className="img1">
-                <img src={project.image} alt={project.title} />
+                <img src={projectDetailPlaceholderImage(project.slug)} alt={project.title} />
               </div>
               <div className="space24" />
               <h2>{project.title}</h2>

@@ -61,9 +61,6 @@ export default function HomePricingSection() {
                 <div className="space20" />
                 <h3>{market.title}</h3>
                 <p>{market.description}</p>
-                <div className="btn-area">
-                  <a href="#market" className="header-btn4">Explore <i className="fa-solid fa-arrow-right" /></a>
-                </div>
               </div>
             </div>
           ))}

@@ -25,8 +25,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.service3-section-area .service-carousel-area .service-boxarea .img1 {
-  aspect-ratio: 370 / 500;
+/* Services carousel: Owl + % heights on imgs can collapse cards; use intrinsic height with a floor */
+body.homepage3-body .service3-section-area .service-carousel-area .service-boxarea .img1 img {
+  height: auto;
+  min-height: 520px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .loader-container {
@@ -72,10 +76,17 @@ body {
   }
 }
 
+/* Home #contact: fixed icon tile + centered SVG */
 .contact2-section-area .contact-header .contact-boxarea .all-content .img1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
   line-height: 1;
 }
 
@@ -83,7 +94,46 @@ body {
   display: block;
   width: 22px;
   height: 22px;
+  max-width: 22px;
+  max-height: 22px;
   object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Footer: social icon tiles — fixed size, centered Font Awesome icons */
+body .footer3-section-area .logo-content ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+body .footer3-section-area .logo-content ul li a i {
+  line-height: 1;
+}
+
+/* Footer “Contact Us” column: phone / email / location icon circles */
+body .footer3-section-area .location-area .img1 {
+  flex-shrink: 0;
+}
+
+body .footer3-section-area .location-area .img1 a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 1;
+  box-sizing: border-box;
 }
 
 /* Home blog carousel: hide Owl prev/next (nav disabled in main.js; belt-and-suspenders) */

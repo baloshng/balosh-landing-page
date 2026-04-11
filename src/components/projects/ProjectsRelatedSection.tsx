@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage";
 import { ProjectItem } from "@/data/projects";
 
 type ProjectsRelatedSectionProps = {
@@ -23,7 +24,7 @@ export default function ProjectsRelatedSection({ projects }: ProjectsRelatedSect
             <div className="col-lg-4 col-md-6" key={item.id}>
               <div className="project-boxarea-inner">
                 <div className="img1">
-                  <img src={item.image} alt={item.title} />
+                  <img src={projectDetailPlaceholderImage(item.slug)} alt={item.title} />
                 </div>
                 <div className="content-area">
                   <div className="all-content">
