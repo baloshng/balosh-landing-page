@@ -587,3 +587,27 @@ body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-ite
     grid-template-columns: 1fr;
   }
 }
+
+/* Home CTA (cta3): vertically center main content in the fixed-height band; center elements23 on the left edge */
+.cta3-section-area {
+  display: flex;
+  align-items: center;
+}
+
+.cta3-section-area > .container {
+  width: 100%;
+}
+
+.cta3-section-area .elements23 {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+  .cta3-section-area .elements23 {
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+}
