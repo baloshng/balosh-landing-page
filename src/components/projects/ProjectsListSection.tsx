@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ProjectItem } from "@/data/projects"
+import { projectCoverImageUrl } from "@/lib/projectCoverImage"
 
 type ProjectsListSectionProps = {
   projects: ProjectItem[]
@@ -15,7 +16,14 @@ export default function ProjectsListSection({ projects }: ProjectsListSectionPro
             <div className="col-lg-4 col-md-6" key={project.id}>
               <div className="project-boxarea-inner">
                 <div className="img1">
-                  <Image src={project.image} alt={project.title} width={600} height={400} className="h-auto w-full object-cover" unoptimized />
+                  <Image
+                    src={projectCoverImageUrl(project.slug)}
+                    alt={project.title}
+                    width={600}
+                    height={400}
+                    className="h-auto w-full object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
                 </div>
                 <div className="content-area">
                   <div className="all-content">

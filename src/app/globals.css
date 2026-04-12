@@ -425,7 +425,8 @@ body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-ite
 
 body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .accordion-collapse,
 body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .accordion-collapse.collapsing,
-body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .accordion-collapse.show {
+body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .accordion-collapse.show,
+body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .faq-panel-wrap {
   background: var(--ztc-bg-bg-11);
 }
 

@@ -6,7 +6,6 @@ export type ProjectItem = {
   products: string[];
   excerpt: string;
   description: string[];
-  image: string;
 };
 
 export const projects: ProjectItem[] = [
@@ -27,7 +26,6 @@ export const projects: ProjectItem[] = [
       "The deployment included controlled entry systems and verification processes to ensure secure and organized crowd movement throughout the event.",
       "This project demonstrates Balosh's capability in handling large-scale, high-traffic events with precision and efficiency.",
     ],
-    image: "/assets/img/all-images/project-img1.png",
   },
   {
     id: 2,
@@ -42,7 +40,6 @@ export const projects: ProjectItem[] = [
       "The system ensured strict access regulation, enabling only authorized personnel and guests into designated zones.",
       "This highlights Balosh's ability to deliver secure and reliable solutions for high-security, government-level and industrial events.",
     ],
-    image: "/assets/img/all-images/project-img2.png",
   },
   {
     id: 3,
@@ -57,7 +54,6 @@ export const projects: ProjectItem[] = [
       "The project introduced a controlled car park system designed to regulate vehicle entry and exit while maximizing available parking space.",
       "The solution improved order, reduced congestion, and enhanced revenue management within the facility.",
     ],
-    image: "/assets/img/all-images/project-img3.png",
   },
   {
     id: 4,
@@ -72,7 +68,6 @@ export const projects: ProjectItem[] = [
       "The project focused on enhancing estate security by regulating entry points and improving resident verification processes.",
       "This deployment reinforces Balosh's expertise in residential estate security infrastructure and controlled community access.",
     ],
-    image: "/assets/img/all-images/project-img4.png",
   },
   {
     id: 5,
@@ -87,7 +82,6 @@ export const projects: ProjectItem[] = [
       "The system was designed to regulate truck movement to and from Lagos ports, addressing long-standing traffic congestion issues.",
       "This project demonstrates Balosh's capacity in large-scale traffic and access management systems beyond traditional security applications.",
     ],
-    image: "/assets/img/all-images/project-img5.png",
   },
   {
     id: 6,
@@ -102,7 +96,6 @@ export const projects: ProjectItem[] = [
       "The system was designed to enhance guest experience, streamline vehicle access, and improve parking revenue management.",
       "This highlights Balosh's strength in delivering tailored solutions for hospitality and commercial environments.",
     ],
-    image: "/assets/img/all-images/project-img6.png",
   },
   {
     id: 7,
@@ -117,7 +110,6 @@ export const projects: ProjectItem[] = [
       "The solution improved access control, enhanced security, and ensured better monitoring of residents and visitors within the estate.",
       "This project further establishes Balosh as a trusted provider for premium residential developments.",
     ],
-    image: "/assets/img/all-images/project-img7.png",
   },
   {
     id: 8,
@@ -132,7 +124,6 @@ export const projects: ProjectItem[] = [
       "The installation focused on regulating pedestrian access using turnstile systems to ensure controlled entry while maintaining smooth visitor flow.",
       "The solution enhanced security, reduced unauthorized access, and improved overall crowd management efficiency within the facility.",
     ],
-    image: "/assets/img/all-images/project-img8.png",
   },
   {
     id: 9,
@@ -147,7 +138,6 @@ export const projects: ProjectItem[] = [
       "The project deployed controlled entry systems to ensure that only authorized students, staff, and visitors gain access to the premises.",
       "The system supports structured movement and monitoring across the school environment, improving safety and administrative control.",
     ],
-    image: "/assets/img/all-images/project-img9.png",
   },
 ];
 

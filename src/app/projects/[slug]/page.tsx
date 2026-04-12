@@ -6,6 +6,7 @@ import ProjectDetailContentSection from "@/components/projects/ProjectDetailCont
 import ProjectsHeroSection from "@/components/projects/ProjectsHeroSection";
 import ProjectsRelatedSection from "@/components/projects/ProjectsRelatedSection";
 import { getProjectBySlug, projects } from "@/data/projects";
+import { projectCoverImageUrl } from "@/lib/projectCoverImage";
 import { slugToTitle } from "@/lib/seo";
 
 type ProjectDetailProps = {
@@ -38,12 +39,12 @@ export async function generateMetadata({ params }: ProjectDetailProps): Promise<
       description: project.excerpt,
       url: `/projects/${project.slug}`,
       type: "article",
-      images: [project.image],
+      images: [projectCoverImageUrl(project.slug)],
     },
     twitter: {
       title: project.title,
       description: project.excerpt,
-      images: [project.image],
+      images: [projectCoverImageUrl(project.slug)],
     },
   };
 }

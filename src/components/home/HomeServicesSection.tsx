@@ -8,19 +8,43 @@ export default function HomeServicesSection() {
         <div className="row">
           <div className="col-lg-6">
             <div className="service-header heading6">
-              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={300}>
-                <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
-                Our Service
+              <h5
+                data-aos="fade-left"
+                data-aos-duration={800}
+                data-aos-delay={100}
+              >
+                <Image
+                  src="/assets/img/icons/finger2.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="inline-block align-middle"
+                  unoptimized
+                />
+                Our Solutions
               </h5>
-              <h2 className="text-anime-style-3">Complete Protection Services</h2>
-              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={400}>
-                With advanced technology, 24/7 surveillance capabilities personalized <br className="d-lg-block d-none" /> service, we&apos;re committed to safeguarding what matters most to you.
+              <h2 className="text-anime-style-3">
+                Complete Protection Solutions
+              </h2>
+              <p
+                data-aos="fade-left"
+                data-aos-duration={1000}
+                data-aos-delay={200}
+              >
+                With advanced technology, 24/7 surveillance capabilities
+                personalized <br className="d-lg-block d-none" /> service,
+                we&apos;re committed to safeguarding what matters most to you.
               </p>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-12" data-aos="zoom-in" data-aos-duration={1000} data-aos-delay={300}>
+          <div
+            className="col-lg-12"
+            data-aos="zoom-in"
+            data-aos-duration={1000}
+            data-aos-delay={100}
+          >
             <div className="service-carousel-area owl-carousel">
               {[
                 {
@@ -80,18 +104,31 @@ export default function HomeServicesSection() {
               ].map((card) => (
                 <div className="service-boxarea" key={card.title}>
                   <div className="img1">
-                    <Image src={card.img} alt="" width={800} height={600} className="h-full w-full object-cover" unoptimized />
+                    <Image
+                      src={card.img}
+                      alt=""
+                      width={800}
+                      height={600}
+                      className="h-full w-full object-cover"
+                      unoptimized
+                    />
                   </div>
                   <div className="content-area">
                     <div className="icons">
-                      <Image src={card.icon} alt="" width={48} height={48} unoptimized />
+                      <Image
+                        src={card.icon}
+                        alt=""
+                        width={48}
+                        height={48}
+                        unoptimized
+                      />
                     </div>
                     <div className="content-area-pera">
                       <Link href="/#service">{card.title}</Link>
                       <p>{card.desc}</p>
-                      <Link href="/#service" className="readmore">
+                      {/* <Link href="/#service" className="readmore">
                         Learn More <i className="fa-solid fa-arrow-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>

@@ -30,7 +30,7 @@ export default function HomeTrustedClientsSection({ clients }: HomeTrustedClient
               <h5
                 data-aos="fade-up"
                 data-aos-duration={800}
-                data-aos-delay={200}
+                data-aos-delay={0}
                 data-aos-offset={40}
                 className="mb-2"
               >
@@ -40,7 +40,7 @@ export default function HomeTrustedClientsSection({ clients }: HomeTrustedClient
                 className="mb-0"
                 data-aos="fade-up"
                 data-aos-duration={800}
-                data-aos-delay={300}
+                data-aos-delay={100}
                 data-aos-offset={40}
               >
                 A selection of organisations that rely on Balosh for access, parking, and traffic solutions.
@@ -53,7 +53,7 @@ export default function HomeTrustedClientsSection({ clients }: HomeTrustedClient
         className="trusted-clients-marquee-outer mt-4"
         data-aos="fade-up"
         data-aos-duration={900}
-        data-aos-delay={400}
+        data-aos-delay={200}
         data-aos-offset={40}
       >
         <div className="trusted-clients-marquee-mask">

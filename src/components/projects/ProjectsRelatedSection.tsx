@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage"
 import { ProjectItem } from "@/data/projects"
+import { projectCoverImageUrl } from "@/lib/projectCoverImage"
 
 type ProjectsRelatedSectionProps = {
   projects: ProjectItem[]
@@ -26,7 +26,7 @@ export default function ProjectsRelatedSection({ projects }: ProjectsRelatedSect
               <div className="project-boxarea-inner">
                 <div className="img1">
                   <Image
-                    src={projectDetailPlaceholderImage(item.slug)}
+                    src={projectCoverImageUrl(item.slug)}
                     alt={item.title}
                     width={1200}
                     height={675}

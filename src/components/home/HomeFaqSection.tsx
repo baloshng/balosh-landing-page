@@ -1,6 +1,44 @@
+"use client"
+
 import Image from "next/image"
+import { Fragment, useState } from "react"
+
+const FAQ_ITEMS: { id: string; question: string }[] = [
+  {
+    id: "faq-1",
+    question: "What are the benefits of installing CCTV cameras?",
+  },
+  {
+    id: "faq-2",
+    question: "How many CCTV cameras do I need for my property?",
+  },
+  {
+    id: "faq-3",
+    question: "Can CCTV cameras be used indoors and outdoors?",
+  },
+  {
+    id: "faq-4",
+    question: "How do I choose the right CCTV system for my needs?",
+  },
+  {
+    id: "faq-5",
+    question: "Are there any legal requirements for CCTV signage?",
+  },
+]
+
+function FaqAnswer() {
+  return (
+    <>
+      From understanding how CCTV surveillance works to choosing the{" "}
+      <br className="d-lg-block d-none" /> right security solution for your
+      needs, we&apos;ve compiled
+    </>
+  )
+}
 
 export default function HomeFaqSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
+
   return (
     <div className="faq-section-area sp1" id="faq">
       <div className="container">
@@ -10,7 +48,7 @@ export default function HomeFaqSection() {
               <h5
                 data-aos="fade-up"
                 data-aos-duration={800}
-                data-aos-delay={600}
+                data-aos-delay={400}
                 data-aos-offset={40}
               >
                 <Image
@@ -29,7 +67,7 @@ export default function HomeFaqSection() {
               <p
                 data-aos="fade-up"
                 data-aos-duration={1000}
-                data-aos-delay={600}
+                data-aos-delay={400}
                 data-aos-offset={40}
               >
                 Have questions about our security and CCTV services? Explore our
@@ -41,145 +79,54 @@ export default function HomeFaqSection() {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <div className="faq-author-area">
-              <div
-                className="accordion accordion-flush"
-                id="accordionFlushExample"
-              >
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseOne"
-                      aria-expanded="true"
-                      aria-controls="flush-collapseOne"
-                    >
-                      What are the benefits of installing CCTV cameras?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseOne"
-                    className="accordion-collapse collapse show"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div className="accordion-body">
-                      From understanding how CCTV surveillance works to choosing
-                      the <br className="d-lg-block d-none" /> right security
-                      solution for your needs, we&apos;ve compiled
-                    </div>
-                  </div>
-                </div>
-                <div className="space20" />
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseTwo"
-                    >
-                      How many CCTV cameras do I need for my property?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseTwo"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div className="accordion-body">
-                      From understanding how CCTV surveillance works to choosing
-                      the <br className="d-lg-block d-none" /> right security
-                      solution for your needs, we&apos;ve compiled
-                    </div>
-                  </div>
-                </div>
-                <div className="space20" />
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseThree"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseThree"
-                    >
-                      Can CCTV cameras be used indoors and outdoors?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseThree"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div className="accordion-body">
-                      From understanding how CCTV surveillance works to choosing
-                      the <br className="d-lg-block d-none" /> right security
-                      solution for your needs, we&apos;ve compiled
-                    </div>
-                  </div>
-                </div>
-                <div className="space20" />
-                <div
-                  className="accordion-item"
-                  data-aos="fade-left"
-                  data-aos-duration={1100}
-                  data-aos-delay={600}
-                  data-aos-offset={40}
-                >
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFour"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseFour"
-                    >
-                      How do I choose the right CCTV system for my needs?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseFour"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div className="accordion-body">
-                      From understanding how CCTV surveillance works to choosing
-                      the <br className="d-lg-block d-none" /> right security
-                      solution for your needs, we&apos;ve compiled
-                    </div>
-                  </div>
-                </div>
-                <div className="space20" />
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFive"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseFive"
-                    >
-                      Are there any legal requirements for CCTV signage?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseFive"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div className="accordion-body">
-                      From understanding how CCTV surveillance works to choosing
-                      the <br className="d-lg-block d-none" /> right security
-                      solution for your needs, we&apos;ve compiled
-                    </div>
-                  </div>
-                </div>
+              <div className="accordion accordion-flush" id="accordionFlushExample">
+                {FAQ_ITEMS.map((item, index) => {
+                  const isOpen = openIndex === index
+                  const panelId = `flush-collapse-${item.id}`
+
+                  return (
+                    <Fragment key={item.id}>
+                      {index > 0 ? <div className="space20" /> : null}
+                      <div className="accordion-item">
+                        <h2 className="accordion-header">
+                          <button
+                            className={
+                              isOpen
+                                ? "accordion-button"
+                                : "accordion-button collapsed"
+                            }
+                            type="button"
+                            aria-expanded={isOpen}
+                            aria-controls={panelId}
+                            id={`${panelId}-heading`}
+                            onClick={() =>
+                              setOpenIndex((prev) =>
+                                prev === index ? null : index,
+                              )
+                            }
+                          >
+                            {item.question}
+                          </button>
+                        </h2>
+                        <div
+                          id={panelId}
+                          role="region"
+                          aria-labelledby={`${panelId}-heading`}
+                          className="faq-panel-wrap grid overflow-hidden transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none"
+                          style={{
+                            gridTemplateRows: isOpen ? "1fr" : "0fr",
+                          }}
+                        >
+                          <div className="min-h-0">
+                            <div className="accordion-body">
+                              <FaqAnswer />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Fragment>
+                  )
+                })}
               </div>
             </div>
           </div>

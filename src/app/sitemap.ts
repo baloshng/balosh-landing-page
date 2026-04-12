@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blogPosts";
 import { projects } from "@/data/projects";
+import { projectCoverImageUrl } from "@/lib/projectCoverImage";
 import { absoluteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -52,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
-    images: [absoluteUrl(project.image)],
+    images: [absoluteUrl(projectCoverImageUrl(project.slug))],
   }));
 
   return [...staticRoutes, ...blogRoutes, ...projectRoutes];

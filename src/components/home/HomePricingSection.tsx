@@ -40,12 +40,12 @@ export default function HomePricingSection() {
         <div className="row">
           <div className="col-lg-6 m-auto">
             <div className="pricing-header text-center heading6">
-              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={300}>
+              <h5 data-aos="fade-left" data-aos-duration={800} data-aos-delay={100}>
                 <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="mr-2 inline-block align-middle" unoptimized />
                 Our Market
               </h5>
               <h2 className="text-anime-style-3">Industries We Serve</h2>
-              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={500}>
+              <p data-aos="fade-left" data-aos-duration={1000} data-aos-delay={300}>
                 Balosh solutions serve multiple market segments, from controlled facility access to traffic and event operations.
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function HomePricingSection() {
               className="col-lg-4 col-md-6"
               data-aos="fade-up"
               data-aos-duration={800 + index * 100}
-              data-aos-delay={600}
+              data-aos-delay={400}
               data-aos-offset={40}
               key={market.title}
             >

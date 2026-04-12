@@ -345,7 +345,7 @@ $(window).on("load", function (event) {
 if ($('.text-anime-style-1').length) {
   let staggerAmount 	= 0.05,
   translateXValue = 0,
-  delayValue 		= 0.5,
+  delayValue 		= 0.3,
    animatedTextElements = document.querySelectorAll('.text-anime-style-1');
 
   animatedTextElements.forEach((element) => {
@@ -364,7 +364,7 @@ if ($('.text-anime-style-1').length) {
   if ($('.text-anime-style-2').length) {
   let	 staggerAmount 		= 0.05,
    translateXValue	= 20,
-   delayValue 		= 0.5,
+   delayValue 		= 0.3,
    easeType 			= "power2.out",
    animatedTextElements = document.querySelectorAll('.text-anime-style-2');
 

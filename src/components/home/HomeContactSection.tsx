@@ -11,7 +11,7 @@ export default function HomeContactSection() {
               <h5
                 data-aos="fade-left"
                 data-aos-duration={800}
-                data-aos-delay={600}
+                data-aos-delay={400}
                 data-aos-offset={40}
               >
                 <Image
@@ -31,7 +31,7 @@ export default function HomeContactSection() {
               <p
                 data-aos="fade-left"
                 data-aos-duration={1000}
-                data-aos-delay={700}
+                data-aos-delay={500}
                 data-aos-offset={40}
               >
                 Ready to take the next step in securing your property? Our team
@@ -43,7 +43,7 @@ export default function HomeContactSection() {
                   className="col-lg-6 col-md-6 col-sm-6"
                   data-aos="fade-up"
                   data-aos-duration={800}
-                  data-aos-delay={600}
+                  data-aos-delay={400}
                   data-aos-offset={40}
                 >
                   <div className="contact-boxarea">
@@ -75,7 +75,7 @@ export default function HomeContactSection() {
                   className="col-lg-6 col-md-6 col-sm-6"
                   data-aos="fade-up"
                   data-aos-duration={900}
-                  data-aos-delay={600}
+                  data-aos-delay={400}
                   data-aos-offset={40}
                 >
                   <div className="contact-boxarea">
@@ -109,7 +109,7 @@ export default function HomeContactSection() {
                   className="col-lg-6 col-md-6 col-sm-6"
                   data-aos="fade-up"
                   data-aos-duration={1000}
-                  data-aos-delay={600}
+                  data-aos-delay={400}
                   data-aos-offset={40}
                 >
                   <div className="contact-boxarea">
@@ -144,7 +144,7 @@ export default function HomeContactSection() {
                   className="col-lg-6 col-md-6 col-sm-6"
                   data-aos="fade-up"
                   data-aos-duration={1100}
-                  data-aos-delay={600}
+                  data-aos-delay={400}
                   data-aos-offset={40}
                 >
                   <div className="contact-boxarea">
@@ -191,7 +191,7 @@ export default function HomeContactSection() {
             className="col-lg-6"
             data-aos="zoom-out"
             data-aos-duration={1200}
-            data-aos-delay={600}
+            data-aos-delay={400}
             data-aos-offset={40}
           >
             <div className="contact-form-area">

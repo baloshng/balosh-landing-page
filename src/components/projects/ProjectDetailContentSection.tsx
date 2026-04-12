@@ -1,13 +1,13 @@
 import Image from "next/image"
-import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage"
 import { ProjectItem } from "@/data/projects"
+import { projectCoverImageUrl } from "@/lib/projectCoverImage"
 
 type ProjectDetailContentSectionProps = {
   project: ProjectItem
 }
 
 export default function ProjectDetailContentSection({ project }: ProjectDetailContentSectionProps) {
-  const heroSrc = projectDetailPlaceholderImage(project.slug)
+  const heroSrc = projectCoverImageUrl(project.slug)
   return (
     <div className="service-single-inner-area sp8">
       <div className="container">

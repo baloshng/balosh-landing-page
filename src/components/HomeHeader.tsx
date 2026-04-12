@@ -63,7 +63,7 @@ export default function HomeHeader() {
                 <nav id="navbar-example2" className="navbar">
                   <div className="header-elements">
                     <div className="site-logo">
-                      <Link href="/#home">
+                      <Link href="/">
                         <Image
                           src="/assets/img/logo/balosh.png"
                           alt=""
@@ -84,7 +84,7 @@ export default function HomeHeader() {
                         </li>
                         <li className="nav-item">
                           <Link href="/#service" className={navClass(activeId, "service")}>
-                            <span>Services</span>
+                            <span>Solutions</span>
                           </Link>
                         </li>
                         <li className="nav-item">
@@ -129,7 +129,7 @@ export default function HomeHeader() {
           <div className="col-12">
             <div className="mobile-header-elements">
               <div className="mobile-logo">
-                <Link href="/#home">
+                <Link href="/">
                   <Image
                     src="/assets/img/logo/balosh.png"
                     alt=""
@@ -151,7 +151,7 @@ export default function HomeHeader() {
       <div className="mobile-sidebar mobile-sidebar3">
         <div className="logosicon-area">
           <div className="logos">
-            <Link href="/#home">
+            <Link href="/">
               <Image
                 src="/assets/img/logo/balosh.png"
                 alt=""
@@ -193,7 +193,7 @@ export default function HomeHeader() {
             </li>
             <li className="nav-item">
               <Link href="/#service" className={navClass(activeId, "service")}>
-                <span>Services</span>
+                <span>Solutions</span>
               </Link>
             </li>
             <li className="nav-item">

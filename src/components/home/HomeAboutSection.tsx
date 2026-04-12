@@ -11,7 +11,7 @@ export default function HomeAboutSection() {
               <h5
                 data-aos="fade-right"
                 data-aos-duration="800"
-                data-aos-delay="300"
+                data-aos-delay="100"
               >
                 <Image
                   src="/assets/img/icons/finger2.svg"
@@ -26,7 +26,7 @@ export default function HomeAboutSection() {
               <p
                 data-aos="fade-right"
                 data-aos-duration="1000"
-                data-aos-delay="400"
+                data-aos-delay="200"
               >
                 Balosh Integrated Services is a leading access control company
                 in Nigeria, serving clients since 2005. Focused on the
@@ -42,7 +42,7 @@ export default function HomeAboutSection() {
               <div
                 data-aos="fade-right"
                 data-aos-duration="1200"
-                data-aos-delay="550"
+                data-aos-delay="350"
               >
                 <Image
                   src="/assets/img/all-images/balosh-why-balosh.png"
@@ -65,7 +65,7 @@ export default function HomeAboutSection() {
               <h5
                 data-aos="fade-left"
                 data-aos-duration="800"
-                data-aos-delay="300"
+                data-aos-delay="100"
               >
                 <Image
                   src="/assets/img/icons/finger2.svg"
@@ -84,7 +84,7 @@ export default function HomeAboutSection() {
               <p
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                data-aos-delay="400"
+                data-aos-delay="200"
               >
                 With years of experience & passion for innovation, our team
                 committed to delivering top-notch security and CCTV solutions
@@ -95,7 +95,7 @@ export default function HomeAboutSection() {
                 className="all-progress-area"
                 data-aos="fade-left"
                 data-aos-duration="1200"
-                data-aos-delay="00"
+                data-aos-delay="0"
               >
                 <div className="progres-section-area">
                   <div className="check">
@@ -149,7 +149,7 @@ export default function HomeAboutSection() {
                 className="btn-area"
                 data-aos="fade-left"
                 data-aos-duration="1300"
-                data-aos-delay="500"
+                data-aos-delay="300"
               >
                 <Link href="/#contact" className="header-btn4">
                   Learn About Us <i className="fa-solid fa-arrow-right"></i>
