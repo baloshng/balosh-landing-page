@@ -10,7 +10,13 @@ export default function HomeBlogSection({ posts }: HomeBlogSectionProps) {
   const homeBlogSlides = [...posts, ...posts, ...posts].map((post, index) => (
     <div className="blog-boxarea" key={`${post.slug}-${index}`}>
       <div className="img1">
-        <Image src={post.image} alt={post.title} width={600} height={400} className="h-auto w-full object-cover" unoptimized />
+        <Image
+          src={post.image}
+          alt={post.title}
+          width={600}
+          height={400}
+          className="h-auto w-full object-cover"
+        />
       </div>
       <div className="content-area">
         <div
@@ -42,14 +48,28 @@ export default function HomeBlogSection({ posts }: HomeBlogSectionProps) {
           <div className="col-lg-4">
             <div className="blog-header-area heading6">
               <h5 data-aos="fade-up" data-aos-duration={800}>
-                <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                <Image
+                  src="/assets/img/icons/finger2.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="inline-block align-middle"
+                />
                 Our Blogs
               </h5>
-              <h2 className="text-anime-style-3">Surveillance Stories Exploring Security Solutions</h2>
+              <h2 className="text-anime-style-3">
+                Surveillance Stories Exploring Security Solutions
+              </h2>
               <p data-aos="fade-up" data-aos-duration={1000}>
-                Welcome to our Security and CCTV Blog, your go-to resource for staying updated on the latest trends, tips, and insights in the world of security.
+                Welcome to our Security and CCTV Blog, your go-to resource for
+                staying updated on the latest trends, tips, and insights in the
+                world of security.
               </p>
-              <div className="btn-area mt-8" data-aos="fade-up" data-aos-duration={1100}>
+              <div
+                className="btn-area mt-3"
+                data-aos="fade-up"
+                data-aos-duration={1100}
+              >
                 <Link href="/blog" className="header-btn4">
                   View All <i className="fa-solid fa-arrow-right" />
                 </Link>
@@ -57,7 +77,9 @@ export default function HomeBlogSection({ posts }: HomeBlogSectionProps) {
             </div>
           </div>
           <div className="col-lg-8" data-aos="fade-up" data-aos-duration={1200}>
-            <div className="blog-slider-area owl-carousel">{homeBlogSlides}</div>
+            <div className="blog-slider-area owl-carousel">
+              {homeBlogSlides}
+            </div>
           </div>
         </div>
       </div>

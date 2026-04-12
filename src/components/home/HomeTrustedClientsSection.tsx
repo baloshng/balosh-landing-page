@@ -8,7 +8,9 @@ type HomeTrustedClientsSectionProps = {
   clients: TrustedClient[]
 }
 
-export default function HomeTrustedClientsSection({ clients }: HomeTrustedClientsSectionProps) {
+export default function HomeTrustedClientsSection({
+  clients,
+}: HomeTrustedClientsSectionProps) {
   const [reduceMotion, setReduceMotion] = useState(false)
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export default function HomeTrustedClientsSection({ clients }: HomeTrustedClient
               <h5
                 data-aos="fade-up"
                 data-aos-duration={800}
-                data-aos-delay={200}
+                data-aos-delay={0}
                 data-aos-offset={40}
                 className="mb-2"
               >
@@ -40,10 +42,11 @@ export default function HomeTrustedClientsSection({ clients }: HomeTrustedClient
                 className="mb-0"
                 data-aos="fade-up"
                 data-aos-duration={800}
-                data-aos-delay={300}
+                data-aos-delay={100}
                 data-aos-offset={40}
               >
-                A selection of organisations that rely on Balosh for access, parking, and traffic solutions.
+                A selection of organisations that rely on Balosh for access,
+                parking, and traffic solutions.
               </p>
             </div>
           </div>
@@ -53,21 +56,23 @@ export default function HomeTrustedClientsSection({ clients }: HomeTrustedClient
         className="trusted-clients-marquee-outer mt-4"
         data-aos="fade-up"
         data-aos-duration={900}
-        data-aos-delay={400}
+        data-aos-delay={200}
         data-aos-offset={40}
       >
         <div className="trusted-clients-marquee-mask">
           <div className="trusted-clients-marquee-track">
             {loop.map((client, idx) => (
-              <div className="trusted-clients-marquee__item" key={`${client.name}-${idx}`}>
+              <div
+                className="trusted-clients-marquee__item"
+                key={`${client.name}-${idx}`}
+              >
                 <Image
                   src={client.logoUrl}
                   alt={`${client.name} logo`}
-                  width={400}
-                  height={240}
+                  width={240}
+                  height={96}
                   className="trusted-clients-marquee__img"
-                  sizes="280px"
-                  unoptimized
+                  sizes="240px"
                 />
               </div>
             ))}

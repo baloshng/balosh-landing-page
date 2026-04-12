@@ -4,7 +4,16 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-const SECTION_IDS = ["home", "about", "service", "market", "project", "contact", "faq", "blog"] as const
+const SECTION_IDS = [
+  "home",
+  "about",
+  "service",
+  "market",
+  "project",
+  "contact",
+  "faq",
+  "blog",
+] as const
 
 type SectionId = (typeof SECTION_IDS)[number]
 
@@ -63,7 +72,7 @@ export default function HomeHeader() {
                 <nav id="navbar-example2" className="navbar">
                   <div className="header-elements">
                     <div className="site-logo">
-                      <Link href="/#home">
+                      <Link href="/">
                         <Image
                           src="/assets/img/logo/balosh.png"
                           alt=""
@@ -71,39 +80,56 @@ export default function HomeHeader() {
                           height={88}
                           className="w-[100px] h-auto"
                           style={{ width: "100px", height: "auto" }}
-                          unoptimized
                         />
                       </Link>
                     </div>
                     <div className="main-menu">
                       <ul>
                         <li className="nav-item">
-                          <Link href="/#about" className={navClass(activeId, "about")}>
+                          <Link
+                            href="/#about"
+                            className={navClass(activeId, "about")}
+                          >
                             <span>About</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/#service" className={navClass(activeId, "service")}>
-                            <span>Services</span>
+                          <Link
+                            href="/#service"
+                            className={navClass(activeId, "service")}
+                          >
+                            <span>Solutions</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/#market" className={navClass(activeId, "market")}>
+                          <Link
+                            href="/#market"
+                            className={navClass(activeId, "market")}
+                          >
                             <span>Our Market</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/#project" className={navClass(activeId, "project")}>
+                          <Link
+                            href="/#project"
+                            className={navClass(activeId, "project")}
+                          >
                             <span>Projects</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/#faq" className={navClass(activeId, "faq")}>
+                          <Link
+                            href="/#faq"
+                            className={navClass(activeId, "faq")}
+                          >
                             <span>FAQ</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/#blog" className={navClass(activeId, "blog")}>
+                          <Link
+                            href="/#blog"
+                            className={navClass(activeId, "blog")}
+                          >
                             <span>Blogs</span>
                           </Link>
                         </li>
@@ -129,7 +155,7 @@ export default function HomeHeader() {
           <div className="col-12">
             <div className="mobile-header-elements">
               <div className="mobile-logo">
-                <Link href="/#home">
+                <Link href="/">
                   <Image
                     src="/assets/img/logo/balosh.png"
                     alt=""
@@ -137,7 +163,6 @@ export default function HomeHeader() {
                     height={88}
                     className="w-[100px] h-auto"
                     style={{ width: "100px", height: "auto" }}
-                    unoptimized
                   />
                 </Link>
               </div>
@@ -151,15 +176,16 @@ export default function HomeHeader() {
       <div className="mobile-sidebar mobile-sidebar3">
         <div className="logosicon-area">
           <div className="logos">
-            <Image
-              src="/assets/img/logo/balosh.png"
-              alt=""
-              width={286}
-              height={88}
-              className="w-[100px] h-auto"
-              style={{ width: "100px", height: "auto" }}
-              unoptimized
-            />
+            <Link href="/">
+              <Image
+                src="/assets/img/logo/balosh.png"
+                alt=""
+                width={286}
+                height={88}
+                className="w-[100px] h-auto"
+                style={{ width: "100px", height: "auto" }}
+              />
+            </Link>
           </div>
           <div className="menu-close">
             <i className="fa-solid fa-xmark" />
@@ -191,7 +217,7 @@ export default function HomeHeader() {
             </li>
             <li className="nav-item">
               <Link href="/#service" className={navClass(activeId, "service")}>
-                <span>Services</span>
+                <span>Solutions</span>
               </Link>
             </li>
             <li className="nav-item">
@@ -259,22 +285,38 @@ export default function HomeHeader() {
                   <div className="social-links-mobile-menu">
                     <ul>
                       <li>
-                        <Link href="https://www.facebook.com/balosh1/" target="_blank" rel="noreferrer">
+                        <Link
+                          href="https://www.facebook.com/balosh1/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa-brands fa-facebook-f" />
                         </Link>
                       </li>
                       <li>
-                        <Link href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">
+                        <Link
+                          href="https://www.instagram.com/baloshng/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa-brands fa-instagram" />
                         </Link>
                       </li>
                       <li>
-                        <Link href="https://www.linkedin.com/company/balosh-integrated-services" target="_blank" rel="noreferrer">
+                        <Link
+                          href="https://www.linkedin.com/company/balosh-integrated-services"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa-brands fa-linkedin-in" />
                         </Link>
                       </li>
                       <li>
-                        <Link href="https://x.com/baloshng" target="_blank" rel="noreferrer">
+                        <Link
+                          href="https://x.com/baloshng"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa-brands fa-youtube" />
                         </Link>
                       </li>

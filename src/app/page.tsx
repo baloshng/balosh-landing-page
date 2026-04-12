@@ -6,6 +6,7 @@ import HomeBlogSection from "@/components/home/HomeBlogSection";
 import HomeContactSection from "@/components/home/HomeContactSection";
 import HomeCtaSection from "@/components/home/HomeCtaSection";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
+import HomeEntryReset from "@/components/home/HomeEntryReset";
 import HomeHeroSection from "@/components/home/HomeHeroSection";
 import HomePreloaderProgress from "@/components/home/HomePreloaderProgress";
 import HomePricingSection from "@/components/home/HomePricingSection";
@@ -16,6 +17,8 @@ import { blogPosts } from "@/data/blogPosts";
 import { projects } from "@/data/projects";
 import { trustedClients } from "@/data/trustedClients";
 import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, DEFAULT_TITLE } from "@/lib/seo";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: DEFAULT_TITLE,
@@ -36,6 +39,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <HomeEntryReset />
       <HomeHeader />
       <div>
         <HomePreloaderProgress />

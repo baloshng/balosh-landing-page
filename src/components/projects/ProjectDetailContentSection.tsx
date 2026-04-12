@@ -1,13 +1,15 @@
 import Image from "next/image"
-import { projectDetailPlaceholderImage } from "@/lib/projectDetailPlaceholderImage"
 import { ProjectItem } from "@/data/projects"
+import { projectCoverImageUrl } from "@/lib/projectCoverImage"
 
 type ProjectDetailContentSectionProps = {
   project: ProjectItem
 }
 
-export default function ProjectDetailContentSection({ project }: ProjectDetailContentSectionProps) {
-  const heroSrc = projectDetailPlaceholderImage(project.slug)
+export default function ProjectDetailContentSection({
+  project,
+}: ProjectDetailContentSectionProps) {
+  const heroSrc = projectCoverImageUrl(project.slug)
   return (
     <div className="service-single-inner-area sp8">
       <div className="container">
@@ -32,12 +34,21 @@ export default function ProjectDetailContentSection({ project }: ProjectDetailCo
               </p>
               <div className="space16" />
               <h3>Products Used</h3>
-              <div className="lista-area" style={{ padding: 0, border: "none" }}>
+              <div
+                className="lista-area"
+                style={{ padding: 0, border: "none" }}
+              >
                 <div className="space16" />
                 <ul>
                   {project.products.map((product) => (
                     <li key={product}>
-                      <Image src="/assets/img/icons/check3.svg" alt="" width={18} height={18} className="mr-2 inline-block align-middle" unoptimized />
+                      <Image
+                        src="/assets/img/icons/check3.svg"
+                        alt=""
+                        width={18}
+                        height={18}
+                        className="mr-2 inline-block align-middle"
+                      />
                       {product}
                     </li>
                   ))}

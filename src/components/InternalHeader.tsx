@@ -3,13 +3,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import type { MouseEvent } from "react"
 
-type NavKey = "blog" | "projects"
+type NavKey = "blog"
 
 function useInternalNavActive(): NavKey | null {
   const pathname = usePathname()
   if (pathname.startsWith("/blog")) return "blog"
-  if (pathname.startsWith("/projects")) return "projects"
   return null
 }
 
@@ -19,6 +19,11 @@ function linkClass(isActive: boolean) {
 
 export default function InternalHeader() {
   const active = useInternalNavActive()
+  const hardNavigate =
+    (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault()
+      window.location.assign(href)
+    }
 
   return (
     <div>
@@ -41,51 +46,72 @@ export default function InternalHeader() {
                           height={88}
                           className="w-[100px] h-auto"
                           style={{ width: "100px", height: "auto" }}
-                          unoptimized
                         />
                       </Link>
                     </div>
                     <div className="main-menu">
                       <ul>
                         <li className="nav-item">
-                          <Link href="/" className="nav-link">
+                          <Link
+                            href="/"
+                            className="nav-link"
+                            onClick={hardNavigate("/")}
+                          >
                             <span>Home</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/#about" className="nav-link">
+                          <Link
+                            href="/#about"
+                            className="nav-link"
+                            onClick={hardNavigate("/#about")}
+                          >
                             <span>About</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/#service" className="nav-link">
+                          <Link
+                            href="/#service"
+                            className="nav-link"
+                            onClick={hardNavigate("/#service")}
+                          >
                             <span>Services</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/#market" className="nav-link">
+                          <Link
+                            href="/#market"
+                            className="nav-link"
+                            onClick={hardNavigate("/#market")}
+                          >
                             <span>Our Market</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/projects" className={linkClass(active === "projects")}>
-                            <span>Projects</span>
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="/#faq" className="nav-link">
+                          <Link
+                            href="/#faq"
+                            className="nav-link"
+                            onClick={hardNavigate("/#faq")}
+                          >
                             <span>FAQ</span>
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link href="/blog" className={linkClass(active === "blog")}>
+                          <Link
+                            href="/blog"
+                            className={linkClass(active === "blog")}
+                          >
                             <span>Blogs</span>
                           </Link>
                         </li>
                       </ul>
                     </div>
                     <div className="btn-area">
-                      <Link href="/#contact" className="header-btn4">
+                      <Link
+                        href="/#contact"
+                        className="header-btn4"
+                        onClick={hardNavigate("/#contact")}
+                      >
                         Contact Us
                         <span>
                           <i className="fa-solid fa-arrow-right" />
@@ -112,7 +138,6 @@ export default function InternalHeader() {
                     height={88}
                     className="w-[100px] h-auto"
                     style={{ width: "100px", height: "auto" }}
-                    unoptimized
                   />
                 </Link>
               </div>
@@ -126,15 +151,16 @@ export default function InternalHeader() {
       <div className="mobile-sidebar mobile-sidebar3">
         <div className="logosicon-area">
           <div className="logos">
-            <Image
-              src="/assets/img/logo/balosh.png"
-              alt=""
-              width={286}
-              height={88}
-              className="w-[100px] h-auto"
-              style={{ width: "100px", height: "auto" }}
-              unoptimized
-            />
+            <Link href="/">
+              <Image
+                src="/assets/img/logo/balosh.png"
+                alt=""
+                width={286}
+                height={88}
+                className="w-[100px] h-auto"
+                style={{ width: "100px", height: "auto" }}
+              />
+            </Link>
           </div>
           <div className="menu-close">
             <i className="fa-solid fa-xmark" />
@@ -143,32 +169,43 @@ export default function InternalHeader() {
         <div className="mobile-nav mobile-nav1">
           <ul className="mobile-nav-list nav-list1">
             <li className="nav-item">
-              <Link href="/" className="nav-link">
+              <Link href="/" className="nav-link" onClick={hardNavigate("/")}>
                 <span>Home</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/#about" className="nav-link">
+              <Link
+                href="/#about"
+                className="nav-link"
+                onClick={hardNavigate("/#about")}
+              >
                 <span>About</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/#service" className="nav-link">
+              <Link
+                href="/#service"
+                className="nav-link"
+                onClick={hardNavigate("/#service")}
+              >
                 <span>Services</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/#market" className="nav-link">
+              <Link
+                href="/#market"
+                className="nav-link"
+                onClick={hardNavigate("/#market")}
+              >
                 <span>Our Market</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/projects" className={linkClass(active === "projects")}>
-                <span>Projects</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/#faq" className="nav-link">
+              <Link
+                href="/#faq"
+                className="nav-link"
+                onClick={hardNavigate("/#faq")}
+              >
                 <span>FAQ</span>
               </Link>
             </li>
@@ -179,7 +216,11 @@ export default function InternalHeader() {
             </li>
           </ul>
           <div className="allmobilesection">
-            <Link href="/#contact" className="header-btn4">
+            <Link
+              href="/#contact"
+              className="header-btn4"
+              onClick={hardNavigate("/#contact")}
+            >
               Get Started{" "}
               <span>
                 <i className="fa-solid fa-arrow-right" />
@@ -211,7 +252,10 @@ export default function InternalHeader() {
                       <i className="fa-solid fa-location-dot" />
                     </div>
                     <div className="contact-info-text">
-                      <Link href="/#contact">
+                      <Link
+                        href="/#contact"
+                        onClick={hardNavigate("/#contact")}
+                      >
                         9, Osaro Isokpan Street, <br /> Lekki Phase 1, Lagos.
                       </Link>
                     </div>
@@ -222,22 +266,38 @@ export default function InternalHeader() {
                   <div className="social-links-mobile-menu">
                     <ul>
                       <li>
-                        <Link href="https://www.facebook.com/balosh1/" target="_blank" rel="noreferrer">
+                        <Link
+                          href="https://www.facebook.com/balosh1/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa-brands fa-facebook-f" />
                         </Link>
                       </li>
                       <li>
-                        <Link href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">
+                        <Link
+                          href="https://www.instagram.com/baloshng/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa-brands fa-instagram" />
                         </Link>
                       </li>
                       <li>
-                        <Link href="https://www.linkedin.com/company/balosh-integrated-services" target="_blank" rel="noreferrer">
+                        <Link
+                          href="https://www.linkedin.com/company/balosh-integrated-services"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa-brands fa-linkedin-in" />
                         </Link>
                       </li>
                       <li>
-                        <Link href="https://x.com/baloshng" target="_blank" rel="noreferrer">
+                        <Link
+                          href="https://x.com/baloshng"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa-brands fa-youtube" />
                         </Link>
                       </li>

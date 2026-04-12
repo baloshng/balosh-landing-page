@@ -11,8 +11,12 @@ export default function HomePreloader() {
             width={350}
             height={98}
             className="loader-logo"
-            style={{ width: "auto", height: "auto", maxWidth: 200, maxHeight: 72 }}
-            unoptimized
+            style={{
+              width: "auto",
+              height: "auto",
+              maxWidth: 200,
+              maxHeight: 72,
+            }}
             priority
           />
         </div>

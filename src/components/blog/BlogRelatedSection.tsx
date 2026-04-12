@@ -23,7 +23,13 @@ export default function BlogRelatedSection({ posts }: BlogRelatedSectionProps) {
               <div className="blog-author-boxraea">
                 <div className="othera-content">
                   <div className="img1">
-                    <Image src={item.authorImage} alt={item.author} width={80} height={80} className="rounded-full object-cover" unoptimized />
+                    <Image
+                      src={item.authorImage}
+                      alt={item.author}
+                      width={80}
+                      height={80}
+                      className="rounded-full object-cover"
+                    />
                   </div>
                   <div className="text">
                     <Link href={`/blog/${item.slug}`}>{item.author}</Link>
@@ -31,7 +37,13 @@ export default function BlogRelatedSection({ posts }: BlogRelatedSectionProps) {
                 </div>
                 <div className="space20" />
                 <div className="blog-img">
-                  <Image src={item.image} alt={item.title} width={800} height={500} className="h-auto w-full object-cover" unoptimized />
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={800}
+                    height={500}
+                    className="h-auto w-full object-cover"
+                  />
                 </div>
                 <div className="blog-content">
                   <Link href={`/blog/${item.slug}`} className="tags">

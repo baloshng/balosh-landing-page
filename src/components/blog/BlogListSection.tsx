@@ -16,7 +16,13 @@ export default function BlogListSection({ posts }: BlogListSectionProps) {
               <div className="blog-author-boxraea">
                 <div className="othera-content">
                   <div className="img1">
-                    <Image src={post.authorImage} alt={post.author} width={80} height={80} className="rounded-full object-cover" unoptimized />
+                    <Image
+                      src={post.authorImage}
+                      alt={post.author}
+                      width={80}
+                      height={80}
+                      className="rounded-full object-cover"
+                    />
                   </div>
                   <div className="text">
                     <Link href={`/blog/${post.slug}`}>{post.author}</Link>
@@ -24,7 +30,13 @@ export default function BlogListSection({ posts }: BlogListSectionProps) {
                 </div>
                 <div className="space20" />
                 <div className="blog-img">
-                  <Image src={post.image} alt={post.title} width={800} height={500} className="h-auto w-full object-cover" unoptimized />
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={800}
+                    height={500}
+                    className="h-auto w-full object-cover"
+                  />
                 </div>
                 <div className="blog-content">
                   <Link href={`/blog/${post.slug}`} className="tags">
