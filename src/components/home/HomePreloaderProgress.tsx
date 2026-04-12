@@ -48,7 +48,7 @@ export default function HomePreloaderProgress() {
   return (
     <>
       <HomePreloader />
-      <HomeScrollProgress />
+      {/* <HomeScrollProgress /> */}
     </>
   )
 }

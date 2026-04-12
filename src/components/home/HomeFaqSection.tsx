@@ -20,9 +20,9 @@ export default function HomeFaqSection() {
           <div className="col-lg-6">
             <div className="faq-author-area">
               <div className="accordion accordion-flush" id="accordionFlushExample">
-                <div className="accordion-item" data-aos="fade-left" data-aos-duration={800} data-aos-delay={600} data-aos-offset={40}>
+                <div className="accordion-item">
                   <h2 className="accordion-header">
-                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
                       What are the benefits of installing CCTV cameras?
                     </button>
                   </h2>
@@ -31,7 +31,7 @@ export default function HomeFaqSection() {
                   </div>
                 </div>
                 <div className="space20" />
-                <div className="accordion-item" data-aos="fade-left" data-aos-duration={900} data-aos-delay={600} data-aos-offset={40}>
+                <div className="accordion-item">
                   <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                       How many CCTV cameras do I need for my property?
@@ -42,7 +42,7 @@ export default function HomeFaqSection() {
                   </div>
                 </div>
                 <div className="space20" />
-                <div className="accordion-item" data-aos="fade-left" data-aos-duration={1000} data-aos-delay={600} data-aos-offset={40}>
+                <div className="accordion-item">
                   <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                       Can CCTV cameras be used indoors and outdoors?
@@ -64,7 +64,7 @@ export default function HomeFaqSection() {
                   </div>
                 </div>
                 <div className="space20" />
-                <div className="accordion-item" data-aos="fade-left" data-aos-duration={1200} data-aos-delay={600} data-aos-offset={40}>
+                <div className="accordion-item">
                   <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
                       Are there any legal requirements for CCTV signage?
