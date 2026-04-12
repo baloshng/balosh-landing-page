@@ -24,3 +24,386 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Services carousel: Owl + % heights on imgs can collapse cards; use intrinsic height with a floor */
+body.homepage3-body .service3-section-area .service-carousel-area .service-boxarea .img1 img {
+  height: auto;
+  min-height: 520px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  width: 240px;
+  height: 240px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wide logo: keep natural aspect ratio (no square crop) */
+.loader-logo {
+  width: auto !important;
+  height: auto !important;
+  max-width: 200px;
+  max-height: 72px;
+  object-fit: contain;
+  animation: spin-reverse 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Home #contact: fixed icon tile + centered SVG */
+.contact2-section-area .contact-header .contact-boxarea .all-content .img1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.contact2-section-area .contact-header .contact-boxarea .all-content .img1 img {
+  display: block;
+  width: auto;
+  height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+.contact2-section-area .contact-header .row > [class*="col-"] {
+  display: flex;
+}
+
+.contact2-section-area .contact-header .contact-boxarea {
+  width: 100%;
+}
+
+/* Footer: social icon tiles — fixed size, centered Font Awesome icons */
+body .footer3-section-area .logo-content ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+body .footer3-section-area .logo-content ul li a i {
+  line-height: 1;
+}
+
+/* Footer “Contact Us” column: phone / email / location icon circles */
+body .footer3-section-area .location-area .img1 {
+  flex-shrink: 0;
+}
+
+body .footer3-section-area .location-area .img1 a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* Home blog carousel: hide Owl prev/next (nav disabled in main.js; belt-and-suspenders) */
+.blog3-section-area .blog-slider-area .owl-nav {
+  display: none !important;
+}
+
+/* Internal pages header (blog, projects): logo left, nav centered, Contact right */
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .site-logo {
+  flex: 0 0 auto;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .main-menu {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .main-menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .main-menu > ul > li {
+  display: inline-block;
+}
+
+body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .btn-area {
+  flex: 0 0 auto;
+}
+
+/* Trusted clients: infinite horizontal marquee (logos from balosh.com) */
+.trusted-clients-section-area {
+  background: transparent;
+  overflow: hidden;
+}
+
+.trusted-clients-header h5 {
+  color: var(--ztc-text-text-2, #0d0e0f);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.trusted-clients-header p {
+  color: var(--ztc-text-text-3, #5c5f69);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.trusted-clients-marquee-mask {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.trusted-clients-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 3rem;
+  animation: trusted-clients-marquee 55s linear infinite;
+}
+
+.trusted-clients-marquee__item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 104px;
+  min-width: 300px;
+  padding: 0 0.5rem;
+}
+
+.trusted-clients-marquee__img {
+  display: block;
+  height: 96px;
+  width: auto;
+  max-width: 300px;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(0.25);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+@media (hover: hover) {
+  .trusted-clients-marquee__img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+}
+
+@keyframes trusted-clients-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trusted-clients-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100% !important;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.5rem 2.5rem;
+    padding: 0 1rem 0.5rem;
+  }
+
+  .trusted-clients-marquee-mask {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
+/* Hero: full viewport height + background cover (fixes mobile / short hero) */
+body.homepage3-body #home.carousel-area.owl-carousel,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-stage-outer,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-stage,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-item {
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+}
+
+/* Owl sets inline heights; force each slide viewport-tall */
+body.homepage3-body #home.carousel-area.owl-carousel .owl-stage-outer,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-stage,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-item {
+  height: 100vh !important;
+  height: 100dvh !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+}
+
+body.homepage3-body #home.carousel-area .owl-item {
+  display: flex;
+  align-items: stretch;
+}
+
+/*
+ * main.css pads .hero3-section-area (260/130 desktop, 160/50 mobile). Padding
+ * shrinks the content box so the absolutely positioned bg can leave empty bands
+ * at the bottom on some slides. Zero section padding; pad the inner container instead.
+ */
+body.homepage3-body #home.carousel-area .hero3-section-area {
+  flex: 1 0 auto;
+  align-self: stretch;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  max-height: 100vh;
+  max-height: 100dvh;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+  body.homepage3-body #home.carousel-area .hero3-section-area .container {
+    padding-top: 260px;
+    padding-bottom: 130px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body.homepage3-body #home.carousel-area .hero3-section-area .container {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  body.homepage3-body #home.carousel-area .hero3-section-area .container {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+}
+
+body.homepage3-body #home.carousel-area .hero3-section-area .hero3-bg-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+body.homepage3-body #home.carousel-area .hero3-section-area .hero3-bg-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Zoom on active slide can expose edges; keep bleed contained */
+body.homepage3-body #home.carousel-area .owl-item.active .hero3-section-area .header-img4 {
+  transform: scale(1) !important;
+}
+
+body.homepage3-body #home.carousel-area .hero3-section-area .elements23,
+body.homepage3-body #home.carousel-area .hero3-section-area .elements24 {
+  z-index: 1;
+}
+
+body.homepage3-body #home.carousel-area .hero3-section-area .container {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* About / FAQ: .reveal defaults to visibility:hidden until GSAP runs; ensure images show with Next + load timing */
+body.homepage3-body .about3-section-area .about-images-area .reveal,
+body.homepage3-body .faq-section-area .faq-images-area .reveal {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* FAQ column: parent height for img { height: 100% } in main.css */
+body.homepage3-body .faq-section-area .faq-images-area .img1 {
+  min-height: 280px;
+}
+
+@media (min-width: 992px) {
+  body.homepage3-body .faq-section-area .faq-images-area .img1 {
+    min-height: 360px;
+  }
+}

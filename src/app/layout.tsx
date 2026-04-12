@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, DEFAULT_TITLE, SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,10 +15,66 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Securix - Security And CCTV",
-  description: "Security and CCTV landing page",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  category: "security",
+  keywords: [
+    "Balosh",
+    "access control",
+    "security solutions",
+    "parking systems",
+    "CCTV",
+    "automated entrances",
+    "Nigeria security company",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_NG",
+    url: "/",
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Balosh Integrated Services access control and security solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
-    icon: "/assets/img/logo/fav-logo3.png",
+    icon: [
+      { url: "/assets/img/logo/favicon.png", type: "image/png" },
+      { url: "/assets/img/logo/favicon.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/assets/img/logo/favicon.png",
+    apple: [{ url: "/assets/img/logo/favicon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -61,30 +118,8 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className="min-h-full flex flex-col homepage3-body">
+      <body suppressHydrationWarning className="min-h-full flex flex-col homepage3-body">
         {children}
-        <Script id="preloader-fallback" strategy="afterInteractive">{`
-          (() => {
-            const hidePreloader = () => {
-              const preloader = document.querySelector('.preloader');
-              if (!preloader) return;
-              preloader.classList.add('is-hidden');
-              window.setTimeout(() => {
-                if (preloader && preloader.parentNode) {
-                  preloader.parentNode.removeChild(preloader);
-                }
-              }, 350);
-            };
-
-            if (document.readyState === 'complete') {
-              hidePreloader();
-            } else {
-              window.addEventListener('load', hidePreloader, { once: true });
-            }
-
-            window.setTimeout(hidePreloader, 1800);
-          })();
-        `}</Script>
         <Script src="/assets/js/plugins/jquery-3-6-0.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/plugins/waypoints.js" strategy="afterInteractive" />
         <Script src="/assets/js/plugins/bootstrap.min.js" strategy="afterInteractive" />

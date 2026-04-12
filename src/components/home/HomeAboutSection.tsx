@@ -1,0 +1,164 @@
+import Image from "next/image"
+import Link from "next/link"
+
+export default function HomeAboutSection() {
+  return (
+    <div className="about3-section-area sp1" id="about">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="about-header-area heading6">
+              <h5
+                data-aos="fade-right"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              >
+                <Image
+                  src="/assets/img/icons/finger2.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="inline-block align-middle"
+                  unoptimized
+                />
+                About Us
+              </h5>
+              <p
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
+                Balosh Integrated Services is a leading access control company
+                in Nigeria, serving clients since 2005. Focused on the
+                commercial sector, we are known for our experience and
+                innovation. We tailor solutions to each client’s needs while
+                maintaining high standards of service and workmanship. Guided by
+                integrity, customer satisfaction, and values like innovation,
+                excellence, and teamwork, we consistently exceed expectations
+                and have earned a strong reputation through successful delivery
+                of major, high-profile access control projects nationwide.
+              </p>
+
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="550"
+              >
+                <Image
+                  src="/assets/img/all-images/balosh-why-balosh.png"
+                  alt="Why Balosh infographic"
+                  width={1024}
+                  height={506}
+                  className="h-auto w-full"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
+                  }}
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="about-header-area heading6">
+              <h5
+                data-aos="fade-left"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              >
+                <Image
+                  src="/assets/img/icons/finger2.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="inline-block align-middle"
+                  unoptimized
+                />
+                Why Choose Us
+              </h5>
+              <h2 className="text-anime-style-3">
+                Innovating Security Partner <br className="d-lg-block d-none" />
+                In Protection
+              </h2>
+              <p
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
+                With years of experience & passion for innovation, our team
+                committed to delivering top-notch security and CCTV solutions
+                tailored to your unique needs.
+              </p>
+              <div className="space32"></div>
+              <div
+                className="all-progress-area"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-delay="00"
+              >
+                <div className="progres-section-area">
+                  <div className="check">
+                    <span>
+                      <i className="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div className="about5-boxes">
+                    <h3>Product Development</h3>
+                    <div className="about5-bar">
+                      <span className="about5-per">
+                        <span className="per">95%</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="space20"></div>
+                <div className="progres-section-area">
+                  <div className="check">
+                    <span>
+                      <i className="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div className="about5-boxes">
+                    <h3>Company Investment</h3>
+                    <div className="about5-bar2">
+                      <span className="about5-per2">
+                        <span className="per">97%</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="space20"></div>
+                <div className="progres-section-area">
+                  <div className="check">
+                    <span>
+                      <i className="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div className="about5-boxes">
+                    <h3>Business Marketing</h3>
+                    <div className="about5-bar">
+                      <span className="about5-per">
+                        <span className="per">94%</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="btn-area"
+                data-aos="fade-left"
+                data-aos-duration="1300"
+                data-aos-delay="500"
+              >
+                <Link href="/#about" className="header-btn4">
+                  Learn About Us <i className="fa-solid fa-arrow-right"></i>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
