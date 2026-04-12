@@ -47,7 +47,14 @@ export default function HomeContactSection() {
                   <div className="contact-boxarea">
                     <div className="all-content">
                       <div className="img1">
-                        <Image src="/assets/img/icons/linkedin-icons1.svg" alt="" width={22} height={22} unoptimized />
+                        <Image
+                          src="/assets/img/icons/linkedin-icons1.svg"
+                          alt=""
+                          width={22}
+                          height={22}
+                          style={{ width: "22px", height: "22px" }}
+                          unoptimized
+                        />
                       </div>
                       <div className="content">
                         <p>Address</p>
