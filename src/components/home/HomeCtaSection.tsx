@@ -40,15 +40,10 @@ export default function HomeCtaSection() {
                 <div className="col-lg-1" />
                 <div className="col-lg-5">
                   <div className="cta-images">
-                    <div className="img1 reveal">
-                      <Image
-                        src="/assets/img/all-images/cta-img1.png"
-                        alt=""
-                        width={600}
-                        height={500}
-                        className="h-auto max-w-full"
-                      />
-                    </div>
+                    <div
+                      className="img1 reveal"
+                      style={{ width: "300px", height: "300px" }}
+                    ></div>
                     <div className="img2">
                       <Image
                         src="/assets/img/bg/cta-bg1.png"
