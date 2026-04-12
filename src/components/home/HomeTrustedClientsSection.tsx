@@ -8,7 +8,9 @@ type HomeTrustedClientsSectionProps = {
   clients: TrustedClient[]
 }
 
-export default function HomeTrustedClientsSection({ clients }: HomeTrustedClientsSectionProps) {
+export default function HomeTrustedClientsSection({
+  clients,
+}: HomeTrustedClientsSectionProps) {
   const [reduceMotion, setReduceMotion] = useState(false)
 
   useEffect(() => {
@@ -43,7 +45,8 @@ export default function HomeTrustedClientsSection({ clients }: HomeTrustedClient
                 data-aos-delay={100}
                 data-aos-offset={40}
               >
-                A selection of organisations that rely on Balosh for access, parking, and traffic solutions.
+                A selection of organisations that rely on Balosh for access,
+                parking, and traffic solutions.
               </p>
             </div>
           </div>
@@ -59,15 +62,17 @@ export default function HomeTrustedClientsSection({ clients }: HomeTrustedClient
         <div className="trusted-clients-marquee-mask">
           <div className="trusted-clients-marquee-track">
             {loop.map((client, idx) => (
-              <div className="trusted-clients-marquee__item" key={`${client.name}-${idx}`}>
+              <div
+                className="trusted-clients-marquee__item"
+                key={`${client.name}-${idx}`}
+              >
                 <Image
                   src={client.logoUrl}
                   alt={`${client.name} logo`}
-                  width={400}
-                  height={240}
+                  width={240}
+                  height={96}
                   className="trusted-clients-marquee__img"
-                  sizes="280px"
-                  unoptimized
+                  sizes="240px"
                 />
               </div>
             ))}

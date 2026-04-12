@@ -28,7 +28,6 @@ export default function HomeProjectsSection({
                   width={20}
                   height={20}
                   className="inline-block align-middle"
-                  unoptimized
                 />
                 Our Projects
               </h5>
@@ -92,7 +91,6 @@ export default function HomeProjectsSection({
                         width={48}
                         height={48}
                         style={{ width: "48px", height: "48px" }}
-                        unoptimized
                       />
                     </div>
                   </div>

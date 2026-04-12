@@ -20,7 +20,6 @@ export default function HomeContactSection() {
                   width={20}
                   height={20}
                   className="inline-block align-middle"
-                  unoptimized
                 />
                 Contact Us
               </h5>
@@ -61,7 +60,6 @@ export default function HomeContactSection() {
                           alt=""
                           width={22}
                           height={22}
-                          unoptimized
                         />
                       </div>
                       <div className="content">
@@ -93,7 +91,6 @@ export default function HomeContactSection() {
                           alt=""
                           width={22}
                           height={22}
-                          unoptimized
                         />
                       </div>
                       <div className="content">
@@ -128,7 +125,6 @@ export default function HomeContactSection() {
                           width={22}
                           height={22}
                           style={{ width: "22px", height: "22px" }}
-                          unoptimized
                         />
                       </div>
                       <div className="content">
@@ -167,7 +163,6 @@ export default function HomeContactSection() {
                           alt=""
                           width={22}
                           height={22}
-                          unoptimized
                         />
                       </div>
                       <div className="content">

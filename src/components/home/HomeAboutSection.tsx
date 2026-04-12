@@ -19,7 +19,6 @@ export default function HomeAboutSection() {
                   width={20}
                   height={20}
                   className="inline-block align-middle"
-                  unoptimized
                 />
                 About Us
               </h5>
@@ -55,7 +54,6 @@ export default function HomeAboutSection() {
                     height: "auto",
                     objectFit: "contain",
                   }}
-                  unoptimized
                 />
               </div>
             </div>
@@ -73,7 +71,6 @@ export default function HomeAboutSection() {
                   width={20}
                   height={20}
                   className="inline-block align-middle"
-                  unoptimized
                 />
                 Why Choose Us
               </h5>

@@ -16,7 +16,6 @@ export default function HomeBlogSection({ posts }: HomeBlogSectionProps) {
           width={600}
           height={400}
           className="h-auto w-full object-cover"
-          unoptimized
         />
       </div>
       <div className="content-area">
@@ -55,7 +54,6 @@ export default function HomeBlogSection({ posts }: HomeBlogSectionProps) {
                   width={20}
                   height={20}
                   className="inline-block align-middle"
-                  unoptimized
                 />
                 Our Blogs
               </h5>

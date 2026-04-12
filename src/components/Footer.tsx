@@ -5,31 +5,62 @@ export default function Footer() {
   return (
     <>
       <div className="footer3-section-area">
-        <Image src="/assets/img/bg/bg1.png" alt="" fill className="bg1 object-cover" sizes="100vw" unoptimized />
+        <Image
+          src="/assets/img/bg/bg1.png"
+          alt=""
+          fill
+          className="bg1 object-cover"
+          sizes="100vw"
+        />
         <div className="container relative z-[1]">
           <div className="row">
             <div className="col-lg-3 col-md-6">
               <div className="logo-content">
-                <Image src="/assets/img/logo/balosh.png" alt="Balosh logo" width={200} height={60} className="h-auto w-auto max-w-full" unoptimized />
-                <p>Our goal is to demystify the process, address your concerns, and empower you with the knowledge to embark.</p>
+                <Image
+                  src="/assets/img/logo/balosh.png"
+                  alt="Balosh logo"
+                  width={200}
+                  height={60}
+                  className="h-auto w-auto max-w-full"
+                />
+                <p>
+                  Our goal is to demystify the process, address your concerns,
+                  and empower you with the knowledge to embark.
+                </p>
                 <ul>
                   <li>
-                    <Link href="https://www.facebook.com/balosh1/" target="_blank" rel="noreferrer">
+                    <Link
+                      href="https://www.facebook.com/balosh1/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fa-brands fa-facebook-f" />
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://www.linkedin.com/company/balosh-integrated-services" target="_blank" rel="noreferrer">
+                    <Link
+                      href="https://www.linkedin.com/company/balosh-integrated-services"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fa-brands fa-linkedin-in" />
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://www.instagram.com/baloshng/" target="_blank" rel="noreferrer">
+                    <Link
+                      href="https://www.instagram.com/baloshng/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fa-brands fa-instagram" />
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://x.com/baloshng" target="_blank" rel="noreferrer">
+                    <Link
+                      href="https://x.com/baloshng"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fa-brands fa-youtube" />
                     </Link>
                   </li>
@@ -43,10 +74,14 @@ export default function Footer() {
                 <h4>Quick Links</h4>
                 <ul>
                   <li>
-                    <Link href="/#service">Cyber Security Specialist&nbsp;</Link>
+                    <Link href="/#service">
+                      Cyber Security Specialist&nbsp;
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/#service">&nbsp;Institute CCTV Security&nbsp;&nbsp;</Link>
+                    <Link href="/#service">
+                      &nbsp;Institute CCTV Security&nbsp;&nbsp;
+                    </Link>
                   </li>
                   <li>
                     <Link href="/#market">Banking Sector Outside</Link>
@@ -55,7 +90,9 @@ export default function Footer() {
                     <Link href="/#market">Private Sector Security&nbsp;</Link>
                   </li>
                   <li>
-                    <Link href="/#faq">School &amp; Hospital Security&nbsp;</Link>
+                    <Link href="/#faq">
+                      School &amp; Hospital Security&nbsp;
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -119,7 +156,8 @@ export default function Footer() {
                 </div>
                 <div className="text">
                   <Link href="/#contact">
-                    9, Osaro Isokpan Street, <br className="d-lg-block d-none" /> Lekki Phase 1, Lagos.
+                    9, Osaro Isokpan Street,{" "}
+                    <br className="d-lg-block d-none" /> Lekki Phase 1, Lagos.
                   </Link>
                 </div>
               </div>
@@ -127,7 +165,7 @@ export default function Footer() {
             <div className="space50" />
             <div className="col-lg-12 m-auto">
               <div className="copyright text-center">
-                <p>© Copyright 2024 -Securix. All Right Reserved</p>
+                <p>© Copyright 2026 - Balosh. All Right Reserved</p>
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 import { BALOSH_WP_CONTENT_IMAGES } from "@/data/baloshWpImages"
 
 /**
- * Random balosh.com media image per visit. Picks after mount so SSR/client markup match
+ * Random trusted-client logo per visit. Picks after mount so SSR/client markup match
  * (avoids hydration errors from differing random values).
  */
 export default function CtaNewsletterImage() {

@@ -19,7 +19,6 @@ export default function HomeServicesSection() {
                   width={20}
                   height={20}
                   className="inline-block align-middle"
-                  unoptimized
                 />
                 Our Solutions
               </h5>
@@ -110,18 +109,11 @@ export default function HomeServicesSection() {
                       width={800}
                       height={600}
                       className="h-full w-full object-cover"
-                      unoptimized
                     />
                   </div>
                   <div className="content-area">
                     <div className="icons">
-                      <Image
-                        src={card.icon}
-                        alt=""
-                        width={48}
-                        height={48}
-                        unoptimized
-                      />
+                      <Image src={card.icon} alt="" width={48} height={48} />
                     </div>
                     <div className="content-area-pera">
                       <Link href="/#service">{card.title}</Link>

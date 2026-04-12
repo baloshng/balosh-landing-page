@@ -36,7 +36,8 @@ const corporateMissionPillars = [
 const milestones = [
   {
     title: "Establishment",
-    description: "Balosh Integrated Services was founded, focusing on access control solutions.",
+    description:
+      "Balosh Integrated Services was founded, focusing on access control solutions.",
     iconClass: "fa-solid fa-award",
   },
   {
@@ -47,7 +48,8 @@ const milestones = [
   },
   {
     title: "Growth",
-    description: "Expanded our workforce to over 300 employees, managing an average of 100,000 passages daily.",
+    description:
+      "Expanded our workforce to over 300 employees, managing an average of 100,000 passages daily.",
     iconClass: "fa-solid fa-chart-line",
   },
   {
@@ -61,25 +63,38 @@ const milestones = [
 export default function AboutExtendedSections() {
   return (
     <>
-      <section className="about3-section-area sp1 about-page-section" id="corporate-philosophy">
+      <section
+        className="about3-section-area sp1 about-page-section"
+        id="corporate-philosophy"
+      >
         <div className="container">
           <div className="row align-items-center gy-4">
             <div className="col-lg-6">
               <div className="heading6">
                 <h5>
-                  <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
                   Corporate Philosophy
                 </h5>
                 <h2>Our Vision</h2>
                 <p>
-                  Our philosophy is not just a set of statements; it’s a commitment to excellence in every interaction. At Balosh Integrated
-                  Services, we are dedicated to creating secure environments that empower businesses and communities, ensuring a brighter,
-                  safer future for all.
+                  Our philosophy is not just a set of statements; it’s a
+                  commitment to excellence in every interaction. At Balosh
+                  Integrated Services, we are dedicated to creating secure
+                  environments that empower businesses and communities, ensuring
+                  a brighter, safer future for all.
                 </p>
                 <h2 className="mt-6">Our Mission</h2>
                 <p>
-                  At Balosh Integrated Services, our mission is to be the leading provider of access control solutions, driven by a
-                  commitment to integrity, customer satisfaction, and innovation. Our foundational beliefs guide every aspect of our
+                  At Balosh Integrated Services, our mission is to be the
+                  leading provider of access control solutions, driven by a
+                  commitment to integrity, customer satisfaction, and
+                  innovation. Our foundational beliefs guide every aspect of our
                   operations:
                 </p>
               </div>
@@ -87,7 +102,10 @@ export default function AboutExtendedSections() {
             <div className="col-lg-6">
               <div className="about-page-pillars">
                 {corporateMissionPillars.map((pillar) => (
-                  <article className="about-page-pillar-card" key={pillar.title}>
+                  <article
+                    className="about-page-pillar-card"
+                    key={pillar.title}
+                  >
                     <h3>{pillar.title}</h3>
                     <p>{pillar.description}</p>
                   </article>
@@ -98,41 +116,64 @@ export default function AboutExtendedSections() {
         </div>
       </section>
 
-      <section className="about3-section-area sp1 about-page-section about-page-section-alt" id="our-people">
+      <section
+        className="about3-section-area sp1 about-page-section about-page-section-alt"
+        id="our-people"
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="heading6">
                 <h5>
-                  <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
                   Our People
                 </h5>
                 <p>
-                  At Balosh Integrated Services, our greatest assets are our people, and we take immense pride in their contributions. We
-                  rely on their enthusiasm, talent, and commitment to drive our success in today’s competitive market. Our employees are the
-                  cornerstone of our ability to deliver exceptional service to our customers.
+                  At Balosh Integrated Services, our greatest assets are our
+                  people, and we take immense pride in their contributions. We
+                  rely on their enthusiasm, talent, and commitment to drive our
+                  success in today’s competitive market. Our employees are the
+                  cornerstone of our ability to deliver exceptional service to
+                  our customers.
                 </p>
                 <p>
-                  We believe that a positive employee experience directly translates to superior customer service. To ensure this, Balosh is
-                  dedicated to fostering a work environment that is safe, promotes well-being, and treats everyone with respect. Our culture
-                  emphasizes teamwork and open communication, allowing all employees to share ideas and collaborate effectively. We prioritize
-                  professional development by offering comprehensive training programs, mentorship opportunities, and clear pathways for career
-                  advancement.
+                  We believe that a positive employee experience directly
+                  translates to superior customer service. To ensure this,
+                  Balosh is dedicated to fostering a work environment that is
+                  safe, promotes well-being, and treats everyone with respect.
+                  Our culture emphasizes teamwork and open communication,
+                  allowing all employees to share ideas and collaborate
+                  effectively. We prioritize professional development by
+                  offering comprehensive training programs, mentorship
+                  opportunities, and clear pathways for career advancement.
                 </p>
                 <p>
-                  Diversity and inclusion are integral to our workplace philosophy. We actively seek to hire individuals from varied
-                  backgrounds, ensuring that our workforce reflects the communities we serve. Our inclusive policies and diversity training
-                  foster an environment where every employee feels valued and respected.
+                  Diversity and inclusion are integral to our workplace
+                  philosophy. We actively seek to hire individuals from varied
+                  backgrounds, ensuring that our workforce reflects the
+                  communities we serve. Our inclusive policies and diversity
+                  training foster an environment where every employee feels
+                  valued and respected.
                 </p>
                 <p>
-                  Employee well-being is a priority at Balosh. We offer wellness programs, flexible work arrangements, and resources such as
-                  Employee Assistance Programs to support mental health. Our social activities and team-building events help create a strong
-                  sense of community among our staff.
+                  Employee well-being is a priority at Balosh. We offer wellness
+                  programs, flexible work arrangements, and resources such as
+                  Employee Assistance Programs to support mental health. Our
+                  social activities and team-building events help create a
+                  strong sense of community among our staff.
                 </p>
                 <p>
-                  As we continue to grow, we remain committed to providing our employees with the tools and opportunities they need to thrive.
-                  At Balosh Integrated Services, we don’t just build a successful business; we cultivate a supportive and dynamic workplace
-                  where our people can excel.
+                  As we continue to grow, we remain committed to providing our
+                  employees with the tools and opportunities they need to
+                  thrive. At Balosh Integrated Services, we don’t just build a
+                  successful business; we cultivate a supportive and dynamic
+                  workplace where our people can excel.
                 </p>
               </div>
             </div>
@@ -140,33 +181,54 @@ export default function AboutExtendedSections() {
         </div>
       </section>
 
-      <section className="about3-section-area sp1 about-page-section" id="how-we-work">
+      <section
+        className="about3-section-area sp1 about-page-section"
+        id="how-we-work"
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="heading6">
                 <h5>
-                  <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
                   How We Work
                 </h5>
                 <p>
-                  At Balosh Integrated Services, we operate with a clear vision and a strong commitment to performance and delivery. Our
-                  pursuit of excellence is evident in every aspect of our work, as we provide high-quality products and services tailored to
-                  meet the needs of our customers. Central to our ethos is the promise of safe delivery.
+                  At Balosh Integrated Services, we operate with a clear vision
+                  and a strong commitment to performance and delivery. Our
+                  pursuit of excellence is evident in every aspect of our work,
+                  as we provide high-quality products and services tailored to
+                  meet the needs of our customers. Central to our ethos is the
+                  promise of safe delivery.
                 </p>
                 <p>
-                  Health and safety are fundamental principles that guide our operations. We cultivate a culture of rigorous attention to
-                  detail and meticulous planning, ensuring that these values are integrated into every project. This disciplined approach not
-                  only enhances our project management capabilities but also guarantees successful outcomes.
+                  Health and safety are fundamental principles that guide our
+                  operations. We cultivate a culture of rigorous attention to
+                  detail and meticulous planning, ensuring that these values are
+                  integrated into every project. This disciplined approach not
+                  only enhances our project management capabilities but also
+                  guarantees successful outcomes.
                 </p>
                 <p>
-                  However, our commitment to safe delivery extends beyond mere health and safety. We recognize the importance of our customers’
-                  valuable assets and take full responsibility for their investments. We treat our customers’ risks and reputations as if they
-                  were our own, fostering a sense of accountability in all our endeavors. This dedication has enabled us to build long-term
-                  partnerships with our clients, relationships that are grounded in trust and collaboration and have stood the test of time.
+                  However, our commitment to safe delivery extends beyond mere
+                  health and safety. We recognize the importance of our
+                  customers’ valuable assets and take full responsibility for
+                  their investments. We treat our customers’ risks and
+                  reputations as if they were our own, fostering a sense of
+                  accountability in all our endeavors. This dedication has
+                  enabled us to build long-term partnerships with our clients,
+                  relationships that are grounded in trust and collaboration and
+                  have stood the test of time.
                 </p>
                 <p>
-                  At Balosh Integrated Services, we don’t just deliver projects; we cultivate enduring partnerships that drive mutual success.
+                  At Balosh Integrated Services, we don’t just deliver projects;
+                  we cultivate enduring partnerships that drive mutual success.
                 </p>
               </div>
             </div>
@@ -174,13 +236,22 @@ export default function AboutExtendedSections() {
         </div>
       </section>
 
-      <section className="about3-section-area sp1 about-page-section about-page-section-alt" id="milestones">
+      <section
+        className="about3-section-area sp1 about-page-section about-page-section-alt"
+        id="milestones"
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="heading6">
                 <h5>
-                  <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
                   Milestones
                 </h5>
               </div>
@@ -202,34 +273,53 @@ export default function AboutExtendedSections() {
         </div>
       </section>
 
-      <section className="about3-section-area sp1 about-page-section" id="md-message">
+      <section
+        className="about3-section-area sp1 about-page-section"
+        id="md-message"
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="heading6 about-page-quote-card">
                 <h5>
-                  <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
                   MD&apos;s Message
                 </h5>
                 <p>
-                  As we look ahead to our 20th anniversary next July, this year marks a significant moment for Balosh Integrated Services!
-                  Our journey has been made possible by two vital pillars: our incredible customers and our committed employees.
+                  As we look ahead to our 20th anniversary next July, this year
+                  marks a significant moment for Balosh Integrated Services! Our
+                  journey has been made possible by two vital pillars: our
+                  incredible customers and our committed employees.
                 </p>
                 <p>
-                  We are immensely grateful for the trust our customers place in us. Their confidence - reflected in their continued business,
-                  referrals, and partnership - drives us to exceed expectations every day. Our dedicated employees embody this spirit of
-                  excellence, delivering services with remarkable quality and efficiency. Their unwavering commitment fills us with excitement
-                  for the bright future ahead.
+                  We are immensely grateful for the trust our customers place in
+                  us. Their confidence - reflected in their continued business,
+                  referrals, and partnership - drives us to exceed expectations
+                  every day. Our dedicated employees embody this spirit of
+                  excellence, delivering services with remarkable quality and
+                  efficiency. Their unwavering commitment fills us with
+                  excitement for the bright future ahead.
                 </p>
                 <p>
-                  In the past year, I have been particularly proud of our company’s resilience. Together, we have navigated unprecedented
-                  challenges and successfully expanded our range of solutions to address evolving needs. Our major projects not only showcase
-                  our capabilities but also highlight our dedication to innovation and service excellence.
+                  In the past year, I have been particularly proud of our
+                  company’s resilience. Together, we have navigated
+                  unprecedented challenges and successfully expanded our range
+                  of solutions to address evolving needs. Our major projects not
+                  only showcase our capabilities but also highlight our
+                  dedication to innovation and service excellence.
                 </p>
                 <p>
-                  As we approach our 20th anniversary, I want to extend my heartfelt gratitude to our employees, customers, and partners.
-                  Together, we are building a brighter future, and I am confident that Balosh Integrated Services will continue to thrive as we
-                  provide solutions that truly make a difference.
+                  As we approach our 20th anniversary, I want to extend my
+                  heartfelt gratitude to our employees, customers, and partners.
+                  Together, we are building a brighter future, and I am
+                  confident that Balosh Integrated Services will continue to
+                  thrive as we provide solutions that truly make a difference.
                 </p>
                 <div className="about-page-signoff">
                   <strong>Roy Femi Oshinbolu</strong>

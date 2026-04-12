@@ -190,7 +190,7 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   flex: 0 0 auto;
 }
 
-/* Trusted clients: infinite horizontal marquee (logos from balosh.com) */
+/* Trusted clients: infinite horizontal marquee (local logos under assets/img/logo/trusted-clients) */
 .trusted-clients-section-area {
   background: transparent;
   overflow: hidden;
@@ -237,9 +237,8 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
 
 .trusted-clients-marquee__img {
   display: block;
+  width: 240px;
   height: 96px;
-  width: auto;
-  max-width: 300px;
   object-fit: contain;
   opacity: 0.85;
   filter: grayscale(0.25);

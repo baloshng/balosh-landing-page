@@ -57,7 +57,6 @@ export default function HomeFaqSection() {
                   width={20}
                   height={20}
                   className="mr-2 inline-block align-middle"
-                  unoptimized
                 />
                 FAQ’s
               </h5>
@@ -79,7 +78,10 @@ export default function HomeFaqSection() {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <div className="faq-author-area">
-              <div className="accordion accordion-flush" id="accordionFlushExample">
+              <div
+                className="accordion accordion-flush"
+                id="accordionFlushExample"
+              >
                 {FAQ_ITEMS.map((item, index) => {
                   const isOpen = openIndex === index
                   const panelId = `flush-collapse-${item.id}`
@@ -141,7 +143,6 @@ export default function HomeFaqSection() {
                       width={1200}
                       height={1200}
                       className="h-full w-full object-cover"
-                      unoptimized
                     />
                   </div>
                 </div>

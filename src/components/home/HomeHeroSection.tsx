@@ -14,7 +14,6 @@ export default function HomeHeroSection() {
               fill
               sizes="100vw"
               className="header-img4 object-cover object-center"
-              unoptimized
               priority={index === 0}
             />
           </div>
@@ -29,7 +28,6 @@ export default function HomeHeroSection() {
                       width={20}
                       height={20}
                       className="mr-2 inline-block align-middle"
-                      unoptimized
                     />
                     <span className="align-middle">{slide.eyebrow}</span>
                   </h5>
@@ -54,7 +52,6 @@ export default function HomeHeroSection() {
             height={140}
             className="elements23"
             style={{ width: "400px", height: "140px" }}
-            unoptimized
           />
           <Image
             src="/assets/img/elements/elements24.png"
@@ -63,7 +60,6 @@ export default function HomeHeroSection() {
             height={140}
             className="elements24"
             style={{ width: "400px", height: "140px" }}
-            unoptimized
           />
         </div>
       ))}
