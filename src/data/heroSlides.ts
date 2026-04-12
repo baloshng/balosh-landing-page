@@ -13,7 +13,7 @@ export type HeroSlide = {
 export const heroSlides: HeroSlide[] = [
   {
     id: "access-control",
-    bannerSrc: "/assets/img/logo/banner1.webp",
+    bannerSrc: "/assets/img/logo/banner1.jpg",
     eyebrow: "Balosh Integrated Services",
     title: "Access Control That Matches How Your Site Really Works",
     description:
@@ -21,7 +21,7 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "automated-entrances",
-    bannerSrc: "/assets/img/logo/banner1.webp",
+    bannerSrc: "/assets/img/logo/banner1.jpg",
     eyebrow: "Automated Entrances",
     title: "Barriers, Turnstiles & Speed Gates Built for Throughput",
     description:

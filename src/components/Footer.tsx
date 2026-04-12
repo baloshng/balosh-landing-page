@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-3 col-md-6">
               <div className="logo-content">
-                <Image src="/assets/img/logo/logo4.png" alt="" width={200} height={60} className="h-auto w-auto max-w-full" unoptimized />
+                <Image src="/assets/img/logo/balosh.png" alt="Balosh logo" width={200} height={60} className="h-auto w-auto max-w-full" unoptimized />
                 <p>Our goal is to demystify the process, address your concerns, and empower you with the knowledge to embark.</p>
                 <ul>
                   <li>

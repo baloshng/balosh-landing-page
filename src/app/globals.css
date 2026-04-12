@@ -196,14 +196,16 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   overflow: hidden;
 }
 
-.trusted-clients-header h5 {
-  color: var(--ztc-text-text-2, #0d0e0f);
+.trusted-clients-header.heading5 h5 {
+  color: #1c0f01 !important;
   font-size: 1.5rem;
   font-weight: 700;
+  background: #f7e8d6;
 }
 
-.trusted-clients-header p {
-  color: var(--ztc-text-text-3, #5c5f69);
+.trusted-clients-header.heading5 p {
+  color: #3b2a1a !important;
+  opacity: 1;
   font-size: 1rem;
   line-height: 1.6;
 }
