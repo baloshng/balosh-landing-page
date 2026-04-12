@@ -56,7 +56,6 @@ export default function HomeCtaSection() {
                         width={600}
                         height={500}
                         className="h-auto max-w-full"
-                        unoptimized
                       />
                     </div>
                   </div>
