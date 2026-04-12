@@ -23,14 +23,21 @@ export default function HomeHeroSection() {
               <div className="col-lg-6">
                 <div className="header-main-content heading5">
                   <h5>
-                    <Image src="/assets/img/icons/finger1.svg" alt="" width={20} height={20} className="mr-2 inline-block align-middle" unoptimized />
+                    <Image
+                      src="/assets/img/icons/finger1.svg"
+                      alt=""
+                      width={20}
+                      height={20}
+                      className="mr-2 inline-block align-middle"
+                      unoptimized
+                    />
                     <span className="align-middle">{slide.eyebrow}</span>
                   </h5>
                   <h1 className="text-anime-style-3">{slide.title}</h1>
                   <p>{slide.description}</p>
-                  <div className="btn-area">
+                  <div className="btn-area hero-cta-grid">
                     <Link href="/#contact" className="header-btn4">
-                      Request a Quote <i className="fa-solid fa-arrow-right" />
+                      Request Quote <i className="fa-solid fa-arrow-right" />
                     </Link>
                     <Link href="/#project" className="header-btn1">
                       View Projects <i className="fa-solid fa-arrow-right" />

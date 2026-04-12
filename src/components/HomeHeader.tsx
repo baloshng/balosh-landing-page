@@ -151,15 +151,17 @@ export default function HomeHeader() {
       <div className="mobile-sidebar mobile-sidebar3">
         <div className="logosicon-area">
           <div className="logos">
-            <Image
-              src="/assets/img/logo/balosh.png"
-              alt=""
-              width={286}
-              height={88}
-              className="w-[100px] h-auto"
-              style={{ width: "100px", height: "auto" }}
-              unoptimized
-            />
+            <Link href="/#home">
+              <Image
+                src="/assets/img/logo/balosh.png"
+                alt=""
+                width={286}
+                height={88}
+                className="w-[100px] h-auto"
+                style={{ width: "100px", height: "auto" }}
+                unoptimized
+              />
+            </Link>
           </div>
           <div className="menu-close">
             <i className="fa-solid fa-xmark" />

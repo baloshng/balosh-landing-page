@@ -151,7 +151,7 @@ export default function HomeAboutSection() {
                 data-aos-duration="1300"
                 data-aos-delay="500"
               >
-                <Link href="/#about" className="header-btn4">
+                <Link href="/#contact" className="header-btn4">
                   Learn About Us <i className="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>
