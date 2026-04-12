@@ -225,89 +225,78 @@ $('.testimonial-slider-area').owlCarousel({
   }
 });
 
-// HEADER //
-$('.carousel-area').owlCarousel({
-  loop:true,
-  margin:0,
-  nav:false,
-  dots:false,
-  mouseDrag:false,
-  items:1,
-  autoplay:true,
-  vertical:true,
-  animateOut: 'fadeOut',
-  animateIn: 'fadeIn',
-  active:true,
-  smartSpeed:1500,
-  autoplayTimeout:3000,
-  autoplayHoverPause:false,
-  responsiveClass:true,
-  responsive:{
-      0:{
-          items:1,
-          nav:false,
-      },
-      600:{
-          items:1,
-      },
-      1000:{
-          items:1,
-      }
+// Homepage carousels (hero, solutions, projects) — must be re-runnable after Next.js client navigation
+function baloshInitHomepageOwl($) {
+  function safeInit(selector, options) {
+    var $t = $(selector);
+    if (!$t.length) return;
+    if ($t.data("owl.carousel")) {
+      $t.trigger("destroy.owl.carousel");
+    }
+    $t.owlCarousel(options);
   }
-});
 
+  safeInit(".carousel-area", {
+    loop: true,
+    margin: 0,
+    nav: false,
+    dots: false,
+    mouseDrag: false,
+    items: 1,
+    autoplay: true,
+    vertical: true,
+    animateOut: "fadeOut",
+    animateIn: "fadeIn",
+    active: true,
+    smartSpeed: 1500,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: false,
+    responsiveClass: true,
+    responsive: {
+      0: { items: 1, nav: false },
+      600: { items: 1 },
+      1000: { items: 1 },
+    },
+  });
 
-// SERVICE TESTIMONIAL //
-$('.service-carousel-area').owlCarousel({
-  loop:true,
-  margin:30,
-  nav:true,
-  dots:false,
-  items:10,
-  navText:["<i class='fa-solid fa-arrow-left'></i>","<i class='fa-solid fa-arrow-right'></i>"],
-  autoplay:true,
-  smartSpeed:2000,
-  autoplayTimeout:3000,
-  responsiveClass:true,
-  responsive:{
-      0:{
-          items:1,
-          nav:true,
-      },
-      600:{
-          items:2,
-      },
-      1000:{
-          items:3,
-      }
-  }
-});
+  safeInit(".service-carousel-area", {
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    items: 10,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    autoplay: true,
+    smartSpeed: 2000,
+    autoplayTimeout: 3000,
+    responsiveClass: true,
+    responsive: {
+      0: { items: 1, nav: true },
+      600: { items: 2 },
+      1000: { items: 3 },
+    },
+  });
 
-// TESTIMONIAL //
-$('.testimonial-author-slider').owlCarousel({
-  loop:true,
-  margin:30,
-  nav:true,
-  dots:false,
-  items:10,
-  navText:["<i class='fa-solid fa-arrow-left'></i>","<i class='fa-solid fa-arrow-right'></i>"],
-  autoplay:true,
-  smartSpeed:2000,
-  autoplayTimeout:3000,
-  responsiveClass:true,
-  responsive:{
-      0:{
-          items:1,
-          nav:true,
-      },
-      600:{
-          items:2,
-      },
-      1000:{
-          items:2,
-      }
-  }
-});
+  safeInit(".testimonial-author-slider", {
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    items: 10,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    autoplay: true,
+    smartSpeed: 2000,
+    autoplayTimeout: 3000,
+    responsiveClass: true,
+    responsive: {
+      0: { items: 1, nav: true },
+      600: { items: 2 },
+      1000: { items: 2 },
+    },
+  });
+}
+
+baloshInitHomepageOwl(jQuery);
 
 // BLOG TESTIMONIAL //
 $('.blog-slider-area').owlCarousel({
@@ -334,97 +323,81 @@ $('.blog-slider-area').owlCarousel({
   }
 });
 
-//========== PRELOADER ============= //
-$(window).on("load", function (event) {
-  setTimeout(function () {
-    $(".preloader").fadeToggle();
-  }, 200);
-  
-//========== GSAP AREA ============= //
+function baloshInitHomepageGsap() {
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+  gsap.registerPlugin(ScrollTrigger);
 
-if ($('.text-anime-style-1').length) {
-  let staggerAmount 	= 0.05,
-  translateXValue = 0,
-  delayValue 		= 0.3,
-   animatedTextElements = document.querySelectorAll('.text-anime-style-1');
-
-  animatedTextElements.forEach((element) => {
-  let animationSplitText = new SplitText(element, { type: "chars, words" });
-    gsap.from(animationSplitText.words, {
-    duration: 1,
-    delay: delayValue,
-    x: 20,
-    autoAlpha: 0,
-    stagger: staggerAmount,
-    scrollTrigger: { trigger: element, start: "top 85%" },
+  if ($(".text-anime-style-1").length) {
+    var staggerAmount = 0.05;
+    var delayValue = 0.3;
+    var animatedTextElements = document.querySelectorAll(".text-anime-style-1");
+    animatedTextElements.forEach(function (element) {
+      var animationSplitText = new SplitText(element, { type: "chars, words" });
+      gsap.from(animationSplitText.words, {
+        duration: 1,
+        delay: delayValue,
+        x: 20,
+        autoAlpha: 0,
+        stagger: staggerAmount,
+        scrollTrigger: { trigger: element, start: "top 85%" },
+      });
     });
-  });
   }
 
-  if ($('.text-anime-style-2').length) {
-  let	 staggerAmount 		= 0.05,
-   translateXValue	= 20,
-   delayValue 		= 0.3,
-   easeType 			= "power2.out",
-   animatedTextElements = document.querySelectorAll('.text-anime-style-2');
-
-  animatedTextElements.forEach((element) => {
-  let animationSplitText = new SplitText(element, { type: "chars, words" });
-    gsap.from(animationSplitText.chars, {
-      duration: 1,
-      delay: delayValue,
-      x: translateXValue,
-      autoAlpha: 0,
-      stagger: staggerAmount,
-      ease: easeType,
-      scrollTrigger: { trigger: element, start: "top 85%"},
+  if ($(".text-anime-style-2").length) {
+    var staggerAmount2 = 0.05;
+    var translateXValue = 20;
+    var delayValue2 = 0.3;
+    var easeType = "power2.out";
+    var animatedTextElements2 = document.querySelectorAll(".text-anime-style-2");
+    animatedTextElements2.forEach(function (element) {
+      var animationSplitText = new SplitText(element, { type: "chars, words" });
+      gsap.from(animationSplitText.chars, {
+        duration: 1,
+        delay: delayValue2,
+        x: translateXValue,
+        autoAlpha: 0,
+        stagger: staggerAmount2,
+        ease: easeType,
+        scrollTrigger: { trigger: element, start: "top 85%" },
+      });
     });
-  });
   }
 
-  if ($('.text-anime-style-3').length) {
-  let	animatedTextElements = document.querySelectorAll('.text-anime-style-3');
-
-  animatedTextElements.forEach((element) => {
-  //Reset if needed
-  if (element.animation) {
-    element.animation.progress(1).kill();
-    element.split.revert();
+  if ($(".text-anime-style-3").length) {
+    var animatedTextElements3 = document.querySelectorAll(".text-anime-style-3");
+    animatedTextElements3.forEach(function (element) {
+      if (element.animation) {
+        element.animation.progress(1).kill();
+        element.split.revert();
+      }
+      element.split = new SplitText(element, {
+        type: "lines,words,chars",
+        linesClass: "split-line",
+      });
+      gsap.set(element, { perspective: 400 });
+      gsap.set(element.split.chars, {
+        opacity: 0,
+        x: "50",
+      });
+      element.animation = gsap.to(element.split.chars, {
+        scrollTrigger: { trigger: element, start: "top 90%" },
+        x: "0",
+        y: "0",
+        rotateX: "0",
+        opacity: 1,
+        duration: 1,
+        ease: Back.easeOut,
+        stagger: 0.02,
+      });
+    });
   }
-
-  element.split = new SplitText(element, {
-    type: "lines,words,chars",
-    linesClass: "split-line",
-  });
-  gsap.set(element, { perspective: 400 });
-
-  gsap.set(element.split.chars, {
-    opacity: 0,
-    x: "50",
-  });
-
-  element.animation = gsap.to(element.split.chars, {
-    scrollTrigger: { trigger: element,	start: "top 90%" },
-    x: "0",
-    y: "0",
-    rotateX: "0",
-    opacity: 1,
-    duration: 1,
-    ease: Back.easeOut,
-    stagger: 0.02,
-  });
-  });
-  }
-
 
   if ($(".reveal").length) {
-    gsap.registerPlugin(ScrollTrigger);
     var revealContainers = document.querySelectorAll(".reveal");
     revealContainers.forEach(function (container) {
       var image = container.querySelector("img");
-      if (!image) {
-        return;
-      }
+      if (!image) return;
       var tl = gsap.timeline({
         scrollTrigger: { trigger: container, toggleActions: "play none none none" },
       });
@@ -433,9 +406,44 @@ if ($('.text-anime-style-1').length) {
       tl.from(image, 1.5, { xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out });
     });
   }
+}
 
+window.baloshInitHomePage = function () {
+  try {
+    if (typeof AOS !== "undefined" && AOS.refresh) {
+      AOS.refresh();
+    }
+  } catch (e) {}
+  try {
+    if (typeof ScrollTrigger !== "undefined") {
+      ScrollTrigger.getAll().forEach(function (st) {
+        st.kill();
+      });
+    }
+  } catch (e) {}
+  try {
+    baloshInitHomepageGsap();
+  } catch (e) {}
+  try {
+    baloshInitHomepageOwl(jQuery);
+  } catch (e) {}
+  try {
+    if (typeof ScrollTrigger !== "undefined") {
+      ScrollTrigger.refresh(true);
+    }
+  } catch (e) {}
+};
+
+//========== PRELOADER ============= //
+$(window).on("load", function () {
+  setTimeout(function () {
+    $(".preloader").fadeToggle();
+  }, 200);
+
+  if (typeof window.baloshInitHomePage === "function") {
+    window.baloshInitHomePage();
+  }
 });
-//========== GSAP AREA ============= //
 
 //========== PROGRESSBAR AREA ============= //
 {

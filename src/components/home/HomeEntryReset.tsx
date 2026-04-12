@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useLayoutEffect } from "react"
+import { useEffect, useLayoutEffect, useRef } from "react"
 import { usePathname } from "next/navigation"
 
 /**
@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation"
  */
 export default function HomeEntryReset() {
   const pathname = usePathname()
+  const prevPathRef = useRef<string | null>(null)
 
   useLayoutEffect(() => {
     if (pathname !== "/") return
@@ -34,6 +35,21 @@ export default function HomeEntryReset() {
       window.cancelAnimationFrame(id)
       window.clearTimeout(t)
     }
+  }, [pathname])
+
+  /**
+   * Owl / GSAP / AOS init on first full load via `window.load` in main.js.
+   * Re-run only when client-navigating to `/` from another route (avoids double SplitText on first paint).
+   */
+  useEffect(() => {
+    const from = prevPathRef.current
+    prevPathRef.current = pathname
+    if (pathname !== "/") return
+    if (from === null || from === "/") return
+    const t = window.setTimeout(() => {
+      window.baloshInitHomePage?.()
+    }, 100)
+    return () => window.clearTimeout(t)
   }, [pathname])
 
   return null

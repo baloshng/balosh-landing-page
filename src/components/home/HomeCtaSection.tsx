@@ -1,4 +1,5 @@
 import Image from "next/image"
+import CtaNewsletterImage from "@/components/home/CtaNewsletterImage"
 
 export default function HomeCtaSection() {
   return (
@@ -26,7 +27,7 @@ export default function HomeCtaSection() {
                 <div className="col-lg-5">
                   <div className="cta-images">
                     <div className="img1 reveal">
-                      <Image src="/assets/img/all-images/cta-img1.png" alt="" width={600} height={500} className="h-auto max-w-full" unoptimized />
+                      <CtaNewsletterImage />
                     </div>
                     <div className="img2">
                       <Image src="/assets/img/bg/cta-bg1.png" alt="" width={800} height={600} className="h-auto max-w-full" unoptimized />

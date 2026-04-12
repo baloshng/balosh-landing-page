@@ -1,25 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/Footer";
 import InternalHeader from "@/components/InternalHeader";
 import BlogHeroSection from "@/components/blog/BlogHeroSection";
+import CareersApplicationForm from "@/components/careers/CareersApplicationForm";
 import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 const CAREER_PARAGRAPHS = [
-  "kindly fill and submit the form below.",
-  "N.B: Only forms with accrate and clear information would be reviewed.",
+  "Kindly fill and submit the form below.",
   "Balosh is the No. 1 access control company, operating successfully since 2005. We pride ourselves as one of the most innovative teams in the industry, and our growth has come from understanding each client's specific requirements while maintaining strong service delivery.",
-];
-
-const ROLE_OPTIONS = [
-  "Account officer/analyst",
-  "Admin/storekeeper",
-  "Operations officer",
-  "Parking attendant",
-  "Supervisor",
-  "Ticket attendant",
-  "Others",
 ];
 
 export const metadata: Metadata = {
@@ -71,19 +60,7 @@ export default function CareersPage() {
                     <div className="space16" />
                   </div>
                 ))}
-                <h3>Role Applying For</h3>
-                <div className="space16" />
-                <ul>
-                  {ROLE_OPTIONS.map((role) => (
-                    <li key={role}>
-                      <p>{role}</p>
-                    </li>
-                  ))}
-                </ul>
-                <div className="space32" />
-                <Link href="https://balosh.com/career/" target="_blank" rel="noreferrer" className="header-btn4">
-                  Apply on Balosh Careers <i className="fa-solid fa-arrow-right" />
-                </Link>
+                <CareersApplicationForm />
               </div>
             </div>
           </div>
