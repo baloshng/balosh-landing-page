@@ -47,19 +47,18 @@ export default function HomeCtaSection() {
                         width={600}
                         height={500}
                         className="h-auto max-w-full"
-                        unoptimized
                       />
                     </div>
-                    {/* <div className="img2">
+                    <div className="img2">
                       <Image
-                        src="/assets/img/all-images/elements23.png"
+                        src="/assets/img/bg/cta-bg1.png"
                         alt=""
                         width={600}
                         height={500}
                         className="h-auto max-w-full"
                         unoptimized
                       />
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </div>
