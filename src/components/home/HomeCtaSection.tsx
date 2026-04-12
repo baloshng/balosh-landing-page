@@ -50,7 +50,16 @@ export default function HomeCtaSection() {
                         unoptimized
                       />
                     </div>
-                    <div className="img2"></div>
+                    {/* <div className="img2">
+                      <Image
+                        src="/assets/img/all-images/elements23.png"
+                        alt=""
+                        width={600}
+                        height={500}
+                        className="h-auto max-w-full"
+                        unoptimized
+                      />
+                    </div> */}
                   </div>
                 </div>
               </div>
