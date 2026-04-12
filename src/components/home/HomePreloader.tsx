@@ -8,9 +8,10 @@ export default function HomePreloader() {
           <Image
             src="/assets/img/logo/logobash.png"
             alt="Logo"
-            width={320}
-            height={120}
+            width={350}
+            height={98}
             className="loader-logo"
+            style={{ width: "auto", height: "auto", maxWidth: 200, maxHeight: 72 }}
             unoptimized
             priority
           />

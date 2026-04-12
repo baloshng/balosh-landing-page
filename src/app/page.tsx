@@ -10,8 +10,10 @@ import HomePreloaderProgress from "@/components/home/HomePreloaderProgress";
 import HomePricingSection from "@/components/home/HomePricingSection";
 import HomeProjectsSection from "@/components/home/HomeProjectsSection";
 import HomeServicesSection from "@/components/home/HomeServicesSection";
+import HomeTrustedClientsSection from "@/components/home/HomeTrustedClientsSection";
 import { blogPosts } from "@/data/blogPosts";
 import { projects } from "@/data/projects";
+import { trustedClients } from "@/data/trustedClients";
 
 export default function Home() {
   return (
@@ -26,6 +28,7 @@ export default function Home() {
           <HomeServicesSection />
           <HomePricingSection />
           <HomeProjectsSection projects={projects} />
+          <HomeTrustedClientsSection clients={trustedClients} />
           <HomeContactSection />
           <HomeFaqSection />
           <HomeBlogSection posts={blogPosts} />

@@ -3,8 +3,8 @@ import Image from "next/image"
 export default function HomeCtaSection() {
   return (
     <div className="cta3-section-area">
-      <Image src="/assets/img/elements/elements23.png" alt="" width={400} height={400} className="elements23" unoptimized />
-      <Image src="/assets/img/elements/elements24.png" alt="" width={400} height={400} className="elements24" unoptimized />
+      <Image src="/assets/img/elements/elements23.png" alt="" width={206} height={107} className="elements23" unoptimized />
+      <Image src="/assets/img/elements/elements24.png" alt="" width={228} height={166} className="elements24" unoptimized />
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

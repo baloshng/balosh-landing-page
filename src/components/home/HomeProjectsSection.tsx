@@ -41,7 +41,14 @@ export default function HomeProjectsSection({ projects }: HomeProjectsSectionPro
                       <p>{project.client}</p>
                     </div>
                     <div className="img1">
-                      <Image src="/assets/img/icons/quito-icons2.svg" alt="" width={48} height={48} unoptimized />
+                      <Image
+                        src="/assets/img/icons/quito-icons2.svg"
+                        alt=""
+                        width={48}
+                        height={48}
+                        style={{ width: "48px", height: "auto" }}
+                        unoptimized
+                      />
                     </div>
                   </div>
                   <div className="space16" />

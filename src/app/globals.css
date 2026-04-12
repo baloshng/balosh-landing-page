@@ -82,7 +82,7 @@ body.homepage3-body .service3-section-area .service-carousel-area .service-boxar
 
 /* Home #contact: fixed icon tile + centered SVG */
 .contact2-section-area .contact-header .contact-boxarea .all-content .img1 {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
@@ -96,12 +96,22 @@ body.homepage3-body .service3-section-area .service-carousel-area .service-boxar
 
 .contact2-section-area .contact-header .contact-boxarea .all-content .img1 img {
   display: block;
-  width: 22px;
+  width: auto;
   height: 22px;
   max-width: 22px;
   max-height: 22px;
   object-fit: contain;
+  object-position: center;
   flex-shrink: 0;
+  margin: 0 auto;
+}
+
+.contact2-section-area .contact-header .row > [class*="col-"] {
+  display: flex;
+}
+
+.contact2-section-area .contact-header .contact-boxarea {
+  width: 100%;
 }
 
 /* Footer: social icon tiles — fixed size, centered Font Awesome icons */
@@ -180,4 +190,92 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
 
 body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elements .btn-area {
   flex: 0 0 auto;
+}
+
+/* Trusted clients: infinite horizontal marquee (logos from balosh.com) */
+.trusted-clients-section-area {
+  background: var(--ztc-bg-bg-6, #eef2f2);
+  overflow: hidden;
+}
+
+.trusted-clients-header h5 {
+  color: var(--ztc-text-text-2, #0d0e0f);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.trusted-clients-header p {
+  color: var(--ztc-text-text-3, #5c5f69);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.trusted-clients-marquee-mask {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.trusted-clients-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 3rem;
+  animation: trusted-clients-marquee 55s linear infinite;
+}
+
+.trusted-clients-marquee__item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 0.25rem;
+}
+
+.trusted-clients-marquee__img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(0.25);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+@media (hover: hover) {
+  .trusted-clients-marquee__img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+}
+
+@keyframes trusted-clients-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trusted-clients-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100% !important;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.5rem 2.5rem;
+    padding: 0 1rem 0.5rem;
+  }
+
+  .trusted-clients-marquee-mask {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
 }

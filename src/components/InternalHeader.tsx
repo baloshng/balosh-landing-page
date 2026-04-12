@@ -37,8 +37,8 @@ export default function InternalHeader() {
                         <Image
                           src="/assets/img/logo/balosh.png"
                           alt=""
-                          width={100}
-                          height={36}
+                          width={286}
+                          height={88}
                           className="w-[100px] h-auto"
                           style={{ width: "100px", height: "auto" }}
                           unoptimized
@@ -108,8 +108,8 @@ export default function InternalHeader() {
                   <Image
                     src="/assets/img/logo/balosh.png"
                     alt=""
-                    width={100}
-                    height={36}
+                    width={286}
+                    height={88}
                     className="w-[100px] h-auto"
                     style={{ width: "100px", height: "auto" }}
                     unoptimized
@@ -129,8 +129,8 @@ export default function InternalHeader() {
             <Image
               src="/assets/img/logo/balosh.png"
               alt=""
-              width={100}
-              height={36}
+              width={286}
+              height={88}
               className="w-[100px] h-auto"
               style={{ width: "100px", height: "auto" }}
               unoptimized

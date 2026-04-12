@@ -37,8 +37,24 @@ export default function HomeHeroSection() {
               </div>
             </div>
           </div>
-          <Image src="/assets/img/elements/elements23.png" alt="" width={400} height={400} className="elements23" unoptimized />
-          <Image src="/assets/img/elements/elements24.png" alt="" width={400} height={400} className="elements24" unoptimized />
+          <Image
+            src="/assets/img/elements/elements23.png"
+            alt=""
+            width={400}
+            height={140}
+            className="elements23"
+            style={{ width: "400px", height: "140px" }}
+            unoptimized
+          />
+          <Image
+            src="/assets/img/elements/elements24.png"
+            alt=""
+            width={400}
+            height={140}
+            className="elements24"
+            style={{ width: "400px", height: "140px" }}
+            unoptimized
+          />
         </div>
       ))}
     </div>

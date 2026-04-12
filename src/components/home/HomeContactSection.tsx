@@ -43,11 +43,11 @@ export default function HomeContactSection() {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration={1000} data-aos-delay={600} data-aos-offset={40}>
+                <div className="col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration={1000} data-aos-delay={600} data-aos-offset={40}>
                   <div className="contact-boxarea">
                     <div className="all-content">
                       <div className="img1">
-                        <Image src="/assets/img/icons/location-icons2.svg" alt="" width={22} height={22} unoptimized />
+                        <Image src="/assets/img/icons/linkedin-icons1.svg" alt="" width={22} height={22} unoptimized />
                       </div>
                       <div className="content">
                         <p>Address</p>
@@ -56,11 +56,11 @@ export default function HomeContactSection() {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration={1100} data-aos-delay={600} data-aos-offset={40}>
+                <div className="col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration={1100} data-aos-delay={600} data-aos-offset={40}>
                   <div className="contact-boxarea">
                     <div className="all-content">
                       <div className="img1">
-                        <Image src="/assets/img/icons/linkedin-icons1.svg" alt="" width={22} height={22} unoptimized />
+                        <Image src="/assets/img/icons/location-icons2.svg" alt="" width={22} height={22} unoptimized />
                       </div>
                       <div className="content">
                         <p>Instagram</p>
