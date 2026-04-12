@@ -96,10 +96,8 @@ body.homepage3-body .service3-section-area .service-carousel-area .service-boxar
 
 .contact2-section-area .contact-header .contact-boxarea .all-content .img1 img {
   display: block;
-  width: auto;
+  width: 22px;
   height: 22px;
-  max-width: 22px;
-  max-height: 22px;
   object-fit: contain;
   object-position: center;
   flex-shrink: 0;
@@ -406,4 +404,21 @@ body.homepage3-body .faq-section-area .faq-images-area .img1 {
   body.homepage3-body .faq-section-area .faq-images-area .img1 {
     min-height: 360px;
   }
+}
+
+/* FAQ accordion: keep readable text during Bootstrap collapse/open transitions */
+body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item {
+  background: var(--ztc-bg-bg-11);
+}
+
+body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .accordion-collapse,
+body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .accordion-collapse.collapsing,
+body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .accordion-collapse.show {
+  background: var(--ztc-bg-bg-11);
+}
+
+body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-item .accordion-body {
+  color: var(--ztc-text-text-1);
+  opacity: 1;
+  transition: none;
 }

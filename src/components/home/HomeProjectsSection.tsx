@@ -46,7 +46,7 @@ export default function HomeProjectsSection({ projects }: HomeProjectsSectionPro
                         alt=""
                         width={48}
                         height={48}
-                        style={{ width: "48px", height: "auto" }}
+                        style={{ width: "48px", height: "48px" }}
                         unoptimized
                       />
                     </div>
