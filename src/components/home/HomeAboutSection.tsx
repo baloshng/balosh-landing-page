@@ -7,31 +7,56 @@ export default function HomeAboutSection() {
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
-            <div className="about-images-area">
-              <div className="img1 reveal">
+            <div className="about-header-area heading6">
+              <h5
+                data-aos="fade-right"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              >
                 <Image
-                  src="/assets/img/all-images/balosh-solutions/balosh-in-brief-diagram.png"
-                  alt="Why Balosh diagram"
+                  src="/assets/img/icons/finger2.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="inline-block align-middle"
+                  unoptimized
+                />
+                About Us
+              </h5>
+              <p
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
+                Balosh Integrated Services is a leading access control company
+                in Nigeria, serving clients since 2005. Focused on the
+                commercial sector, we are known for our experience and
+                innovation. We tailor solutions to each client’s needs while
+                maintaining high standards of service and workmanship. Guided by
+                integrity, customer satisfaction, and values like innovation,
+                excellence, and teamwork, we consistently exceed expectations
+                and have earned a strong reputation through successful delivery
+                of major, high-profile access control projects nationwide.
+              </p>
+
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="550"
+              >
+                <Image
+                  src="/assets/img/all-images/balosh-why-balosh.png"
+                  alt="Why Balosh infographic"
                   width={1024}
                   height={506}
                   className="h-auto w-full"
-                  style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
+                  }}
                   unoptimized
                 />
-              </div>
-              <div className="img2 reveal">
-                <Image
-                  src="/assets/img/all-images/balosh-solutions/Access-Control_3.jpg"
-                  alt="Balosh access control"
-                  width={800}
-                  height={600}
-                  className="h-auto w-full"
-                  style={{ width: "100%", height: "auto", objectFit: "contain" }}
-                  unoptimized
-                />
-              </div>
-              <div className="about-pera">
-                <p>WE ARE TRUSTED BY MORE THAN 3500 CLIENTS</p>
               </div>
             </div>
           </div>
@@ -42,7 +67,14 @@ export default function HomeAboutSection() {
                 data-aos-duration="800"
                 data-aos-delay="300"
               >
-                <Image src="/assets/img/icons/finger2.svg" alt="" width={20} height={20} className="inline-block align-middle" unoptimized />
+                <Image
+                  src="/assets/img/icons/finger2.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="inline-block align-middle"
+                  unoptimized
+                />
                 Why Choose Us
               </h5>
               <h2 className="text-anime-style-3">

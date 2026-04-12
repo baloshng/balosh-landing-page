@@ -1,30 +1,33 @@
 import Image from "next/image"
 import Link from "next/link"
+import { heroSlides } from "@/data/heroSlides"
 
 export default function HomeHeroSection() {
   return (
     <div id="home" className="carousel-area owl-carousel">
-      {[1, 2, 3].map((item) => (
-        <div className="hero3-section-area" key={item}>
-          <Image
-            src="/assets/img/logo/banner1.jpg"
-            alt=""
-            width={1920}
-            height={1080}
-            className="header-img4 h-auto w-full max-w-full"
-            unoptimized
-            priority={item === 1}
-          />
-          <div className="container">
+      {heroSlides.map((slide, index) => (
+        <div className="hero3-section-area" key={slide.id}>
+          <div className="hero3-bg-cover" aria-hidden>
+            <Image
+              src={slide.bannerSrc}
+              alt=""
+              fill
+              sizes="100vw"
+              className="header-img4 object-cover object-center"
+              unoptimized
+              priority={index === 0}
+            />
+          </div>
+          <div className="container relative z-2">
             <div className="row">
               <div className="col-lg-6">
                 <div className="header-main-content heading5">
                   <h5>
                     <Image src="/assets/img/icons/finger1.svg" alt="" width={20} height={20} className="mr-2 inline-block align-middle" unoptimized />
-                    <span className="align-middle">Balosh Integrated Services</span>
+                    <span className="align-middle">{slide.eyebrow}</span>
                   </h5>
-                  <h1 className="text-anime-style-3">Access Control, Parking &amp; Traffic Management Solutions</h1>
-                  <p>We deploy secure access control systems, automated entrances, car park infrastructure, and event entry solutions for corporate, residential, institutional, and high-traffic environments.</p>
+                  <h1 className="text-anime-style-3">{slide.title}</h1>
+                  <p>{slide.description}</p>
                   <div className="btn-area">
                     <Link href="/#contact" className="header-btn4">
                       Request a Quote <i className="fa-solid fa-arrow-right" />

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import HomeHeader from "@/components/HomeHeader";
 import HomeAboutSection from "@/components/home/HomeAboutSection";
@@ -14,6 +15,23 @@ import HomeTrustedClientsSection from "@/components/home/HomeTrustedClientsSecti
 import { blogPosts } from "@/data/blogPosts";
 import { projects } from "@/data/projects";
 import { trustedClients } from "@/data/trustedClients";
+import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, DEFAULT_TITLE } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
+  openGraph: {
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    url: "/",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
+  },
+};
 
 export default function Home() {
   return (

@@ -194,7 +194,7 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
 
 /* Trusted clients: infinite horizontal marquee (logos from balosh.com) */
 .trusted-clients-section-area {
-  background: var(--ztc-bg-bg-6, #eef2f2);
+  background: transparent;
   overflow: hidden;
 }
 
@@ -230,15 +230,16 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
-  padding: 0 0.25rem;
+  min-height: 104px;
+  min-width: 300px;
+  padding: 0 0.5rem;
 }
 
 .trusted-clients-marquee__img {
   display: block;
-  height: 48px;
+  height: 96px;
   width: auto;
-  max-width: 150px;
+  max-width: 300px;
   object-fit: contain;
   opacity: 0.85;
   filter: grayscale(0.25);
@@ -277,5 +278,132 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   .trusted-clients-marquee-mask {
     mask-image: none;
     -webkit-mask-image: none;
+  }
+}
+
+/* Hero: full viewport height + background cover (fixes mobile / short hero) */
+body.homepage3-body #home.carousel-area.owl-carousel,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-stage-outer,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-stage,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-item {
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+}
+
+/* Owl sets inline heights; force each slide viewport-tall */
+body.homepage3-body #home.carousel-area.owl-carousel .owl-stage-outer,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-stage,
+body.homepage3-body #home.carousel-area.owl-carousel .owl-item {
+  height: 100vh !important;
+  height: 100dvh !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+}
+
+body.homepage3-body #home.carousel-area .owl-item {
+  display: flex;
+  align-items: stretch;
+}
+
+/*
+ * main.css pads .hero3-section-area (260/130 desktop, 160/50 mobile). Padding
+ * shrinks the content box so the absolutely positioned bg can leave empty bands
+ * at the bottom on some slides. Zero section padding; pad the inner container instead.
+ */
+body.homepage3-body #home.carousel-area .hero3-section-area {
+  flex: 1 0 auto;
+  align-self: stretch;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  max-height: 100vh;
+  max-height: 100dvh;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+  body.homepage3-body #home.carousel-area .hero3-section-area .container {
+    padding-top: 260px;
+    padding-bottom: 130px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body.homepage3-body #home.carousel-area .hero3-section-area .container {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  body.homepage3-body #home.carousel-area .hero3-section-area .container {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+}
+
+body.homepage3-body #home.carousel-area .hero3-section-area .hero3-bg-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+body.homepage3-body #home.carousel-area .hero3-section-area .hero3-bg-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Zoom on active slide can expose edges; keep bleed contained */
+body.homepage3-body #home.carousel-area .owl-item.active .hero3-section-area .header-img4 {
+  transform: scale(1) !important;
+}
+
+body.homepage3-body #home.carousel-area .hero3-section-area .elements23,
+body.homepage3-body #home.carousel-area .hero3-section-area .elements24 {
+  z-index: 1;
+}
+
+body.homepage3-body #home.carousel-area .hero3-section-area .container {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* About / FAQ: .reveal defaults to visibility:hidden until GSAP runs; ensure images show with Next + load timing */
+body.homepage3-body .about3-section-area .about-images-area .reveal,
+body.homepage3-body .faq-section-area .faq-images-area .reveal {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* FAQ column: parent height for img { height: 100% } in main.css */
+body.homepage3-body .faq-section-area .faq-images-area .img1 {
+  min-height: 280px;
+}
+
+@media (min-width: 992px) {
+  body.homepage3-body .faq-section-area .faq-images-area .img1 {
+    min-height: 360px;
   }
 }

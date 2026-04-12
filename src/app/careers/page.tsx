@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import InternalHeader from "@/components/InternalHeader";
 import BlogHeroSection from "@/components/blog/BlogHeroSection";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 const CAREER_PARAGRAPHS = [
   "kindly fill and submit the form below.",
@@ -19,6 +21,25 @@ const ROLE_OPTIONS = [
   "Ticket attendant",
   "Others",
 ];
+
+export const metadata: Metadata = {
+  title: "Careers",
+  description: "Join the Balosh workforce and explore career opportunities in access control and security operations.",
+  alternates: {
+    canonical: "/careers",
+  },
+  openGraph: {
+    title: "Balosh Careers",
+    description: "Join the Balosh workforce and explore career opportunities in access control and security operations.",
+    url: "/careers",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    title: "Balosh Careers",
+    description: "Join the Balosh workforce and explore career opportunities in access control and security operations.",
+    images: [DEFAULT_OG_IMAGE],
+  },
+};
 
 export default function CareersPage() {
   return (
