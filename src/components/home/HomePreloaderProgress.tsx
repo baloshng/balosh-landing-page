@@ -1,39 +1,36 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import HomePreloader from "@/components/home/HomePreloader"
 import HomeScrollProgress from "@/components/home/HomeScrollProgress"
 
-/** Matches layout script fallback: 1800ms × 3 */
-const PRELOADER_MAX_MS = 1800 * 3
-
-function hidePreloaderDOM() {
-  const preloader = document.querySelector(".preloader")
-  if (!preloader?.parentNode) return
-  preloader.classList.add("is-hidden")
-  window.setTimeout(() => {
-    if (preloader.parentNode) {
-      preloader.parentNode.removeChild(preloader)
-    }
-  }, 350)
-}
+const PRELOADER_READY_MS = 120
+const PRELOADER_FALLBACK_MS = 1200
+const PRELOADER_EXIT_MS = 350
 
 export default function HomePreloaderProgress() {
+  const [isVisible, setIsVisible] = useState(true)
+  const [isHiding, setIsHiding] = useState(false)
+
   useEffect(() => {
     let done = false
+    let exitTimer: number | undefined
+
     const finish = () => {
       if (done) return
       done = true
-      hidePreloaderDOM()
+      setIsHiding(true)
+      exitTimer = window.setTimeout(() => {
+        setIsVisible(false)
+      }, PRELOADER_EXIT_MS)
     }
 
-    // Client-side navigation to /: document is already "complete" — only a timer can hide the preloader.
     if (document.readyState === "complete") {
-      const timer = window.setTimeout(finish, PRELOADER_MAX_MS)
+      const timer = window.setTimeout(finish, PRELOADER_READY_MS)
       return () => window.clearTimeout(timer)
     }
 
-    const timer = window.setTimeout(finish, PRELOADER_MAX_MS)
+    const timer = window.setTimeout(finish, PRELOADER_FALLBACK_MS)
     const onLoad = () => {
       window.clearTimeout(timer)
       finish()
@@ -42,13 +39,20 @@ export default function HomePreloaderProgress() {
     return () => {
       window.clearTimeout(timer)
       window.removeEventListener("load", onLoad)
+      if (exitTimer) window.clearTimeout(exitTimer)
     }
   }, [])
 
+  if (!isVisible) {
+    return <HomeScrollProgress />
+  }
+
   return (
     <>
-      <HomePreloader />
-      {/* <HomeScrollProgress /> */}
+      <div className={isHiding ? "preloader is-hidden" : "preloader"}>
+        <HomePreloader />
+      </div>
+      <HomeScrollProgress />
     </>
   )
 }

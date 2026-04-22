@@ -58,12 +58,12 @@ export default function HomeBlogSection({ posts }: HomeBlogSectionProps) {
                 Our Blogs
               </h5>
               <h2 className="text-anime-style-3">
-                Surveillance Stories Exploring Security Solutions
+                News, Projects, and Field Updates
               </h2>
               <p data-aos="fade-up" data-aos-duration={1000}>
-                Welcome to our Security and CCTV Blog, your go-to resource for
-                staying updated on the latest trends, tips, and insights in the
-                world of security.
+                Follow Balosh stories from airports, estates, ports,
+                hospitality, and events where access, mobility, and security
+                operations are delivered at scale.
               </p>
               <div
                 className="btn-area mt-3"

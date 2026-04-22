@@ -101,6 +101,7 @@ export default function RootLayout({
             display: flex;
             align-items: center;
             justify-content: center;
+            animation: preloader-autohide 0.01s linear 4s forwards;
           }
           .preloader .loading-container {
             margin: 0 !important;
@@ -116,7 +117,17 @@ export default function RootLayout({
             pointer-events: none;
             transition: opacity 0.25s ease, visibility 0.25s ease;
           }
+          @keyframes preloader-autohide {
+            to {
+              opacity: 0;
+              visibility: hidden;
+              pointer-events: none;
+            }
+          }
         `}</style>
+        <noscript>
+          <style>{`.preloader { display: none !important; }`}</style>
+        </noscript>
       </head>
       <body suppressHydrationWarning className="min-h-full flex flex-col homepage3-body">
         {children}

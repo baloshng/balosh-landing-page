@@ -9,21 +9,21 @@ import { DEFAULT_OG_IMAGE } from "@/lib/seo"
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Balosh Integrated Services, our philosophy, people, milestones, and leadership direction.",
+    "Learn about Balosh Integrated Services, including our company story, mission, values, team, milestones, and leadership direction.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About Balosh",
     description:
-      "Learn about Balosh Integrated Services, our philosophy, people, milestones, and leadership direction.",
+      "Learn about Balosh Integrated Services, including our company story, mission, values, team, milestones, and leadership direction.",
     url: "/about",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "About Balosh",
     description:
-      "Learn about Balosh Integrated Services, our philosophy, people, milestones, and leadership direction.",
+      "Learn about Balosh Integrated Services, including our company story, mission, values, team, milestones, and leadership direction.",
     images: [DEFAULT_OG_IMAGE],
   },
 }

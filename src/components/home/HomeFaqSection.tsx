@@ -3,37 +3,56 @@
 import Image from "next/image"
 import { Fragment, useState } from "react"
 
-const FAQ_ITEMS: { id: string; question: string }[] = [
+const FAQ_ITEMS: { id: string; question: string; answer: string }[] = [
   {
     id: "faq-1",
-    question: "What are the benefits of installing CCTV cameras?",
+    question:
+      "Can your security doors and turnstiles be customized for different environments?",
+    answer:
+      "Yes. We design and deploy solutions based on each environment's operational realities, traffic volume, security profile, and integration requirements.",
   },
   {
     id: "faq-2",
-    question: "How many CCTV cameras do I need for my property?",
+    question:
+      "Can your turnstiles integrate with biometric, card, or remote access systems?",
+    answer:
+      "Yes. Our systems support biometric authentication, card credentials, QR workflows, and remote access control through integrated platforms.",
   },
   {
     id: "faq-3",
-    question: "Can CCTV cameras be used indoors and outdoors?",
+    question: "Do you offer installation, maintenance, and after-sales support?",
+    answer:
+      "Yes. Balosh delivers end-to-end services including design, installation, preventive maintenance, corrective support, and long-term service coverage.",
   },
   {
     id: "faq-4",
-    question: "How do I choose the right CCTV system for my needs?",
+    question:
+      "How secure and compliant are your products with industry standards?",
+    answer:
+      "Our solutions are built for high-security operations and are deployed using tested hardware, robust software controls, and auditable operating processes.",
   },
   {
     id: "faq-5",
-    question: "Are there any legal requirements for CCTV signage?",
+    question: "Do you supply and install nationwide or internationally?",
+    answer:
+      "We deploy and support projects across Nigeria with nationwide service coverage. International opportunities can be reviewed based on project scope.",
+  },
+  {
+    id: "faq-6",
+    question: "What is your typical project turnaround time?",
+    answer:
+      "Turnaround depends on project size, integration depth, and site readiness. After assessment, we provide a clear implementation plan and timeline.",
+  },
+  {
+    id: "faq-7",
+    question: "How can I request a consultation or get a quote for my project?",
+    answer:
+      "Use the contact form or call our team directly. We will review your requirements, schedule a consultation, and provide a tailored proposal.",
   },
 ]
 
-function FaqAnswer() {
-  return (
-    <>
-      From understanding how CCTV surveillance works to choosing the{" "}
-      <br className="d-lg-block d-none" /> right security solution for your
-      needs, we&apos;ve compiled
-    </>
-  )
+function FaqAnswer({ answer }: { answer: string }) {
+  return <>{answer}</>
 }
 
 export default function HomeFaqSection() {
@@ -61,7 +80,7 @@ export default function HomeFaqSection() {
                 FAQ’s
               </h5>
               <h2 className="text-anime-style-3">
-                Your Guide to Security &amp; CCTV
+                Frequently Asked Questions
               </h2>
               <p
                 data-aos="fade-up"
@@ -69,8 +88,8 @@ export default function HomeFaqSection() {
                 data-aos-delay={400}
                 data-aos-offset={40}
               >
-                Have questions about our security and CCTV services? Explore our
-                FAQ section below to find answers to commonly asked questions.
+                Answers to common client questions about customization,
+                integrations, delivery scope, compliance, and project timelines.
               </p>
             </div>
           </div>
@@ -121,7 +140,7 @@ export default function HomeFaqSection() {
                         >
                           <div className="min-h-0">
                             <div className="accordion-body">
-                              <FaqAnswer />
+                              <FaqAnswer answer={item.answer} />
                             </div>
                           </div>
                         </div>

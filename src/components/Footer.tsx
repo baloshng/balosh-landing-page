@@ -24,8 +24,9 @@ export default function Footer() {
                   className="h-auto w-auto max-w-full"
                 />
                 <p>
-                  Our goal is to demystify the process, address your concerns,
-                  and empower you with the knowledge to embark.
+                  Since 2005, Balosh has delivered reliable access control,
+                  parking, and security solutions for critical environments
+                  across Nigeria.
                 </p>
                 <ul>
                   <li>
@@ -74,25 +75,19 @@ export default function Footer() {
                 <h4>Quick Links</h4>
                 <ul>
                   <li>
-                    <Link href="/#service">
-                      Cyber Security Specialist&nbsp;
-                    </Link>
+                    <Link href="/#service">Access Control</Link>
                   </li>
                   <li>
-                    <Link href="/#service">
-                      &nbsp;Institute CCTV Security&nbsp;&nbsp;
-                    </Link>
+                    <Link href="/#service">Automated Entrances</Link>
                   </li>
                   <li>
-                    <Link href="/#market">Banking Sector Outside</Link>
+                    <Link href="/#service">Car Parking Solutions</Link>
                   </li>
                   <li>
-                    <Link href="/#market">Private Sector Security&nbsp;</Link>
+                    <Link href="/#service">Toll Road Management</Link>
                   </li>
                   <li>
-                    <Link href="/#faq">
-                      School &amp; Hospital Security&nbsp;
-                    </Link>
+                    <Link href="/#market">Industries We Serve</Link>
                   </li>
                 </ul>
               </div>
@@ -113,10 +108,10 @@ export default function Footer() {
                     <Link href="/#service">Service</Link>
                   </li>
                   <li>
-                    <Link href="/news">News&nbsp;</Link>
+                    <Link href="/projects">Projects</Link>
                   </li>
                   <li>
-                    <Link href="/careers">Careers</Link>
+                    <Link href="/blog">Blog</Link>
                   </li>
                   <li>
                     <Link href="/#contact">Contact Us</Link>

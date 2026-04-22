@@ -139,6 +139,62 @@ export const projects: ProjectItem[] = [
       "The system supports structured movement and monitoring across the school environment, improving safety and administrative control.",
     ],
   },
+  {
+    id: 10,
+    slug: "mma2-airport-car-park-lagos",
+    title: "MMA2 Airport Car Park, Lagos",
+    client: "MMA2 Airport, Lagos",
+    products: [
+      "Car Park Management System Upgrade",
+      "ANPR Integration",
+      "Vehicle Classification and Tariffing",
+      "Plastic Card Ticketing System",
+    ],
+    excerpt:
+      "Balosh modernized MMA2 parking operations, cutting downtime and improving throughput with ANPR-enabled, cost-efficient infrastructure.",
+    description: [
+      "MMA2's multi-story car park was constrained by ageing equipment, expensive imported consumables, and frequent failures that caused passenger queues and revenue leakage.",
+      "Balosh replaced legacy systems with modern equipment at less than half the previous cost, migrated from paper tickets to reusable plastic cards, and implemented vehicle classification with ANPR support for faster dispute-free processing.",
+      "The result was major cost reduction, near-zero downtime in a 24/7 environment, faster traffic throughput, and stronger revenue performance through accurate tariffing and improved operational control.",
+    ],
+  },
+  {
+    id: 11,
+    slug: "ikoyi-club-access-control-upgrade",
+    title: "Ikoyi Club Access Control",
+    client: "Ikoyi Club, Lagos",
+    products: [
+      "Access Control Software Upgrade",
+      "Proprietary Turnstiles",
+      "Facial Recognition and QR Access",
+      "Accounts-to-Access Integration",
+    ],
+    excerpt:
+      "Balosh delivered a full access overhaul at Ikoyi Club, enabling zero unauthorized access and zero downtime.",
+    description: [
+      "Ikoyi Club faced recurring turnstile failures, unreliable access cards, and a disconnected membership workflow that required manual activation and deactivation of access rights.",
+      "Balosh stabilized immediate operations, deployed proprietary turnstiles designed for Nigerian conditions, introduced facial recognition and QR entry, and integrated accounting with access control for automatic membership-based permissions.",
+      "The upgraded system delivered zero unauthorized access, zero downtime, faster operations, complete entry visibility for members, staff, and guests, and measurable improvement in dues collection and administrative efficiency.",
+    ],
+  },
+  {
+    id: 12,
+    slug: "ikeja-city-mall-car-park-reset",
+    title: "Ikeja City Mall Car Park",
+    client: "Ikeja City Mall",
+    products: [
+      "Car Park Operations Takeover",
+      "Reusable Card Ticketing",
+      "On-site Engineering and Spare Parts Program",
+    ],
+    excerpt:
+      "Balosh reset Ikeja City Mall parking operations with near-zero downtime and significant monthly revenue growth.",
+    description: [
+      "The mall's car park suffered long outages, undertrained technical support, dependency on foreign specialists, and consumable shortages that forced manual ticketing and enabled revenue leakage.",
+      "From July 1, 2024, Balosh implemented a full operational reset by replacing paper ticketing with reusable cards, deploying trained on-site teams, and maintaining local spare parts stock for rapid response.",
+      "The deployment delivered near-zero downtime, faster vehicle processing, improved customer experience, and up to 60% revenue increase in peak months by eliminating manual processes and fraud exposure.",
+    ],
+  },
 ];
 
 export function getProjectBySlug(slug: string): ProjectItem | undefined {
