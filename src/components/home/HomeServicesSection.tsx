@@ -23,16 +23,16 @@ export default function HomeServicesSection() {
                 Our Solutions
               </h5>
               <h2 className="text-anime-style-3">
-                Complete Protection Solutions
+                Integrated Access, Mobility &amp; Security Solutions
               </h2>
               <p
                 data-aos="fade-left"
                 data-aos-duration={1000}
                 data-aos-delay={200}
               >
-                With advanced technology, 24/7 surveillance capabilities
-                personalized <br className="d-lg-block d-none" /> service,
-                we&apos;re committed to safeguarding what matters most to you.
+                At Balosh Integrated Services, we deliver tailor-made solutions
+                built around each client&apos;s unique needs, combining innovation,
+                modern technology, and dependable delivery.
               </p>
             </div>
           </div>
@@ -49,56 +49,38 @@ export default function HomeServicesSection() {
                 {
                   img: "/assets/img/all-images/balosh-solutions/Access-Control_3.jpg",
                   icon: "/assets/img/icons/service-img7.svg",
-                  title: "Tripod Bridge Turnstiles",
-                  desc: "Integrated access control solution for secure and controlled movement.",
+                  title: "Access Control",
+                  desc: "Secure and scalable access management across hardware and software, including biometrics, visitor management, and end-to-end support.",
                 },
                 {
                   img: "/assets/img/all-images/balosh-solutions/ASC.png",
                   icon: "/assets/img/icons/service-icons8.svg",
-                  title: "Linear Tripod Turnstiles",
-                  desc: "Integrated access control solution for secure and controlled movement.",
+                  title: "Automated Entrances",
+                  desc: "Intelligent doors, gates, barriers, bollards, turnstiles, and shutters built for high-throughput environments.",
                 },
                 {
                   img: "/assets/img/all-images/balosh-solutions/carpark.jpg",
                   icon: "/assets/img/icons/service-icons9.svg",
-                  title: "Automated Ticketing Terminals",
-                  desc: "Smart car park solution for automated vehicle entry, ticketing, and exit.",
-                },
-                {
-                  img: "/assets/img/all-images/balosh-solutions/CarPark-1.jpg",
-                  icon: "/assets/img/icons/service-img7.svg",
-                  title: "Structured Parking Arrangements",
-                  desc: "Smart car park solution for automated vehicle entry, ticketing, and exit.",
-                },
-                {
-                  img: "/assets/img/all-images/balosh-solutions/Digital-Door-Access.jpg",
-                  icon: "/assets/img/icons/service-icons8.svg",
-                  title: "Digital Door Access",
-                  desc: "Secure entrance control system with digital authentication access points.",
-                },
-                {
-                  img: "/assets/img/all-images/balosh-solutions/Access-Control_2.jpg",
-                  icon: "/assets/img/icons/service-icons9.svg",
-                  title: "Entrance Control",
-                  desc: "Secure entrance control system with digital authentication access points.",
-                },
-                {
-                  img: "/assets/img/all-images/balosh-solutions/evm.png",
-                  icon: "/assets/img/icons/service-img7.svg",
-                  title: "Rentals",
-                  desc: "Short-term and event-based security equipment rental services.",
-                },
-                {
-                  img: "/assets/img/all-images/balosh-solutions/maintenance.png",
-                  icon: "/assets/img/icons/service-icons8.svg",
-                  title: "Maintenance Service",
-                  desc: "Preventive and corrective maintenance for deployed security systems.",
+                  title: "Car Parking Solutions",
+                  desc: "End-to-end parking ecosystems with ticketing, ANPR, cashless payments, and real-time occupancy visibility.",
                 },
                 {
                   img: "/assets/img/all-images/balosh-solutions/Wings_m_ee.jpg",
+                  icon: "/assets/img/icons/service-img7.svg",
+                  title: "Toll Road Management",
+                  desc: "Integrated toll solutions with multi-lane processing, real-time reporting, audit trails, and nationwide support.",
+                },
+                {
+                  img: "/assets/img/all-images/balosh-solutions/Access-Control_2.jpg",
+                  icon: "/assets/img/icons/service-icons8.svg",
+                  title: "Security Systems",
+                  desc: "Screening and threat-detection systems integrated with access control, CCTV, and incident management workflows.",
+                },
+                {
+                  img: "/assets/img/all-images/balosh-solutions/maintenance.png",
                   icon: "/assets/img/icons/service-icons9.svg",
-                  title: "Toll roads & Traffic Management",
-                  desc: "Traffic control solutions for toll operations and roadway flow management.",
+                  title: "Cross-cutting Capabilities",
+                  desc: "Custom software development, rental options, and API-based system integration for flexible operations.",
                 },
               ].map((card) => (
                 <div className="service-boxarea" key={card.title}>

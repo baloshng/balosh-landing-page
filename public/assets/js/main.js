@@ -436,10 +436,6 @@ window.baloshInitHomePage = function () {
 
 //========== PRELOADER ============= //
 $(window).on("load", function () {
-  setTimeout(function () {
-    $(".preloader").fadeToggle();
-  }, 200);
-
   if (typeof window.baloshInitHomePage === "function") {
     window.baloshInitHomePage();
   }

@@ -35,27 +35,27 @@ const corporateMissionPillars = [
 
 const milestones = [
   {
-    title: "Establishment",
+    title: "2005 Foundation",
     description:
-      "Balosh Integrated Services was founded, focusing on access control solutions.",
+      "Balosh Integrated Services was founded and began delivering access control and security solutions in Nigeria.",
     iconClass: "fa-solid fa-award",
   },
   {
-    title: "Expansion",
+    title: "Nationwide Growth",
     description:
-      "Successfully managed parking facilities, enhancing customer satisfaction and operational efficiency.",
+      "Over nearly two decades, Balosh built a strong nationwide presence supported by over 100 skilled professionals.",
     iconClass: "fa-solid fa-forward",
   },
   {
-    title: "Growth",
+    title: "Operational Scale",
     description:
-      "Expanded our workforce to over 300 employees, managing an average of 100,000 passages daily.",
+      "Balosh systems now manage over 200,000 daily check-ins across multiple sectors and high-throughput environments.",
     iconClass: "fa-solid fa-chart-line",
   },
   {
-    title: "Digital Innovation",
+    title: "Built for Local Conditions",
     description:
-      "Ventured into mobile app development, creating estate management and recreational center applications to meet the evolving needs of our clients.",
+      "Balosh deploys OEM hardware designed for Nigerian operating conditions, improving durability, uptime, and long-term value.",
     iconClass: "fa-solid fa-code",
   },
 ]
@@ -132,48 +132,38 @@ export default function AboutExtendedSections() {
                     height={20}
                     className="inline-block align-middle"
                   />
-                  Our People
+                  Our Team
                 </h5>
                 <p>
-                  At Balosh Integrated Services, our greatest assets are our
-                  people, and we take immense pride in their contributions. We
-                  rely on their enthusiasm, talent, and commitment to drive our
-                  success in today’s competitive market. Our employees are the
-                  cornerstone of our ability to deliver exceptional service to
-                  our customers.
+                  Behind every door Balosh opens is a team of engineers,
+                  technicians, software developers, and support specialists who
+                  take personal ownership of client outcomes. At Balosh
+                  Integrated Services, our people are at the heart of
+                  everything we do, and their expertise drives our ability to
+                  deliver exceptional value in a competitive landscape.
                 </p>
                 <p>
-                  We believe that a positive employee experience directly
-                  translates to superior customer service. To ensure this,
-                  Balosh is dedicated to fostering a work environment that is
-                  safe, promotes well-being, and treats everyone with respect.
-                  Our culture emphasizes teamwork and open communication,
-                  allowing all employees to share ideas and collaborate
-                  effectively. We prioritize professional development by
-                  offering comprehensive training programs, mentorship
-                  opportunities, and clear pathways for career advancement.
+                  We are committed to creating a work environment that is safe,
+                  respectful, and empowering, where collaboration thrives and
+                  every voice is heard. Through continuous learning, mentorship,
+                  and clear growth pathways, we equip our team with the tools
+                  they need to succeed and evolve.
                 </p>
                 <p>
-                  Diversity and inclusion are integral to our workplace
-                  philosophy. We actively seek to hire individuals from varied
-                  backgrounds, ensuring that our workforce reflects the
-                  communities we serve. Our inclusive policies and diversity
-                  training foster an environment where every employee feels
-                  valued and respected.
+                  Diversity and inclusion remain central to our culture. By
+                  embracing individuals from varied backgrounds, we foster a
+                  workplace that reflects the communities we serve and
+                  encourages innovation through different perspectives.
                 </p>
                 <p>
-                  Employee well-being is a priority at Balosh. We offer wellness
-                  programs, flexible work arrangements, and resources such as
-                  Employee Assistance Programs to support mental health. Our
-                  social activities and team-building events help create a
-                  strong sense of community among our staff.
+                  We also prioritize employee well-being by supporting both
+                  professional and personal growth, ensuring our team remains
+                  motivated, balanced, and inspired.
                 </p>
                 <p>
-                  As we continue to grow, we remain committed to providing our
-                  employees with the tools and opportunities they need to
-                  thrive. At Balosh Integrated Services, we don’t just build a
-                  successful business; we cultivate a supportive and dynamic
-                  workplace where our people can excel.
+                  At Balosh, we do not just build a business, we cultivate a
+                  dynamic environment where people can thrive, contribute
+                  meaningfully, and achieve excellence.
                 </p>
               </div>
             </div>
@@ -197,38 +187,34 @@ export default function AboutExtendedSections() {
                     height={20}
                     className="inline-block align-middle"
                   />
-                  How We Work
+                  What Sets Us Apart
                 </h5>
                 <p>
-                  At Balosh Integrated Services, we operate with a clear vision
-                  and a strong commitment to performance and delivery. Our
-                  pursuit of excellence is evident in every aspect of our work,
-                  as we provide high-quality products and services tailored to
-                  meet the needs of our customers. Central to our ethos is the
-                  promise of safe delivery.
+                  There are many vendors, but there is only one Balosh. Leaders
+                  choose us because we combine proven technology with deep local
+                  operating expertise and full lifecycle accountability.
                 </p>
                 <p>
-                  Health and safety are fundamental principles that guide our
-                  operations. We cultivate a culture of rigorous attention to
-                  detail and meticulous planning, ensuring that these values are
-                  integrated into every project. This disciplined approach not
-                  only enhances our project management capabilities but also
-                  guarantees successful outcomes.
+                  <strong>Built for Nigeria&apos;s Realities:</strong> Our
+                  systems are engineered to perform in demanding conditions,
+                  from power variability to large-scale and complex
+                  environments.
                 </p>
                 <p>
-                  However, our commitment to safe delivery extends beyond mere
-                  health and safety. We recognize the importance of our
-                  customers’ valuable assets and take full responsibility for
-                  their investments. We treat our customers’ risks and
-                  reputations as if they were our own, fostering a sense of
-                  accountability in all our endeavors. This dedication has
-                  enabled us to build long-term partnerships with our clients,
-                  relationships that are grounded in trust and collaboration and
-                  have stood the test of time.
+                  <strong>End-to-End Accountability:</strong> We manage every
+                  stage in-house, from hardware and software to installation and
+                  ongoing support, ensuring seamless delivery and full
+                  responsibility.
                 </p>
                 <p>
-                  At Balosh Integrated Services, we don’t just deliver projects;
-                  we cultivate enduring partnerships that drive mutual success.
+                  <strong>Global Technology, Local Expertise:</strong> We pair
+                  world-class technology with local insight to deliver solutions
+                  that work where it matters most.
+                </p>
+                <p>
+                  <strong>Built for the Long Term:</strong> We do not just
+                  deliver projects, we build partnerships focused on uptime,
+                  reliability, and long-term client success.
                 </p>
               </div>
             </div>
@@ -275,6 +261,37 @@ export default function AboutExtendedSections() {
 
       <section
         className="about3-section-area sp1 about-page-section"
+        id="management-team"
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="heading6">
+                <h5>
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
+                  Management Team
+                </h5>
+                <p>
+                  Our management team brings together experience, strategic
+                  insight, and a shared commitment to excellence. With a clear
+                  vision and deep industry expertise, they drive Balosh&apos;s
+                  growth while ensuring consistent delivery of reliable,
+                  high-quality solutions across every project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="about3-section-area sp1 about-page-section"
         id="md-message"
       >
         <div className="container">
@@ -292,34 +309,27 @@ export default function AboutExtendedSections() {
                   MD&apos;s Message
                 </h5>
                 <p>
-                  As we look ahead to our 20th anniversary next July, this year
-                  marks a significant moment for Balosh Integrated Services! Our
-                  journey has been made possible by two vital pillars: our
-                  incredible customers and our committed employees.
+                  At Balosh Integrated Services, our direction is clear: deliver
+                  reliable, future-focused access, mobility, and security
+                  solutions that help our clients operate with confidence.
                 </p>
                 <p>
-                  We are immensely grateful for the trust our customers place in
-                  us. Their confidence - reflected in their continued business,
-                  referrals, and partnership - drives us to exceed expectations
-                  every day. Our dedicated employees embody this spirit of
-                  excellence, delivering services with remarkable quality and
-                  efficiency. Their unwavering commitment fills us with
-                  excitement for the bright future ahead.
+                  The trust placed in us by major institutions across Nigeria
+                  has been earned through consistency, expertise, and results.
+                  We remain committed to strengthening that trust through
+                  disciplined execution, innovation, and service excellence.
                 </p>
                 <p>
-                  In the past year, I have been particularly proud of our
-                  company’s resilience. Together, we have navigated
-                  unprecedented challenges and successfully expanded our range
-                  of solutions to address evolving needs. Our major projects not
-                  only showcase our capabilities but also highlight our
-                  dedication to innovation and service excellence.
+                  Our people continue to be our strongest advantage. Their
+                  ownership, technical capability, and commitment to quality are
+                  what make it possible for Balosh to perform in some of the
+                  country&apos;s most demanding operating environments.
                 </p>
                 <p>
-                  As we approach our 20th anniversary, I want to extend my
-                  heartfelt gratitude to our employees, customers, and partners.
-                  Together, we are building a brighter future, and I am
-                  confident that Balosh Integrated Services will continue to
-                  thrive as we provide solutions that truly make a difference.
+                  We appreciate our clients, partners, and employees for their
+                  continued confidence and collaboration. Together, we will
+                  continue building secure, efficient, and future-ready
+                  operations.
                 </p>
                 <div className="about-page-signoff">
                   <strong>Roy Femi Oshinbolu</strong>

@@ -20,6 +20,7 @@ export default function ProjectsHeroSection({
         width={300}
         height={300}
         className="elements1 aniamtion-key-5"
+        style={{ width: "auto", height: "auto" }}
       />
       <Image
         src="/assets/img/elements/elements2.png"
@@ -27,6 +28,7 @@ export default function ProjectsHeroSection({
         width={300}
         height={300}
         className="elements2 aniamtion-key-1"
+        style={{ width: "auto", height: "auto" }}
       />
       <Image
         src="/assets/img/elements/elements3.png"
@@ -34,6 +36,7 @@ export default function ProjectsHeroSection({
         width={300}
         height={300}
         className="elements3 aniamtion-key-5"
+        style={{ width: "auto", height: "auto" }}
       />
       <Image
         src="/assets/img/elements/elements4.png"
@@ -41,6 +44,7 @@ export default function ProjectsHeroSection({
         width={300}
         height={300}
         className="elements4 aniamtion-key-1"
+        style={{ width: "auto", height: "auto" }}
       />
       <Image
         src="/assets/img/elements/elements5.png"

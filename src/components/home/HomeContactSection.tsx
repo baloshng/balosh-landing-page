@@ -24,8 +24,7 @@ export default function HomeContactSection() {
                 Contact Us
               </h5>
               <h2 className="text-anime-style-3">
-                Reach Out for Reliable Security Solutions We&apos;re Here to
-                Help
+                Start Your Access &amp; Mobility Project with Balosh
               </h2>
               <p
                 data-aos="fade-left"
@@ -33,9 +32,9 @@ export default function HomeContactSection() {
                 data-aos-delay={500}
                 data-aos-offset={40}
               >
-                Ready to take the next step in securing your property? Our team
-                is here to assist you every step of the way. Whether you have
-                questions about{" "}
+                Speak with our team about access control, parking, tolling, or
+                security systems. We will assess your environment and recommend
+                a solution tailored to your operational goals.
               </p>
               <div className="row">
                 <div

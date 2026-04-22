@@ -26,13 +26,14 @@ export default function HomeCtaSection() {
                 <div className="col-lg-5">
                   <div className="heading2">
                     <h2 className="text-anime-style-3">
-                      Empower Your Security Request Information
+                      Need a Reliable Access &amp; Security Partner?
                     </h2>
                     <div className="space16" />
                     <form>
                       <input type="text" placeholder="Email Address.." />
                       <button type="button">
-                        Subscribe Now <i className="fa-solid fa-arrow-right" />
+                        Request Consultation{" "}
+                        <i className="fa-solid fa-arrow-right" />
                       </button>
                     </form>
                   </div>

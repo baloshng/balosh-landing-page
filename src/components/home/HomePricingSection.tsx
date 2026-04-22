@@ -3,40 +3,46 @@ import Image from "next/image"
 export default function HomePricingSection() {
   const markets = [
     {
-      title: "Access Control",
+      title: "Commercial",
       image: "/assets/img/all-images/balosh-solutions/Access-Control_3.jpg",
       description:
-        "Secure identity-based entry and movement control for facilities and high-footfall sites.",
+        "Integrated solutions that optimize operational efficiency, strengthen security infrastructure, and support seamless facility management.",
     },
     {
-      title: "Automated Entrances",
+      title: "Residential",
       image: "/assets/img/all-images/balosh-solutions/ASC.png",
       description:
-        "Automated entrance systems that improve throughput, control, and operational efficiency.",
+        "Access control, safety systems, and environment management that keep living spaces secure, efficient, and well-regulated.",
     },
     {
-      title: "Car Parking",
+      title: "Education",
       image: "/assets/img/all-images/balosh-solutions/carpark.jpg",
       description:
-        "Smart parking infrastructure for ticketing, access regulation, and traffic flow optimization.",
+        "Structured access, safety protocols, and operational support for secure and conducive learning environments.",
     },
     {
-      title: "Event Management",
+      title: "Events",
       image: "/assets/img/all-images/balosh-solutions/evm.png",
       description:
-        "Event-ready access solutions for credential validation, queue control, and safe crowd movement.",
+        "End-to-end event operations including crowd management, access control, traffic coordination, and on-ground logistics.",
     },
     {
-      title: "Maintenance Services",
+      title: "Leisure",
       image: "/assets/img/all-images/balosh-solutions/maintenance.png",
       description:
-        "Preventive and corrective support services to keep deployed systems stable and reliable.",
+        "Visitor-management and safety-focused services for recreational and hospitality environments.",
     },
     {
-      title: "Toll Roads & Traffic Management",
+      title: "Public Sector",
       image: "/assets/img/all-images/balosh-solutions/Wings_m_ee.jpg",
       description:
-        "Traffic and tolling control systems for roadway flow management and vehicle access regulation.",
+        "Scalable solutions for government and public institutions to improve service delivery and infrastructure performance.",
+    },
+    {
+      title: "Transport",
+      image: "/assets/img/all-images/balosh-solutions/CarPark-1.jpg",
+      description:
+        "Advanced mobility management for access, flow optimization, and airport-grade operational security.",
     },
   ]
 
@@ -66,8 +72,9 @@ export default function HomePricingSection() {
                 data-aos-duration={1000}
                 data-aos-delay={300}
               >
-                Balosh solutions serve multiple market segments, from controlled
-                facility access to traffic and event operations.
+                Balosh provides tailored solutions across residential,
+                commercial, education, public services, transportation, and
+                event operations, adapting to each sector&apos;s specific needs.
               </p>
             </div>
           </div>

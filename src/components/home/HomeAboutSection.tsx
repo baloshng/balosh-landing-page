@@ -27,15 +27,15 @@ export default function HomeAboutSection() {
                 data-aos-duration="1000"
                 data-aos-delay="200"
               >
-                Balosh Integrated Services is a leading access control company
-                in Nigeria, serving clients since 2005. Focused on the
-                commercial sector, we are known for our experience and
-                innovation. We tailor solutions to each client’s needs while
-                maintaining high standards of service and workmanship. Guided by
-                integrity, customer satisfaction, and values like innovation,
-                excellence, and teamwork, we consistently exceed expectations
-                and have earned a strong reputation through successful delivery
-                of major, high-profile access control projects nationwide.
+                Since 2005, Balosh Integrated Services Limited has built its
+                reputation on three uncompromising pillars: reliability,
+                credibility, and consistent industry leadership. We provide
+                fully integrated, end-to-end services, from design and
+                development to installation and ongoing support, all managed
+                in-house. From major transport terminals and government
+                institutions to corporate campuses and leading retail
+                destinations, Balosh has become a trusted name in securing and
+                managing high-value spaces across Nigeria.
               </p>
 
               <div
@@ -75,17 +75,18 @@ export default function HomeAboutSection() {
                 Why Choose Us
               </h5>
               <h2 className="text-anime-style-3">
-                Innovating Security Partner <br className="d-lg-block d-none" />
-                In Protection
+                Why Leaders Choose <br className="d-lg-block d-none" />
+                Balosh
               </h2>
               <p
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-delay="200"
               >
-                With years of experience & passion for innovation, our team
-                committed to delivering top-notch security and CCTV solutions
-                tailored to your unique needs.
+                There are many vendors, but there is only one Balosh. Our
+                systems are built for Nigeria&apos;s realities, delivered with
+                full end-to-end accountability, and designed for long-term
+                operational reliability.
               </p>
               <div className="space32"></div>
               <div
@@ -101,7 +102,7 @@ export default function HomeAboutSection() {
                     </span>
                   </div>
                   <div className="about5-boxes">
-                    <h3>Product Development</h3>
+                    <h3>Built for Nigeria&apos;s Realities</h3>
                     <div className="about5-bar">
                       <span className="about5-per">
                         <span className="per">95%</span>
@@ -117,7 +118,7 @@ export default function HomeAboutSection() {
                     </span>
                   </div>
                   <div className="about5-boxes">
-                    <h3>Company Investment</h3>
+                    <h3>End-to-End Accountability</h3>
                     <div className="about5-bar2">
                       <span className="about5-per2">
                         <span className="per">97%</span>
@@ -133,7 +134,7 @@ export default function HomeAboutSection() {
                     </span>
                   </div>
                   <div className="about5-boxes">
-                    <h3>Business Marketing</h3>
+                    <h3>Built for the Long Term</h3>
                     <div className="about5-bar">
                       <span className="about5-per">
                         <span className="per">94%</span>
@@ -149,7 +150,7 @@ export default function HomeAboutSection() {
                 data-aos-delay="300"
               >
                 <Link href="/#contact" className="header-btn4">
-                  Learn About Us <i className="fa-solid fa-arrow-right"></i>
+                  Talk to Us <i className="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>
             </div>

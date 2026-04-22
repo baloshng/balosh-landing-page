@@ -12,7 +12,7 @@ export default function HomeHeroSection() {
               src={slide.bannerSrc}
               alt=""
               fill
-              sizes="100vw"
+              sizes="(max-width: 991px) 100vw, 92vw"
               className="header-img4 object-cover object-center"
               priority={index === 0}
             />
