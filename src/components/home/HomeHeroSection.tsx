@@ -35,11 +35,11 @@ export default function HomeHeroSection() {
                   <h1 className="text-anime-style-3">{slide.title}</h1>
                   <p>{slide.description}</p>
                   <div className="btn-area hero-cta-grid">
-                    <Link href="/#contact" className="header-btn4">
-                      Request Quote <i className="fa-solid fa-arrow-right" />
+                    <Link href="/solutions" className="header-btn4">
+                      Explore our solutions <i className="fa-solid fa-arrow-right" />
                     </Link>
-                    <Link href="/#project" className="header-btn1">
-                      View Projects <i className="fa-solid fa-arrow-right" />
+                    <Link href="/#contact" className="header-btn1">
+                      Schedule a site assessment <i className="fa-solid fa-arrow-right" />
                     </Link>
                   </div>
                 </div>

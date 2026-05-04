@@ -44,13 +44,16 @@ export default function InternalHeader() {
                 <nav id="navbar-example2" className="navbar">
                   <div className="header-elements internal-header-elements">
                     <div className="site-logo">
-                      <Link href="/">
+                      <Link
+                        href="/"
+                        onClick={hardNavigate("/")}
+                      >
                         <Image
                           src="/assets/img/logo/balosh.png"
                           alt=""
                           width={286}
                           height={88}
-                          className="w-[100px] h-auto"
+                          className="w-25 h-auto"
                           style={{ width: "100px", height: "auto" }}
                         />
                       </Link>
@@ -169,7 +172,7 @@ export default function InternalHeader() {
                     alt=""
                     width={286}
                     height={88}
-                    className="w-[100px] h-auto"
+                    className="w-25 h-auto"
                     style={{ width: "100px", height: "auto" }}
                   />
                 </Link>
@@ -192,7 +195,7 @@ export default function InternalHeader() {
                 alt=""
                 width={286}
                 height={88}
-                className="w-[100px] h-auto"
+                className="w-25 h-auto"
                 style={{ width: "100px", height: "auto" }}
               />
             </Link>

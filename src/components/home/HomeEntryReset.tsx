@@ -1,16 +1,14 @@
 "use client"
 
-import { useEffect, useLayoutEffect, useRef } from "react"
+import { useEffect, useLayoutEffect } from "react"
 import { usePathname } from "next/navigation"
 
 /**
- * Each time the user lands on `/`, start at the hero: disable scroll restoration
- * and reset scroll position so back/forward navigation does not restore a mid-page
- * position (avoids carousel, AOS, and anchor glitches).
+ * Handles homepage-specific initialization and scroll management.
+ * Note: Universal page reload on route change is handled by PageInitializer component.
  */
 export default function HomeEntryReset() {
   const pathname = usePathname()
-  const initTimerRef = useRef<number | null>(null)
 
   useLayoutEffect(() => {
     if (pathname !== "/") return
@@ -34,49 +32,6 @@ export default function HomeEntryReset() {
     return () => {
       window.cancelAnimationFrame(id)
       window.clearTimeout(t)
-    }
-  }, [pathname])
-
-  useEffect(() => {
-    if (pathname !== "/") return
-
-    let cancelled = false
-    let attempts = 0
-
-    const isHomeHeroReady = () => {
-      const hero = document.querySelector("#home.carousel-area")
-      if (!hero) return true
-      return hero.classList.contains("owl-loaded") && Boolean(hero.querySelector(".owl-item.active"))
-    }
-
-    const clearInitTimer = () => {
-      if (initTimerRef.current === null) return
-      window.clearTimeout(initTimerRef.current)
-      initTimerRef.current = null
-    }
-
-    const runInit = () => {
-      if (cancelled) return
-      attempts += 1
-
-      if (typeof window.baloshInitHomePage === "function") {
-        window.baloshInitHomePage()
-        if (isHomeHeroReady()) return
-      }
-
-      if (attempts < 20) {
-        initTimerRef.current = window.setTimeout(runInit, 100)
-      }
-    }
-
-    const animationFrame = window.requestAnimationFrame(() => {
-      initTimerRef.current = window.setTimeout(runInit, 80)
-    })
-
-    return () => {
-      cancelled = true
-      window.cancelAnimationFrame(animationFrame)
-      clearInitTimer()
     }
   }, [pathname])
 

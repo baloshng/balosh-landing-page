@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import PageInitializer from "@/components/PageInitializer";
 import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, DEFAULT_TITLE, SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
@@ -134,6 +135,7 @@ export default function RootLayout({
         </noscript>
       </head>
       <body suppressHydrationWarning className="min-h-full flex flex-col homepage3-body">
+        <PageInitializer />
         {children}
         <Script src="/assets/js/plugins/jquery-3-6-0.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/plugins/waypoints.js" strategy="afterInteractive" />

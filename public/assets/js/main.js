@@ -261,7 +261,7 @@ function baloshInitHomepageOwl($) {
     },
   });
 
-  safeInit(".service-carousel-area", {
+  safeInit(".service-carousel-area.owl-carousel", {
     loop: true,
     margin: 30,
     nav: true,

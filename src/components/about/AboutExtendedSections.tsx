@@ -157,7 +157,7 @@ export default function AboutExtendedSections() {
           <div className="row">
             <div className="col-lg-8 m-auto">
               <div className="heading6 text-center">
-                <h5>
+                <h5 data-aos="fade-up" data-aos-duration="800">
                   <Image
                     src="/assets/img/icons/finger2.svg"
                     alt=""
@@ -167,8 +167,14 @@ export default function AboutExtendedSections() {
                   />
                   About Balosh
                 </h5>
-                <h2>Identity, Direction, and the People Behind the Brand</h2>
-                <p>
+                <h2
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                >
+                  Identity, Direction, and the People Behind the Brand
+                </h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                   The About Us page is structured to communicate Balosh&apos;s
                   identity, values, journey, team structure, difference, and
                   leadership in one clear path.
@@ -182,6 +188,9 @@ export default function AboutExtendedSections() {
                 className="about-page-nav-card"
                 href={item.href}
                 key={item.id}
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay={120 + index * 70}
               >
                 <span className="about-page-nav-card-kicker">
                   {String(index + 1).padStart(2, "0")}
@@ -202,7 +211,7 @@ export default function AboutExtendedSections() {
           <div className="row align-items-center gy-4">
             <div className="col-lg-6">
               <div className="heading6">
-                <h5>
+                <h5 data-aos="fade-right" data-aos-duration="800">
                   <Image
                     src="/assets/img/icons/finger2.svg"
                     alt=""
@@ -212,9 +221,13 @@ export default function AboutExtendedSections() {
                   />
                   Introduction
                 </h5>
-                <h2>Who We Are</h2>
+                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="120">
+                  Who We Are
+                </h2>
                 {whoWeAreParagraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph} data-aos="fade-right" data-aos-duration="1050">
+                    {paragraph}
+                  </p>
                 ))}
               </div>
             </div>
@@ -226,6 +239,9 @@ export default function AboutExtendedSections() {
                 height={506}
                 className="h-auto w-full"
                 style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                data-aos="fade-left"
+                data-aos-duration="1100"
+                data-aos-delay="150"
               />
             </div>
           </div>
@@ -240,7 +256,7 @@ export default function AboutExtendedSections() {
           <div className="row align-items-start gy-4">
             <div className="col-lg-5">
               <div className="heading6">
-                <h5>
+                <h5 data-aos="fade-right" data-aos-duration="800">
                   <Image
                     src="/assets/img/icons/finger2.svg"
                     alt=""
@@ -250,22 +266,30 @@ export default function AboutExtendedSections() {
                   />
                   Mission and Vision
                 </h5>
-                <h2>Built on Principles That Deliver</h2>
-                <h3>What We Stand For</h3>
-                <p>
+                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="80">
+                  Built on Principles That Deliver
+                </h2>
+                <h3 data-aos="fade-right" data-aos-duration="950" data-aos-delay="140">
+                  What We Stand For
+                </h3>
+                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="180">
                   At Balosh, our work is guided by principles that shape how we
                   design, deliver, and support every system.
                 </p>
                 <div style={{ height: "1.5rem" }} />
-                <h3>Our Focus</h3>
-                <p>
+                <h3 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="220">
+                  Our Focus
+                </h3>
+                <p data-aos="fade-right" data-aos-duration="1050" data-aos-delay="260">
                   We create secure, efficient environments that give
                   organisations and communities confidence, control, and
                   operational clarity.
                 </p>
                 <div style={{ height: "1.5rem" }} />
-                <h3>Our Commitment</h3>
-                <p>
+                <h3 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
+                  Our Commitment
+                </h3>
+                <p data-aos="fade-right" data-aos-duration="1150" data-aos-delay="340">
                   At Balosh Integrated Services, our mission is to be the
                   leading provider of access control solutions, driven by a
                   commitment to integrity, customer satisfaction, and innovation.
@@ -276,11 +300,17 @@ export default function AboutExtendedSections() {
             </div>
             <div className="col-lg-7">
               <div className="heading6 about-page-section-subhead">
-                <h3>What Drives Us</h3>
+                <h3 data-aos="fade-left" data-aos-duration="900">What Drives Us</h3>
               </div>
               <div className="about-page-pillars">
-                {valuePillars.map((pillar) => (
-                  <article className="about-page-pillar-card" key={pillar.title}>
+                {valuePillars.map((pillar, index) => (
+                  <article
+                    className="about-page-pillar-card"
+                    key={pillar.title}
+                    data-aos="fade-left"
+                    data-aos-duration="950"
+                    data-aos-delay={100 + index * 70}
+                  >
                     <h3>{pillar.title}</h3>
                     <p>{pillar.description}</p>
                   </article>
@@ -296,7 +326,7 @@ export default function AboutExtendedSections() {
           <div className="row gy-4">
             <div className="col-lg-5">
               <div className="heading6">
-                <h5>
+                <h5 data-aos="fade-right" data-aos-duration="800">
                   <Image
                     src="/assets/img/icons/finger2.svg"
                     alt=""
@@ -306,16 +336,26 @@ export default function AboutExtendedSections() {
                   />
                   The Balosh Journey
                 </h5>
-                <h2>Our Journey</h2>
+                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="100">
+                  Our Journey
+                </h2>
                 {journeyParagraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph} data-aos="fade-right" data-aos-duration="1050">
+                    {paragraph}
+                  </p>
                 ))}
               </div>
             </div>
             <div className="col-lg-7">
               <div className="row">
-                {journeyHighlights.map((milestone) => (
-                  <div className="col-lg-6 col-md-6" key={milestone.title}>
+                {journeyHighlights.map((milestone, index) => (
+                  <div
+                    className="col-lg-6 col-md-6"
+                    key={milestone.title}
+                    data-aos="fade-up"
+                    data-aos-duration="950"
+                    data-aos-delay={100 + index * 90}
+                  >
                     <article className="about-page-milestone-card">
                       <span className="about-page-milestone-icon">
                         <i className={milestone.iconClass} />
@@ -339,7 +379,7 @@ export default function AboutExtendedSections() {
           <div className="row gy-4">
             <div className="col-lg-6">
               <div className="heading6">
-                <h5>
+                <h5 data-aos="fade-right" data-aos-duration="800">
                   <Image
                     src="/assets/img/icons/finger2.svg"
                     alt=""
@@ -349,24 +389,26 @@ export default function AboutExtendedSections() {
                   />
                   Balosh Allstars
                 </h5>
-                <h2>The Team Behind Every Important Door</h2>
-                <p>
+                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="80">
+                  The Team Behind Every Important Door
+                </h2>
+                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="140">
                   Behind every door we open is a team we call the Balosh
                   Allstars: engineers, technicians, software developers, and
                   support specialists who take full ownership of every outcome.
                 </p>
-                <p>
+                <p data-aos="fade-right" data-aos-duration="1050" data-aos-delay="180">
                   Because at Balosh, &quot;we open important doors&quot;, and
                   the people behind those doors matter just as much as the
                   systems themselves.
                 </p>
-                <p>
+                <p data-aos="fade-right" data-aos-duration="1100" data-aos-delay="220">
                   Our team is built to deliver in environments where performance
                   is critical. Their expertise, responsiveness, and commitment
                   to excellence ensure that every system we design, install, and
                   support works consistently and at scale.
                 </p>
-                <p>
+                <p data-aos="fade-right" data-aos-duration="1150" data-aos-delay="260">
                   We also recognize that opening doors goes beyond access. It is
                   about opportunity, trust, and impact. By bringing together
                   people from diverse backgrounds, we foster a culture that
@@ -376,20 +418,41 @@ export default function AboutExtendedSections() {
             </div>
             <div className="col-lg-6">
               <div className="heading6 text-center">
-                <h3>We have built a culture where:</h3>
+                <h3 data-aos="fade-left" data-aos-duration="900">
+                  We have built a culture where:
+                </h3>
               </div>
               <div className="space20" />
-              <div className="about-page-pillars">
-                {teamCulture.map((item) => (
-                  <article className="about-page-pillar-card" key={item.title}>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </article>
-                ))}
+              <div className="row g-3">
+                {teamCulture.map((item, index) => {
+                  const wrapperClass =
+                    index === 2
+                      ? "col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
+                      : "col-12 col-md-6"
+
+                  return (
+                    <div className={wrapperClass} key={item.title}>
+                      <article
+                        className="about-page-pillar-card h-100"
+                        data-aos="fade-left"
+                        data-aos-duration="950"
+                        data-aos-delay={80 + index * 90}
+                      >
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </article>
+                    </div>
+                  )
+                })}
               </div>
       
               <div className="space20" />
-              <div className="heading6 about-page-quote-card">
+              <div
+                className="heading6 about-page-quote-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="260"
+              >
                 <p>
                   Beyond delivery, we invest in our people, supporting their
                   development, well-being, and long-term growth, because a
@@ -411,7 +474,7 @@ export default function AboutExtendedSections() {
           <div className="row align-items-center gy-4">
             <div className="col-lg-5">
               <div className="heading6">
-                <h5>
+                <h5 data-aos="fade-right" data-aos-duration="800">
                   <Image
                     src="/assets/img/icons/finger2.svg"
                     alt=""
@@ -421,11 +484,15 @@ export default function AboutExtendedSections() {
                   />
                   The Balosh Difference
                 </h5>
-                <h2>Why Leaders Choose Balosh</h2>
-                <p>There are many vendors, but there is only one Balosh.</p>
+                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="80">
+                  Why Leaders Choose Balosh
+                </h2>
+                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="140">
+                  There are many vendors, but there is only one Balosh.
+                </p>
                 <div className="space20" />
                 <div className="heading6 text-center">
-                  <h3>Why Balosh?</h3>
+                  <h3 data-aos="fade-up" data-aos-duration="900">Why Balosh?</h3>
                 </div>
                 <Image
                   src="/assets/img/all-images/balosh-why-balosh.png"
@@ -434,13 +501,22 @@ export default function AboutExtendedSections() {
                   height={506}
                   className="h-auto w-full"
                   style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                  data-aos="fade-right"
+                  data-aos-duration="1100"
+                  data-aos-delay="200"
                 />
               </div>
             </div>
             <div className="col-lg-7">
               <div className="about-page-pillars">
-                {differenceItems.map((item) => (
-                  <article className="about-page-pillar-card" key={item.title}>
+                {differenceItems.map((item, index) => (
+                  <article
+                    className="about-page-pillar-card"
+                    key={item.title}
+                    data-aos="fade-left"
+                    data-aos-duration="950"
+                    data-aos-delay={100 + index * 70}
+                  >
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
                   </article>
@@ -459,7 +535,7 @@ export default function AboutExtendedSections() {
           <div className="row">
             <div className="col-lg-8 m-auto">
               <div className="heading6 text-center">
-                <h5>
+                <h5 data-aos="fade-up" data-aos-duration="800">
                   <Image
                     src="/assets/img/icons/finger2.svg"
                     alt=""
@@ -469,8 +545,10 @@ export default function AboutExtendedSections() {
                   />
                   Meet the Team
                 </h5>
-                <h2>Balosh Leadership Team</h2>
-                <p>
+                <h2 data-aos="fade-up" data-aos-duration="950" data-aos-delay="100">
+                  Balosh Leadership Team
+                </h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="180">
                   Our management team brings together experience, strategic
                   insight, and a shared commitment to excellence. With a clear
                   vision and deep industry expertise, they drive Balosh&apos;s
@@ -481,8 +559,14 @@ export default function AboutExtendedSections() {
             </div>
           </div>
           <div className="about-page-team-grid">
-            {leadershipTeam.map((member) => (
-              <article className="about-page-team-card" key={member.title}>
+            {leadershipTeam.map((member, index) => (
+              <article
+                className="about-page-team-card"
+                key={member.title}
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={120 + index * 100}
+              >
                 <div className="about-page-team-card-image">
                   <Image
                     src={member.image}
