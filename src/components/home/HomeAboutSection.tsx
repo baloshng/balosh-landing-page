@@ -1,6 +1,22 @@
 import Image from "next/image"
 import Link from "next/link"
 
+const whoWeAreParagraphs = [
+  "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and consistent industry leadership. For two decades, we have delivered trusted security and access control solutions across Nigeria's most critical environments.",
+  "We provide fully integrated, end-to-end services, from design and development to installation and ongoing support, all managed in-house. This approach ensures seamless execution, accountability, and the highest standards of quality at every stage.",
+  "From major transport terminals handling millions of people to government institutions, corporate campuses, and leading retail destinations, Balosh has become a trusted name in securing and managing high-value spaces. Our solutions are built to perform in demanding environments, supporting efficiency, safety, and operational excellence.",
+  "The trust placed in us by Nigeria's most important institutions has been earned through consistency, expertise, and results. It is a responsibility we take seriously, and one that continues to drive our commitment to delivering reliable, future-focused solutions.",
+]
+
+const baloshDifference = [
+  { title: "Built for Nigeria's Realities", percent: "95%", altBar: false },
+  { title: "End-to-End Accountability", percent: "97%", altBar: true },
+  { title: "Proprietary OEM Hardware", percent: "94%", altBar: false },
+  { title: "Global Technology, Local Expertise", percent: "96%", altBar: true },
+  { title: "A Reputation Earned Through Results", percent: "98%", altBar: false },
+  { title: "Built for the Long Term", percent: "94%", altBar: true },
+]
+
 export default function HomeAboutSection() {
   return (
     <div className="about3-section-area sp1" id="about">
@@ -20,23 +36,18 @@ export default function HomeAboutSection() {
                   height={20}
                   className="inline-block align-middle"
                 />
-                About Us
+                Who We Are
               </h5>
-              <p
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-              >
-                Since 2005, Balosh Integrated Services Limited has built its
-                reputation on three uncompromising pillars: reliability,
-                credibility, and consistent industry leadership. We provide
-                fully integrated, end-to-end services, from design and
-                development to installation and ongoing support, all managed
-                in-house. From major transport terminals and government
-                institutions to corporate campuses and leading retail
-                destinations, Balosh has become a trusted name in securing and
-                managing high-value spaces across Nigeria.
-              </p>
+              {whoWeAreParagraphs.map((paragraph, index) => (
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration={1000 + index * 100}
+                  data-aos-delay={200 + index * 50}
+                  key={paragraph}
+                >
+                  {paragraph}
+                </p>
+              ))}
 
               <div
                 data-aos="fade-right"
@@ -72,7 +83,7 @@ export default function HomeAboutSection() {
                   height={20}
                   className="inline-block align-middle"
                 />
-                Why Choose Us
+                The Balosh Difference
               </h5>
               <h2 className="text-anime-style-3">
                 Why Leaders Choose <br className="d-lg-block d-none" />
@@ -83,10 +94,7 @@ export default function HomeAboutSection() {
                 data-aos-duration="1000"
                 data-aos-delay="200"
               >
-                There are many vendors, but there is only one Balosh. Our
-                systems are built for Nigeria&apos;s realities, delivered with
-                full end-to-end accountability, and designed for long-term
-                operational reliability.
+                There are many vendors, but there is only one Balosh.
               </p>
               <div className="space32"></div>
               <div
@@ -95,53 +103,32 @@ export default function HomeAboutSection() {
                 data-aos-duration="1200"
                 data-aos-delay="0"
               >
-                <div className="progres-section-area">
-                  <div className="check">
-                    <span>
-                      <i className="fa-solid fa-check"></i>
-                    </span>
-                  </div>
-                  <div className="about5-boxes">
-                    <h3>Built for Nigeria&apos;s Realities</h3>
-                    <div className="about5-bar">
-                      <span className="about5-per">
-                        <span className="per">95%</span>
-                      </span>
+                {baloshDifference.map((item, index) => (
+                  <div key={item.title}>
+                    {index > 0 ? <div className="space20"></div> : null}
+                    <div className="progres-section-area">
+                      <div className="check">
+                        <span>
+                          <i className="fa-solid fa-check"></i>
+                        </span>
+                      </div>
+                      <div className="about5-boxes">
+                        <h3>{item.title}</h3>
+                        <div
+                          className={item.altBar ? "about5-bar2" : "about5-bar"}
+                        >
+                          <span
+                            className={
+                              item.altBar ? "about5-per2" : "about5-per"
+                            }
+                          >
+                            <span className="per">{item.percent}</span>
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="space20"></div>
-                <div className="progres-section-area">
-                  <div className="check">
-                    <span>
-                      <i className="fa-solid fa-check"></i>
-                    </span>
-                  </div>
-                  <div className="about5-boxes">
-                    <h3>End-to-End Accountability</h3>
-                    <div className="about5-bar2">
-                      <span className="about5-per2">
-                        <span className="per">97%</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="space20"></div>
-                <div className="progres-section-area">
-                  <div className="check">
-                    <span>
-                      <i className="fa-solid fa-check"></i>
-                    </span>
-                  </div>
-                  <div className="about5-boxes">
-                    <h3>Built for the Long Term</h3>
-                    <div className="about5-bar">
-                      <span className="about5-per">
-                        <span className="per">94%</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
               <div
                 className="btn-area"

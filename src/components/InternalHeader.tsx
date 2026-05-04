@@ -4,11 +4,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import type { MouseEvent } from "react"
+import { aboutNavigationLinks } from "@/data/aboutSections"
+import { socialLinks } from "@/data/socialLinks"
+import { solutionNavigationLinks } from "@/data/solutions"
 
-type NavKey = "blog"
+type NavKey = "about" | "solutions" | "market" | "blog"
 
 function useInternalNavActive(): NavKey | null {
   const pathname = usePathname()
+  if (pathname.startsWith("/about")) return "about"
+  if (pathname.startsWith("/solutions")) return "solutions"
+  if (pathname.startsWith("/market")) return "market"
   if (pathname.startsWith("/blog")) return "blog"
   return null
 }
@@ -62,27 +68,38 @@ export default function InternalHeader() {
                         </li>
                         <li className="nav-item">
                           <Link
-                            href="/#about"
-                            className="nav-link"
-                            onClick={hardNavigate("/#about")}
+                            href="/about"
+                            className={linkClass(active === "about")}
                           >
                             <span>About</span>
                           </Link>
+                          <ul className="dropdown-padding">
+                            {aboutNavigationLinks.map((item) => (
+                              <li key={item.id}>
+                                <Link href={item.href}>{item.title}</Link>
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                         <li className="nav-item">
                           <Link
-                            href="/#service"
-                            className="nav-link"
-                            onClick={hardNavigate("/#service")}
+                            href="/solutions"
+                            className={linkClass(active === "solutions")}
                           >
-                            <span>Services</span>
+                            <span>Solutions</span>
                           </Link>
+                          <ul className="dropdown-padding">
+                            {solutionNavigationLinks.map((item) => (
+                              <li key={item.id}>
+                                <Link href={item.href}>{item.title}</Link>
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                         <li className="nav-item">
                           <Link
-                            href="/#market"
-                            className="nav-link"
-                            onClick={hardNavigate("/#market")}
+                            href="/market"
+                            className={linkClass(active === "market")}
                           >
                             <span>Our Market</span>
                           </Link>
@@ -106,17 +123,33 @@ export default function InternalHeader() {
                         </li>
                       </ul>
                     </div>
-                    <div className="btn-area">
-                      <Link
-                        href="/#contact"
-                        className="header-btn4"
-                        onClick={hardNavigate("/#contact")}
-                      >
-                        Contact Us
-                        <span>
-                          <i className="fa-solid fa-arrow-right" />
-                        </span>
-                      </Link>
+                    <div className="header-action-area">
+                      <ul className="header-social-links" aria-label="Balosh social media">
+                        {socialLinks.map((item) => (
+                          <li key={item.label}>
+                            <Link
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={item.label}
+                            >
+                              <i className={item.iconClass} />
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="btn-area">
+                        <Link
+                          href="/#contact"
+                          className="header-btn4"
+                          onClick={hardNavigate("/#contact")}
+                        >
+                          Contact Us
+                          <span>
+                            <i className="fa-solid fa-arrow-right" />
+                          </span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </nav>
@@ -141,8 +174,10 @@ export default function InternalHeader() {
                   />
                 </Link>
               </div>
-              <div className="mobile-nav-icon dots-menu">
-                <i className="fa-solid fa-bars-staggered" />
+              <div className="mobile-header-actions">
+                <div className="mobile-nav-icon dots-menu">
+                  <i className="fa-solid fa-bars-staggered" />
+                </div>
               </div>
             </div>
           </div>
@@ -173,30 +208,35 @@ export default function InternalHeader() {
                 <span>Home</span>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                href="/#about"
-                className="nav-link"
-                onClick={hardNavigate("/#about")}
-              >
+            <li>
+              <Link href="/about" className={linkClass(active === "about")}>
                 <span>About</span>
               </Link>
+              <ul className="sub-menu">
+                {aboutNavigationLinks.map((item) => (
+                  <li key={item.id}>
+                    <Link href={item.href}>{item.title}</Link>
+                  </li>
+                ))}
+              </ul>
             </li>
             <li className="nav-item">
               <Link
-                href="/#service"
-                className="nav-link"
-                onClick={hardNavigate("/#service")}
+                href="/solutions"
+                className={linkClass(active === "solutions")}
               >
-                <span>Services</span>
+                <span>Solutions</span>
               </Link>
+              <ul className="sub-menu">
+                {solutionNavigationLinks.map((item) => (
+                  <li key={item.id}>
+                    <Link href={item.href}>{item.title}</Link>
+                  </li>
+                ))}
+              </ul>
             </li>
             <li className="nav-item">
-              <Link
-                href="/#market"
-                className="nav-link"
-                onClick={hardNavigate("/#market")}
-              >
+              <Link href="/market" className={linkClass(active === "market")}>
                 <span>Our Market</span>
               </Link>
             </li>
@@ -265,42 +305,18 @@ export default function InternalHeader() {
                   <h3>Social Links</h3>
                   <div className="social-links-mobile-menu">
                     <ul>
-                      <li>
-                        <Link
-                          href="https://www.facebook.com/balosh1/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-facebook-f" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://www.instagram.com/baloshng/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-instagram" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://www.linkedin.com/company/balosh-integrated-services"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-linkedin-in" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://x.com/baloshng"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-youtube" />
-                        </Link>
-                      </li>
+                      {socialLinks.map((item) => (
+                        <li key={item.label}>
+                          <Link
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={item.label}
+                          >
+                            <i className={item.iconClass} />
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>

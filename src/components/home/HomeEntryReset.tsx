@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation"
  */
 export default function HomeEntryReset() {
   const pathname = usePathname()
-  const prevPathRef = useRef<string | null>(null)
+  const initTimerRef = useRef<number | null>(null)
 
   useLayoutEffect(() => {
     if (pathname !== "/") return
@@ -37,19 +37,47 @@ export default function HomeEntryReset() {
     }
   }, [pathname])
 
-  /**
-   * Owl / GSAP / AOS init on first full load via `window.load` in main.js.
-   * Re-run only when client-navigating to `/` from another route (avoids double SplitText on first paint).
-   */
   useEffect(() => {
-    const from = prevPathRef.current
-    prevPathRef.current = pathname
     if (pathname !== "/") return
-    if (from === null || from === "/") return
-    const t = window.setTimeout(() => {
-      window.baloshInitHomePage?.()
-    }, 100)
-    return () => window.clearTimeout(t)
+
+    let cancelled = false
+    let attempts = 0
+
+    const isHomeHeroReady = () => {
+      const hero = document.querySelector("#home.carousel-area")
+      if (!hero) return true
+      return hero.classList.contains("owl-loaded") && Boolean(hero.querySelector(".owl-item.active"))
+    }
+
+    const clearInitTimer = () => {
+      if (initTimerRef.current === null) return
+      window.clearTimeout(initTimerRef.current)
+      initTimerRef.current = null
+    }
+
+    const runInit = () => {
+      if (cancelled) return
+      attempts += 1
+
+      if (typeof window.baloshInitHomePage === "function") {
+        window.baloshInitHomePage()
+        if (isHomeHeroReady()) return
+      }
+
+      if (attempts < 20) {
+        initTimerRef.current = window.setTimeout(runInit, 100)
+      }
+    }
+
+    const animationFrame = window.requestAnimationFrame(() => {
+      initTimerRef.current = window.setTimeout(runInit, 80)
+    })
+
+    return () => {
+      cancelled = true
+      window.cancelAnimationFrame(animationFrame)
+      clearInitTimer()
+    }
   }, [pathname])
 
   return null

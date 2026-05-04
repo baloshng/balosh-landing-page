@@ -230,8 +230,10 @@ function baloshInitHomepageOwl($) {
   function safeInit(selector, options) {
     var $t = $(selector);
     if (!$t.length) return;
-    if ($t.data("owl.carousel")) {
-      $t.trigger("destroy.owl.carousel");
+    if (!$.fn || !$.fn.owlCarousel) return;
+    if ($t.hasClass("owl-loaded") && $t.data("owl.carousel")) {
+      $t.trigger("refresh.owl.carousel");
+      return;
     }
     $t.owlCarousel(options);
   }
