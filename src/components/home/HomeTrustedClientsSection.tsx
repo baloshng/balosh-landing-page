@@ -36,7 +36,7 @@ export default function HomeTrustedClientsSection({
                 data-aos-offset={40}
                 className="mb-2"
               >
-                Trusted By These Companies
+                Clients We Serve
               </h5>
               <p
                 className="mb-0"
@@ -45,8 +45,8 @@ export default function HomeTrustedClientsSection({
                 data-aos-delay={100}
                 data-aos-offset={40}
               >
-                A selection of organisations that rely on Balosh for access,
-                parking, and traffic solutions.
+                Logos of companies Balosh has served across access, parking,
+                traffic, and security operations.
               </p>
             </div>
           </div>

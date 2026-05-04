@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blogPosts";
 import { projects } from "@/data/projects";
+import { solutions } from "@/data/solutions";
 import { projectCoverImageUrl } from "@/lib/projectCoverImage";
 import { absoluteUrl } from "@/lib/seo";
 
@@ -13,6 +14,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: absoluteUrl("/about"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: absoluteUrl("/solutions"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: absoluteUrl("/market"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
     {
       url: absoluteUrl("/news"),
@@ -56,5 +75,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [absoluteUrl(projectCoverImageUrl(project.slug))],
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...projectRoutes];
+  const solutionRoutes: MetadataRoute.Sitemap = solutions.map((solution) => ({
+    url: absoluteUrl(`/solutions/${solution.slug}`),
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+    images: [absoluteUrl(solution.image)],
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...projectRoutes, ...solutionRoutes];
 }

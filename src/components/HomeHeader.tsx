@@ -3,6 +3,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { aboutNavigationLinks } from "@/data/aboutSections"
+import { socialLinks } from "@/data/socialLinks"
+import { solutionNavigationLinks } from "@/data/solutions"
 
 const SECTION_IDS = [
   "home",
@@ -87,23 +90,37 @@ export default function HomeHeader() {
                       <ul>
                         <li className="nav-item">
                           <Link
-                            href="/#about"
+                            href="/about"
                             className={navClass(activeId, "about")}
                           >
                             <span>About</span>
                           </Link>
+                          <ul className="dropdown-padding">
+                            {aboutNavigationLinks.map((item) => (
+                              <li key={item.id}>
+                                <Link href={item.href}>{item.title}</Link>
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                         <li className="nav-item">
                           <Link
-                            href="/#service"
+                            href="/solutions"
                             className={navClass(activeId, "service")}
                           >
                             <span>Solutions</span>
                           </Link>
+                          <ul className="dropdown-padding">
+                            {solutionNavigationLinks.map((item) => (
+                              <li key={item.id}>
+                                <Link href={item.href}>{item.title}</Link>
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                         <li className="nav-item">
                           <Link
-                            href="/#market"
+                            href="/market"
                             className={navClass(activeId, "market")}
                           >
                             <span>Our Market</span>
@@ -135,13 +152,29 @@ export default function HomeHeader() {
                         </li>
                       </ul>
                     </div>
-                    <div className="btn-area">
-                      <Link href="/#contact" className="header-btn4">
-                        Contact Us
-                        <span>
-                          <i className="fa-solid fa-arrow-right" />
-                        </span>
-                      </Link>
+                    <div className="header-action-area">
+                      <ul className="header-social-links" aria-label="Balosh social media">
+                        {socialLinks.map((item) => (
+                          <li key={item.label}>
+                            <Link
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={item.label}
+                            >
+                              <i className={item.iconClass} />
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="btn-area">
+                        <Link href="/#contact" className="header-btn4">
+                          Contact Us
+                          <span>
+                            <i className="fa-solid fa-arrow-right" />
+                          </span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </nav>
@@ -166,8 +199,10 @@ export default function HomeHeader() {
                   />
                 </Link>
               </div>
-              <div className="mobile-nav-icon dots-menu">
-                <i className="fa-solid fa-bars-staggered" />
+              <div className="mobile-header-actions">
+                <div className="mobile-nav-icon dots-menu">
+                  <i className="fa-solid fa-bars-staggered" />
+                </div>
               </div>
             </div>
           </div>
@@ -193,35 +228,37 @@ export default function HomeHeader() {
         </div>
         <div className="mobile-nav mobile-nav1">
           <ul className="mobile-nav-list nav-list1">
+            <li className="nav-item">
+              <Link href="/#home" className={navClass(activeId, "home")}>
+                <span>Home</span>
+              </Link>
+            </li>
             <li>
-              <Link href="/#home">Home </Link>
+              <Link href="/about">
+                <span>About</span>
+              </Link>
               <ul className="sub-menu">
-                <li>
-                  <Link href="/#home">Home One</Link>
-                </li>
-                <li>
-                  <Link href="/#home">Home Two</Link>
-                </li>
-                <li>
-                  <Link href="/#home">Home Three</Link>
-                </li>
-                <li>
-                  <Link href="/#home">Home Four</Link>
-                </li>
+                {aboutNavigationLinks.map((item) => (
+                  <li key={item.id}>
+                    <Link href={item.href}>{item.title}</Link>
+                  </li>
+                ))}
               </ul>
             </li>
             <li className="nav-item">
-              <Link href="/#about" className={navClass(activeId, "about")}>
-                <span>About</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/#service" className={navClass(activeId, "service")}>
+              <Link href="/solutions" className={navClass(activeId, "service")}>
                 <span>Solutions</span>
               </Link>
+              <ul className="sub-menu">
+                {solutionNavigationLinks.map((item) => (
+                  <li key={item.id}>
+                    <Link href={item.href}>{item.title}</Link>
+                  </li>
+                ))}
+              </ul>
             </li>
             <li className="nav-item">
-              <Link href="/#market" className={navClass(activeId, "market")}>
+              <Link href="/market" className={navClass(activeId, "market")}>
                 <span>Our Market</span>
               </Link>
             </li>
@@ -284,42 +321,18 @@ export default function HomeHeader() {
                   <h3>Social Links</h3>
                   <div className="social-links-mobile-menu">
                     <ul>
-                      <li>
-                        <Link
-                          href="https://www.facebook.com/balosh1/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-facebook-f" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://www.instagram.com/baloshng/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-instagram" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://www.linkedin.com/company/balosh-integrated-services"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-linkedin-in" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://x.com/baloshng"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-youtube" />
-                        </Link>
-                      </li>
+                      {socialLinks.map((item) => (
+                        <li key={item.label}>
+                          <Link
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={item.label}
+                          >
+                            <i className={item.iconClass} />
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>

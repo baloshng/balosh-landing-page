@@ -14,7 +14,8 @@ export default function HomeHeroSection() {
               fill
               sizes="(max-width: 991px) 100vw, 92vw"
               className="header-img4 object-cover object-center"
-              priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
             />
           </div>
           <div className="container relative z-2">

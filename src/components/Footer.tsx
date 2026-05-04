@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
+import { socialLinks } from "@/data/socialLinks"
+import { solutionNavigationLinks } from "@/data/solutions"
 
 export default function Footer() {
   return (
@@ -12,7 +14,7 @@ export default function Footer() {
           className="bg1 object-cover"
           sizes="100vw"
         />
-        <div className="container relative z-[1]">
+        <div className="container relative z-1">
           <div className="row">
             <div className="col-lg-3 col-md-6">
               <div className="logo-content">
@@ -29,42 +31,18 @@ export default function Footer() {
                   across Nigeria.
                 </p>
                 <ul>
-                  <li>
-                    <Link
-                      href="https://www.facebook.com/balosh1/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fa-brands fa-facebook-f" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://www.linkedin.com/company/balosh-integrated-services"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fa-brands fa-linkedin-in" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://www.instagram.com/baloshng/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fa-brands fa-instagram" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://x.com/baloshng"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fa-brands fa-youtube" />
-                    </Link>
-                  </li>
+                  {socialLinks.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={item.label}
+                      >
+                        <i className={item.iconClass} />
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="space30 d-lg-none d-block" />
@@ -74,20 +52,13 @@ export default function Footer() {
               <div className="footer-list">
                 <h4>Quick Links</h4>
                 <ul>
+                  {solutionNavigationLinks.slice(0, 4).map((item) => (
+                    <li key={item.id}>
+                      <Link href={item.href}>{item.title}</Link>
+                    </li>
+                  ))}
                   <li>
-                    <Link href="/#service">Access Control</Link>
-                  </li>
-                  <li>
-                    <Link href="/#service">Automated Entrances</Link>
-                  </li>
-                  <li>
-                    <Link href="/#service">Car Parking Solutions</Link>
-                  </li>
-                  <li>
-                    <Link href="/#service">Toll Road Management</Link>
-                  </li>
-                  <li>
-                    <Link href="/#market">Industries We Serve</Link>
+                    <Link href="/market">Industries We Serve</Link>
                   </li>
                 </ul>
               </div>
@@ -102,10 +73,13 @@ export default function Footer() {
                     <Link href="/#home">Home&nbsp;</Link>
                   </li>
                   <li>
-                    <Link href="/#about">&nbsp;About Us&nbsp;&nbsp;</Link>
+                    <Link href="/about">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/#service">Service</Link>
+                    <Link href="/solutions">Solutions</Link>
+                  </li>
+                  <li>
+                    <Link href="/market">Our Market</Link>
                   </li>
                   <li>
                     <Link href="/projects">Projects</Link>

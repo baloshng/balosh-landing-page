@@ -1,72 +1,203 @@
 import Image from "next/image"
+import Link from "next/link"
+import { aboutNavigationLinks } from "@/data/aboutSections"
 
-const corporateMissionPillars = [
+const whoWeAreParagraphs = [
+  "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and consistent industry leadership. For two decades, we have delivered trusted security and access control solutions across Nigeria's most critical environments.",
+  "We provide fully integrated, end-to-end services, from design and development to installation and ongoing support, all managed in-house. This approach ensures seamless execution, accountability, and the highest standards of quality at every stage.",
+  "From major transport terminals handling millions of people to government institutions, corporate campuses, and leading retail destinations, Balosh has become a trusted name in securing and managing high-value spaces. Our solutions are built to perform in demanding environments, supporting efficiency, safety, and operational excellence.",
+  "The trust placed in us by Nigeria's most important institutions has been earned through consistency, expertise, and results. It is a responsibility we take seriously, and one that continues to drive our commitment to delivering reliable, future-focused solutions.",
+]
+
+const valuePillars = [
   {
-    title: "Integrity",
+    title: "Built on Trust",
     description:
-      "We conduct our business with honesty and transparency, fostering trust with our clients and partners.",
+      "We operate with transparency and take full responsibility for every system we deliver. Our clients rely on us because we stand behind our work, consistently and without compromise.",
   },
   {
-    title: "Customer-Centricity",
+    title: "Client-First Thinking",
     description:
-      "Our customers are our priority. We view our relationships as partnerships, actively seeking their feedback to tailor our solutions and ensure complete satisfaction.",
+      "We build long-term partnerships, not one-off projects, delivering solutions tailored to each client's environment and real operational needs, with performance and durability designed for long-term value.",
   },
   {
-    title: "Employee Empowerment",
+    title: "People Who Deliver",
     description:
-      "We believe that our employees are our greatest asset. By investing in their professional development, recognizing their contributions, and promoting an inclusive environment, we create a motivated and engaged workforce.",
+      "Our strength lies in our team. We invest in continuous development and empower our people to take ownership, solve problems, and deliver results in complex, high-demand environments.",
   },
   {
-    title: "Innovation and Agility",
+    title: "Innovation with Agility",
     description:
-      "We embrace a proactive approach to innovation, continuously adapting our strategies to meet the ever-evolving needs of the market. Our commitment to research and development, combined with an agile mindset, allows us to integrate the latest technologies and methodologies into our offerings.",
+      "We do not just adopt new technologies. We respond quickly to changing needs. Our agile approach allows us to adapt systems, integrate new solutions, and continuously improve performance in dynamic environments.",
   },
   {
-    title: "Community Engagement",
+    title: "Committed to the Communities We Serve",
     description:
-      "We recognize our responsibility to give back to the communities we serve. Through outreach programs, sustainable practices, and support for local economies, we strive to make a positive impact while enhancing community safety through our innovative solutions.",
+      "Our work extends beyond installations. By enabling safer access, reducing operational risks, and improving how people and vehicles move through critical spaces, we contribute directly to safer, more efficient communities. We also support local economies by developing local expertise, creating employment opportunities, and delivering solutions that strengthen the environments in which our clients operate.",
   },
   {
-    title: "Excellence and Security",
+    title: "Excellence Without Compromise",
     description:
-      "Our philosophy is not just a set of statements; it’s a commitment to excellence in every interaction. At Balosh Integrated Services, we are dedicated to creating secure environments that empower businesses and communities, ensuring a brighter, safer future for all.",
+      "In the environments we operate in, failure is not an option. We are committed to delivering systems that perform consistently, reliably, and at scale.",
   },
 ]
 
-const milestones = [
+const journeyParagraphs = [
+  "Founded in 2005, Balosh Integrated Services began with a clear focus: to bring structure, reliability, and control to environments where it matters most.",
+  "Over the past two decades, that focus has driven our growth into a trusted leader in access control and infrastructure systems, delivering solutions across Nigeria's most critical and high-traffic environments.",
+  "Today, our systems support over 200,000 daily check-ins, reflecting the scale, reliability, and operational confidence our clients depend on every day. Backed by a team of over 100 skilled professionals nationwide, we continue to deliver consistent performance across sectors.",
+  "Our evolution has been shaped by a commitment to building systems that work in real conditions. By leveraging OEM hardware tailored for the Nigerian environment, we ensure durability, efficiency, and long-term value across every deployment.",
+  "As Balosh continues to grow, one thing remains constant: a commitment to delivering solutions that perform consistently, reliably, and at scale.",
+]
+
+const journeyHighlights = [
   {
     title: "2005 Foundation",
     description:
-      "Balosh Integrated Services was founded and began delivering access control and security solutions in Nigeria.",
+      "Balosh Integrated Services began with a focus on structure, reliability, and control.",
     iconClass: "fa-solid fa-award",
   },
   {
-    title: "Nationwide Growth",
+    title: "Two Decades of Growth",
     description:
-      "Over nearly two decades, Balosh built a strong nationwide presence supported by over 100 skilled professionals.",
+      "Balosh expanded into a trusted leader in access control and infrastructure systems.",
     iconClass: "fa-solid fa-forward",
   },
   {
-    title: "Operational Scale",
+    title: "200,000+ Daily Check-ins",
     description:
-      "Balosh systems now manage over 200,000 daily check-ins across multiple sectors and high-throughput environments.",
+      "Balosh systems now support large-scale movement across critical and high-traffic environments.",
     iconClass: "fa-solid fa-chart-line",
   },
   {
-    title: "Built for Local Conditions",
+    title: "100+ Skilled Professionals",
     description:
-      "Balosh deploys OEM hardware designed for Nigerian operating conditions, improving durability, uptime, and long-term value.",
-    iconClass: "fa-solid fa-code",
+      "A nationwide team supports consistent delivery, service, and long-term performance.",
+    iconClass: "fa-solid fa-users",
+  },
+]
+
+const teamCulture = [
+  {
+    title: "Ownership is expected",
+    description: "Every team member is accountable for results.",
+  },
+  {
+    title: "Collaboration drives execution",
+    description: "Complex challenges are solved as one team.",
+  },
+  {
+    title: "Continuous growth is a priority",
+    description: "Through training, mentorship, and real-world experience.",
+  },
+]
+
+const leadershipTeam = [
+  {
+    title: "Strategic Leadership",
+    role: "Management Team",
+    image: "/assets/img/all-images/team-img1.png",
+    profile:
+      "Sets the clear vision and strategic direction that guide Balosh's growth, credibility, and culture.",
+  },
+  {
+    title: "Delivery Leadership",
+    role: "Operations Team",
+    image: "/assets/img/all-images/team-img2.png",
+    profile:
+      "Keeps project delivery, support, and service standards aligned across demanding client environments.",
+  },
+  {
+    title: "Technical Leadership",
+    role: "Systems Team",
+    image: "/assets/img/all-images/team-img3.png",
+    profile:
+      "Applies deep industry expertise to system design, integration, installation, and long-term reliability.",
+  },
+]
+
+const differenceItems = [
+  {
+    title: "Built for Nigeria's Realities",
+    description:
+      "Our systems are engineered to perform in demanding conditions, from power variability to large-scale, complex environments.",
+  },
+  {
+    title: "End-to-End Accountability",
+    description:
+      "We manage every stage in-house, from hardware and software to installation and ongoing support, ensuring seamless delivery and full responsibility.",
+  },
+  {
+    title: "Proprietary OEM Hardware",
+    description:
+      "Our solutions are powered by hardware designed for Nigerian conditions, offering durability, faster parts access, and flexible customization.",
+  },
+  {
+    title: "Global Technology, Local Expertise",
+    description:
+      "We combine world-class technology with deep local insight to deliver solutions that truly work where it matters most.",
+  },
+  {
+    title: "A Reputation Earned Through Results",
+    description:
+      "For over 20 years, our clients have become our strongest advocates, driven by consistent performance and trust.",
+  },
+  {
+    title: "Built for the Long Term",
+    description:
+      "We do not just deliver projects, we build lasting partnerships. Your uptime, reliability, and success remain our priority.",
   },
 ]
 
 export default function AboutExtendedSections() {
   return (
     <>
-      <section
-        className="about3-section-area sp1 about-page-section"
-        id="corporate-philosophy"
-      >
+      <section className="about-page-section about-page-nav-section sp1">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 m-auto">
+              <div className="heading6 text-center">
+                <h5>
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
+                  About Balosh
+                </h5>
+                <h2>Identity, Direction, and the People Behind the Brand</h2>
+                <p>
+                  The About Us page is structured to communicate Balosh&apos;s
+                  identity, values, journey, team structure, difference, and
+                  leadership in one clear path.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="about-page-nav-grid">
+            {aboutNavigationLinks.map((item, index) => (
+              <Link
+                className="about-page-nav-card"
+                href={item.href}
+                key={item.id}
+              >
+                <span className="about-page-nav-card-kicker">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="about-page-nav-card-title">
+                  {item.title}
+                  <i className="fa-solid fa-arrow-right" />
+                </span>
+                <p>{item.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="about3-section-area sp1 about-page-section" id="who-we-are">
         <div className="container">
           <div className="row align-items-center gy-4">
             <div className="col-lg-6">
@@ -79,33 +210,77 @@ export default function AboutExtendedSections() {
                     height={20}
                     className="inline-block align-middle"
                   />
-                  Corporate Philosophy
+                  Introduction
                 </h5>
-                <h2>Our Vision</h2>
-                <p>
-                  Our philosophy is not just a set of statements; it’s a
-                  commitment to excellence in every interaction. At Balosh
-                  Integrated Services, we are dedicated to creating secure
-                  environments that empower businesses and communities, ensuring
-                  a brighter, safer future for all.
-                </p>
-                <h2 className="mt-6">Our Mission</h2>
-                <p>
-                  At Balosh Integrated Services, our mission is to be the
-                  leading provider of access control solutions, driven by a
-                  commitment to integrity, customer satisfaction, and
-                  innovation. Our foundational beliefs guide every aspect of our
-                  operations:
-                </p>
+                <h2>Who We Are</h2>
+                {whoWeAreParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
             </div>
             <div className="col-lg-6">
+              <Image
+                src="/assets/img/all-images/balosh-why-balosh.png"
+                alt="Why Balosh infographic"
+                width={1024}
+                height={506}
+                className="h-auto w-full"
+                style={{ width: "100%", height: "auto", objectFit: "contain" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="about3-section-area sp1 about-page-section about-page-section-alt"
+        id="what-we-stand-for"
+      >
+        <div className="container">
+          <div className="row align-items-start gy-4">
+            <div className="col-lg-5">
+              <div className="heading6">
+                <h5>
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
+                  Mission and Vision
+                </h5>
+                <h2>Built on Principles That Deliver</h2>
+                <h3>What We Stand For</h3>
+                <p>
+                  At Balosh, our work is guided by principles that shape how we
+                  design, deliver, and support every system.
+                </p>
+                <div style={{ height: "1.5rem" }} />
+                <h3>Our Focus</h3>
+                <p>
+                  We create secure, efficient environments that give
+                  organisations and communities confidence, control, and
+                  operational clarity.
+                </p>
+                <div style={{ height: "1.5rem" }} />
+                <h3>Our Commitment</h3>
+                <p>
+                  At Balosh Integrated Services, our mission is to be the
+                  leading provider of access control solutions, driven by a
+                  commitment to integrity, customer satisfaction, and innovation.
+                  Our foundational beliefs guide every aspect of our operations.
+                </p>
+           
+              </div>
+            </div>
+            <div className="col-lg-7">
+              <div className="heading6 about-page-section-subhead">
+                <h3>What Drives Us</h3>
+              </div>
               <div className="about-page-pillars">
-                {corporateMissionPillars.map((pillar) => (
-                  <article
-                    className="about-page-pillar-card"
-                    key={pillar.title}
-                  >
+                {valuePillars.map((pillar) => (
+                  <article className="about-page-pillar-card" key={pillar.title}>
                     <h3>{pillar.title}</h3>
                     <p>{pillar.description}</p>
                   </article>
@@ -116,13 +291,10 @@ export default function AboutExtendedSections() {
         </div>
       </section>
 
-      <section
-        className="about3-section-area sp1 about-page-section about-page-section-alt"
-        id="our-people"
-      >
+      <section className="about3-section-area sp1 about-page-section" id="balosh-journey">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
+          <div className="row gy-4">
+            <div className="col-lg-5">
               <div className="heading6">
                 <h5>
                   <Image
@@ -132,90 +304,27 @@ export default function AboutExtendedSections() {
                     height={20}
                     className="inline-block align-middle"
                   />
-                  Our Team
+                  The Balosh Journey
                 </h5>
-                <p>
-                  Behind every door Balosh opens is a team of engineers,
-                  technicians, software developers, and support specialists who
-                  take personal ownership of client outcomes. At Balosh
-                  Integrated Services, our people are at the heart of
-                  everything we do, and their expertise drives our ability to
-                  deliver exceptional value in a competitive landscape.
-                </p>
-                <p>
-                  We are committed to creating a work environment that is safe,
-                  respectful, and empowering, where collaboration thrives and
-                  every voice is heard. Through continuous learning, mentorship,
-                  and clear growth pathways, we equip our team with the tools
-                  they need to succeed and evolve.
-                </p>
-                <p>
-                  Diversity and inclusion remain central to our culture. By
-                  embracing individuals from varied backgrounds, we foster a
-                  workplace that reflects the communities we serve and
-                  encourages innovation through different perspectives.
-                </p>
-                <p>
-                  We also prioritize employee well-being by supporting both
-                  professional and personal growth, ensuring our team remains
-                  motivated, balanced, and inspired.
-                </p>
-                <p>
-                  At Balosh, we do not just build a business, we cultivate a
-                  dynamic environment where people can thrive, contribute
-                  meaningfully, and achieve excellence.
-                </p>
+                <h2>Our Journey</h2>
+                {journeyParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="about3-section-area sp1 about-page-section"
-        id="how-we-work"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="heading6">
-                <h5>
-                  <Image
-                    src="/assets/img/icons/finger2.svg"
-                    alt=""
-                    width={20}
-                    height={20}
-                    className="inline-block align-middle"
-                  />
-                  What Sets Us Apart
-                </h5>
-                <p>
-                  There are many vendors, but there is only one Balosh. Leaders
-                  choose us because we combine proven technology with deep local
-                  operating expertise and full lifecycle accountability.
-                </p>
-                <p>
-                  <strong>Built for Nigeria&apos;s Realities:</strong> Our
-                  systems are engineered to perform in demanding conditions,
-                  from power variability to large-scale and complex
-                  environments.
-                </p>
-                <p>
-                  <strong>End-to-End Accountability:</strong> We manage every
-                  stage in-house, from hardware and software to installation and
-                  ongoing support, ensuring seamless delivery and full
-                  responsibility.
-                </p>
-                <p>
-                  <strong>Global Technology, Local Expertise:</strong> We pair
-                  world-class technology with local insight to deliver solutions
-                  that work where it matters most.
-                </p>
-                <p>
-                  <strong>Built for the Long Term:</strong> We do not just
-                  deliver projects, we build partnerships focused on uptime,
-                  reliability, and long-term client success.
-                </p>
+            <div className="col-lg-7">
+              <div className="row">
+                {journeyHighlights.map((milestone) => (
+                  <div className="col-lg-6 col-md-6" key={milestone.title}>
+                    <article className="about-page-milestone-card">
+                      <span className="about-page-milestone-icon">
+                        <i className={milestone.iconClass} />
+                      </span>
+                      <h3>{milestone.title}</h3>
+                      <p>{milestone.description}</p>
+                    </article>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -224,11 +333,11 @@ export default function AboutExtendedSections() {
 
       <section
         className="about3-section-area sp1 about-page-section about-page-section-alt"
-        id="milestones"
+        id="balosh-allstars"
       >
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
+          <div className="row gy-4">
+            <div className="col-lg-6">
               <div className="heading6">
                 <h5>
                   <Image
@@ -238,35 +347,118 @@ export default function AboutExtendedSections() {
                     height={20}
                     className="inline-block align-middle"
                   />
-                  Milestones
+                  Balosh Allstars
                 </h5>
+                <h2>The Team Behind Every Important Door</h2>
+                <p>
+                  Behind every door we open is a team we call the Balosh
+                  Allstars: engineers, technicians, software developers, and
+                  support specialists who take full ownership of every outcome.
+                </p>
+                <p>
+                  Because at Balosh, &quot;we open important doors&quot;, and
+                  the people behind those doors matter just as much as the
+                  systems themselves.
+                </p>
+                <p>
+                  Our team is built to deliver in environments where performance
+                  is critical. Their expertise, responsiveness, and commitment
+                  to excellence ensure that every system we design, install, and
+                  support works consistently and at scale.
+                </p>
+                <p>
+                  We also recognize that opening doors goes beyond access. It is
+                  about opportunity, trust, and impact. By bringing together
+                  people from diverse backgrounds, we foster a culture that
+                  encourages new thinking, adaptability, and stronger outcomes.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="heading6 text-center">
+                <h3>We have built a culture where:</h3>
+              </div>
+              <div className="space20" />
+              <div className="about-page-pillars">
+                {teamCulture.map((item) => (
+                  <article className="about-page-pillar-card" key={item.title}>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </article>
+                ))}
+              </div>
+      
+              <div className="space20" />
+              <div className="heading6 about-page-quote-card">
+                <p>
+                  Beyond delivery, we invest in our people, supporting their
+                  development, well-being, and long-term growth, because a
+                  motivated, supported team delivers better results for our
+                  clients.
+                </p>
+                <p>
+                  At Balosh, we do not just open important doors. We have the
+                  team that ensures what is behind them works.
+                </p>
               </div>
             </div>
           </div>
-          <div className="row">
-            {milestones.map((milestone) => (
-              <div className="col-lg-6 col-md-6" key={milestone.title}>
-                <article className="about-page-milestone-card">
-                  <span className="about-page-milestone-icon">
-                    <i className={milestone.iconClass} />
-                  </span>
-                  <h3>{milestone.title}</h3>
-                  <p>{milestone.description}</p>
-                </article>
+        </div>
+      </section>
+
+      <section className="about3-section-area sp1 about-page-section" id="balosh-difference">
+        <div className="container">
+          <div className="row align-items-center gy-4">
+            <div className="col-lg-5">
+              <div className="heading6">
+                <h5>
+                  <Image
+                    src="/assets/img/icons/finger2.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="inline-block align-middle"
+                  />
+                  The Balosh Difference
+                </h5>
+                <h2>Why Leaders Choose Balosh</h2>
+                <p>There are many vendors, but there is only one Balosh.</p>
+                <div className="space20" />
+                <div className="heading6 text-center">
+                  <h3>Why Balosh?</h3>
+                </div>
+                <Image
+                  src="/assets/img/all-images/balosh-why-balosh.png"
+                  alt="Why leaders choose Balosh"
+                  width={1024}
+                  height={506}
+                  className="h-auto w-full"
+                  style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                />
               </div>
-            ))}
+            </div>
+            <div className="col-lg-7">
+              <div className="about-page-pillars">
+                {differenceItems.map((item) => (
+                  <article className="about-page-pillar-card" key={item.title}>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section
-        className="about3-section-area sp1 about-page-section"
-        id="management-team"
+        className="about3-section-area sp1 about-page-section about-page-section-alt"
+        id="balosh-leadership"
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
-              <div className="heading6">
+            <div className="col-lg-8 m-auto">
+              <div className="heading6 text-center">
                 <h5>
                   <Image
                     src="/assets/img/icons/finger2.svg"
@@ -275,68 +467,38 @@ export default function AboutExtendedSections() {
                     height={20}
                     className="inline-block align-middle"
                   />
-                  Management Team
+                  Meet the Team
                 </h5>
+                <h2>Balosh Leadership Team</h2>
                 <p>
                   Our management team brings together experience, strategic
                   insight, and a shared commitment to excellence. With a clear
                   vision and deep industry expertise, they drive Balosh&apos;s
-                  growth while ensuring consistent delivery of reliable,
+                  growth while ensuring the consistent delivery of reliable,
                   high-quality solutions across every project.
                 </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section
-        className="about3-section-area sp1 about-page-section"
-        id="md-message"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="heading6 about-page-quote-card">
-                <h5>
+          <div className="about-page-team-grid">
+            {leadershipTeam.map((member) => (
+              <article className="about-page-team-card" key={member.title}>
+                <div className="about-page-team-card-image">
                   <Image
-                    src="/assets/img/icons/finger2.svg"
-                    alt=""
-                    width={20}
-                    height={20}
-                    className="inline-block align-middle"
+                    src={member.image}
+                    alt={member.title}
+                    width={370}
+                    height={370}
+                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 33vw"
                   />
-                  MD&apos;s Message
-                </h5>
-                <p>
-                  At Balosh Integrated Services, our direction is clear: deliver
-                  reliable, future-focused access, mobility, and security
-                  solutions that help our clients operate with confidence.
-                </p>
-                <p>
-                  The trust placed in us by major institutions across Nigeria
-                  has been earned through consistency, expertise, and results.
-                  We remain committed to strengthening that trust through
-                  disciplined execution, innovation, and service excellence.
-                </p>
-                <p>
-                  Our people continue to be our strongest advantage. Their
-                  ownership, technical capability, and commitment to quality are
-                  what make it possible for Balosh to perform in some of the
-                  country&apos;s most demanding operating environments.
-                </p>
-                <p>
-                  We appreciate our clients, partners, and employees for their
-                  continued confidence and collaboration. Together, we will
-                  continue building secure, efficient, and future-ready
-                  operations.
-                </p>
-                <div className="about-page-signoff">
-                  <strong>Roy Femi Oshinbolu</strong>
-                  <span>Managing Director</span>
                 </div>
-              </div>
-            </div>
+                <div className="about-page-team-card-content">
+                  <span>{member.role}</span>
+                  <h3>{member.title}</h3>
+                  <p>{member.profile}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
