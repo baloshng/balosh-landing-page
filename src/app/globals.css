@@ -519,6 +519,228 @@ body.homepage3-body #home.carousel-area .hero3-section-area .container {
   }
 }
 
+body.homepage3-body .home-proof-section {
+  padding-top: 64px;
+  padding-bottom: 56px;
+  background: transparent;
+}
+
+body.homepage3-body .home-proof-section .home-proof-intro {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body.homepage3-body .home-proof-section .home-proof-intro h5 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-intro__icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  height: 20px;
+  width: 20px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-intro h2 {
+  color: var(--ztc-text-text-10);
+  margin-bottom: 18px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-intro p {
+  color: #3b2a1a;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-stats {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-stat {
+  display: flex;
+  justify-content: center;
+}
+
+body.homepage3-body .home-proof-section .home-proof-circle {
+  position: relative;
+  width: 230px;
+  height: 230px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-circle__svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+body.homepage3-body .home-proof-section .home-proof-circle__bg {
+  fill: none;
+  stroke: #fde6cd;
+  stroke-width: 12;
+}
+
+body.homepage3-body .home-proof-section .home-proof-circle__progress {
+  fill: none;
+  stroke: var(--ztc-text-text-9);
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dashoffset: var(--home-proof-circumference);
+}
+
+body.homepage3-body .home-proof-section.animate-bars .home-proof-circle__progress {
+  animation: home-proof-circle-load 2.5s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+body.homepage3-body .home-proof-section .home-proof-circle__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  padding: 0 24px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-circle__content strong {
+  color: var(--ztc-text-text-10);
+  font-size: 30px;
+  line-height: 1;
+}
+
+body.homepage3-body .home-proof-section .home-proof-circle__content span {
+  color: var(--ztc-text-text-10);
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 38px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-card {
+  background: #fff;
+  border: 1px solid #f1d2ae;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(28, 15, 1, 0.06);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 22px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-card:hover {
+  border-color: #fa8100;
+  box-shadow: 0 16px 32px rgba(28, 15, 1, 0.1);
+  transform: translateY(-2px);
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-card__client {
+  color: #c95d00;
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-card h3 {
+  color: var(--ztc-text-text-10);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-card p {
+  color: #4f3a27;
+  flex: 1;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-card a {
+  align-items: center;
+  color: #c95d00;
+  display: inline-flex;
+  font-weight: 800;
+  gap: 8px;
+  line-height: 1;
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-card a i {
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+body.homepage3-body .home-proof-section .home-proof-case-card a:hover i {
+  transform: translateX(3px);
+}
+
+@keyframes home-proof-circle-load {
+  from {
+    stroke-dashoffset: var(--home-proof-circumference);
+  }
+  to {
+    stroke-dashoffset: var(--home-proof-target-offset);
+  }
+}
+
+@media (max-width: 1199px) {
+  body.homepage3-body .home-proof-section .home-proof-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.homepage3-body .home-proof-section .home-proof-case-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  body.homepage3-body .home-proof-section {
+    padding-top: 46px;
+    padding-bottom: 42px;
+  }
+
+  body.homepage3-body .home-proof-section .home-proof-intro {
+    text-align: left;
+  }
+
+  body.homepage3-body .home-proof-section .home-proof-intro p {
+    font-size: 1rem;
+  }
+
+  body.homepage3-body .home-proof-section .home-proof-stats {
+    grid-template-columns: 1fr;
+  }
+
+  body.homepage3-body .home-proof-section .home-proof-case-card {
+    padding: 18px;
+  }
+}
+
 /* About / FAQ: .reveal defaults to visibility:hidden until GSAP runs; ensure images show with Next + load timing */
 body.homepage3-body .about3-section-area .about-images-area .reveal,
 body.homepage3-body .faq-section-area .faq-images-area .reveal {

@@ -9,12 +9,36 @@ const whoWeAreParagraphs = [
 ]
 
 const baloshDifference = [
-  { title: "Built for Nigeria's Realities", percent: "95%", altBar: false },
-  { title: "End-to-End Accountability", percent: "97%", altBar: true },
-  { title: "Proprietary OEM Hardware", percent: "94%", altBar: false },
-  { title: "Global Technology, Local Expertise", percent: "96%", altBar: true },
-  { title: "A Reputation Earned Through Results", percent: "98%", altBar: false },
-  { title: "Built for the Long Term", percent: "94%", altBar: true },
+  {
+    title: "Built for Nigeria's Realities",
+    percent: 95,
+    altBar: false,
+  },
+  {
+    title: "End-to-End Accountability",
+    percent: 97,
+    altBar: true,
+  },
+  {
+    title: "Proprietary OEM Hardware",
+    percent: 94,
+    altBar: false,
+  },
+  {
+    title: "Global Technology, Local Expertise",
+    percent: 96,
+    altBar: true,
+  },
+  {
+    title: "A Reputation Earned Through Results",
+    percent: 98,
+    altBar: false,
+  },
+  {
+    title: "Built for the Long Term",
+    percent: 94,
+    altBar: true,
+  },
 ]
 
 export default function HomeAboutSection() {
@@ -121,8 +145,9 @@ export default function HomeAboutSection() {
                             className={
                               item.altBar ? "about5-per2" : "about5-per"
                             }
+                            style={{ width: `${item.percent}%` }}
                           >
-                            <span className="per">{item.percent}</span>
+                            <span className="per">{item.percent}%</span>
                           </span>
                         </div>
                       </div>
