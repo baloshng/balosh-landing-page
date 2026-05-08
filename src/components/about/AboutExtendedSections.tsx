@@ -3,22 +3,23 @@ import Link from "next/link"
 import { aboutNavigationLinks } from "@/data/aboutSections"
 
 const whoWeAreParagraphs = [
-  "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and consistent industry leadership. For two decades, we have delivered trusted security and access control solutions across Nigeria's most critical environments.",
-  "We provide fully integrated, end-to-end services, from design and development to installation and ongoing support, all managed in-house. This approach ensures seamless execution, accountability, and the highest standards of quality at every stage.",
-  "From major transport terminals handling millions of people to government institutions, corporate campuses, and leading retail destinations, Balosh has become a trusted name in securing and managing high-value spaces. Our solutions are built to perform in demanding environments, supporting efficiency, safety, and operational excellence.",
-  "The trust placed in us by Nigeria's most important institutions has been earned through consistency, expertise, and results. It is a responsibility we take seriously, and one that continues to drive our commitment to delivering reliable, future-focused solutions.",
+  "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and quiet dominance.",
+  "We operate end-to-end — design, development, installation, and ongoing support — all in-house, with no middlemen and no gaps in accountability. From the terminals that move millions to the institutions that govern a nation, the names that define Nigeria's most critical spaces have one thing in common: Balosh.",
+  "For 20 years, Nigeria's airports, government institutions, major retail destinations, corporate campuses, and critical national infrastructure have entrusted their security and access operations to us. That trust is not given lightly — and we have never taken it for granted.",
+  "We don't rely on advertising. We let our work speak for itself.",
+  "We are builders, operators, and long-term partners — trusted by the organisations that cannot afford to get access control and security wrong.",
 ]
 
 const valuePillars = [
   {
     title: "Built on Trust",
     description:
-      "We operate with transparency and take full responsibility for every system we deliver. Our clients rely on us because we stand behind our work, consistently and without compromise.",
+      "We operate with transparency and take full responsibility for every system we deliver. Our clients rely on us because we stand behind our work — consistently and without compromise.",
   },
   {
     title: "Client-First Thinking",
     description:
-      "We build long-term partnerships, not one-off projects, delivering solutions tailored to each client's environment and real operational needs, with performance and durability designed for long-term value.",
+      "We build long-term partnerships, not one-off projects — delivering solutions tailored to each client's environment and real operational needs.",
   },
   {
     title: "People Who Deliver",
@@ -28,12 +29,12 @@ const valuePillars = [
   {
     title: "Innovation with Agility",
     description:
-      "We do not just adopt new technologies. We respond quickly to changing needs. Our agile approach allows us to adapt systems, integrate new solutions, and continuously improve performance in dynamic environments.",
+      "We don't just adopt new technologies — we respond quickly to changing needs. Our approach allows us to adapt systems, integrate new solutions, and continuously improve performance.",
   },
   {
-    title: "Committed to the Communities We Serve",
+    title: "Community Impact",
     description:
-      "Our work extends beyond installations. By enabling safer access, reducing operational risks, and improving how people and vehicles move through critical spaces, we contribute directly to safer, more efficient communities. We also support local economies by developing local expertise, creating employment opportunities, and delivering solutions that strengthen the environments in which our clients operate.",
+      "Our work extends beyond installations. By enabling safer access and improving how people move through critical spaces, we contribute to safer, more efficient communities — and to the development of local expertise and employment.",
   },
   {
     title: "Excellence Without Compromise",
@@ -44,9 +45,9 @@ const valuePillars = [
 
 const journeyParagraphs = [
   "Founded in 2005, Balosh Integrated Services began with a clear focus: to bring structure, reliability, and control to environments where it matters most.",
-  "Over the past two decades, that focus has driven our growth into a trusted leader in access control and infrastructure systems, delivering solutions across Nigeria's most critical and high-traffic environments.",
-  "Today, our systems support over 200,000 daily check-ins, reflecting the scale, reliability, and operational confidence our clients depend on every day. Backed by a team of over 100 skilled professionals nationwide, we continue to deliver consistent performance across sectors.",
-  "Our evolution has been shaped by a commitment to building systems that work in real conditions. By leveraging OEM hardware tailored for the Nigerian environment, we ensure durability, efficiency, and long-term value across every deployment.",
+  "Over the past two decades, that focus has driven our growth into a trusted leader in access control and infrastructure systems — delivering solutions across Nigeria's most critical and high-traffic environments.",
+  "Today, our systems support over 200,000 daily check-ins across Nigeria, reflecting the scale, reliability, and operational confidence our clients depend on. Backed by a team of over 100 skilled professionals nationwide, we continue to deliver consistent performance across sectors.",
+  "Our evolution has been shaped by a commitment to building systems that work in real conditions. By developing and deploying OEM hardware tailored specifically for the Nigerian environment, we ensure durability, efficiency, and long-term value across every deployment.",
   "As Balosh continues to grow, one thing remains constant: a commitment to delivering solutions that perform consistently, reliably, and at scale.",
 ]
 
@@ -80,15 +81,15 @@ const journeyHighlights = [
 const teamCulture = [
   {
     title: "Ownership is expected",
-    description: "Every team member is accountable for results.",
+    description: "Every team member is accountable for results",
   },
   {
     title: "Collaboration drives execution",
-    description: "Complex challenges are solved as one team.",
+    description: "Complex challenges are solved as one team",
   },
   {
     title: "Continuous growth is a priority",
-    description: "Through training, mentorship, and real-world experience.",
+    description: "Through training, mentorship, and real-world experience",
   },
 ]
 
@@ -120,32 +121,32 @@ const differenceItems = [
   {
     title: "Built for Nigeria's Realities",
     description:
-      "Our systems are engineered to perform in demanding conditions, from power variability to large-scale, complex environments.",
+      "Our systems are engineered to perform in demanding conditions — from power variability to large-scale, complex environments. We don't adapt foreign solutions; we build for where we operate.",
   },
   {
     title: "End-to-End Accountability",
     description:
-      "We manage every stage in-house, from hardware and software to installation and ongoing support, ensuring seamless delivery and full responsibility.",
+      "We manage every stage in-house — hardware, software, installation, and ongoing support — ensuring seamless delivery and a single point of accountability.",
   },
   {
     title: "Proprietary OEM Hardware",
     description:
-      "Our solutions are powered by hardware designed for Nigerian conditions, offering durability, faster parts access, and flexible customization.",
+      "Our solutions are powered by hardware designed specifically for Nigerian conditions, offering durability, faster parts access, and flexible customisation.",
   },
   {
     title: "Global Technology, Local Expertise",
     description:
-      "We combine world-class technology with deep local insight to deliver solutions that truly work where it matters most.",
+      "We combine world-class technology partnerships with deep local knowledge to deliver solutions that truly work where it matters most.",
   },
   {
     title: "A Reputation Earned Through Results",
     description:
-      "For over 20 years, our clients have become our strongest advocates, driven by consistent performance and trust.",
+      "For over 20 years, our clients have become our strongest advocates — driven by consistent performance and the trust built through every project.",
   },
   {
     title: "Built for the Long Term",
     description:
-      "We do not just deliver projects, we build lasting partnerships. Your uptime, reliability, and success remain our priority.",
+      "We don't just deliver projects; we build lasting partnerships. Your uptime, reliability, and long-term success remain our priority long after installation.",
   },
 ]
 
@@ -232,6 +233,12 @@ export default function AboutExtendedSections() {
               </div>
             </div>
             <div className="col-lg-6">
+              <div className="heading6 text-center">
+                <h3 data-aos="fade-left" data-aos-duration="900">
+                  Why Balosh?
+                </h3>
+              </div>
+              <div className="space20" />
               <Image
                 src="/assets/img/all-images/balosh-why-balosh.png"
                 alt="Why Balosh infographic"
@@ -290,10 +297,9 @@ export default function AboutExtendedSections() {
                   Our Commitment
                 </h3>
                 <p data-aos="fade-right" data-aos-duration="1150" data-aos-delay="340">
-                  At Balosh Integrated Services, our mission is to be the
-                  leading provider of access control solutions, driven by a
-                  commitment to integrity, customer satisfaction, and innovation.
-                  Our foundational beliefs guide every aspect of our operations.
+                  To be Nigeria&apos;s most trusted provider of access control and security
+                  infrastructure — driven by integrity, long-term client partnerships,
+                  and a relentless commitment to systems that actually work.
                 </p>
            
               </div>
@@ -394,11 +400,11 @@ export default function AboutExtendedSections() {
                 </h2>
                 <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="140">
                   Behind every door we open is a team we call the Balosh
-                  Allstars: engineers, technicians, software developers, and
+                  Allstars — engineers, technicians, software developers, and
                   support specialists who take full ownership of every outcome.
                 </p>
                 <p data-aos="fade-right" data-aos-duration="1050" data-aos-delay="180">
-                  Because at Balosh, &quot;we open important doors&quot;, and
+                  Because at Balosh, &quot;we open important doors&quot; — and
                   the people behind those doors matter just as much as the
                   systems themselves.
                 </p>
@@ -406,13 +412,14 @@ export default function AboutExtendedSections() {
                   Our team is built to deliver in environments where performance
                   is critical. Their expertise, responsiveness, and commitment
                   to excellence ensure that every system we design, install, and
-                  support works consistently and at scale.
+                  support works — consistently and at scale.
                 </p>
                 <p data-aos="fade-right" data-aos-duration="1150" data-aos-delay="260">
-                  We also recognize that opening doors goes beyond access. It is
+                  We recognise that opening doors goes beyond access — it is
                   about opportunity, trust, and impact. By bringing together
                   people from diverse backgrounds, we foster a culture that
-                  encourages new thinking, adaptability, and stronger outcomes.
+                  encourages new thinking, adaptability, and stronger outcomes
+                  for clients.
                 </p>
               </div>
             </div>
@@ -454,14 +461,10 @@ export default function AboutExtendedSections() {
                 data-aos-delay="260"
               >
                 <p>
-                  Beyond delivery, we invest in our people, supporting their
-                  development, well-being, and long-term growth, because a
-                  motivated, supported team delivers better results for our
-                  clients.
+                  At Balosh, we don&apos;t just open important doors.
                 </p>
                 <p>
-                  At Balosh, we do not just open important doors. We have the
-                  team that ensures what is behind them works.
+                  We have the team that ensures what&apos;s behind them works.
                 </p>
               </div>
             </div>
@@ -549,11 +552,9 @@ export default function AboutExtendedSections() {
                   Balosh Leadership Team
                 </h2>
                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="180">
-                  Our management team brings together experience, strategic
-                  insight, and a shared commitment to excellence. With a clear
-                  vision and deep industry expertise, they drive Balosh&apos;s
-                  growth while ensuring the consistent delivery of reliable,
-                  high-quality solutions across every project.
+                Our management team brings together decades of experience, strategic insight, and a shared 
+                commitment to excellence. With a clear vision and deep industry expertise, they drive Balosh&apos;s growth 
+                while ensuring the consistent delivery of reliable, high-quality solutions across every project.
                 </p>
               </div>
             </div>

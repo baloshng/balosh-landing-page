@@ -57,12 +57,49 @@ export default function ProjectDetailContentSection({
               <div className="space24" />
               <h3>Project Description</h3>
               <div className="space16" />
-              {project.description.map((paragraph, index) => (
-                <div key={`${project.slug}-${index}`}>
-                  <p>{paragraph}</p>
-                  <div className="space16" />
-                </div>
-              ))}
+              {project.caseStudy
+                ? project.caseStudy.map((section) => (
+                    <div key={section.heading}>
+                      <h4>{section.heading}</h4>
+                      <div className="space16" />
+                      {section.paragraphs.map((paragraph) => (
+                        <div key={paragraph}>
+                          <p>{paragraph}</p>
+                          <div className="space16" />
+                        </div>
+                      ))}
+                      {section.bullets ? (
+                        <>
+                          <div
+                            className="lista-area"
+                            style={{ padding: 0, border: "none" }}
+                          >
+                            <ul>
+                              {section.bullets.map((bullet) => (
+                                <li key={bullet}>
+                                  <Image
+                                    src="/assets/img/icons/check3.svg"
+                                    alt=""
+                                    width={18}
+                                    height={18}
+                                    className="mr-2 inline-block align-middle"
+                                  />
+                                  {bullet}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="space16" />
+                        </>
+                      ) : null}
+                    </div>
+                  ))
+                : project.description.map((paragraph, index) => (
+                    <div key={`${project.slug}-${index}`}>
+                      <p>{paragraph}</p>
+                      <div className="space16" />
+                    </div>
+                  ))}
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ export default function SolutionsHubSection({
             <div className="space24 d-lg-none d-block" />
           </div>
         </div>
-        <div className="row service-carousel-area solutions-carousel">
+        <div className="row service-carousel-area solutions-carousel gy-4">
           {solutions.map((solution) => (
             <div className="col-lg-4 col-md-6 col-sm-12" key={solution.id}>
               <div className="service-boxarea">

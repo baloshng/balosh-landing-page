@@ -1009,6 +1009,94 @@ body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-ite
   min-height: 108px;
 }
 
+.project-main-inner-area .project-boxarea-inner .img1 {
+  height: 340px;
+}
+
+.project-main-inner-area .project-boxarea-inner .img1 img {
+  height: 100% !important;
+}
+
+.project-main-inner-area .project-boxarea-inner:hover .content-area::after,
+.project-main-inner-area .project-boxarea-inner.active .content-area::after {
+  transform: scale(1) !important;
+}
+
+.project-main-inner-area .project-boxarea-inner .content-area .all-content,
+.project-main-inner-area .project-boxarea-inner.active .content-area .all-content {
+  align-items: center;
+  bottom: auto !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  left: 0 !important;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 34px 24px 20px;
+  position: absolute !important;
+  top: 0 !important;
+  transform: none !important;
+  width: 100%;
+}
+
+.project-main-inner-area
+  .project-boxarea-inner
+  .content-area
+  .all-content
+  .icons
+  a,
+.project-main-inner-area
+  .project-boxarea-inner.active
+  .content-area
+  .all-content
+  .icons
+  a {
+  height: 34px;
+  line-height: 34px;
+  margin-bottom: 12px;
+  width: 34px;
+}
+
+.project-main-inner-area .project-boxarea-inner .content-area .all-content a,
+.project-main-inner-area
+  .project-boxarea-inner.active
+  .content-area
+  .all-content
+  a {
+  font-size: 0.94rem;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  max-width: 100%;
+}
+
+.project-main-inner-area .project-boxarea-inner .content-area .all-content p,
+.project-main-inner-area
+  .project-boxarea-inner.active
+  .content-area
+  .all-content
+  p {
+  font-size: 0.8rem;
+  line-height: 1.34;
+  margin: 0 auto;
+  max-width: 25rem;
+}
+
+@media (max-width: 767px) {
+  .project-main-inner-area .project-boxarea-inner .img1 {
+    height: 330px;
+  }
+
+  .project-main-inner-area .project-boxarea-inner .content-area .all-content,
+  .project-main-inner-area
+    .project-boxarea-inner.active
+    .content-area
+    .all-content {
+    padding: 28px 18px 18px;
+  }
+}
+
 .about-page-pillar-card h3 {
   color: #1c0f01;
   font-size: 1.05rem;

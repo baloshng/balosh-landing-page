@@ -88,8 +88,8 @@ export default function HomeFaqSection() {
                 data-aos-delay={400}
                 data-aos-offset={40}
               >
-                Answers to common client questions about customization,
-                integrations, delivery scope, compliance, and project timelines.
+                Everything you need to know about working with Balosh — from how our systems work to what 
+                happens after installation.
               </p>
             </div>
           </div>

@@ -2,10 +2,11 @@ import Image from "next/image"
 import Link from "next/link"
 
 const whoWeAreParagraphs = [
-  "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and consistent industry leadership. For two decades, we have delivered trusted security and access control solutions across Nigeria's most critical environments.",
-  "We provide fully integrated, end-to-end services, from design and development to installation and ongoing support, all managed in-house. This approach ensures seamless execution, accountability, and the highest standards of quality at every stage.",
-  "From major transport terminals handling millions of people to government institutions, corporate campuses, and leading retail destinations, Balosh has become a trusted name in securing and managing high-value spaces. Our solutions are built to perform in demanding environments, supporting efficiency, safety, and operational excellence.",
-  "The trust placed in us by Nigeria's most important institutions has been earned through consistency, expertise, and results. It is a responsibility we take seriously, and one that continues to drive our commitment to delivering reliable, future-focused solutions.",
+  "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and quiet dominance.",
+  "We operate end-to-end — design, development, installation, and ongoing support — all in-house, with no middlemen and no gaps in accountability. From the terminals that move millions to the institutions that govern a nation, the names that define Nigeria's most critical spaces have one thing in common: Balosh.",
+  "For 20 years, Nigeria's airports, government institutions, major retail destinations, corporate campuses, and critical national infrastructure have entrusted their security and access operations to us. That trust is not given lightly — and we have never taken it for granted.",
+  "We don't rely on advertising. We let our work speak for itself.",
+  "We are builders, operators, and long-term partners — trusted by the organisations that cannot afford to get access control and security wrong.",
 ]
 
 const baloshDifference = [
@@ -78,6 +79,10 @@ export default function HomeAboutSection() {
                 data-aos-duration="1200"
                 data-aos-delay="350"
               >
+                <div className="heading6 text-center">
+                  <h3>Why Balosh?</h3>
+                </div>
+                <div className="space20" />
                 <Image
                   src="/assets/img/all-images/balosh-why-balosh.png"
                   alt="Why Balosh infographic"
