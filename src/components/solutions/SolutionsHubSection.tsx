@@ -33,9 +33,9 @@ export default function SolutionsHubSection({
             <div className="space24 d-lg-none d-block" />
           </div>
         </div>
-        <div className="row service-carousel-area solutions-hub-grid">
+        <div className="row service-carousel-area solutions-carousel gy-4">
           {solutions.map((solution) => (
-            <div className="col-lg-4 col-md-6" key={solution.id}>
+            <div className="col-lg-4 col-md-6 col-sm-12" key={solution.id}>
               <div className="service-boxarea">
                 <div className="img1">
                   <Image
@@ -45,6 +45,7 @@ export default function SolutionsHubSection({
                     height={600}
                     className="h-full w-full object-cover"
                     sizes="(max-width: 768px) 100vw, 400px"
+                    priority={false}
                   />
                 </div>
                 <div className="content-area">

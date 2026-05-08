@@ -40,9 +40,9 @@ export default function HomeProjectsSection({
                 data-aos-delay={400}
                 data-aos-offset={40}
               >
-                Explore selected Balosh projects across events, healthcare,
-                residential estates, ports, hospitality, and education
-                environments.
+                Explore selected Balosh projects across airports, retail, hospitality, residential estates, healthcare, ports, 
+                events, and education environments. Each one a testament to what the right partner, the right 
+                technology, and the right commitment can deliver.
               </p>
               <div
                 className="btn-area mt-3"

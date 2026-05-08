@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import type { SolutionItem } from "@/data/solutions"
 
 type SolutionDetailContentSectionProps = {
@@ -46,6 +45,23 @@ export default function SolutionDetailContentSection({
                   </div>
                 ))}
               </div>
+              <div className="lista-area" style={{ padding: 0, border: "none" }}>
+                <ul>
+                  {solution.features.map((feature) => (
+                    <li key={feature}>
+                      <Image
+                        src="/assets/img/icons/check3.svg"
+                        alt=""
+                        width={18}
+                        height={18}
+                        className="mr-2 inline-block align-middle"
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="space24" />
               <div className="heading6 solution-equipment-heading">
                 <h5>
                   <Image
@@ -71,50 +87,6 @@ export default function SolutionDetailContentSection({
                 ))}
               </div>
               <div className="space24" />
-              <div className="lista-area" style={{ padding: 0, border: "none" }}>
-                <ul>
-                  <li>
-                    <Image
-                      src="/assets/img/icons/check3.svg"
-                      alt=""
-                      width={18}
-                      height={18}
-                      className="mr-2 inline-block align-middle"
-                    />
-                    Tailored to the client&apos;s access, movement, and security
-                    needs.
-                  </li>
-                  <li>
-                    <Image
-                      src="/assets/img/icons/check3.svg"
-                      alt=""
-                      width={18}
-                      height={18}
-                      className="mr-2 inline-block align-middle"
-                    />
-                    Supported by Balosh&apos;s installation and maintenance
-                    capabilities.
-                  </li>
-                  <li>
-                    <Image
-                      src="/assets/img/icons/check3.svg"
-                      alt=""
-                      width={18}
-                      height={18}
-                      className="mr-2 inline-block align-middle"
-                    />
-                    Built for reliable performance in demanding Nigerian
-                    environments.
-                  </li>
-                </ul>
-              </div>
-              <div className="space24" />
-              <Link href="/#contact" className="header-btn4">
-                Discuss This Solution
-                <span>
-                  <i className="fa-solid fa-arrow-right" />
-                </span>
-              </Link>
             </div>
           </div>
         </div>

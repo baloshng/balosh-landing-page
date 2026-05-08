@@ -12,6 +12,7 @@ import HomePreloaderProgress from "@/components/home/HomePreloaderProgress";
 import HomePricingSection from "@/components/home/HomePricingSection";
 import HomeProjectsSection from "@/components/home/HomeProjectsSection";
 import HomeServicesSection from "@/components/home/HomeServicesSection";
+import HomeStatusBarSection from "@/components/home/HomeStatusBarSection";
 import HomeTrustedClientsSection from "@/components/home/HomeTrustedClientsSection";
 import { blogPosts } from "@/data/blogPosts";
 import { projects } from "@/data/projects";
@@ -44,6 +45,7 @@ export default function Home() {
       <div>
         <HomePreloaderProgress />
         <HomeHeroSection />
+        <HomeStatusBarSection />
 
         <div>
           <HomeAboutSection />
