@@ -153,41 +153,14 @@ export default function HomeFaqSection() {
           </div>
           <div className="col-lg-6">
             <div className="faq-images-area">
-              <div className="row">
-                <div className="col-lg-8">
-                  <div className="img1 reveal relative w-full max-[991px]:aspect-square min-[992px]:aspect-4/5">
-                    <Image
-                      src="/assets/img/logo/cam.jpg"
-                      alt="CCTV camera"
-                      width={1200}
-                      height={1200}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="faq-progress-area">
-                    <div className="progresbar">
-                      <div className="progressbar">
-                        <div className="circle" data-percent={90}>
-                          <canvas />
-                          <div>90%</div>
-                        </div>
-                      </div>
-                      <p>Cameras Installed</p>
-                    </div>
-                    <div className="space24" />
-                    <div className="progresbar">
-                      <div className="progressbar">
-                        <div className="circle" data-percent={90}>
-                          <canvas />
-                          <div>90%</div>
-                        </div>
-                      </div>
-                      <p>Qualified Safe</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="img1 reveal relative w-full max-[991px]:aspect-square min-[992px]:aspect-4/5">
+                <Image
+                  src="/assets/img/all-images/balosh-solutions/Access-Control_3.jpg"
+                  alt="Access control turnstiles"
+                  width={1200}
+                  height={1200}
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
           </div>

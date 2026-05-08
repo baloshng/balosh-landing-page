@@ -314,7 +314,7 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   animation: trusted-clients-marquee 55s linear infinite;
 }
 
@@ -323,19 +323,35 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 104px;
-  min-width: 300px;
+  min-height: 140px;
+  width: clamp(360px, 32vw, 460px);
   padding: 0 0.5rem;
 }
 
 .trusted-clients-marquee__img {
   display: block;
-  width: 240px;
-  height: 96px;
+  width: 320px;
+  height: 128px;
   object-fit: contain;
   opacity: 0.85;
   filter: grayscale(0.25);
   transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+@media (max-width: 767px) {
+  .trusted-clients-marquee-track {
+    gap: 1.25rem;
+  }
+
+  .trusted-clients-marquee__item {
+    min-height: 112px;
+    width: 260px;
+  }
+
+  .trusted-clients-marquee__img {
+    width: 220px;
+    height: 88px;
+  }
 }
 
 @media (hover: hover) {
