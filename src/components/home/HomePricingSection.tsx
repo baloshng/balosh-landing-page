@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { marketPageIntro, markets } from "@/data/markets"
 
 export default function HomePricingSection() {
@@ -37,7 +38,7 @@ export default function HomePricingSection() {
           </div>
         </div>
         <div className="row">
-          {markets.map((market, index) => (
+          {markets.slice(0, 3).map((market, index) => (
             <div
               className="col-lg-4 col-md-6"
               data-aos="fade-up"
@@ -68,6 +69,15 @@ export default function HomePricingSection() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="row">
+          <div className="col-lg-12 text-center">
+            <div className="btn-area mt-4">
+              <Link href="/market" className="header-btn4">
+                View More <i className="fa-solid fa-arrow-right" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
