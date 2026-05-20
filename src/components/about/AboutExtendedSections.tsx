@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import WhyBaloshWheelSection from "@/components/WhyBaloshWheelSection"
 import { aboutNavigationLinks } from "@/data/aboutSections"
 
 const whoWeAreParagraphs = [
@@ -209,8 +210,8 @@ export default function AboutExtendedSections() {
 
       <section className="about3-section-area sp1 about-page-section" id="who-we-are">
         <div className="container">
-          <div className="row align-items-center gy-4">
-            <div className="col-lg-6">
+          <div className="row">
+            <div className="col-lg-10 m-auto">
               <div className="heading6">
                 <h5 data-aos="fade-right" data-aos-duration="800">
                   <Image
@@ -232,28 +233,11 @@ export default function AboutExtendedSections() {
                 ))}
               </div>
             </div>
-            <div className="col-lg-6">
-              <div className="heading6 text-center">
-                <h3 data-aos="fade-left" data-aos-duration="900">
-                  Why Balosh?
-                </h3>
-              </div>
-              <div className="space20" />
-              <Image
-                src="/assets/img/all-images/balosh-why-balosh.png"
-                alt="Why Balosh infographic"
-                width={1024}
-                height={506}
-                className="h-auto w-full"
-                style={{ width: "100%", height: "auto", objectFit: "contain" }}
-                data-aos="fade-left"
-                data-aos-duration="1100"
-                data-aos-delay="150"
-              />
-            </div>
           </div>
         </div>
       </section>
+
+      <WhyBaloshWheelSection id="about-why-balosh" />
 
       <section
         className="about3-section-area sp1 about-page-section about-page-section-alt"
@@ -493,21 +477,6 @@ export default function AboutExtendedSections() {
                 <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="140">
                   There are many vendors, but there is only one Balosh.
                 </p>
-                <div className="space20" />
-                <div className="heading6 text-center">
-                  <h3 data-aos="fade-up" data-aos-duration="900">Why Balosh?</h3>
-                </div>
-                <Image
-                  src="/assets/img/all-images/balosh-why-balosh.png"
-                  alt="Why leaders choose Balosh"
-                  width={1024}
-                  height={506}
-                  className="h-auto w-full"
-                  style={{ width: "100%", height: "auto", objectFit: "contain" }}
-                  data-aos="fade-right"
-                  data-aos-duration="1100"
-                  data-aos-delay="200"
-                />
               </div>
             </div>
             <div className="col-lg-7">

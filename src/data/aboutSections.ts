@@ -14,6 +14,13 @@ export const aboutNavigationLinks: AboutNavigationLink[] = [
       "A clear introduction to Balosh, what the company represents, and the environments it serves.",
   },
   {
+    id: "about-why-balosh",
+    title: "Why Balosh?",
+    href: "/about#about-why-balosh",
+    description:
+      "The proof points behind Balosh's reputation, reach, workforce, referrals, and operational scale.",
+  },
+  {
     id: "what-we-stand-for",
     title: "What We Stand For",
     href: "/about#what-we-stand-for",

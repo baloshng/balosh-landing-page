@@ -29,8 +29,10 @@ export default function MarketPage() {
   return (
     <>
       <InternalHeader />
-      <BlogHeroSection title="Our Market" breadcrumbLabel="Our Market" />
-      <MarketContentSection />
+      <main className="inner-page-flow market-page-flow">
+        <BlogHeroSection title="Our Market" breadcrumbLabel="Our Market" />
+        <MarketContentSection />
+      </main>
       <Footer />
     </>
   )

@@ -74,28 +74,6 @@ export default function HomeAboutSection() {
                 </p>
               ))}
 
-              <div
-                data-aos="fade-right"
-                data-aos-duration="1200"
-                data-aos-delay="350"
-              >
-                <div className="heading6 text-center">
-                  <h3>Why Balosh?</h3>
-                </div>
-                <div className="space20" />
-                <Image
-                  src="/assets/img/all-images/balosh-why-balosh.png"
-                  alt="Why Balosh infographic"
-                  width={1024}
-                  height={506}
-                  className="h-auto w-full"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
             </div>
           </div>
           <div className="col-lg-6">

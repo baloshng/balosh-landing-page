@@ -29,8 +29,10 @@ export default function SolutionsPage() {
   return (
     <>
       <InternalHeader />
-      <BlogHeroSection title="Solutions" breadcrumbLabel="Solutions" />
-      <SolutionsHubSection solutions={solutions} />
+      <main className="inner-page-flow solutions-page-flow">
+        <BlogHeroSection title="Solutions" breadcrumbLabel="Solutions" />
+        <SolutionsHubSection solutions={solutions} />
+      </main>
       <Footer />
     </>
   )

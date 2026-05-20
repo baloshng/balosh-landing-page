@@ -31,8 +31,10 @@ export default function AboutPage() {
   return (
     <>
       <InternalHeader />
-      <BlogHeroSection title="About Us" breadcrumbLabel="About Us" />
-      <AboutExtendedSections />
+      <main className="inner-page-flow about-page-flow">
+        <BlogHeroSection title="About Us" breadcrumbLabel="About Us" />
+        <AboutExtendedSections />
+      </main>
       <Footer />
     </>
   )

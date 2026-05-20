@@ -29,8 +29,10 @@ export default function BlogPage() {
   return (
     <>
       <InternalHeader />
-      <BlogHeroSection title="Our Blog" breadcrumbLabel="Our Blog" />
-      <BlogListSection posts={blogPosts} />
+      <main className="inner-page-flow blog-page-flow">
+        <BlogHeroSection title="Our Blog" breadcrumbLabel="Our Blog" />
+        <BlogListSection posts={blogPosts} />
+      </main>
       <Footer />
     </>
   );
