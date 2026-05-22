@@ -403,7 +403,7 @@ export default function AboutExtendedSections() {
                   about opportunity, trust, and impact. By bringing together
                   people from diverse backgrounds, we foster a culture that
                   encourages new thinking, adaptability, and stronger outcomes
-                  for clients.
+                  for clients. At Balosh, we don&apos;t just open important doors, We have the team that ensures what&apos;s behind them works.
                 </p>
               </div>
             </div>
@@ -438,19 +438,6 @@ export default function AboutExtendedSections() {
               </div>
       
               <div className="space20" />
-              <div
-                className="heading6 about-page-quote-card"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="260"
-              >
-                <p>
-                  At Balosh, we don&apos;t just open important doors.
-                </p>
-                <p>
-                  We have the team that ensures what&apos;s behind them works.
-                </p>
-              </div>
             </div>
           </div>
         </div>
