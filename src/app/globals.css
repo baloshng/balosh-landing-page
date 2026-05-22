@@ -651,6 +651,37 @@ body .footer3-section-area .location-area .img1 a {
   box-sizing: border-box;
 }
 
+body .footer3-section-area .location-area {
+  align-items: flex-start;
+  gap: 10px;
+}
+
+body .footer3-section-area .location-area .text {
+  min-width: 0;
+}
+
+body .footer3-section-area .location-area .text a {
+  padding-left: 0;
+}
+
+@media (max-width: 767px) {
+  body .footer3-section-area {
+    padding-top: 72px;
+  }
+
+  body .footer3-section-area .location-area {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: left;
+  }
+
+  body .footer3-section-area .location-area .text {
+    flex: 0 1 auto;
+  }
+}
+
 /* Header social links */
 body.homepage3-body .header-area.homepage3 .header-elements .header-action-area {
   align-items: center;

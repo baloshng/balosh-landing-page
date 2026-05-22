@@ -95,7 +95,7 @@ export default function Footer() {
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="head">
-                <h4>Contact Us </h4>
+                <h4>Contact Info </h4>
               </div>
               <div className="location-area">
                 <div className="img1">
