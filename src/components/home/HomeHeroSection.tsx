@@ -19,27 +19,17 @@ export default function HomeHeroSection() {
             />
           </div>
           <div className="container relative z-2">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="header-main-content heading5">
-                  <h5>
-                    <Image
-                      src="/assets/img/icons/finger1.svg"
-                      alt=""
-                      width={20}
-                      height={20}
-                      className="mr-2 inline-block align-middle"
-                    />
-                    <span className="align-middle">{slide.eyebrow}</span>
-                  </h5>
+            <div className="row justify-content-center">
+              <div className="col-lg-8">
+                <div className="header-main-content heading5 text-center home-hero-content">
                   <h1 className="text-anime-style-3">{slide.title}</h1>
                   <p>{slide.description}</p>
                   <div className="btn-area hero-cta-grid">
                     <Link href="/solutions" className="header-btn4">
-                      Explore our solutions <i className="fa-solid fa-arrow-right" />
+                      Explore Our Solutions <i className="fa-solid fa-arrow-right" />
                     </Link>
                     <Link href="/#contact" className="header-btn1">
-                      Schedule a site assessment <i className="fa-solid fa-arrow-right" />
+                      Schedule a Site Assessment <i className="fa-solid fa-arrow-right" />
                     </Link>
                   </div>
                 </div>

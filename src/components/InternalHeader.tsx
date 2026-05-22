@@ -53,7 +53,7 @@ export default function InternalHeader() {
                           alt=""
                           width={286}
                           height={88}
-                          className="w-25 h-auto"
+                          className="w-[100px] h-auto"
                           style={{ width: "100px", height: "auto" }}
                         />
                       </Link>
@@ -172,7 +172,7 @@ export default function InternalHeader() {
                     alt=""
                     width={286}
                     height={88}
-                    className="w-25 h-auto"
+                    className="w-[100px] h-auto"
                     style={{ width: "100px", height: "auto" }}
                   />
                 </Link>
@@ -195,7 +195,7 @@ export default function InternalHeader() {
                 alt=""
                 width={286}
                 height={88}
-                className="w-25 h-auto"
+                className="w-[100px] h-auto"
                 style={{ width: "100px", height: "auto" }}
               />
             </Link>

@@ -14,6 +14,7 @@ import HomeProjectsSection from "@/components/home/HomeProjectsSection";
 import HomeServicesSection from "@/components/home/HomeServicesSection";
 import HomeStatusBarSection from "@/components/home/HomeStatusBarSection";
 import HomeTrustedClientsSection from "@/components/home/HomeTrustedClientsSection";
+import WhyBaloshWheelSection from "@/components/WhyBaloshWheelSection";
 import { blogPosts } from "@/data/blogPosts";
 import { projects } from "@/data/projects";
 import { trustedClients } from "@/data/trustedClients";
@@ -42,13 +43,14 @@ export default function Home() {
     <>
       <HomeEntryReset />
       <HomeHeader />
-      <div>
+      <main className="home-page-flow">
         <HomePreloaderProgress />
         <HomeHeroSection />
-        <HomeStatusBarSection />
 
-        <div>
+        <div className="home-section-stack">
+          <HomeStatusBarSection />
           <HomeAboutSection />
+          <WhyBaloshWheelSection />
           <HomeServicesSection />
           <HomePricingSection />
           <HomeProjectsSection projects={projects} />
@@ -58,7 +60,7 @@ export default function Home() {
           <HomeBlogSection posts={blogPosts} />
           <HomeCtaSection />
         </div>
-      </div>
+      </main>
       <Footer />
     </>
   );
