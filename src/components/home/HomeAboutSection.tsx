@@ -48,7 +48,7 @@ export default function HomeAboutSection() {
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
-            <div className="about-header-area heading6">
+            <div className="about-header-area heading6 home-who-we-are-copy">
               <h5
                 data-aos="fade-right"
                 data-aos-duration="800"

@@ -179,6 +179,17 @@ body.homepage3-body .home-section-stack > .cta3-section-area {
   margin-top: 24px;
 }
 
+body.homepage3-body .about3-section-area .home-who-we-are-copy p {
+  color: #4f3a27 !important;
+  font-size: clamp(1.18rem, 1.25vw, 1.32rem) !important;
+  line-height: 1.58 !important;
+  margin-bottom: 18px !important;
+}
+
+body.homepage3-body .about3-section-area .home-who-we-are-copy p:last-child {
+  margin-bottom: 0 !important;
+}
+
 .why-balosh-wheel-section {
   background: #f9f9f9;
   overflow: hidden;
@@ -1015,6 +1026,10 @@ body.homepage3-body #home.carousel-area .hero3-section-area .home-hero-content .
   transition: none;
 }
 
+body.homepage3-body #home.carousel-area .hero3-section-area .home-hero-content p + .btn-area.hero-cta-grid {
+  margin-top: 28px;
+}
+
 body.homepage3-body #home.carousel-area.owl-carousel:not(.owl-loaded) .hero3-section-area .home-hero-content h1,
 body.homepage3-body #home.carousel-area.owl-carousel .owl-item.active .hero3-section-area .home-hero-content h1 {
   animation: home-hero-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
@@ -1055,19 +1070,32 @@ body.homepage3-body #home.carousel-area.owl-carousel .owl-item.active .hero3-sec
 @media (max-width: 767px) {
   body.homepage3-body #home.carousel-area .hero3-section-area .header-main-content .btn-area.hero-cta-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(130px, 1fr));
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
     justify-content: center;
-    gap: 10px;
-    max-width: 360px;
+    gap: 12px;
+    max-width: min(100%, 340px);
     margin-left: auto;
     margin-right: auto;
+    margin-top: 24px;
+    padding: 0 12px;
   }
 
   body.homepage3-body #home.carousel-area .hero3-section-area .header-main-content .btn-area.hero-cta-grid .header-btn4,
   body.homepage3-body #home.carousel-area .hero3-section-area .header-main-content .btn-area.hero-cta-grid .header-btn1 {
-    width: 100%;
+    align-items: center;
+    display: inline-flex !important;
+    justify-content: center;
+    margin: 0 !important;
+    min-height: 52px;
+    padding: 14px 18px;
     text-align: center;
+    white-space: normal;
+    width: 100%;
+  }
+
+  body.homepage3-body #home.carousel-area .hero3-section-area .header-main-content .btn-area.hero-cta-grid i {
+    flex: 0 0 auto;
   }
 }
 
