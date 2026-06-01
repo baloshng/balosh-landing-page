@@ -75,7 +75,15 @@ export default function HomeHeader() {
                 <nav id="navbar-example2" className="navbar">
                   <div className="header-elements">
                     <div className="site-logo">
-                      <Link href="/">
+                      <Link
+                        href="/"
+                        style={{
+                          display: "inline-block",
+                          lineHeight: 0,
+                          position: "relative",
+                          width: "100px",
+                        }}
+                      >
                         <Image
                           src="/assets/img/logo/balosh.png"
                           alt=""
@@ -84,6 +92,24 @@ export default function HomeHeader() {
                           className="w-[100px] h-auto"
                           style={{ width: "100px", height: "auto" }}
                         />
+                        <span
+                          style={{
+                            color: "#ff7a00",
+                            fontSize: "9px",
+                            fontWeight: 700,
+                            left: "50%",
+                            lineHeight: 1,
+                            pointerEvents: "none",
+                            position: "absolute",
+                            textAlign: "center",
+                            textTransform: "lowercase",
+                            top: "calc(100% + 2px)",
+                            transform: "translateX(-50%)",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          ...we open important doors
+                        </span>
                       </Link>
                     </div>
                     <div className="main-menu">
@@ -188,7 +214,15 @@ export default function HomeHeader() {
           <div className="col-12">
             <div className="mobile-header-elements">
               <div className="mobile-logo">
-                <Link href="/">
+                <Link
+                  href="/"
+                  style={{
+                    display: "inline-block",
+                    lineHeight: 0,
+                    position: "relative",
+                    width: "100px",
+                  }}
+                >
                   <Image
                     src="/assets/img/logo/balosh.png"
                     alt=""
@@ -197,6 +231,24 @@ export default function HomeHeader() {
                     className="w-[100px] h-auto"
                     style={{ width: "100px", height: "auto" }}
                   />
+                  <span
+                    style={{
+                      color: "#ff7a00",
+                      fontSize: "9px",
+                      fontWeight: 700,
+                      left: "50%",
+                      lineHeight: 1,
+                      pointerEvents: "none",
+                      position: "absolute",
+                      textAlign: "center",
+                      textTransform: "lowercase",
+                      top: "calc(100% + 2px)",
+                      transform: "translateX(-50%)",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    ...we open important doors
+                  </span>
                 </Link>
               </div>
               <div className="mobile-header-actions">
@@ -211,7 +263,15 @@ export default function HomeHeader() {
       <div className="mobile-sidebar mobile-sidebar3">
         <div className="logosicon-area">
           <div className="logos">
-            <Link href="/">
+            <Link
+              href="/"
+              style={{
+                display: "inline-block",
+                lineHeight: 0,
+                position: "relative",
+                width: "100px",
+              }}
+            >
               <Image
                 src="/assets/img/logo/balosh.png"
                 alt=""
@@ -220,6 +280,24 @@ export default function HomeHeader() {
                 className="w-[100px] h-auto"
                 style={{ width: "100px", height: "auto" }}
               />
+              <span
+                style={{
+                  color: "#ff7a00",
+                  fontSize: "9px",
+                  fontWeight: 700,
+                  left: "50%",
+                  lineHeight: 1,
+                  pointerEvents: "none",
+                  position: "absolute",
+                  textAlign: "center",
+                  textTransform: "lowercase",
+                  top: "calc(100% + 2px)",
+                  transform: "translateX(-50%)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                ...we open important doors
+              </span>
             </Link>
           </div>
           <div className="menu-close">

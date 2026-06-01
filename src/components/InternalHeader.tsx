@@ -47,6 +47,12 @@ export default function InternalHeader() {
                       <Link
                         href="/"
                         onClick={hardNavigate("/")}
+                        style={{
+                          display: "inline-block",
+                          lineHeight: 0,
+                          position: "relative",
+                          width: "100px",
+                        }}
                       >
                         <Image
                           src="/assets/img/logo/balosh.png"
@@ -56,6 +62,24 @@ export default function InternalHeader() {
                           className="w-[100px] h-auto"
                           style={{ width: "100px", height: "auto" }}
                         />
+                        <span
+                          style={{
+                            color: "#ff7a00",
+                            fontSize: "9px",
+                            fontWeight: 700,
+                            left: "50%",
+                            lineHeight: 1,
+                            pointerEvents: "none",
+                            position: "absolute",
+                            textAlign: "center",
+                            textTransform: "lowercase",
+                            top: "calc(100% + 2px)",
+                            transform: "translateX(-50%)",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          ...we open important doors
+                        </span>
                       </Link>
                     </div>
                     <div className="main-menu">
@@ -166,7 +190,15 @@ export default function InternalHeader() {
           <div className="col-12">
             <div className="mobile-header-elements">
               <div className="mobile-logo">
-                <Link href="/">
+                <Link
+                  href="/"
+                  style={{
+                    display: "inline-block",
+                    lineHeight: 0,
+                    position: "relative",
+                    width: "100px",
+                  }}
+                >
                   <Image
                     src="/assets/img/logo/balosh.png"
                     alt=""
@@ -175,6 +207,24 @@ export default function InternalHeader() {
                     className="w-[100px] h-auto"
                     style={{ width: "100px", height: "auto" }}
                   />
+                  <span
+                    style={{
+                      color: "#ff7a00",
+                      fontSize: "9px",
+                      fontWeight: 700,
+                      left: "50%",
+                      lineHeight: 1,
+                      pointerEvents: "none",
+                      position: "absolute",
+                      textAlign: "center",
+                      textTransform: "lowercase",
+                      top: "calc(100% + 2px)",
+                      transform: "translateX(-50%)",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    ...we open important doors
+                  </span>
                 </Link>
               </div>
               <div className="mobile-header-actions">
@@ -189,7 +239,15 @@ export default function InternalHeader() {
       <div className="mobile-sidebar mobile-sidebar3">
         <div className="logosicon-area">
           <div className="logos">
-            <Link href="/">
+            <Link
+              href="/"
+              style={{
+                display: "inline-block",
+                lineHeight: 0,
+                position: "relative",
+                width: "100px",
+              }}
+            >
               <Image
                 src="/assets/img/logo/balosh.png"
                 alt=""
@@ -198,6 +256,24 @@ export default function InternalHeader() {
                 className="w-[100px] h-auto"
                 style={{ width: "100px", height: "auto" }}
               />
+              <span
+                style={{
+                  color: "#ff7a00",
+                  fontSize: "9px",
+                  fontWeight: 700,
+                  left: "50%",
+                  lineHeight: 1,
+                  pointerEvents: "none",
+                  position: "absolute",
+                  textAlign: "center",
+                  textTransform: "lowercase",
+                  top: "calc(100% + 2px)",
+                  transform: "translateX(-50%)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                ...we open important doors
+              </span>
             </Link>
           </div>
           <div className="menu-close">
