@@ -20,17 +20,17 @@ const featuredCaseStudies = [
   {
     slug: "mma2-airport-car-park-lagos",
     result:
-      "Near-zero downtime, faster passenger throughput, and stronger revenue control in a 24/7 airport environment.",
+      "Near zero downtime, faster passenger throughput, and stronger revenue control in a 24/7 airport environment.",
   },
   {
     slug: "ikoyi-club-access-control-upgrade",
     result:
-      "Zero unauthorized access, zero downtime, and automatic membership-based entry control.",
+      "Zero unauthorized access, zero downtime, and automatic membership based entry control.",
   },
   {
     slug: "ikeja-city-mall-car-park-reset",
     result:
-      "Near-zero downtime, faster vehicle processing, and up to 60% monthly revenue growth.",
+      "Near zero downtime, faster vehicle processing, and up to 60% monthly revenue growth.",
   },
 ]
   .flatMap((item) => {
@@ -85,11 +85,11 @@ export default function HomeStatusBarSection() {
           <p>
             Balosh Integrated Services Limited is the infrastructure behind
             Nigeria&apos;s safest, most efficient spaces. For over two decades,
-            we have delivered end-to-end access control and security
+            we have delivered end to end access control and security
             infrastructure solutions across the country&apos;s most demanding
             environments, including airports, government facilities, corporate
             campuses, retail destinations, hospitals, and gated communities.
-            We design, build, install, and support every system in-house. One
+            We design, build, install, and support every system in house. One
             partner. No gaps. No excuses.
           </p>
         </div>

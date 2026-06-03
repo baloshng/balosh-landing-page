@@ -8,7 +8,7 @@ export const marketPageIntro = {
   eyebrow: "Our Market",
   title: "Industries We Serve",
   description: [
-    "Balosh delivers tailored access control and security solutions across seven key industries. Our expertise allows us to adapt to the unique demands of each environment — delivering solutions that improve security, operational efficiency, and the everyday experience of the people who use these spaces.",
+    "Balosh delivers tailored access control and security solutions across seven key industries. Our expertise allows us to adapt to the unique demands of each environment, delivering solutions that improve security, operational efficiency, and the everyday experience of the people who use these spaces.",
   ],
 }
 
@@ -23,13 +23,13 @@ export const markets: MarketItem[] = [
     title: "Residential",
     image: "/assets/img/all-images/balosh-solutions/ASC.png",
     description:
-      "Our residential solutions cover estate access control, visitor management, facility management and payment applications and security systems — ensuring that gated communities, residential developments, and private estates are safe, efficiently managed, and well-controlled.",
+      "Our residential solutions cover estate access control, visitor management, facility management and payment applications and security systems, ensuring that gated communities, residential developments, and private estates are safe, efficiently managed, and well controlled.",
   },
   {
     title: "Education",
     image: "/assets/img/all-images/balosh-solutions/carpark.jpg",
     description:
-      "We provide access management, attendance tracking, and safety systems for schools, universities, and campuses — creating secure, well-regulated environments that support learning without disrupting daily flow.",
+      "We provide access management, attendance tracking, and safety systems for schools, universities, and campuses, creating secure, well regulated environments that support learning without disrupting daily flow.",
   },
   {
     title: "Events",
@@ -41,7 +41,7 @@ export const markets: MarketItem[] = [
     title: "Leisure",
     image: "/assets/img/all-images/balosh-blog/federal-palace.png",
     description:
-      "Our leisure solutions support clubs, recreational facilities, and hospitality venues with access control, membership management, visitor flow, and safety systems — all designed to protect the experience your guests expect.",
+      "Our leisure solutions support clubs, recreational facilities, and hospitality venues with access control, membership management, visitor flow, and safety systems, all designed to protect the experience your guests expect.",
   },
   {
     title: "Public Sector",
@@ -53,6 +53,6 @@ export const markets: MarketItem[] = [
     title: "Transport",
     image: "/assets/img/all-images/balosh-blog/airport-contract-award.png",
     description:
-      "We provide advanced traffic and mobility management solutions — including ANPR systems, automated toll plazas, and vehicle flow optimisation — for airports, seaports, toll roads, and major transport hubs. Our aviation expertise includes full car park management, ANPR integration, and access systems for airport terminals — as delivered at MMA2, Lagos.",
+      "We provide advanced traffic and mobility management solutions, including ANPR systems, automated toll plazas, and vehicle flow optimisation for airports, seaports, toll roads, and major transport hubs. Our aviation expertise includes full car park management, ANPR integration, and access systems for airport terminals as delivered at MMA2, Lagos.",
   },
 ]

@@ -5,22 +5,22 @@ import { aboutNavigationLinks } from "@/data/aboutSections"
 
 const whoWeAreParagraphs = [
   "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and quiet dominance.",
-  "We operate end-to-end — design, development, installation, and ongoing support — all in-house, with no middlemen and no gaps in accountability. From the terminals that move millions to the institutions that govern a nation, the names that define Nigeria's most critical spaces have one thing in common: Balosh.",
-  "For 20 years, Nigeria's airports, government institutions, major retail destinations, corporate campuses, and critical national infrastructure have entrusted their security and access operations to us. That trust is not given lightly — and we have never taken it for granted.",
+  "We operate end-to-end: design, development, installation, and ongoing support, all in-house, with no middlemen and no gaps in accountability. From the terminals that move millions to the institutions that govern a nation, the names that define Nigeria's most critical spaces have one thing in common: Balosh.",
+  "For 20 years, Nigeria's airports, government institutions, major retail destinations, corporate campuses, and critical national infrastructure have entrusted their security and access operations to us. That trust is not given lightly, and we have never taken it for granted.",
   "We don't rely on advertising. We let our work speak for itself.",
-  "We are builders, operators, and long-term partners — trusted by the organisations that cannot afford to get access control and security wrong.",
+  "We are builders, operators, and long-term partners, trusted by the organisations that cannot afford to get access control and security wrong.",
 ]
 
 const valuePillars = [
   {
     title: "Built on Trust",
     description:
-      "We operate with transparency and take full responsibility for every system we deliver. Our clients rely on us because we stand behind our work — consistently and without compromise.",
+      "We operate with transparency and take full responsibility for every system we deliver. Our clients rely on us because we stand behind our work, consistently and without compromise.",
   },
   {
     title: "Client-First Thinking",
     description:
-      "We build long-term partnerships, not one-off projects — delivering solutions tailored to each client's environment and real operational needs.",
+      "We build long-term partnerships, not one-off projects, delivering solutions tailored to each client's environment and real operational needs.",
   },
   {
     title: "People Who Deliver",
@@ -30,12 +30,12 @@ const valuePillars = [
   {
     title: "Innovation with Agility",
     description:
-      "We don't just adopt new technologies — we respond quickly to changing needs. Our approach allows us to adapt systems, integrate new solutions, and continuously improve performance.",
+      "We don't just adopt new technologies; we respond quickly to changing needs. Our approach allows us to adapt systems, integrate new solutions, and continuously improve performance.",
   },
   {
     title: "Community Impact",
     description:
-      "Our work extends beyond installations. By enabling safer access and improving how people move through critical spaces, we contribute to safer, more efficient communities — and to the development of local expertise and employment.",
+      "Our work extends beyond installations. By enabling safer access and improving how people move through critical spaces, we contribute to safer, more efficient communities and to the development of local expertise and employment.",
   },
   {
     title: "Excellence Without Compromise",
@@ -46,7 +46,7 @@ const valuePillars = [
 
 const journeyParagraphs = [
   "Founded in 2005, Balosh Integrated Services began with a clear focus: to bring structure, reliability, and control to environments where it matters most.",
-  "Over the past two decades, that focus has driven our growth into a trusted leader in access control and infrastructure systems — delivering solutions across Nigeria's most critical and high-traffic environments.",
+  "Over the past two decades, that focus has driven our growth into a trusted leader in access control and infrastructure systems, delivering solutions across Nigeria's most critical and high-traffic environments.",
   "Today, our systems support over 200,000 daily check-ins across Nigeria, reflecting the scale, reliability, and operational confidence our clients depend on. Backed by a team of over 100 skilled professionals nationwide, we continue to deliver consistent performance across sectors.",
   "Our evolution has been shaped by a commitment to building systems that work in real conditions. By developing and deploying OEM hardware tailored specifically for the Nigerian environment, we ensure durability, efficiency, and long-term value across every deployment.",
   "As Balosh continues to grow, one thing remains constant: a commitment to delivering solutions that perform consistently, reliably, and at scale.",
@@ -122,12 +122,12 @@ const differenceItems = [
   {
     title: "Built for Nigeria's Realities",
     description:
-      "Our systems are engineered to perform in demanding conditions — from power variability to large-scale, complex environments. We don't adapt foreign solutions; we build for where we operate.",
+      "Our systems are engineered to perform in demanding conditions, from power variability to large-scale, complex environments. We don't adapt foreign solutions; we build for where we operate.",
   },
   {
     title: "End-to-End Accountability",
     description:
-      "We manage every stage in-house — hardware, software, installation, and ongoing support — ensuring seamless delivery and a single point of accountability.",
+      "We manage every stage in-house: hardware, software, installation, and ongoing support, ensuring seamless delivery and a single point of accountability.",
   },
   {
     title: "Proprietary OEM Hardware",
@@ -142,7 +142,7 @@ const differenceItems = [
   {
     title: "A Reputation Earned Through Results",
     description:
-      "For over 20 years, our clients have become our strongest advocates — driven by consistent performance and the trust built through every project.",
+      "For over 20 years, our clients have become our strongest advocates, driven by consistent performance and the trust built through every project.",
   },
   {
     title: "Built for the Long Term",
@@ -282,7 +282,7 @@ export default function AboutExtendedSections() {
                 </h3>
                 <p data-aos="fade-right" data-aos-duration="1150" data-aos-delay="340">
                   To be Nigeria&apos;s most trusted provider of access control and security
-                  infrastructure — driven by integrity, long-term client partnerships,
+                  infrastructure, driven by integrity, long-term client partnerships,
                   and a relentless commitment to systems that actually work.
                 </p>
            
@@ -384,11 +384,11 @@ export default function AboutExtendedSections() {
                 </h2>
                 <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="140">
                   Behind every door we open is a team we call the Balosh
-                  Allstars — engineers, technicians, software developers, and
+                  Allstars, engineers, technicians, software developers, and
                   support specialists who take full ownership of every outcome.
                 </p>
                 <p data-aos="fade-right" data-aos-duration="1050" data-aos-delay="180">
-                  Because at Balosh, &quot;we open important doors&quot; — and
+                  Because at Balosh, &quot;we open important doors&quot;, and
                   the people behind those doors matter just as much as the
                   systems themselves.
                 </p>
@@ -396,10 +396,10 @@ export default function AboutExtendedSections() {
                   Our team is built to deliver in environments where performance
                   is critical. Their expertise, responsiveness, and commitment
                   to excellence ensure that every system we design, install, and
-                  support works — consistently and at scale.
+                  support works, consistently and at scale.
                 </p>
                 <p data-aos="fade-right" data-aos-duration="1150" data-aos-delay="260">
-                  We recognise that opening doors goes beyond access — it is
+                  We recognise that opening doors goes beyond access, it is
                   about opportunity, trust, and impact. By bringing together
                   people from diverse backgrounds, we foster a culture that
                   encourages new thinking, adaptability, and stronger outcomes

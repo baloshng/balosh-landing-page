@@ -20,16 +20,16 @@ const FAQ_ITEMS: { id: string; question: string; answer: string }[] = [
   },
   {
     id: "faq-3",
-    question: "Do you offer installation, maintenance, and after-sales support?",
+    question: "Do you offer installation, maintenance, and after sales support?",
     answer:
-      "Yes. Balosh delivers end-to-end services including design, installation, preventive maintenance, corrective support, and long-term service coverage.",
+      "Yes. Balosh delivers end to end services including design, installation, preventive maintenance, corrective support, and long term service coverage.",
   },
   {
     id: "faq-4",
     question:
       "How secure and compliant are your products with industry standards?",
     answer:
-      "Our solutions are built for high-security operations and are deployed using tested hardware, robust software controls, and auditable operating processes.",
+      "Our solutions are built for high security operations and are deployed using tested hardware, robust software controls, and auditable operating processes.",
   },
   {
     id: "faq-5",
@@ -88,7 +88,7 @@ export default function HomeFaqSection() {
                 data-aos-delay={400}
                 data-aos-offset={40}
               >
-                Everything you need to know about working with Balosh — from how our systems work to what 
+                Everything you need to know about working with Balosh, from how our systems work to what 
                 happens after installation.
               </p>
             </div>

@@ -13,7 +13,7 @@ export const aboutLegacyLinks: AboutLegacyLink[] = [
   {
     title: "Corporate Philosophy",
     href: "https://balosh.com/04022022_0129/",
-    description: "Our core principles around integrity, customer focus, execution quality, and long-term trust.",
+    description: "Our core principles around integrity, customer focus, execution quality, and long term trust.",
   },
   {
     title: "Our People",
