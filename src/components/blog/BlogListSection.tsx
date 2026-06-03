@@ -27,7 +27,7 @@ export default function BlogListSection({ posts }: BlogListSectionProps) {
                 News, Projects, and Field Updates
               </h2>
               <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="180">
-                The latest from Balosh — project updates, contract awards, and
+                The latest from Balosh project updates, contract awards, and
                 news from across our operations.
               </p>
             </div>

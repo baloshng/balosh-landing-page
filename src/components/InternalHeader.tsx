@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import type { MouseEvent } from "react"
+import { useEffect, useState } from "react"
 import { aboutNavigationLinks } from "@/data/aboutSections"
 import { socialLinks } from "@/data/socialLinks"
 import { solutionNavigationLinks } from "@/data/solutions"
@@ -24,9 +25,40 @@ function linkClass(isActive: boolean) {
 }
 
 export default function InternalHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const active = useInternalNavActive()
+  
+  // Sync React state with DOM
+  useEffect(() => {
+    const sidebar = document.querySelector(".mobile-sidebar")
+    if (sidebar) {
+      if (mobileMenuOpen) {
+        sidebar.classList.add("mobile-menu-active")
+      } else {
+        sidebar.classList.remove("mobile-menu-active")
+      }
+    }
+  }, [mobileMenuOpen])
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(prev => !prev)
+  }
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false)
+  }
+  
   const hardNavigate =
     (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault()
+      window.location.assign(href)
+    }
+
+  const handleAnchorClick =
+    (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+      if (href.includes("#")) {
+        closeMobileMenu()
+      }
       event.preventDefault()
       window.location.assign(href)
     }
@@ -228,7 +260,7 @@ export default function InternalHeader() {
                 </Link>
               </div>
               <div className="mobile-header-actions">
-                <div className="mobile-nav-icon dots-menu">
+                <div className="mobile-nav-icon dots-menu" onClick={toggleMobileMenu}>
                   <i className="fa-solid fa-bars-staggered" />
                 </div>
               </div>
@@ -276,7 +308,7 @@ export default function InternalHeader() {
               </span>
             </Link>
           </div>
-          <div className="menu-close">
+          <div className="menu-close" onClick={closeMobileMenu}>
             <i className="fa-solid fa-xmark" />
           </div>
         </div>
@@ -323,7 +355,7 @@ export default function InternalHeader() {
               <Link
                 href="/#faq"
                 className="nav-link"
-                onClick={hardNavigate("/#faq")}
+                onClick={handleAnchorClick("/#faq")}
               >
                 <span>FAQ</span>
               </Link>
@@ -338,7 +370,7 @@ export default function InternalHeader() {
             <Link
               href="/#contact"
               className="header-btn4"
-              onClick={hardNavigate("/#contact")}
+              onClick={handleAnchorClick("/#contact")}
             >
               Get Started{" "}
               <span>
@@ -373,7 +405,7 @@ export default function InternalHeader() {
                     <div className="contact-info-text">
                       <Link
                         href="/#contact"
-                        onClick={hardNavigate("/#contact")}
+                        onClick={handleAnchorClick("/#contact")}
                       >
                         9, Osaro Isokpan Street, <br /> Lekki Phase 1, Lagos.
                       </Link>

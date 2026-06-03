@@ -29,7 +29,7 @@ export const projects: ProjectItem[] = [
     description: [
       "Balosh Integrated Services provided access control solutions for the Timeless concert, managing entry for over 22,000 attendees.",
       "The deployment included controlled entry systems and verification processes to ensure secure and organized crowd movement throughout the event.",
-      "This project demonstrates Balosh's capability in handling large-scale, high-traffic events with precision and efficiency.",
+      "This project demonstrates Balosh's capability in handling large scale, high traffic events with precision and efficiency.",
     ],
   },
   {
@@ -39,11 +39,11 @@ export const projects: ProjectItem[] = [
     client: "Dangote Refinery (Commissioning Event)",
     products: ["Access Control Rental Systems", "Event Entry Management Solutions"],
     excerpt:
-      "Balosh deployed rental access control for the Dangote Refinery commissioning, enforcing strict zone-level authorization.",
+      "Balosh deployed rental access control for the Dangote Refinery commissioning, enforcing strict zone level authorization.",
     description: [
-      "Balosh deployed its access control rental solution for the commissioning of the Dangote Refinery, one of the most high-profile industrial events in Nigeria.",
+      "Balosh deployed its access control rental solution for the commissioning of the Dangote Refinery, one of the most high profile industrial events in Nigeria.",
       "The system ensured strict access regulation, enabling only authorized personnel and guests into designated zones.",
-      "This highlights Balosh's ability to deliver secure and reliable solutions for high-security, government-level and industrial events.",
+      "This highlights Balosh's ability to deliver secure and reliable solutions for high security, government level and industrial events.",
     ],
   },
   {
@@ -77,15 +77,15 @@ export const projects: ProjectItem[] = [
   {
     id: 5,
     slug: "npa-electronic-truck-call-up-eto",
-    title: "Nigerian Ports Authority Electronic Call-Up System (ETO)",
+    title: "Nigerian Ports Authority Electronic Call Up System (ETO)",
     client: "Nigerian Ports Authority",
-    products: ["Electronic Truck Call-Up System", "Traffic and Access Management Infrastructure"],
+    products: ["Electronic Truck Call Up System", "Traffic and Access Management Infrastructure"],
     excerpt:
-      "Balosh contributed to ETO implementation to regulate truck movement and ease port-access congestion.",
+      "Balosh contributed to ETO implementation to regulate truck movement and ease port access congestion.",
     description: [
-      "In collaboration with partners, Balosh contributed to the implementation of the Electronic Truck Call-Up System (ETO) for the Nigerian Ports Authority.",
-      "The system was designed to regulate truck movement to and from Lagos ports, addressing long-standing traffic congestion issues.",
-      "This project demonstrates Balosh's capacity in large-scale traffic and access management systems beyond traditional security applications.",
+      "In collaboration with partners, Balosh contributed to the implementation of the Electronic Truck Call Up System (ETO) for the Nigerian Ports Authority.",
+      "The system was designed to regulate truck movement to and from Lagos ports, addressing long standing traffic congestion issues.",
+      "This project demonstrates Balosh's capacity in large scale traffic and access management systems beyond traditional security applications.",
     ],
   },
   {
@@ -95,7 +95,7 @@ export const projects: ProjectItem[] = [
     client: "Federal Palace Hotel and Casino",
     products: ["Car Park Ticketing System", "Entrance Control Systems"],
     excerpt:
-      "Balosh delivered guest-friendly parking and entry control infrastructure for a major hospitality facility.",
+      "Balosh delivered guest friendly parking and entry control infrastructure for a major hospitality facility.",
     description: [
       "Balosh was appointed to supply and install a car park ticketing and entrance control system at the Federal Palace Hotel and Casino in Victoria Island.",
       "The system was designed to enhance guest experience, streamline vehicle access, and improve parking revenue management.",
@@ -111,7 +111,7 @@ export const projects: ProjectItem[] = [
     excerpt:
       "Balosh upgraded estate entrance security and improved resident and visitor monitoring.",
     description: [
-      "Balosh upgraded the entrance infrastructure of Osborne Foreshore Estate, a high-end residential community.",
+      "Balosh upgraded the entrance infrastructure of Osborne Foreshore Estate, a high end residential community.",
       "The solution improved access control, enhanced security, and ensured better monitoring of residents and visitors within the estate.",
       "This project further establishes Balosh as a trusted provider for premium residential developments.",
     ],
@@ -123,7 +123,7 @@ export const projects: ProjectItem[] = [
     client: "Landmark Group",
     products: ["Turnstile Systems", "Access Control Infrastructure", "Crowd Entry Management"],
     excerpt:
-      "Balosh deployed turnstile-based access control at Landmark to improve security and visitor flow in a high-traffic venue.",
+      "Balosh deployed turnstile based access control at Landmark to improve security and visitor flow in a high traffic venue.",
     description: [
       "Balosh Integrated Services deployed access control and entry management solutions at Landmark, a major lifestyle and entertainment destination in Lagos.",
       "The installation focused on regulating pedestrian access using turnstile systems to ensure controlled entry while maintaining smooth visitor flow.",
@@ -156,35 +156,35 @@ export const projects: ProjectItem[] = [
       "Plastic Card Ticketing System",
     ],
     excerpt:
-      "Balosh modernized MMA2 parking operations, cutting downtime and improving throughput with ANPR-enabled, cost-efficient infrastructure.",
+      "Balosh modernized MMA2 parking operations, cutting downtime and improving throughput with ANPR enabled, cost efficient infrastructure.",
     description: [
-      "MMA2's multi-story car park was constrained by ageing equipment, expensive imported consumables, and frequent failures that caused passenger queues and revenue leakage.",
-      "Balosh replaced legacy systems with modern equipment at less than half the previous cost, migrated from paper tickets to reusable plastic cards, and implemented vehicle classification with ANPR support for faster dispute-free processing.",
-      "The result was major cost reduction, near-zero downtime in a 24/7 environment, faster traffic throughput, and stronger revenue performance through accurate tariffing and improved operational control.",
+      "MMA2's multi story car park was constrained by ageing equipment, expensive imported consumables, and frequent failures that caused passenger queues and revenue leakage.",
+      "Balosh replaced legacy systems with modern equipment at less than half the previous cost, migrated from paper tickets to reusable plastic cards, and implemented vehicle classification with ANPR support for faster dispute free processing.",
+      "The result was major cost reduction, near zero downtime in a 24/7 environment, faster traffic throughput, and stronger revenue performance through accurate tariffing and improved operational control.",
     ],
     caseStudy: [
       {
         heading: "The Challenge",
         paragraphs: [
-          "MMA2 is one of Nigeria's busiest airports — and its multi-storey car park wasn't keeping up. Outdated equipment cost more than twice as much as modern alternatives, spare parts had to be imported causing costly delays, and system failures forced manual processing that left passengers stuck in queues — still being charged while they waited. There was no vehicle classification system and no ANPR technology, creating revenue leakage and congestion at every turn.",
+          "MMA2 is one of Nigeria's busiest airports, and its multi storey car park wasn't keeping up. Outdated equipment cost more than twice as much as modern alternatives, spare parts had to be imported causing costly delays, and system failures forced manual processing that left passengers stuck in queues while still being charged as they waited. There was no vehicle classification system and no ANPR technology, creating revenue leakage and congestion at every turn.",
         ],
       },
       {
         heading: "The Solution",
         paragraphs: [
-          "We replaced the ageing infrastructure with modern, cost-effective equipment at less than half the previous price. Paper tickets gave way to reusable plastic cards, eliminating imported consumables entirely. A vehicle classification system was introduced to enable accurate, differentiated tariffs — and ANPR cameras were deployed to handle lost tickets swiftly and without dispute. Trained staff and locally stocked spare parts ensured rapid response to any issues.",
+          "We replaced the ageing infrastructure with modern, cost effective equipment at less than half the previous price. Paper tickets gave way to reusable plastic cards, eliminating imported consumables entirely. A vehicle classification system was introduced to enable accurate, differentiated tariffs, and ANPR cameras were deployed to handle lost tickets swiftly and without dispute. Trained staff and locally stocked spare parts ensured rapid response to any issues.",
         ],
       },
       {
         heading: "The Results",
         paragraphs: [
-          "The MMA2 transformation proves what the right technology and the right support can deliver — even in the most demanding environments.",
+          "The MMA2 transformation proves what the right technology and the right support can deliver, even in the most demanding environments.",
         ],
         bullets: [
           "Major cost savings on both equipment and consumables",
-          "Near-zero downtime — 24/7 reliability in a 24/7 environment",
+          "Near zero downtime with 24/7 reliability in a 24/7 environment",
           "Increased revenue through accurate vehicle classification and tariffing",
-          "Faster throughput — queues eliminated, passengers moving freely",
+          "Faster throughput, with queues eliminated and passengers moving freely",
           "Lost tickets resolved instantly via number plate lookup",
         ],
       },
@@ -205,39 +205,39 @@ export const projects: ProjectItem[] = [
       "Balosh delivered a full access overhaul at Ikoyi Club, enabling zero unauthorized access and zero downtime.",
     description: [
       "Ikoyi Club faced recurring turnstile failures, unreliable access cards, and a disconnected membership workflow that required manual activation and deactivation of access rights.",
-      "Balosh stabilized immediate operations, deployed proprietary turnstiles designed for Nigerian conditions, introduced facial recognition and QR entry, and integrated accounting with access control for automatic membership-based permissions.",
+      "Balosh stabilized immediate operations, deployed proprietary turnstiles designed for Nigerian conditions, introduced facial recognition and QR entry, and integrated accounting with access control for automatic membership based permissions.",
       "The upgraded system delivered zero unauthorized access, zero downtime, faster operations, complete entry visibility for members, staff, and guests, and measurable improvement in dues collection and administrative efficiency.",
     ],
     caseStudy: [
       {
         heading: "The Challenge",
         paragraphs: [
-          "For one of Lagos' most prestigious members-only institutions, access control is about far more than security — it is about prestige and member trust. Yet frequent turnstile breakdowns were creating dangerous gaps in security, and unreliable access cards made controlling entry nearly impossible. A complete disconnect between the accounts department and access control software meant staff had to manually activate and deactivate member access — an error-prone process that left lapsed and unauthorised memberships slipping through undetected.",
+          "For one of Lagos' most prestigious members only institutions, access control is about far more than security. It is about prestige and member trust. Yet frequent turnstile breakdowns were creating dangerous gaps in security, and unreliable access cards made controlling entry nearly impossible. A complete disconnect between the accounts department and access control software meant staff had to manually activate and deactivate member access, an error prone process that left lapsed and unauthorised memberships slipping through undetected.",
         ],
       },
       {
         heading: "The Solution",
         paragraphs: [
-          "We moved quickly — immediately repairing existing turnstiles and replacing the access control software to restore security without delay. From there, we delivered a full upgrade:",
+          "We moved quickly, immediately repairing existing turnstiles and replacing the access control software to restore security without delay. From there, we delivered a full upgrade:",
         ],
         bullets: [
           "Proprietary turnstiles engineered specifically for the Nigerian environment",
           "Facial recognition and QR code readers introduced alongside card access for seamless, flexible entry",
-          "Full integration between accounting and access control software — member access now activates or deactivates automatically based on subscription status",
+          "Full integration between accounting and access control software, so member access now activates or deactivates automatically based on subscription status",
           "A formal SLA guaranteeing proactive maintenance and rapid response times",
         ],
       },
       {
         heading: "The Results",
         paragraphs: [
-          "The Ikoyi Club project is proof that the right access control system doesn't just secure a building — it protects an institution's identity.",
+          "The Ikoyi Club project is proof that the right access control system doesn't just secure a building. It protects an institution's identity.",
         ],
         bullets: [
-          "Zero unauthorised access — entry is strictly controlled, guests included",
-          "Zero downtime — a complete reversal from constant failures",
+          "Zero unauthorised access, with entry strictly controlled, guests included",
+          "Zero downtime, a complete reversal from constant failures",
           "Hundreds of staff hours saved through automated account management",
           "Measurable increase in membership dues payment and revenue",
-          "Full entry records for members, staff, and guests — anytime, anywhere",
+          "Full entry records for members, staff, and guests anytime, anywhere",
           "Adopted by HR for staff time and attendance tracking",
         ],
       },
@@ -251,20 +251,20 @@ export const projects: ProjectItem[] = [
     products: [
       "Car Park Operations Takeover",
       "Reusable Card Ticketing",
-      "On-site Engineering and Spare Parts Program",
+      "On site Engineering and Spare Parts Program",
     ],
     excerpt:
-      "Balosh reset Ikeja City Mall parking operations with near-zero downtime and significant monthly revenue growth.",
+      "Balosh reset Ikeja City Mall parking operations with near zero downtime and significant monthly revenue growth.",
     description: [
       "The mall's car park suffered long outages, undertrained technical support, dependency on foreign specialists, and consumable shortages that forced manual ticketing and enabled revenue leakage.",
-      "From July 1, 2024, Balosh implemented a full operational reset by replacing paper ticketing with reusable cards, deploying trained on-site teams, and maintaining local spare parts stock for rapid response.",
-      "The deployment delivered near-zero downtime, faster vehicle processing, improved customer experience, and up to 60% revenue increase in peak months by eliminating manual processes and fraud exposure.",
+      "From July 1, 2024, Balosh implemented a full operational reset by replacing paper ticketing with reusable cards, deploying trained on site teams, and maintaining local spare parts stock for rapid response.",
+      "The deployment delivered near zero downtime, faster vehicle processing, improved customer experience, and up to 60% revenue increase in peak months by eliminating manual processes and fraud exposure.",
     ],
     caseStudy: [
       {
         heading: "The Challenge",
         paragraphs: [
-          "Ikeja City Mall's car park had been poorly managed for years. Frequent system failures — some lasting up to three months — were caused by a lack of spare parts and undertrained engineers. Fixing problems meant flying in specialists from South Africa, leaving the facility crippled in the meantime. A chronic shortage of imported ticket consumables forced heavy reliance on manual ticketing, opening the door to revenue leakage and fraud while frustrating shoppers and damaging the mall's reputation.",
+          "Ikeja City Mall's car park had been poorly managed for years. Frequent system failures, some lasting up to three months, were caused by a lack of spare parts and undertrained engineers. Fixing problems meant flying in specialists from South Africa, leaving the facility crippled in the meantime. A chronic shortage of imported ticket consumables forced heavy reliance on manual ticketing, opening the door to revenue leakage and fraud while frustrating shoppers and damaging the mall's reputation.",
         ],
       },
       {
@@ -273,9 +273,9 @@ export const projects: ProjectItem[] = [
           "Taking over operations on 1st July 2024, we delivered a complete reset:",
         ],
         bullets: [
-          "Paper ticketing replaced with reusable plastic cards — eliminating imported consumables, reducing mechanical failures, and cutting paper waste",
-          "Full staffing overhaul — trained personnel and on-site standby engineers replaced, ending the need for costly overseas specialists",
-          "Comprehensive spare parts stock maintained locally at all times — keeping resolution times minimal and emergency imports firmly in the past",
+          "Paper ticketing replaced with reusable plastic cards, eliminating imported consumables, reducing mechanical failures, and cutting paper waste",
+          "Full staffing overhaul with trained personnel and on site standby engineers, ending the need for costly overseas specialists",
+          "Comprehensive spare parts stock maintained locally at all times, keeping resolution times minimal and emergency imports firmly in the past",
         ],
       },
       {
@@ -284,10 +284,10 @@ export const projects: ProjectItem[] = [
           "The Ikeja City Mall turnaround shows exactly what the right technology, the right people, and the right preparation can deliver.",
         ],
         bullets: [
-          "Near-zero downtime — compared to failures lasting months under the previous operator",
-          "Up to 60% revenue increase in some months — with manual processing and fraud eliminated",
-          "Faster throughput — reusable cards process vehicles more quickly, reducing congestion at peak times",
-          "Improved shopper experience — faster, smoother, and frustration-free parking",
+          "Near zero downtime compared to failures lasting months under the previous operator",
+          "Up to 60% revenue increase in some months with manual processing and fraud eliminated",
+          "Faster throughput as reusable cards process vehicles more quickly, reducing congestion at peak times",
+          "Improved shopper experience with faster, smoother, and frustration free parking",
         ],
       },
     ],

@@ -61,6 +61,36 @@ function navClass(activeId: SectionId, section: SectionId) {
 
 export default function HomeHeader() {
   const activeId = useHomeActiveSection()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  // Sync React state with DOM
+  useEffect(() => {
+    const sidebar = document.querySelector(".mobile-sidebar")
+    if (sidebar) {
+      if (mobileMenuOpen) {
+        sidebar.classList.add("mobile-menu-active")
+      } else {
+        sidebar.classList.remove("mobile-menu-active")
+      }
+    }
+  }, [mobileMenuOpen])
+
+  // Cleanup function - no listeners needed since we're using onClick in JSX
+  useEffect(() => {
+    return () => {}
+  }, [])
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(prev => !prev)
+  }
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false)
+  }
+
+  const handleAnchorClick = () => {
+    closeMobileMenu()
+  }
 
   return (
     <div>
@@ -252,7 +282,7 @@ export default function HomeHeader() {
                 </Link>
               </div>
               <div className="mobile-header-actions">
-                <div className="mobile-nav-icon dots-menu">
+                <div className="mobile-nav-icon dots-menu" onClick={toggleMobileMenu}>
                   <i className="fa-solid fa-bars-staggered" />
                 </div>
               </div>
@@ -300,14 +330,14 @@ export default function HomeHeader() {
               </span>
             </Link>
           </div>
-          <div className="menu-close">
+          <div className="menu-close" onClick={closeMobileMenu}>
             <i className="fa-solid fa-xmark" />
           </div>
         </div>
         <div className="mobile-nav mobile-nav1">
           <ul className="mobile-nav-list nav-list1">
             <li className="nav-item">
-              <Link href="/#home" className={navClass(activeId, "home")}>
+              <Link href="/#home" className={navClass(activeId, "home")} onClick={handleAnchorClick}>
                 <span>Home</span>
               </Link>
             </li>
@@ -341,23 +371,23 @@ export default function HomeHeader() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/#project" className={navClass(activeId, "project")}>
+              <Link href="/#project" className={navClass(activeId, "project")} onClick={handleAnchorClick}>
                 <span>Projects</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/#faq" className={navClass(activeId, "faq")}>
+              <Link href="/#faq" className={navClass(activeId, "faq")} onClick={handleAnchorClick}>
                 <span>FAQ</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/#blog" className={navClass(activeId, "blog")}>
+              <Link href="/#blog" className={navClass(activeId, "blog")} onClick={handleAnchorClick}>
                 <span>Blogs</span>
               </Link>
             </li>
           </ul>
           <div className="allmobilesection">
-            <Link href="/#contact" className="header-btn4">
+            <Link href="/#contact" className="header-btn4" onClick={handleAnchorClick}>
               Get Started{" "}
               <span>
                 <i className="fa-solid fa-arrow-right" />
@@ -389,7 +419,7 @@ export default function HomeHeader() {
                       <i className="fa-solid fa-location-dot" />
                     </div>
                     <div className="contact-info-text">
-                      <Link href="/#contact">
+                      <Link href="/#contact" onClick={handleAnchorClick}>
                         9, Osaro Isokpan Street, <br /> Lekki Phase 1, Lagos.
                       </Link>
                     </div>
