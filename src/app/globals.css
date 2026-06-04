@@ -1967,6 +1967,18 @@ body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-ite
   width: 100%;
 }
 
+.cta3-section-area .home-cta-status {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+
+.cta3-section-area .home-cta-status--error {
+  color: #321a03;
+}
+
 .cta3-section-area .elements23 {
   top: 50%;
   bottom: auto;
