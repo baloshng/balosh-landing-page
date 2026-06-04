@@ -10,7 +10,7 @@ const CIRCLE_RADIUS = 70
 const CIRCUMFERENCE = 2 * Math.PI * CIRCLE_RADIUS
 
 const proofStats = [
-  { label: "Of operational excellence", value: "20 Years", progress: 96 },
+  { label: "Of operational excellence", value: "20+ Years", progress: 96 },
   { label: "Daily check-ins across Nigeria", value: "200,000+", progress: 98 },
   { label: "Skilled professionals nationwide", value: "100+", progress: 93 },
   { label: "Served across Nigeria", value: "6 Sectors", progress: 95 },
@@ -135,7 +135,7 @@ export default function HomeStatusBarSection() {
               <h3>{project.title}</h3>
               <p>{project.result}</p>
               <Link href={`/projects/${project.slug}`}>
-                Read the case study <i className="fa-solid fa-arrow-right" />
+                Learn more <i className="fa-solid fa-arrow-right" />
               </Link>
             </article>
           ))}

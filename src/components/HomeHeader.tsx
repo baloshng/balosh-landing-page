@@ -119,7 +119,6 @@ export default function HomeHeader() {
                           alt=""
                           width={286}
                           height={88}
-                          className="w-[100px] h-auto"
                           style={{ width: "100px", height: "auto" }}
                         />
                         <span
@@ -258,7 +257,7 @@ export default function HomeHeader() {
                     alt=""
                     width={286}
                     height={88}
-                    className="w-[100px] h-auto"
+                    className="w-25 h-auto"
                     style={{ width: "100px", height: "auto" }}
                   />
                   <span
@@ -307,7 +306,7 @@ export default function HomeHeader() {
                 alt=""
                 width={286}
                 height={88}
-                className="w-[100px] h-auto"
+                className="w-25 h-auto"
                 style={{ width: "100px", height: "auto" }}
               />
               <span

@@ -38,7 +38,7 @@ export default function HomeTrustedClientsSection({
               >
                 Clients We Serve
               </h5>
-              <p
+              {/* <p
                 className="mb-0"
                 data-aos="fade-up"
                 data-aos-duration={800}
@@ -47,7 +47,7 @@ export default function HomeTrustedClientsSection({
               >
                 Logos of companies Balosh has served across access, parking,
                 traffic, and security operations.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
