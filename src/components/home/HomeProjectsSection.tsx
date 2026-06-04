@@ -11,7 +11,7 @@ export default function HomeProjectsSection({
   projects,
 }: HomeProjectsSectionProps) {
   return (
-    <div className="testimonial3-section-area sp1" id="project">
+    <div className="testimonial3-section-area home-projects-section sp1" id="project">
       <div className="container">
         <div className="row">
           <div className="col-lg-5">
@@ -68,17 +68,19 @@ export default function HomeProjectsSection({
           >
             <div className="testimonial-author-slider owl-carousel">
               {projects.map((project) => (
-                <div className="testimonial-author-box" key={project.slug}>
+                <div className="testimonial-author-box home-project-card" key={project.slug}>
                   <div className="images">
                     <div className="content">
-                      <Image
-                        src={projectCoverImageUrl(project.slug)}
-                        alt={project.title}
-                        width={400}
-                        height={300}
-                        className="h-auto max-w-full object-cover"
-                        sizes="(max-width: 768px) 80vw, 400px"
-                      />
+                      <div className="home-project-media">
+                        <Image
+                          src={projectCoverImageUrl(project.slug)}
+                          alt={project.title}
+                          width={400}
+                          height={300}
+                          className="home-project-media-image"
+                          sizes="(max-width: 768px) 80vw, 320px"
+                        />
+                      </div>
                       <Link href={`/projects/${project.slug}`}>
                         {project.title}
                       </Link>

@@ -102,6 +102,45 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/plugins/nice-select.css" />
         <link rel="stylesheet" href="/assets/css/main.css" />
         <style>{`
+          /* Loaded after main.css — home projects must stay inside dark section */
+          body.homepage3-body #project.testimonial3-section-area {
+            height: auto !important;
+            min-height: 0 !important;
+            overflow: visible;
+          }
+          body.homepage3-body
+            #project.testimonial3-section-area
+            .testimonial-author-slider.owl-carousel
+            .owl-stage-outer {
+            position: relative !important;
+            height: auto !important;
+            overflow: visible;
+          }
+          body.homepage3-body
+            #project.testimonial3-section-area
+            .testimonial-author-slider
+            .owl-nav {
+            position: absolute !important;
+            right: 0;
+            top: -150px !important;
+            text-align: right;
+          }
+          @media (min-width: 992px) {
+            body.homepage3-body #project.testimonial3-section-area {
+              padding-bottom: 96px;
+            }
+          }
+          @media (max-width: 991px) {
+            body.homepage3-body
+              #project.testimonial3-section-area
+              .testimonial-author-slider
+              .owl-nav {
+              position: relative !important;
+              top: 0 !important;
+              margin-top: 30px;
+              text-align: center;
+            }
+          }
           .preloader {
             display: flex;
             align-items: center;
