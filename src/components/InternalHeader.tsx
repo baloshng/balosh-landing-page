@@ -227,7 +227,7 @@ export default function InternalHeader() {
                     display: "inline-block",
                     lineHeight: 0,
                     position: "relative",
-                    width: "100px",
+                    width: "120px",
                   }}
                 >
                   <Image
@@ -235,8 +235,8 @@ export default function InternalHeader() {
                     alt=""
                     width={286}
                     height={88}
-                    className="w-25 h-auto"
-                    style={{ width: "100px", height: "auto" }}
+                    className="mobile-header-logo"
+                    style={{ width: "120px", height: "auto" }}
                   />
                   <span
                     style={{
@@ -276,7 +276,7 @@ export default function InternalHeader() {
                 display: "inline-block",
                 lineHeight: 0,
                 position: "relative",
-                width: "100px",
+                width: "120px",
               }}
             >
               <Image
@@ -284,8 +284,8 @@ export default function InternalHeader() {
                 alt=""
                 width={286}
                 height={88}
-                className="w-25 h-auto"
-                style={{ width: "100px", height: "auto" }}
+                className="mobile-header-logo"
+                style={{ width: "120px", height: "auto" }}
               />
               <span
                 style={{
