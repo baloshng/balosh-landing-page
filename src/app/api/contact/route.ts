@@ -22,19 +22,71 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
 
-    const { name, email, phone, message } = body
+    const { name, email, phone, message, source } = body
+    const isCtaRequest = source === 'home_cta'
 
-    if (!name || !email || !phone) {
+    if (!email || (!isCtaRequest && (!name || !phone))) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       )
     }
 
-    const safeName = escapeHtml(name)
+    const safeName = escapeHtml(name || '')
     const safeEmail = escapeHtml(email)
-    const safePhone = escapeHtml(phone)
+    const safePhone = escapeHtml(phone || '')
     const safeMessage = formatMessage(message || '')
+    const enquiryIntro = isCtaRequest
+      ? 'A new consultation request has arrived through the Balosh website. Review the email below and follow up directly.'
+      : 'A new enquiry has arrived through the Balosh website. Review the details below and follow up directly.'
+    const emailSubject = isCtaRequest
+      ? 'New Consultation Request from Website'
+      : 'New Enquiry from Website'
+    const contactFieldsHtml = isCtaRequest
+      ? `
+</td></tr><tr><td class=t33 align=center>
+<table class=t32 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t31 style="width:600px;">
+<table class=t30 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t29><p class=t28 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span class=t27 style="margin:0;Margin:0;font-weight:bold;mso-line-height-rule:exactly;">Email address</span></p></td></tr></table>
+</td></tr></table>
+</td></tr><tr><td class=t39 align=center>
+<table class=t38 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t37 style="width:600px;">
+<table class=t36 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t35 style="padding:0 0 22px 0;"><p class=t34 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><a href="mailto:${safeEmail}" style="color:#333333;text-decoration:none;font-family:Afacad,Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:22px;font-style:normal;">${safeEmail}</a></p></td></tr></table>
+</td></tr></table>
+`
+      : `
+</td></tr><tr><td class=t20 align=center>
+<table class=t19 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t18 style="width:600px;">
+<table class=t17 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t16><p class=t15 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span class=t14 style="margin:0;Margin:0;font-weight:700;mso-line-height-rule:exactly;">Contact name</span></p></td></tr></table>
+</td></tr></table>
+</td></tr><tr><td class=t26 align=center>
+<table class=t25 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t24 style="width:600px;">
+<table class=t23 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t22 style="padding:0 0 22px 0;"><p class=t21 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;">${safeName}</p></td></tr></table>
+</td></tr></table>
+</td></tr><tr><td class=t33 align=center>
+<table class=t32 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t31 style="width:600px;">
+<table class=t30 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t29><p class=t28 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span class=t27 style="margin:0;Margin:0;font-weight:bold;mso-line-height-rule:exactly;">Reply email</span></p></td></tr></table>
+</td></tr></table>
+</td></tr><tr><td class=t39 align=center>
+<table class=t38 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t37 style="width:600px;">
+<table class=t36 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t35 style="padding:0 0 22px 0;"><p class=t34 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><a href="mailto:${safeEmail}" style="color:#333333;text-decoration:none;font-family:Afacad,Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:22px;font-style:normal;">${safeEmail}</a></p></td></tr></table>
+</td></tr></table>
+</td></tr><tr><td class=t46 align=center>
+<table class=t45 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t44 style="width:600px;">
+<table class=t43 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t42><p class=t41 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span class=t40 style="margin:0;Margin:0;font-weight:bold;mso-line-height-rule:exactly;">Phone number</span></p></td></tr></table>
+</td></tr></table>
+</td></tr><tr><td class=t52 align=center>
+<table class=t51 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t50 style="width:600px;">
+<table class=t49 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t48 style="padding:0 0 22px 0;"><p class=t47 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><a href="tel:${safePhone}" style="color:#333333;text-decoration:none;font-family:Afacad,Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:22px;font-style:normal;">${safePhone}</a></p></td></tr></table>
+</td></tr></table>
+</td></tr><tr><td class=t58 align=center>
+<table class=t57 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t56 style="width:600px;">
+<table class=t55 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t54><p class=t53 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span style="margin:0;Margin:0;font-weight:bold;mso-line-height-rule:exactly;">Message</span></p></td></tr></table>
+</td></tr></table>
+</td></tr><tr><td class=t64 align=center>
+<table class=t63 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t62 style="width:600px;">
+<table class=t61 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t60 style="padding:0 0 22px 0;"><p class=t59 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;">${safeMessage || 'No additional details were provided in the form.'}</p></td></tr></table>
+</td></tr></table>
+`
     const logoUrl = BALOSH_EMAIL_LOGO_URL
     const backgroundUrl = BALOSH_EMAIL_BACKGROUND_URL
     const faviconUrl = BALOSH_EMAIL_FAVICON_URL
@@ -184,40 +236,9 @@ text-decoration: none
 </td></tr></table>
 </td></tr><tr><td><div class=t7 style="mso-line-height-rule:exactly;mso-line-height-alt:37px;line-height:37px;font-size:1px;display:block;">&nbsp;&nbsp;</div></td></tr><tr><td class=t13 align=center>
 <table class=t12 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t11 style="width:600px;">
-<table class=t10 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t9 style="padding:0 0 22px 0;"><p class=t8 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;">A new enquiry has arrived through the Balosh website. Review the details below and follow up directly.</p></td></tr></table>
+<table class=t10 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t9 style="padding:0 0 22px 0;"><p class=t8 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;">${enquiryIntro}</p></td></tr></table>
 </td></tr></table>
-</td></tr><tr><td class=t20 align=center>
-<table class=t19 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t18 style="width:600px;">
-<table class=t17 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t16><p class=t15 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span class=t14 style="margin:0;Margin:0;font-weight:700;mso-line-height-rule:exactly;">Contact name</span></p></td></tr></table>
-</td></tr></table>
-</td></tr><tr><td class=t26 align=center>
-<table class=t25 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t24 style="width:600px;">
-<table class=t23 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t22 style="padding:0 0 22px 0;"><p class=t21 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;">${safeName}</p></td></tr></table>
-</td></tr></table>
-</td></tr><tr><td class=t33 align=center>
-<table class=t32 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t31 style="width:600px;">
-<table class=t30 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t29><p class=t28 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span class=t27 style="margin:0;Margin:0;font-weight:bold;mso-line-height-rule:exactly;">Reply email</span></p></td></tr></table>
-</td></tr></table>
-</td></tr><tr><td class=t39 align=center>
-<table class=t38 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t37 style="width:600px;">
-<table class=t36 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t35 style="padding:0 0 22px 0;"><p class=t34 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><a href="mailto:${safeEmail}" style="color:#333333;text-decoration:none;font-family:Afacad,Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:22px;font-style:normal;">${safeEmail}</a></p></td></tr></table>
-</td></tr></table>
-</td></tr><tr><td class=t46 align=center>
-<table class=t45 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t44 style="width:600px;">
-<table class=t43 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t42><p class=t41 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span class=t40 style="margin:0;Margin:0;font-weight:bold;mso-line-height-rule:exactly;">Phone number</span></p></td></tr></table>
-</td></tr></table>
-</td></tr><tr><td class=t52 align=center>
-<table class=t51 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t50 style="width:600px;">
-<table class=t49 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t48 style="padding:0 0 22px 0;"><p class=t47 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><a href="tel:${safePhone}" style="color:#333333;text-decoration:none;font-family:Afacad,Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:22px;font-style:normal;">${safePhone}</a></p></td></tr></table>
-</td></tr></table>
-</td></tr><tr><td class=t58 align=center>
-<table class=t57 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t56 style="width:600px;">
-<table class=t55 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t54><p class=t53 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;"><span style="margin:0;Margin:0;font-weight:bold;mso-line-height-rule:exactly;">Message</span></p></td></tr></table>
-</td></tr></table>
-</td></tr><tr><td class=t64 align=center>
-<table class=t63 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t62 style="width:600px;">
-<table class=t61 role=presentation cellpadding=0 cellspacing=0 width=100% style="width:100%;"><tr><td class=t60 style="padding:0 0 22px 0;"><p class=t59 style="margin:0;Margin:0;font-family:Afacad,Arial,Helvetica,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;">${safeMessage || 'No additional details were provided in the form.'}</p></td></tr></table>
-</td></tr></table>
+${contactFieldsHtml}
 </td></tr><tr><td><div class=t65 style="mso-line-height-rule:exactly;mso-line-height-alt:30px;line-height:30px;font-size:1px;display:block;">&nbsp;&nbsp;</div></td></tr><tr><td class=t71 align=center>
 <table class=t70 role=presentation cellpadding=0 cellspacing=0 style="Margin-left:auto;Margin-right:auto;"><tr><td width=500 class=t69 style="width:600px;">
 </td></tr></table>
@@ -283,7 +304,7 @@ text-decoration: none
           email,
           name,
         },
-        subject: 'New Enquiry from Website',
+        subject: emailSubject,
         htmlContent,
       }),
     })
