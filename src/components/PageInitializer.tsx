@@ -8,6 +8,37 @@ export default function PageInitializer() {
   const isFirstRenderRef = useRef(true)
 
   useEffect(() => {
+    const cancelHashScroll = scrollToCurrentHash()
+
+    const handleHashChange = () => {
+      scrollToCurrentHash()
+    }
+
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target
+      if (!(target instanceof Element)) return
+
+      const link = target.closest<HTMLAnchorElement>("a[href*='#']")
+      if (!link) return
+
+      const url = new URL(link.href, window.location.href)
+      if (url.origin !== window.location.origin) return
+      if (url.pathname !== window.location.pathname) return
+      if (!url.hash) return
+
+      window.setTimeout(() => scrollToHash(url.hash), 0)
+    }
+
+    window.addEventListener("hashchange", handleHashChange)
+    document.addEventListener("click", handleClick)
+    return () => {
+      cancelHashScroll?.()
+      window.removeEventListener("hashchange", handleHashChange)
+      document.removeEventListener("click", handleClick)
+    }
+  }, [pathname])
+
+  useEffect(() => {
     if (isFirstRenderRef.current) {
       isFirstRenderRef.current = false
       return
@@ -22,6 +53,44 @@ export default function PageInitializer() {
   }, [pathname])
 
   return null
+}
+
+function scrollToCurrentHash() {
+  if (typeof window === "undefined") return
+  if (!window.location.hash) return
+
+  const frame = window.requestAnimationFrame(() => {
+    scrollToHash(window.location.hash)
+  })
+  const shortTimer = window.setTimeout(() => {
+    scrollToHash(window.location.hash)
+  }, 100)
+  const longTimer = window.setTimeout(() => {
+    scrollToHash(window.location.hash)
+  }, 350)
+
+  return () => {
+    window.cancelAnimationFrame(frame)
+    window.clearTimeout(shortTimer)
+    window.clearTimeout(longTimer)
+  }
+}
+
+function scrollToHash(hash: string) {
+  const id = decodeURIComponent(hash.replace(/^#/, ""))
+  if (!id) return
+
+  const target = document.getElementById(id)
+  if (!target) return
+
+  const header = document.getElementById("header")
+  const headerOffset = header ? header.getBoundingClientRect().height + 12 : 0
+  const top = target.getBoundingClientRect().top + window.scrollY - headerOffset
+
+  window.scrollTo({
+    top: Math.max(top, 0),
+    behavior: "smooth",
+  })
 }
 
 function reinitializePageScripts() {

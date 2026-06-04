@@ -15,6 +15,11 @@ export default function HomeEntryReset() {
     if (typeof window === "undefined") return
     const prev = window.history.scrollRestoration
     window.history.scrollRestoration = "manual"
+    if (window.location.hash) {
+      return () => {
+        window.history.scrollRestoration = prev
+      }
+    }
     window.scrollTo(0, 0)
     return () => {
       window.history.scrollRestoration = prev
@@ -23,6 +28,7 @@ export default function HomeEntryReset() {
 
   useEffect(() => {
     if (pathname !== "/") return
+    if (window.location.hash) return
     const id = window.requestAnimationFrame(() => {
       window.scrollTo(0, 0)
     })
