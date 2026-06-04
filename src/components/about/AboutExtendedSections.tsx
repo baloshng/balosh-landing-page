@@ -6,7 +6,7 @@ import { aboutNavigationLinks } from "@/data/aboutSections"
 const whoWeAreParagraphs = [
   "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and quiet dominance.",
   "We operate end-to-end: design, development, installation, and ongoing support, all in-house, with no middlemen and no gaps in accountability. From the terminals that move millions to the institutions that govern a nation, the names that define Nigeria's most critical spaces have one thing in common: Balosh.",
-  "For 20 years, Nigeria's airports, government institutions, major retail destinations, corporate campuses, and critical national infrastructure have entrusted their security and access operations to us. That trust is not given lightly, and we have never taken it for granted.",
+  "For 20+ years, Nigeria's airports, government institutions, major retail destinations, corporate campuses, and critical national infrastructure have entrusted their security and access operations to us. That trust is not given lightly, and we have never taken it for granted.",
   "We don't rely on advertising. We let our work speak for itself.",
   "We are builders, operators, and long-term partners, trusted by the organisations that cannot afford to get access control and security wrong.",
 ]
@@ -142,7 +142,7 @@ const differenceItems = [
   {
     title: "A Reputation Earned Through Results",
     description:
-      "For over 20 years, our clients have become our strongest advocates, driven by consistent performance and the trust built through every project.",
+      "For over 20+ years, our clients have become our strongest advocates, driven by consistent performance and the trust built through every project.",
   },
   {
     title: "Built for the Long Term",

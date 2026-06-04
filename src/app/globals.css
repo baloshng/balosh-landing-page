@@ -817,7 +817,7 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   width: max-content;
   align-items: center;
   gap: 2rem;
-  animation: trusted-clients-marquee 55s linear infinite;
+  animation: trusted-clients-marquee 140s linear infinite;
 }
 
 .trusted-clients-marquee__item {

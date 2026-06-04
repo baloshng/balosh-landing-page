@@ -2,7 +2,7 @@ const whyBaloshItems = [
   {
     title: "Proven Track Record",
     description:
-      "17 years of experience, Balosh has developed solutions for every unique environment.",
+      "20+ years of experience, Balosh has developed solutions for every unique environment.",
     iconClass: "fa-solid fa-award",
   },
   {

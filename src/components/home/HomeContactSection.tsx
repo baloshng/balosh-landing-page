@@ -1,7 +1,44 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
+import { FormEvent, useState } from "react"
 
 export default function HomeContactSection() {
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' })
+  const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setLoading(true)
+    setStatus('idle')
+    setErrorMessage('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message')
+      }
+
+      setStatus('success')
+      setFormData({ name: '', phone: '', email: '', message: '' })
+      setTimeout(() => setStatus('idle'), 5000)
+    } catch (error) {
+      setStatus('error')
+      setErrorMessage(error instanceof Error ? error.message : 'Something went wrong')
+    } finally {
+      setLoading(false)
+    }
+  }
   return (
     <div className="contact2-section-area sp1" id="contact">
       <div className="container">
@@ -127,7 +164,7 @@ export default function HomeContactSection() {
                         />
                       </div>
                       <div className="content">
-                        <p>Address</p>
+                        <p>Showroom</p>
                         <Link href="/#contact">
                           9, Osaro Isokpan Street, Lekki Phase 1, Lagos.
                         </Link>
@@ -190,41 +227,72 @@ export default function HomeContactSection() {
           >
             <div className="contact-form-area">
               <h3>Request A Quote</h3>
-              <form action="https://api.web3forms.com/submit" method="POST">
-                <input
-                  type="hidden"
-                  name="access_key"
-                  defaultValue="0cd32fff-eda2-4da3-be43-37d47fbb396b"
-                />
+              {status === 'success' && (
+                <div style={{ padding: '12px', marginBottom: '15px', backgroundColor: '#d4edda', color: '#155724', borderRadius: '4px' }}>
+                  ✓ Message sent successfully! We'll get back to you soon.
+                </div>
+              )}
+              {status === 'error' && (
+                <div style={{ padding: '12px', marginBottom: '15px', backgroundColor: '#f8d7da', color: '#721c24', borderRadius: '4px' }}>
+                  ✗ Error: {errorMessage}
+                </div>
+              )}
+              <form onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="input-area">
                       <p>Name (required)</p>
-                      <input type="text" placeholder="First Name" />
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="First Name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        required
+                      />
                     </div>
                   </div>
                   <div className="col-lg-6">
                     <div className="input-area">
                       <p>Number (required)</p>
-                      <input type="number" placeholder="Phone" />
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        required
+                      />
                     </div>
                   </div>
                   <div className="col-lg-12">
                     <div className="input-area">
                       <p>Email (required)</p>
-                      <input type="email" placeholder="Email" />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        required
+                      />
                     </div>
                   </div>
                   <div className="col-lg-12">
                     <div className="input-area">
                       <p>Additional Details (Optional)</p>
-                      <textarea placeholder="Message" defaultValue={""} />
+                      <textarea
+                        name="message"
+                        placeholder="Message"
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      />
                     </div>
                   </div>
                   <div className="col-lg-12">
                     <div className="input-area text-start">
-                      <button type="submit" className="header-btn3">
-                        Submit Now <i className="fa-solid fa-arrow-right" />
+                      <button type="submit" className="header-btn3" disabled={loading}>
+                        {loading ? 'Sending...' : 'Submit Now'} <i className="fa-solid fa-arrow-right" />
                       </button>
                     </div>
                   </div>
