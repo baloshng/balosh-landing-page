@@ -195,7 +195,7 @@ export default function HomeContactSection() {
                         }}
                       >
                         <Image
-                          src="/assets/img/icons/location-icons2.svg"
+                          src="/assets/img/icons/instagram-black.svg"
                           alt=""
                           width={22}
                           height={22}
