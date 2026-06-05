@@ -958,15 +958,17 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 140px;
-  width: clamp(360px, 32vw, 460px);
+  min-height: 224px;
+  width: clamp(560px, 42vw, 680px);
   padding: 0 0.5rem;
 }
 
 .trusted-clients-marquee__img {
   display: block;
-  width: 320px;
-  height: 128px;
+  width: 520px;
+  height: 208px;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   opacity: 0.85;
   filter: grayscale(0.25);
@@ -979,13 +981,13 @@ body.homepage3-body .header-area.homepage3 .header-elements.internal-header-elem
   }
 
   .trusted-clients-marquee__item {
-    min-height: 112px;
-    width: 260px;
+    min-height: 164px;
+    width: 380px;
   }
 
   .trusted-clients-marquee__img {
-    width: 220px;
-    height: 88px;
+    width: 340px;
+    height: 136px;
   }
 }
 
