@@ -387,7 +387,7 @@ export default function HomeHeader() {
           </ul>
           <div className="allmobilesection">
             <Link href="/#contact" className="header-btn4" onClick={handleAnchorClick}>
-              Get Started{" "}
+              Contact Us{" "}
               <span>
                 <i className="fa-solid fa-arrow-right" />
               </span>

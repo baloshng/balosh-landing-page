@@ -141,6 +141,26 @@ export default function RootLayout({
               text-align: center;
             }
           }
+          body.homepage3-body .trusted-clients-marquee__item {
+            min-height: 224px !important;
+            width: clamp(560px, 42vw, 680px) !important;
+          }
+          body.homepage3-body .trusted-clients-marquee__img {
+            height: 208px !important;
+            max-height: none !important;
+            max-width: none !important;
+            width: 520px !important;
+          }
+          @media (max-width: 767px) {
+            body.homepage3-body .trusted-clients-marquee__item {
+              min-height: 164px !important;
+              width: 380px !important;
+            }
+            body.homepage3-body .trusted-clients-marquee__img {
+              height: 136px !important;
+              width: 340px !important;
+            }
+          }
           .preloader {
             display: flex;
             align-items: center;

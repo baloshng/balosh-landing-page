@@ -371,7 +371,7 @@ export default function InternalHeader() {
               className="header-btn4"
               onClick={handleAnchorClick("/#contact")}
             >
-              Get Started{" "}
+              Contact Us{" "}
               <span>
                 <i className="fa-solid fa-arrow-right" />
               </span>

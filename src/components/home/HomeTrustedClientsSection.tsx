@@ -69,10 +69,10 @@ export default function HomeTrustedClientsSection({
                 <Image
                   src={client.logoUrl}
                   alt={`${client.name} logo`}
-                  width={320}
-                  height={128}
+                  width={520}
+                  height={208}
                   className="trusted-clients-marquee__img"
-                  sizes="(max-width: 767px) 220px, 320px"
+                  sizes="(max-width: 767px) 340px, 520px"
                 />
               </div>
             ))}
