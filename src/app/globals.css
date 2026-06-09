@@ -1682,19 +1682,31 @@ body.homepage3-body .faq-section-area .faq-author-area .accordion .accordion-ite
   margin-bottom: 12px;
 }
 
-.solution-equipment-card-icon {
-  align-items: center;
-  background: #fde6cd;
-  border-radius: 999px;
-  color: #c95d00;
-  display: inline-flex;
-  font-size: 0.78rem;
-  font-weight: 800;
-  height: 40px;
-  justify-content: center;
-  letter-spacing: 0.04em;
-  margin-bottom: 12px;
-  width: 40px;
+.solution-equipment-card {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 100%;
+}
+
+.solution-equipment-card-image {
+  border-radius: 8px;
+  height: 220px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.solution-equipment-card-image img {
+  border-radius: 8px;
+  display: block;
+  height: 100% !important;
+  object-fit: cover;
+  width: 100% !important;
+}
+
+.solution-equipment-card h3 {
+  margin-top: 0;
 }
 
 .service-right-single-area .about-page-pillar-card h3:last-child {

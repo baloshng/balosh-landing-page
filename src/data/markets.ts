@@ -15,19 +15,19 @@ export const marketPageIntro = {
 export const markets: MarketItem[] = [
   {
     title: "Commercial",
-    image: "/assets/img/all-images/balosh-solutions/Access-Control_3.jpg",
+    image: "/assets/img/all-images/balosh-solutions/Wings_m_ee.jpg",
     description:
       "We deliver integrated access control and security solutions that enhance security, optimise facility management, and support the operational efficiency of corporate offices, business parks, and commercial buildings.",
   },
   {
     title: "Residential",
-    image: "/assets/img/all-images/balosh-solutions/ASC.png",
+    image: "/assets/img/all-images/balosh-blog/vgc.png",
     description:
       "Our residential solutions cover estate access control, visitor management, facility management and payment applications and security systems, ensuring that gated communities, residential developments, and private estates are safe, efficiently managed, and well controlled.",
   },
   {
     title: "Education",
-    image: "/assets/img/all-images/balosh-solutions/carpark.jpg",
+    image: "/assets/img/all-images/new-images/Education.jpeg",
     description:
       "We provide access management, attendance tracking, and safety systems for schools, universities, and campuses, creating secure, well regulated environments that support learning without disrupting daily flow.",
   },
@@ -39,19 +39,19 @@ export const markets: MarketItem[] = [
   },
   {
     title: "Leisure",
-    image: "/assets/img/all-images/balosh-blog/federal-palace.png",
+    image: "/assets/img/all-images/new-images/Leisure.png",
     description:
       "Our leisure solutions support clubs, recreational facilities, and hospitality venues with access control, membership management, visitor flow, and safety systems, all designed to protect the experience your guests expect.",
   },
   {
     title: "Public Sector",
-    image: "/assets/img/all-images/balosh-blog/npa-eto.png",
+    image: "/assets/img/all-images/new-images/public-sector.png",
     description:
       "We work with government agencies, ministries, and public institutions to implement access control and security systems that meet the demands of accountability, public safety, and regulatory compliance at scale.",
   },
   {
     title: "Transport",
-    image: "/assets/img/all-images/balosh-blog/airport-contract-award.png",
+    image: "/assets/img/all-images/balosh-blog/asaba_n.png",
     description:
       "We provide advanced traffic and mobility management solutions, including ANPR systems, automated toll plazas, and vehicle flow optimisation for airports, seaports, toll roads, and major transport hubs. Our aviation expertise includes full car park management, ANPR integration, and access systems for airport terminals as delivered at MMA2, Lagos.",
   },

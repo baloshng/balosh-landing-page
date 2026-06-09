@@ -8,7 +8,12 @@ export type SolutionItem = {
   features: string[]
   image: string
   icon: string
-  equipment: string[]
+  equipment: SolutionEquipmentItem[]
+}
+
+export type SolutionEquipmentItem = {
+  title: string
+  image?: string
 }
 
 export const solutionsPageIntro = {
@@ -34,13 +39,25 @@ export const solutions: SolutionItem[] = [
       "Visitor management and workforce security features",
       "End to end delivery: design, installation, system integration, and ongoing support",
     ],
-    image: "/assets/img/all-images/balosh-solutions/Access-Control_3.jpg",
+    image: "/assets/img/all-images/new-images/Access Control 2.png",
     icon: "/assets/img/icons/service-img7.svg",
     equipment: [
-      "Tripod Bridge Turnstiles",
-      "Linear Tripod Turnstiles",
-      "Digital Door Access",
-      "Entrance Controls",
+      {
+        title: "Tripod Bridge Turnstiles",
+        image: "/assets/img/all-images/new-images/Tripod Bridge Turnstiles.png",
+      },
+      {
+        title: "Linear Tripod Turnstiles",
+        image: "/assets/img/all-images/new-images/Entrance Control 2.png",
+      },
+      {
+        title: "Digital Door Access",
+        image: "/assets/img/all-images/new-images/Digital Door Access.png",
+      },
+      {
+        title: "Entrance Controls",
+        image: "/assets/img/all-images/new-images/Entrance Controls.png",
+      },
     ],
   },
   {
@@ -58,9 +75,18 @@ export const solutions: SolutionItem[] = [
       "Seamless integration with access control systems, ANPR technology, and dashboard monitoring",
       "Built for volume without sacrificing security or reliability",
     ],
-    image: "/assets/img/all-images/balosh-solutions/ASC.png",
+    image: "/assets/img/all-images/new-images/Automated Entrances.png",
     icon: "/assets/img/icons/service-icons8.svg",
-    equipment: ["Entrance Controls", "Digital Door Access"],
+    equipment: [
+      {
+        title: "Entrance Controls",
+        image: "/assets/img/all-images/new-images/Entrance Controls.png",
+      },
+      {
+        title: "Digital Door Access",
+        image: "/assets/img/all-images/new-images/Digital Door Access 2.png",
+      },
+    ],
   },
   {
     id: 3,
@@ -78,9 +104,20 @@ export const solutions: SolutionItem[] = [
       "Flexible models including operational and lease arrangements",
       "Design, supply, installation, operation, and maintenance all managed by Balosh",
     ],
-    image: "/assets/img/all-images/balosh-solutions/carpark.jpg",
+    image: "/assets/img/all-images/new-images/Car Park Management.png",
     icon: "/assets/img/icons/service-icons9.svg",
-    equipment: ["Automated Ticketing Terminals", "Structured Parking Arrangement"],
+    equipment: [
+      {
+        title: "Automated Ticketing Terminals",
+        image:
+          "/assets/img/all-images/new-images/Automated Ticketing Terminals.png",
+      },
+      {
+        title: "Structured Parking Arrangement",
+        image:
+          "/assets/img/all-images/new-images/Structured Parking Arrangement.png",
+      },
+    ],
   },
   {
     id: 4,
@@ -98,9 +135,19 @@ export const solutions: SolutionItem[] = [
       "Nationwide maintenance support and operational reliability",
       "Hardware and software delivered as one complete system",
     ],
-    image: "/assets/img/all-images/balosh-solutions/Wings_m_ee.jpg",
+    image: "/assets/img/all-images/new-images/Toll Road Management 2.png",
     icon: "/assets/img/icons/service-img7.svg",
-    equipment: ["Toll Roads & Traffic Management", "Automated Ticketing Terminals"],
+    equipment: [
+      {
+        title: "Toll Roads & Traffic Management",
+        image: "/assets/img/all-images/new-images/Toll Road Management.png",
+      },
+      {
+        title: "Automated Ticketing Terminals",
+        image:
+          "/assets/img/all-images/new-images/Automated Ticketing Terminals.png",
+      },
+    ],
   },
   {
     id: 5,
@@ -118,9 +165,18 @@ export const solutions: SolutionItem[] = [
       "Full integration with access control, CCTV, and incident management platforms",
       "End to end implementation and 24/7 operational support",
     ],
-    image: "/assets/img/all-images/balosh-solutions/Access-Control_2.jpg",
+    image: "/assets/img/all-images/new-images/Security Systems.png",
     icon: "/assets/img/icons/service-icons8.svg",
-    equipment: ["Digital Door Access", "Entrance Controls"],
+    equipment: [
+      {
+        title: "Digital Door Access",
+        image: "/assets/img/all-images/new-images/Digital Door Access 3.png",
+      },
+      {
+        title: "Entrance Controls",
+        image: "/assets/img/all-images/new-images/Entrance Control.png",
+      },
+    ],
   },
   {
     id: 6,
@@ -139,7 +195,10 @@ export const solutions: SolutionItem[] = [
     ],
     image: "/assets/img/all-images/balosh-solutions/maintenance.png",
     icon: "/assets/img/icons/service-icons9.svg",
-    equipment: ["Rentals", "Maintenance Service"],
+    equipment: [
+      { title: "Rentals" },
+      { title: "Maintenance Service" },
+    ],
   },
 ]
 
