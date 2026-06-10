@@ -1,0 +1,42 @@
+.contact-form {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+.contact-form-textarea,
+.contact-form-input {
+  width: 100%;
+  background: var(--ztc-bg-bg-1);
+  border-radius: 4px;
+  font-family: var(--ztc-family-font1);
+  font-size: var(--ztc-font-size-font-s18);
+  font-weight: var(--ztc-weight-semibold);
+  transition: all 0.4s;
+  padding: 16px;
+  height: 52px;
+  border: 1px solid rgb(208, 208, 208);
+}
+
+textarea {
+  height: 200px;
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-form-input::placeholder,
+.contact-form textarea::placeholder {
+  color: #98a2b3 !important;
+  opacity: 1 !important;
+  font-weight: 400;
+}
+.contact-form-select-placeholder {
+  color: #98a2b3 !important;
+}
+/* Style for initial dropdown indicator state matching placeholder look */
+.contact-form-select-placeholder option:first-of-type {
+  color: #98a2b3 !important;
+}
