@@ -2,8 +2,10 @@ import type { Metadata } from "next"
 import Footer from "@/components/Footer"
 import InternalHeader from "@/components/InternalHeader"
 import CourseFormHeroSection from "@/components/contact-form/CourseFormHeroSection"
-import { absoluteUrl, DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/seo"
+import { absoluteUrl, DEFAULT_DESCRIPTION, SITE_NAME } from "@/lib/seo"
 import { ProjectEvaluationForm } from "@/components/contact-form"
+
+const CONTACT_OG_IMAGE = "/assets/img/logo/balosh.png"
 
 export const metadata: Metadata = {
   title: "Project Enquiry",
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: absoluteUrl(DEFAULT_OG_IMAGE),
+        url: absoluteUrl(CONTACT_OG_IMAGE),
         width: 1200,
         height: 630,
         alt: "Balosh Integrated Services project enquiry preview",
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Balosh Project Enquiry",
     description: DEFAULT_DESCRIPTION,
-    images: [absoluteUrl(DEFAULT_OG_IMAGE)],
+    images: [absoluteUrl(CONTACT_OG_IMAGE)],
   },
 }
 
