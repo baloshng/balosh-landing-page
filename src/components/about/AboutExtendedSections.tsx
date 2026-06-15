@@ -98,21 +98,21 @@ const leadershipTeam = [
   {
     title: "Strategic Leadership",
     role: "Management Team",
-    image: "/assets/img/all-images/team-img1.png",
+    image: "/assets/headshots/web/leadership-1.jpg",
     profile:
       "Sets the clear vision and strategic direction that guide Balosh's growth, credibility, and culture.",
   },
   {
     title: "Delivery Leadership",
     role: "Operations Team",
-    image: "/assets/img/all-images/team-img2.png",
+    image: "/assets/headshots/web/leadership-2.jpg",
     profile:
       "Keeps project delivery, support, and service standards aligned across demanding client environments.",
   },
   {
     title: "Technical Leadership",
     role: "Systems Team",
-    image: "/assets/img/all-images/team-img3.png",
+    image: "/assets/headshots/web/leadership-3.jpg",
     profile:
       "Applies deep industry expertise to system design, integration, installation, and long-term reliability.",
   },
@@ -530,6 +530,7 @@ export default function AboutExtendedSections() {
                     alt={member.title}
                     width={370}
                     height={370}
+                    quality={75}
                     sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 33vw"
                   />
                 </div>
