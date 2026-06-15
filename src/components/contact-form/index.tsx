@@ -1,7 +1,7 @@
 "use client"
 
 import { FormEvent, useState } from "react"
-import { CustomSelect } from "./CustomSelect"
+import { CustomSelect, type FieldChangeEvent } from "./CustomSelect"
 import { getNigerianStateOptions } from "./nigerianStates"
 import "./form-style.css"
 
@@ -47,11 +47,14 @@ export function ProjectEvaluationForm() {
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState("")
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
 
   const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    e:
+      | React.ChangeEvent<
+          HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+        >
+      | FieldChangeEvent,
   ) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -86,6 +89,7 @@ export function ProjectEvaluationForm() {
       }
 
       setStatus("success")
+      setShowSuccessModal(true)
       // Reset form on success
       setFormData({
         fullName: "",
@@ -122,6 +126,7 @@ export function ProjectEvaluationForm() {
       setTimeout(() => setStatus("idle"), 5000)
     } catch (error) {
       setStatus("error")
+      setShowSuccessModal(false)
       setErrorMessage(
         error instanceof Error ? error.message : "Something went wrong",
       )
@@ -132,7 +137,10 @@ export function ProjectEvaluationForm() {
 
   const roleOptions = [
     { value: "Owner/MD/CEO/Director", label: "Owner / MD / CEO / Director" },
-    { value: "Facility/Operations Manager", label: "Facility / Operations Manager" },
+    {
+      value: "Facility/Operations Manager",
+      label: "Facility / Operations Manager",
+    },
     { value: "Procurement/ Purchasing", label: "Procurement / Purchasing" },
     { value: "Project / Technical Lead", label: "Project / Technical Lead" },
     {
@@ -149,14 +157,35 @@ export function ProjectEvaluationForm() {
   ]
 
   const siteTypeOptions = [
-    { value: "Airport / Seaport / transport terminal", label: "Airport / Seaport / transport terminal" },
+    {
+      value: "Airport / Seaport / transport terminal",
+      label: "Airport / Seaport / transport terminal",
+    },
     { value: "Toll road/highway", label: "Toll road / highway" },
-    { value: "Shopping mall / major retail", label: "Shopping mall / major retail" },
-    { value: "Stadium/arena / event venue", label: "Stadium / arena / event venue" },
-    { value: "Government institution / agency", label: "Government institution / agency" },
-    { value: "Corporate HQ / large campus", label: "Corporate HQ / large campus" },
-    { value: "Private institution/club/gated community", label: "Private institution / club / gated community" },
-    { value: "Small office / SME premises", label: "Small office / SME premises" },
+    {
+      value: "Shopping mall / major retail",
+      label: "Shopping mall / major retail",
+    },
+    {
+      value: "Stadium/arena / event venue",
+      label: "Stadium / arena / event venue",
+    },
+    {
+      value: "Government institution / agency",
+      label: "Government institution / agency",
+    },
+    {
+      value: "Corporate HQ / large campus",
+      label: "Corporate HQ / large campus",
+    },
+    {
+      value: "Private institution/club/gated community",
+      label: "Private institution / club / gated community",
+    },
+    {
+      value: "Small office / SME premises",
+      label: "Small office / SME premises",
+    },
     { value: "Residential/private home", label: "Residential / private home" },
     { value: "Other", label: "Other" },
   ]
@@ -208,12 +237,18 @@ export function ProjectEvaluationForm() {
   ]
 
   const timelineOptions = [
-    { value: "Active need ready to proceed now", label: "Active need ready to proceed now" },
+    {
+      value: "Active need ready to proceed now",
+      label: "Active need ready to proceed now",
+    },
     {
       value: "Planning & budgeting (next 1-6 months)",
       label: "Planning & budgeting (next 1-6 months)",
     },
-    { value: "Just researching for the future", label: "Just researching for the future" },
+    {
+      value: "Just researching for the future",
+      label: "Just researching for the future",
+    },
   ]
 
   const decisionRoleOptions = [
@@ -232,6 +267,45 @@ export function ProjectEvaluationForm() {
       <div className="container">
         <div className="row align-items-center">
           <div>
+            {showSuccessModal && (
+              <div
+                className="contact-success-modal-backdrop"
+                role="presentation"
+                onClick={() => setShowSuccessModal(false)}
+              >
+                <div
+                  className="contact-success-modal"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="contact-success-title"
+                  aria-describedby="contact-success-description"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <h1 className="contact-success-modal-eyebrow">Thank you</h1>
+                  <h3 id="contact-success-title">
+                    Your submission was received
+                  </h3>
+                  <p id="contact-success-description">
+                    Thanks for reaching out. Our team will review your project
+                    details and get back to you shortly with the next steps.
+                  </p>
+                  <div>
+                    <button
+                      className="header-btn4"
+                      style={{
+                        width: "fit-content",
+                        padding: "14px",
+                        fontWeight: 600,
+                        cursor: loading ? "not-allowed" : "pointer",
+                        opacity: loading ? 0.7 : 1,
+                      }}
+                    >
+                      Continue
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
             {status === "success" && (
               <div
                 style={{
@@ -441,6 +515,33 @@ export function ProjectEvaluationForm() {
                   </h2>
                 </div>
 
+                <div className="col-lg-6">
+                  <div className="input-area">
+                    <p>What kind of project is this?</p>
+                    <CustomSelect
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleInputChange}
+                      required
+                      placeholder="Select status"
+                      options={projectTypeOptions}
+                    />
+                  </div>
+                </div>
+
+                <div className="col-lg-6">
+                  <div className="input-area">
+                    <p>Site Type / Profile</p>
+                    <CustomSelect
+                      name="siteType"
+                      value={formData.siteType}
+                      onChange={handleInputChange}
+                      required
+                      placeholder="Select asset profile"
+                      options={siteTypeOptions}
+                    />
+                  </div>
+                </div>
                 <div className="col-lg-12">
                   <div className="input-area">
                     <p>Which service(s) do you need? (Select all that apply)</p>
@@ -479,34 +580,6 @@ export function ProjectEvaluationForm() {
                         </div>
                       ))}
                     </div>
-                  </div>
-                </div>
-
-                <div className="col-lg-6">
-                  <div className="input-area">
-                    <p>What kind of project is this?</p>
-                    <CustomSelect
-                      name="projectType"
-                      value={formData.projectType}
-                      onChange={handleInputChange}
-                      required
-                      placeholder="Select status"
-                      options={projectTypeOptions}
-                    />
-                  </div>
-                </div>
-
-                <div className="col-lg-6">
-                  <div className="input-area">
-                    <p>Site Type / Profile</p>
-                    <CustomSelect
-                      name="siteType"
-                      value={formData.siteType}
-                      onChange={handleInputChange}
-                      required
-                      placeholder="Select asset profile"
-                      options={siteTypeOptions}
-                    />
                   </div>
                 </div>
 

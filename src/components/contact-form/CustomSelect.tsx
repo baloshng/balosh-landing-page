@@ -7,14 +7,16 @@ type Option = {
   label: string
 }
 
+export type FieldChangeEvent = {
+  target: { name: string; value: string }
+}
+
 type CustomSelectProps = {
   name: string
   value: string
   options: Option[]
   placeholder: string
-  onChange: (event: {
-    target: { name: string; value: string }
-  }) => void
+  onChange: (event: FieldChangeEvent) => void
   required?: boolean
   className?: string
 }
@@ -74,7 +76,9 @@ export function CustomSelect({
         name={name}
         value={value}
         required={required}
-        onChange={(event) => onChange(event)}
+        onChange={(event) =>
+          onChange({ target: { name: event.target.name, value: event.target.value } })
+        }
         className="custom-select-native"
         tabIndex={-1}
         aria-hidden="true"
