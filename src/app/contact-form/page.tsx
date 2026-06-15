@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Footer from "@/components/Footer"
 import InternalHeader from "@/components/InternalHeader"
 import CourseFormHeroSection from "@/components/contact-form/CourseFormHeroSection"
-import { DEFAULT_OG_IMAGE } from "@/lib/seo"
+import { absoluteUrl, DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/seo"
 import { ProjectEvaluationForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
@@ -12,15 +12,26 @@ export const metadata: Metadata = {
     canonical: "/contact-form",
   },
   openGraph: {
-    title: "Balosh Project Enquiry",
-    description: "Submit your Balosh project enquiry and consultation request.",
+    type: "website",
+    locale: "en_NG",
     url: "/contact-form",
-    images: [DEFAULT_OG_IMAGE],
+    siteName: SITE_NAME,
+    title: "Balosh Project Enquiry",
+    description: DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: absoluteUrl(DEFAULT_OG_IMAGE),
+        width: 1200,
+        height: 630,
+        alt: "Balosh Integrated Services project enquiry preview",
+      },
+    ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "Balosh Project Enquiry",
-    description: "Submit your Balosh project enquiry and consultation request.",
-    images: [DEFAULT_OG_IMAGE],
+    description: DEFAULT_DESCRIPTION,
+    images: [absoluteUrl(DEFAULT_OG_IMAGE)],
   },
 }
 
