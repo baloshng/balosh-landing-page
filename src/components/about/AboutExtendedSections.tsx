@@ -176,7 +176,11 @@ export default function AboutExtendedSections() {
                 >
                   Identity, Direction, and the People Behind the Brand
                 </h2>
-                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
                   The About Us page is structured to communicate Balosh&apos;s
                   identity, values, journey, team structure, difference, and
                   leadership in one clear path.
@@ -208,7 +212,10 @@ export default function AboutExtendedSections() {
         </div>
       </section>
 
-      <section className="about3-section-area sp1 about-page-section" id="who-we-are">
+      <section
+        className="about3-section-area sp1 about-page-section"
+        id="who-we-are"
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-10 m-auto">
@@ -223,11 +230,19 @@ export default function AboutExtendedSections() {
                   />
                   Introduction
                 </h5>
-                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="120">
+                <h2
+                  data-aos="fade-right"
+                  data-aos-duration="950"
+                  data-aos-delay="120"
+                >
                   Who We Are
                 </h2>
                 {whoWeAreParagraphs.map((paragraph) => (
-                  <p key={paragraph} data-aos="fade-right" data-aos-duration="1050">
+                  <p
+                    key={paragraph}
+                    data-aos="fade-right"
+                    data-aos-duration="1050"
+                  >
                     {paragraph}
                   </p>
                 ))}
@@ -257,40 +272,70 @@ export default function AboutExtendedSections() {
                   />
                   Mission and Vision
                 </h5>
-                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="80">
+                <h2
+                  data-aos="fade-right"
+                  data-aos-duration="950"
+                  data-aos-delay="80"
+                >
                   Built on Principles That Deliver
                 </h2>
-                <h3 data-aos="fade-right" data-aos-duration="950" data-aos-delay="140">
+                <h3
+                  data-aos="fade-right"
+                  data-aos-duration="950"
+                  data-aos-delay="140"
+                >
                   What We Stand For
                 </h3>
-                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="180">
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="180"
+                >
                   At Balosh, our work is guided by principles that shape how we
                   design, deliver, and support every system.
                 </p>
                 <div style={{ height: "1.5rem" }} />
-                <h3 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="220">
+                <h3
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="220"
+                >
                   Our Focus
                 </h3>
-                <p data-aos="fade-right" data-aos-duration="1050" data-aos-delay="260">
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1050"
+                  data-aos-delay="260"
+                >
                   We create secure, efficient environments that give
                   organisations and communities confidence, control, and
                   operational clarity.
                 </p>
                 <div style={{ height: "1.5rem" }} />
-                <h3 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
+                <h3
+                  data-aos="fade-right"
+                  data-aos-duration="1100"
+                  data-aos-delay="300"
+                >
                   Our Commitment
                 </h3>
-                <p data-aos="fade-right" data-aos-duration="1150" data-aos-delay="340">
-                  To be Nigeria&apos;s most trusted provider of access control and security
-                  infrastructure, driven by integrity, long-term client partnerships,
-                  and a relentless commitment to systems that actually work.
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1150"
+                  data-aos-delay="340"
+                >
+                  To be Nigeria&apos;s most trusted provider of access control
+                  and security infrastructure, driven by integrity, long-term
+                  client partnerships, and a relentless commitment to systems
+                  that actually work.
                 </p>
-           
               </div>
             </div>
             <div className="col-lg-7">
               <div className="heading6 about-page-section-subhead">
-                <h3 data-aos="fade-left" data-aos-duration="900">What Drives Us</h3>
+                <h3 data-aos="fade-left" data-aos-duration="900">
+                  What Drives Us
+                </h3>
               </div>
               <div className="about-page-pillars">
                 {valuePillars.map((pillar, index) => (
@@ -311,7 +356,10 @@ export default function AboutExtendedSections() {
         </div>
       </section>
 
-      <section className="about3-section-area sp1 about-page-section" id="balosh-journey">
+      <section
+        className="about3-section-area sp1 about-page-section"
+        id="balosh-journey"
+      >
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-5">
@@ -326,11 +374,19 @@ export default function AboutExtendedSections() {
                   />
                   The Balosh Journey
                 </h5>
-                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="100">
+                <h2
+                  data-aos="fade-right"
+                  data-aos-duration="950"
+                  data-aos-delay="100"
+                >
                   Our Journey
                 </h2>
                 {journeyParagraphs.map((paragraph) => (
-                  <p key={paragraph} data-aos="fade-right" data-aos-duration="1050">
+                  <p
+                    key={paragraph}
+                    data-aos="fade-right"
+                    data-aos-duration="1050"
+                  >
                     {paragraph}
                   </p>
                 ))}
@@ -379,31 +435,53 @@ export default function AboutExtendedSections() {
                   />
                   Balosh Allstars
                 </h5>
-                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="80">
+                <h2
+                  data-aos="fade-right"
+                  data-aos-duration="950"
+                  data-aos-delay="80"
+                >
                   The Team Behind Every Important Door
                 </h2>
-                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="140">
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="140"
+                >
                   Behind every door we open is a team we call the Balosh
                   Allstars, engineers, technicians, software developers, and
                   support specialists who take full ownership of every outcome.
                 </p>
-                <p data-aos="fade-right" data-aos-duration="1050" data-aos-delay="180">
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1050"
+                  data-aos-delay="180"
+                >
                   Because at Balosh, &quot;we open important doors&quot;, and
                   the people behind those doors matter just as much as the
                   systems themselves.
                 </p>
-                <p data-aos="fade-right" data-aos-duration="1100" data-aos-delay="220">
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1100"
+                  data-aos-delay="220"
+                >
                   Our team is built to deliver in environments where performance
                   is critical. Their expertise, responsiveness, and commitment
                   to excellence ensure that every system we design, install, and
                   support works, consistently and at scale.
                 </p>
-                <p data-aos="fade-right" data-aos-duration="1150" data-aos-delay="260">
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1150"
+                  data-aos-delay="260"
+                >
                   We recognise that opening doors goes beyond access, it is
                   about opportunity, trust, and impact. By bringing together
                   people from diverse backgrounds, we foster a culture that
                   encourages new thinking, adaptability, and stronger outcomes
-                  for clients. At Balosh, we don&apos;t just open important doors, We have the team that ensures what&apos;s behind them works.
+                  for clients. At Balosh, we don&apos;t just open important
+                  doors, We have the team that ensures what&apos;s behind them
+                  works.
                 </p>
               </div>
             </div>
@@ -436,14 +514,17 @@ export default function AboutExtendedSections() {
                   )
                 })}
               </div>
-      
+
               <div className="space20" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="about3-section-area sp1 about-page-section" id="balosh-difference">
+      <section
+        className="about3-section-area sp1 about-page-section"
+        id="balosh-difference"
+      >
         <div className="container">
           <div className="row align-items-center gy-4">
             <div className="col-lg-5">
@@ -458,10 +539,18 @@ export default function AboutExtendedSections() {
                   />
                   The Balosh Difference
                 </h5>
-                <h2 data-aos="fade-right" data-aos-duration="950" data-aos-delay="80">
+                <h2
+                  data-aos="fade-right"
+                  data-aos-duration="950"
+                  data-aos-delay="80"
+                >
                   Why Leaders Choose Balosh
                 </h2>
-                <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="140">
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="140"
+                >
                   There are many vendors, but there is only one Balosh.
                 </p>
               </div>
@@ -504,13 +593,23 @@ export default function AboutExtendedSections() {
                   />
                   Meet the Team
                 </h5>
-                <h2 data-aos="fade-up" data-aos-duration="950" data-aos-delay="100">
+                <h2
+                  data-aos="fade-up"
+                  data-aos-duration="950"
+                  data-aos-delay="100"
+                >
                   Balosh Leadership Team
                 </h2>
-                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="180">
-                Our management team brings together decades of experience, strategic insight, and a shared 
-                commitment to excellence. With a clear vision and deep industry expertise, they drive Balosh&apos;s growth 
-                while ensuring the consistent delivery of reliable, high-quality solutions across every project.
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="180"
+                >
+                  Our management team brings together decades of experience,
+                  strategic insight, and a shared commitment to excellence. With
+                  a clear vision and deep industry expertise, they drive
+                  Balosh&apos;s growth while ensuring the consistent delivery of
+                  reliable, high-quality solutions across every project.
                 </p>
               </div>
             </div>
@@ -529,7 +628,7 @@ export default function AboutExtendedSections() {
                     src={member.image}
                     alt={member.title}
                     width={370}
-                    height={370}
+                    height={450}
                     quality={75}
                     sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 33vw"
                   />
