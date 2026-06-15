@@ -1,7 +1,8 @@
 "use client"
 
 import { FormEvent, useState } from "react"
-import Link from "next/link"
+import { CustomSelect } from "./CustomSelect"
+import { getNigerianStateOptions } from "./nigerianStates"
 import "./form-style.css"
 
 export function ProjectEvaluationForm() {
@@ -129,6 +130,103 @@ export function ProjectEvaluationForm() {
     }
   }
 
+  const roleOptions = [
+    { value: "Owner/MD/CEO/Director", label: "Owner / MD / CEO / Director" },
+    { value: "Facility/Operations Manager", label: "Facility / Operations Manager" },
+    { value: "Procurement/ Purchasing", label: "Procurement / Purchasing" },
+    { value: "Project / Technical Lead", label: "Project / Technical Lead" },
+    {
+      value: "Consultant/Contractor (for a client)",
+      label: "Consultant / Contractor (for a client)",
+    },
+    { value: "Other", label: "Other" },
+  ]
+
+  const projectTypeOptions = [
+    { value: "New facility", label: "New facility" },
+    { value: "Upgrade existing system", label: "Upgrade existing system" },
+    { value: "Repair/maintain existing", label: "Repair / maintain existing" },
+  ]
+
+  const siteTypeOptions = [
+    { value: "Airport / Seaport / transport terminal", label: "Airport / Seaport / transport terminal" },
+    { value: "Toll road/highway", label: "Toll road / highway" },
+    { value: "Shopping mall / major retail", label: "Shopping mall / major retail" },
+    { value: "Stadium/arena / event venue", label: "Stadium / arena / event venue" },
+    { value: "Government institution / agency", label: "Government institution / agency" },
+    { value: "Corporate HQ / large campus", label: "Corporate HQ / large campus" },
+    { value: "Private institution/club/gated community", label: "Private institution / club / gated community" },
+    { value: "Small office / SME premises", label: "Small office / SME premises" },
+    { value: "Residential/private home", label: "Residential / private home" },
+    { value: "Other", label: "Other" },
+  ]
+
+  const scaleOptions = [
+    { value: "1-5", label: "1-5 doors" },
+    { value: "6-10", label: "6-10 doors" },
+    { value: "11-20", label: "11-20 doors" },
+    { value: "20+", label: "20+ doors" },
+  ]
+
+  const automatedEntrancesOptions = [
+    { value: "1", label: "1 point" },
+    { value: "2-4", label: "2-4 points" },
+    { value: "5-10", label: "5-10 points" },
+    { value: "10+", label: "10+ points" },
+  ]
+
+  const tollOptions = [
+    { value: "1-2", label: "1-2 lanes" },
+    { value: "3-6", label: "3-6 lanes" },
+    { value: "7+", label: "7+ lanes" },
+  ]
+
+  const securityOptions = [
+    { value: "1", label: "1 point" },
+    { value: "2-4", label: "2-4 points" },
+    { value: "5+", label: "5+ points" },
+  ]
+
+  const dailyTrafficOptions = [
+    { value: "Under 500", label: "Under 500" },
+    { value: "500-2,000", label: "500 - 2,000" },
+    { value: "2,000-10,000", label: "2,000 - 10,000" },
+    { value: "10,000+", label: "10,000+" },
+  ]
+
+  const budgetOptions = [
+    { value: "Under NGN 10M", label: "Under NGN 10M" },
+    { value: "NGN 10M-50M", label: "NGN 10M - 50M" },
+    { value: "NGN 50M-100M", label: "NGN 50M - 100M" },
+    { value: "Above NGN 100M", label: "Above NGN 100M" },
+  ]
+
+  const budgetStatusOptions = [
+    { value: "Approved", label: "Approved / Allocated" },
+    { value: "Being budgeted now", label: "Being budgeted now" },
+    { value: "Not allocated yet", label: "Not allocated yet" },
+  ]
+
+  const timelineOptions = [
+    { value: "Active need ready to proceed now", label: "Active need ready to proceed now" },
+    {
+      value: "Planning & budgeting (next 1-6 months)",
+      label: "Planning & budgeting (next 1-6 months)",
+    },
+    { value: "Just researching for the future", label: "Just researching for the future" },
+  ]
+
+  const decisionRoleOptions = [
+    { value: "I make the decision", label: "I make the decision" },
+    {
+      value: "I recommend; someone else approves",
+      label: "I recommend; someone else approves",
+    },
+    { value: "I'm gathering information", label: "I'm gathering information" },
+  ]
+
+  const nigerianStateOptions = getNigerianStateOptions()
+
   return (
     <div className="contact2-section-area sp1" id="contact">
       <div className="container">
@@ -242,34 +340,14 @@ export function ProjectEvaluationForm() {
                 <div className="col-lg-12">
                   <div className="input-area">
                     <p>Your Role / Position (required)</p>
-                    <select
+                    <CustomSelect
                       name="role"
-                      required
                       value={formData.role}
                       onChange={handleInputChange}
-                      className={`form-select w-100 contact-form-select ${formData.role === "" ? "contact-form-select-placeholder" : ""}`}
-                      style={{ height: 52 }}
-                    >
-                      <option value="" style={{ color: "#98a2b3" }}>
-                        Select your position
-                      </option>
-                      <option value="Owner/MD/CEO/Director">
-                        Owner / MD / CEO / Director
-                      </option>
-                      <option value="Facility/Operations Manager">
-                        Facility / Operations Manager
-                      </option>
-                      <option value="Procurement/ Purchasing">
-                        Procurement / Purchasing
-                      </option>
-                      <option value="Project / Technical Lead">
-                        Project / Technical Lead
-                      </option>
-                      <option value="Consultant/Contractor (for a client)">
-                        Consultant / Contractor (for a client)
-                      </option>
-                      <option value="Other">Other</option>
-                    </select>
+                      required
+                      placeholder="Select your position"
+                      options={roleOptions}
+                    />
                   </div>
                 </div>
 
@@ -337,14 +415,13 @@ export function ProjectEvaluationForm() {
                 <div className="col-lg-6">
                   <div className="input-area">
                     <p>Project Location State (required)</p>
-                    <input
-                      className="contact-form-input"
-                      type="text"
+                    <CustomSelect
                       name="projectLocation"
-                      placeholder="e.g. Lagos"
                       value={formData.projectLocation}
                       onChange={handleInputChange}
                       required
+                      placeholder="Select a state"
+                      options={nigerianStateOptions}
                     />
                   </div>
                 </div>
@@ -408,71 +485,28 @@ export function ProjectEvaluationForm() {
                 <div className="col-lg-6">
                   <div className="input-area">
                     <p>What kind of project is this?</p>
-                    <select
+                    <CustomSelect
                       name="projectType"
-                      required
                       value={formData.projectType}
                       onChange={handleInputChange}
-                      className={`form-select w-100 contact-form-select ${formData.projectType === "" ? "contact-form-select-placeholder" : ""}`}
-                      style={{ height: 52 }}
-                    >
-                      <option value="" style={{ color: "#98a2b3" }}>
-                        Select status
-                      </option>
-                      <option value="New facility">New facility</option>
-                      <option value="Upgrade existing system">
-                        Upgrade existing system
-                      </option>
-                      <option value="Repair/maintain existing">
-                        Repair / maintain existing
-                      </option>
-                    </select>
+                      required
+                      placeholder="Select status"
+                      options={projectTypeOptions}
+                    />
                   </div>
                 </div>
 
                 <div className="col-lg-6">
                   <div className="input-area">
                     <p>Site Type / Profile</p>
-                    <select
+                    <CustomSelect
                       name="siteType"
-                      required
                       value={formData.siteType}
                       onChange={handleInputChange}
-                      className={`form-select w-100 contact-form-select ${formData.siteType === "" ? "contact-form-select-placeholder" : ""}`}
-                      style={{ height: 52 }}
-                    >
-                      <option value="" style={{ color: "#98a2b3" }}>
-                        Select asset profile
-                      </option>
-                      <option value="Airport / Seaport / transport terminal">
-                        Airport / Seaport / transport terminal
-                      </option>
-                      <option value="Toll road/highway">
-                        Toll road / highway
-                      </option>
-                      <option value="Shopping mall / major retail">
-                        Shopping mall / major retail
-                      </option>
-                      <option value="Stadium/arena / event venue">
-                        Stadium / arena / event venue
-                      </option>
-                      <option value="Government institution / agency">
-                        Government institution / agency
-                      </option>
-                      <option value="Corporate HQ / large campus">
-                        Corporate HQ / large campus
-                      </option>
-                      <option value="Private institution/club/gated community">
-                        Private institution / club / gated community
-                      </option>
-                      <option value="Small office / SME premises">
-                        Small office / SME premises
-                      </option>
-                      <option value="Residential/private home">
-                        Residential / private home
-                      </option>
-                      <option value="Other">Other</option>
-                    </select>
+                      required
+                      placeholder="Select asset profile"
+                      options={siteTypeOptions}
+                    />
                   </div>
                 </div>
 
@@ -519,21 +553,13 @@ export function ProjectEvaluationForm() {
                             <p className="m-0 small text-muted">
                               Access Entry Points
                             </p>
-                            <select
+                            <CustomSelect
                               name="scaleAccessControl"
                               value={formData.scaleAccessControl}
                               onChange={handleInputChange}
-                              className={`form-select form-select-sm mt-1 ${formData.scaleAccessControl === "" ? "contact-form-select-placeholder" : ""}`}
-                              style={{ height: 52 }}
-                            >
-                              <option value="" style={{ color: "#98a2b3" }}>
-                                Select scope
-                              </option>
-                              <option value="1-5">1-5 doors</option>
-                              <option value="6-10">6-10 doors</option>
-                              <option value="11-20">11-20 doors</option>
-                              <option value="20+">20+ doors</option>
-                            </select>
+                              placeholder="Select scope"
+                              options={scaleOptions}
+                            />
                           </div>
                         )}
 
@@ -544,21 +570,13 @@ export function ProjectEvaluationForm() {
                             <p className="m-0 small text-muted">
                               Gates / Turnstiles / Barriers
                             </p>
-                            <select
+                            <CustomSelect
                               name="scaleAutomatedEntrances"
                               value={formData.scaleAutomatedEntrances}
                               onChange={handleInputChange}
-                              className={`form-select form-select-sm mt-1 ${formData.scaleAutomatedEntrances === "" ? "contact-form-select-placeholder" : ""}`}
-                              style={{ height: 52 }}
-                            >
-                              <option value="" style={{ color: "#98a2b3" }}>
-                                Select scope
-                              </option>
-                              <option value="1">1 point</option>
-                              <option value="2-4">2-4 points</option>
-                              <option value="5-10">5-10 points</option>
-                              <option value="10+">10+ points</option>
-                            </select>
+                              placeholder="Select scope"
+                              options={automatedEntrancesOptions}
+                            />
                           </div>
                         )}
 
@@ -611,20 +629,13 @@ export function ProjectEvaluationForm() {
                         ) && (
                           <div className="col-md-6 mt-2">
                             <p className="m-0 small text-muted">Toll Lanes</p>
-                            <select
+                            <CustomSelect
                               name="scaleTollLanes"
                               value={formData.scaleTollLanes}
                               onChange={handleInputChange}
-                              className={`form-select form-select-sm mt-1 ${formData.scaleTollLanes === "" ? "contact-form-select-placeholder" : ""}`}
-                              style={{ height: 52 }}
-                            >
-                              <option value="" style={{ color: "#98a2b3" }}>
-                                Select scope
-                              </option>
-                              <option value="1-2">1-2 lanes</option>
-                              <option value="3-6">3-6 lanes</option>
-                              <option value="7+">7+ lanes</option>
-                            </select>
+                              placeholder="Select scope"
+                              options={tollOptions}
+                            />
                           </div>
                         )}
 
@@ -635,20 +646,13 @@ export function ProjectEvaluationForm() {
                             <p className="m-0 small text-muted">
                               Screening Points
                             </p>
-                            <select
+                            <CustomSelect
                               name="scaleSecurityScreening"
                               value={formData.scaleSecurityScreening}
                               onChange={handleInputChange}
-                              className={`form-select form-select-sm mt-1 ${formData.scaleSecurityScreening === "" ? "contact-form-select-placeholder" : ""}`}
-                              style={{ height: 52 }}
-                            >
-                              <option value="" style={{ color: "#98a2b3" }}>
-                                Select scope
-                              </option>
-                              <option value="1">1 point</option>
-                              <option value="2-4">2-4 points</option>
-                              <option value="5+">5+ points</option>
-                            </select>
+                              placeholder="Select scope"
+                              options={securityOptions}
+                            />
                           </div>
                         )}
                       </div>
@@ -659,22 +663,14 @@ export function ProjectEvaluationForm() {
                 <div className="col-lg-12">
                   <div className="input-area">
                     <p>Approx. daily volume (people / vehicles)</p>
-                    <select
+                    <CustomSelect
                       name="dailyTraffic"
-                      required
                       value={formData.dailyTraffic}
                       onChange={handleInputChange}
-                      className={`form-select w-100 contact-form-select ${formData.dailyTraffic === "" ? "contact-form-select-placeholder" : ""}`}
-                      style={{ height: 52 }}
-                    >
-                      <option value="" style={{ color: "#98a2b3" }}>
-                        Select footprint volume
-                      </option>
-                      <option value="Under 500">Under 500</option>
-                      <option value="500-2,000">500 - 2,000</option>
-                      <option value="2,000-10,000">2,000 - 10,000</option>
-                      <option value="10,000+">10,000+</option>
-                    </select>
+                      required
+                      placeholder="Select footprint volume"
+                      options={dailyTrafficOptions}
+                    />
                   </div>
                 </div>
 
@@ -696,101 +692,56 @@ export function ProjectEvaluationForm() {
                 <div className="col-lg-6">
                   <div className="input-area">
                     <p>Estimated Project Budget</p>
-                    <select
+                    <CustomSelect
                       name="estimatedBudget"
-                      required
                       value={formData.estimatedBudget}
                       onChange={handleInputChange}
-                      className={`form-select w-100 contact-form-select ${formData.estimatedBudget === "" ? "contact-form-select-placeholder" : ""}`}
-                      style={{ height: 52 }}
-                    >
-                      <option value="" style={{ color: "#98a2b3" }}>
-                        Select financial range
-                      </option>
-                      <option value="Under NGN 10M">Under NGN 10M</option>
-                      <option value="NGN 10M-50M">NGN 10M - 50M</option>
-                      <option value="NGN 50M-100M">NGN 50M - 100M</option>
-                      <option value="Above NGN 100M">Above NGN 100M</option>
-                    </select>
+                      required
+                      placeholder="Select financial range"
+                      options={budgetOptions}
+                    />
                   </div>
                 </div>
 
                 <div className="col-lg-6">
                   <div className="input-area">
                     <p>Budget Status</p>
-                    <select
+                    <CustomSelect
                       name="budgetStatus"
-                      required
                       value={formData.budgetStatus}
                       onChange={handleInputChange}
-                      className={`form-select w-100 contact-form-select ${formData.budgetStatus === "" ? "contact-form-select-placeholder" : ""}`}
-                      style={{ height: 52 }}
-                    >
-                      <option value="" style={{ color: "#98a2b3" }}>
-                        Select financial status
-                      </option>
-                      <option value="Approved">Approved / Allocated</option>
-                      <option value="Being budgeted now">
-                        Being budgeted now
-                      </option>
-                      <option value="Not allocated yet">
-                        Not allocated yet
-                      </option>
-                    </select>
+                      required
+                      placeholder="Select financial status"
+                      options={budgetStatusOptions}
+                    />
                   </div>
                 </div>
 
                 <div className="col-lg-6">
                   <div className="input-area">
                     <p>Deployment Timeline</p>
-                    <select
+                    <CustomSelect
                       name="timeline"
-                      required
                       value={formData.timeline}
                       onChange={handleInputChange}
-                      className={`form-select w-100 contact-form-select ${formData.timeline === "" ? "contact-form-select-placeholder" : ""}`}
-                      style={{ height: 52 }}
-                    >
-                      <option value="" style={{ color: "#98a2b3" }}>
-                        Select target timeline
-                      </option>
-                      <option value="Active need ready to proceed now">
-                        Active need ready to proceed now
-                      </option>
-                      <option value="Planning & budgeting (next 1-6 months)">
-                        Planning & budgeting (next 1-6 months)
-                      </option>
-                      <option value="Just researching for the future">
-                        Just researching for the future
-                      </option>
-                    </select>
+                      required
+                      placeholder="Select target timeline"
+                      options={timelineOptions}
+                    />
                   </div>
                 </div>
 
                 <div className="col-lg-6">
                   <div className="input-area">
                     <p>Your Role in Decision Making</p>
-                    <select
+                    <CustomSelect
                       name="decisionRole"
-                      required
                       value={formData.decisionRole}
                       onChange={handleInputChange}
-                      className={`form-select w-100 contact-form-select ${formData.decisionRole === "" ? "contact-form-select-placeholder" : ""}`}
-                      style={{ height: 52 }}
-                    >
-                      <option value="" style={{ color: "#98a2b3" }}>
-                        Select mandate type
-                      </option>
-                      <option value="I make the decision">
-                        I make the decision
-                      </option>
-                      <option value="I recommend; someone else approves">
-                        I recommend; someone else approves
-                      </option>
-                      <option value="I'm gathering information">
-                        I'm gathering information
-                      </option>
-                    </select>
+                      required
+                      placeholder="Select mandate type"
+                      options={decisionRoleOptions}
+                    />
                   </div>
                 </div>
 
