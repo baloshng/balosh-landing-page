@@ -50,14 +50,6 @@ export const solutions: SolutionItem[] = [
         title: "Linear Tripod Turnstiles",
         image: "/assets/img/all-images/new-images/Entrance Control 2.png",
       },
-      {
-        title: "Digital Door Access",
-        image: "/assets/img/all-images/new-images/Digital Door Access.png",
-      },
-      {
-        title: "Entrance Controls",
-        image: "/assets/img/all-images/new-images/Entrance Controls.png",
-      },
     ],
   },
   {
@@ -168,14 +160,6 @@ export const solutions: SolutionItem[] = [
     image: "/assets/img/all-images/new-images/Security Systems.png",
     icon: "/assets/img/icons/service-icons8.svg",
     equipment: [
-      {
-        title: "Digital Door Access",
-        image: "/assets/img/all-images/new-images/Digital Door Access 3.png",
-      },
-      {
-        title: "Entrance Controls",
-        image: "/assets/img/all-images/new-images/Entrance Control.png",
-      },
     ],
   },
   {
