@@ -127,7 +127,7 @@ export const solutions: SolutionItem[] = [
       "Nationwide maintenance support and operational reliability",
       "Hardware and software delivered as one complete system",
     ],
-    image: "/assets/img/all-images/new-images/Toll Road Management 2.png",
+    image: "/assets/img/all-images/new-images/Toll Road Management 3.jpeg",
     icon: "/assets/img/icons/service-img7.svg",
     equipment: [
       {

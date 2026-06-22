@@ -11,6 +11,10 @@ export type ProjectItem = {
     paragraphs: string[];
     bullets?: string[];
   }[];
+  detailEmbed?: {
+    type: "youtube";
+    permalink: string;
+  };
 };
 
 export const projects: ProjectItem[] = [
@@ -31,6 +35,10 @@ export const projects: ProjectItem[] = [
       "The deployment included controlled entry systems and verification processes to ensure secure and organized crowd movement throughout the event.",
       "This project demonstrates Balosh's capability in handling large scale, high traffic events with precision and efficiency.",
     ],
+    detailEmbed: {
+      type: "youtube",
+      permalink: "https://youtube.com/shorts/wect-ogzIpE",
+    },
   },
   {
     id: 2,
@@ -45,6 +53,10 @@ export const projects: ProjectItem[] = [
       "The system ensured strict access regulation, enabling only authorized personnel and guests into designated zones.",
       "This highlights Balosh's ability to deliver secure and reliable solutions for high security, government level and industrial events.",
     ],
+    detailEmbed: {
+      type: "youtube",
+      permalink: "https://youtube.com/shorts/etl3fQyHANA",
+    },
   },
   {
     id: 3,
@@ -129,6 +141,10 @@ export const projects: ProjectItem[] = [
       "The installation focused on regulating pedestrian access using turnstile systems to ensure controlled entry while maintaining smooth visitor flow.",
       "The solution enhanced security, reduced unauthorized access, and improved overall crowd management efficiency within the facility.",
     ],
+    detailEmbed: {
+      type: "youtube",
+      permalink: "https://youtube.com/shorts/_v4Ljo7Fzv0",
+    },
   },
   {
     id: 9,
@@ -143,6 +159,10 @@ export const projects: ProjectItem[] = [
       "The project deployed controlled entry systems to ensure that only authorized students, staff, and visitors gain access to the premises.",
       "The system supports structured movement and monitoring across the school environment, improving safety and administrative control.",
     ],
+    detailEmbed: {
+      type: "youtube",
+      permalink: "https://youtube.com/shorts/Vwoy10T-HAs",
+    },
   },
   {
     id: 10,
@@ -242,6 +262,10 @@ export const projects: ProjectItem[] = [
         ],
       },
     ],
+    detailEmbed: {
+      type: "youtube",
+      permalink: "https://youtube.com/shorts/LOcAhRh7AcY",
+    },
   },
   {
     id: 12,
