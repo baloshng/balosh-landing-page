@@ -12,8 +12,8 @@ const CIRCUMFERENCE = 2 * Math.PI * CIRCLE_RADIUS
 const proofStats = [
   { label: "Of operational excellence", value: "20+ Years", progress: 96 },
   { label: "Daily check-ins across Nigeria", value: "200,000+", progress: 98 },
-  { label: "Skilled professionals nationwide", value: "100+", progress: 93 },
-  { label: "Served across Nigeria", value: "6 Sectors", progress: 95 },
+  { label: "Skilled professionals nationwide", value: "250+", progress: 93 },
+  { label: "Served across Nigeria", value: "7 Sectors", progress: 95 },
 ]
 
 const featuredCaseStudies = [

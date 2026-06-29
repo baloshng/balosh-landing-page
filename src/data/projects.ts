@@ -63,7 +63,7 @@ export const projects: ProjectItem[] = [
     slug: "zenith-bank-plc",
     title: "Zenith Bank PLC",
     client: "Zenith Bank",
-    products: ["Access Control Rental Systems", "Event Entry Management Solutions"],
+    products: ["Access Control Systems", "Event Entry Management Solutions"],
     excerpt:
       "Balosh delivered access control for the Zenith Bank Tech Fair 2025, managing secure entry for over attendees.",
       description: [
