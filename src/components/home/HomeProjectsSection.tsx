@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ProjectItem } from "@/data/projects"
 import { projectCoverImageUrl } from "@/lib/projectCoverImage"
+import ProjectVideoEmbed from "@/components/projects/ProjectVideoEmbed"
 
 type HomeProjectsSectionProps = {
   projects: ProjectItem[]
@@ -71,15 +72,30 @@ export default function HomeProjectsSection({
                 <div className="testimonial-author-box home-project-card" key={project.slug}>
                   <div className="images">
                     <div className="content">
-                      <div className="home-project-media">
-                        <Image
-                          src={projectCoverImageUrl(project.slug)}
-                          alt={project.title}
-                          width={400}
-                          height={300}
-                          className="home-project-media-image"
-                          sizes="(max-width: 768px) 80vw, 320px"
-                        />
+                      <div
+                        className={
+                          project.detailEmbed?.type === "youtube"
+                            ? "home-project-media home-project-media-video"
+                            : "home-project-media"
+                        }
+                      >
+                        {project.detailEmbed?.type === "youtube" ? (
+                          <ProjectVideoEmbed
+                            permalink={project.detailEmbed.permalink}
+                            provider={project.detailEmbed.type}
+                            title={`${project.title} video cover`}
+                            variant="cover"
+                          />
+                        ) : (
+                          <Image
+                            src={projectCoverImageUrl(project.slug)}
+                            alt={project.title}
+                            width={400}
+                            height={300}
+                            className="home-project-media-image"
+                            sizes="(max-width: 768px) 80vw, 320px"
+                          />
+                        )}
                       </div>
                       <Link href={`/projects/${project.slug}`}>
                         {project.title}

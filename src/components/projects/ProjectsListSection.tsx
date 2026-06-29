@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ProjectItem } from "@/data/projects"
 import { projectCoverImageUrl } from "@/lib/projectCoverImage"
+import ProjectVideoEmbed from "./ProjectVideoEmbed"
 
 type ProjectsListSectionProps = {
   projects: ProjectItem[]
@@ -43,15 +44,30 @@ export default function ProjectsListSection({ projects }: ProjectsListSectionPro
           {projects.map((project) => (
             <div className="col-lg-4 col-md-6" key={project.id}>
               <div className="project-boxarea-inner">
-                <div className="img1">
-                  <Image
-                    src={projectCoverImageUrl(project.slug)}
-                    alt={project.title}
-                    width={600}
-                    height={400}
-                    className="h-auto w-full object-cover"
-                    sizes="(max-width: 768px) 100vw, 400px"
-                  />
+                <div
+                  className={
+                    project.detailEmbed?.type === "youtube"
+                      ? "img1 project-list-video-media"
+                      : "img1"
+                  }
+                >
+                  {project.detailEmbed?.type === "youtube" ? (
+                    <ProjectVideoEmbed
+                      permalink={project.detailEmbed.permalink}
+                      provider={project.detailEmbed.type}
+                      title={`${project.title} video cover`}
+                      variant="cover"
+                    />
+                  ) : (
+                    <Image
+                      src={projectCoverImageUrl(project.slug)}
+                      alt={project.title}
+                      width={600}
+                      height={400}
+                      className="h-auto w-full object-cover"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  )}
                 </div>
                 <div className="content-area">
                   <div className="all-content">

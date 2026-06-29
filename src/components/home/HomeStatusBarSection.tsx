@@ -18,19 +18,19 @@ const proofStats = [
 
 const featuredCaseStudies = [
   {
-    slug: "mma2-airport-car-park-lagos",
+    slug: "zenith-bank-plc",
     result:
-      "Near zero downtime, faster passenger throughput, and stronger revenue control in a 24/7 airport environment.",
+      "Balosh delivered access control for the Zenith Bank Tech Fair 2025, managing secure entry for over attendees.",
   },
   {
     slug: "ikoyi-club-access-control-upgrade",
     result:
-      "Zero unauthorized access, zero downtime, and automatic membership based entry control.",
+      "Balosh delivered a full access overhaul at Ikoyi Club, enabling zero unauthorized access and zero downtime.",
   },
   {
-    slug: "ikeja-city-mall-car-park-reset",
+    slug: "dangote-refinery-commissioning-event-security",
     result:
-      "Near zero downtime, faster vehicle processing, and up to 60% monthly revenue growth.",
+      "Balosh deployed rental access control for the Dangote Refinery commissioning, enforcing strict zone level authorization.",
   },
 ]
   .flatMap((item) => {

@@ -57,7 +57,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
     notFound();
   }
 
-  const relatedProjects = projects.filter((item) => item.slug !== project.slug).slice(0, 3);
+  const currentProjectIndex = projects.findIndex((item) => item.slug === project.slug);
+  const relatedProjects = projects
+    .slice(currentProjectIndex + 1)
+    .concat(projects.slice(0, currentProjectIndex))
+    .slice(0, 3);
 
   return (
     <>

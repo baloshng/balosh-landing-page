@@ -50,14 +50,6 @@ export const solutions: SolutionItem[] = [
         title: "Linear Tripod Turnstiles",
         image: "/assets/img/all-images/new-images/Entrance Control 2.png",
       },
-      {
-        title: "Digital Door Access",
-        image: "/assets/img/all-images/new-images/Digital Door Access.png",
-      },
-      {
-        title: "Entrance Controls",
-        image: "/assets/img/all-images/new-images/Entrance Controls.png",
-      },
     ],
   },
   {
@@ -84,7 +76,7 @@ export const solutions: SolutionItem[] = [
       },
       {
         title: "Digital Door Access",
-        image: "/assets/img/all-images/new-images/Digital Door Access 2.png",
+        image: "/assets/img/all-images/new-images/Digital Door Access 4.jpeg",
       },
     ],
   },
@@ -135,7 +127,7 @@ export const solutions: SolutionItem[] = [
       "Nationwide maintenance support and operational reliability",
       "Hardware and software delivered as one complete system",
     ],
-    image: "/assets/img/all-images/new-images/Toll Road Management 2.png",
+    image: "/assets/img/all-images/new-images/Toll Road Management 3.jpeg",
     icon: "/assets/img/icons/service-img7.svg",
     equipment: [
       {
@@ -168,14 +160,6 @@ export const solutions: SolutionItem[] = [
     image: "/assets/img/all-images/new-images/Security Systems.png",
     icon: "/assets/img/icons/service-icons8.svg",
     equipment: [
-      {
-        title: "Digital Door Access",
-        image: "/assets/img/all-images/new-images/Digital Door Access 3.png",
-      },
-      {
-        title: "Entrance Controls",
-        image: "/assets/img/all-images/new-images/Entrance Control.png",
-      },
     ],
   },
   {
@@ -193,7 +177,7 @@ export const solutions: SolutionItem[] = [
       "Equipment Rentals with flexible rental solutions for varying project demands",
       "System Integration & API Access for enabling different platforms and technologies to work seamlessly together",
     ],
-    image: "/assets/img/all-images/balosh-solutions/maintenance.png",
+    image: "/assets/img/all-images/new-images/Cross Cutting Capabilities.jpeg",
     icon: "/assets/img/icons/service-icons9.svg",
     equipment: [
       { title: "Rentals" },
