@@ -31,6 +31,7 @@ export default function ProjectVideoEmbed({
             : "project-video-frame"
         }
         loading="lazy"
+        key={embedUrl}
         src={embedUrl}
         title={title}
       />

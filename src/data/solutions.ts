@@ -76,7 +76,7 @@ export const solutions: SolutionItem[] = [
       },
       {
         title: "Digital Door Access",
-        image: "/assets/img/all-images/new-images/Digital Door Access 2.png",
+        image: "/assets/img/all-images/new-images/Digital Door Access 4.jpeg",
       },
     ],
   },
@@ -177,7 +177,7 @@ export const solutions: SolutionItem[] = [
       "Equipment Rentals with flexible rental solutions for varying project demands",
       "System Integration & API Access for enabling different platforms and technologies to work seamlessly together",
     ],
-    image: "/assets/img/all-images/balosh-solutions/maintenance.png",
+    image: "/assets/img/all-images/new-images/Cross Cutting Capabilities.jpeg",
     icon: "/assets/img/icons/service-icons9.svg",
     equipment: [
       { title: "Rentals" },
