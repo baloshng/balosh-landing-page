@@ -58,7 +58,9 @@ export function ProjectEvaluationForm() {
     projectDescription: "contact-form-error-project-description",
   } satisfies Record<ContactFormFieldName, string>
 
-  const conditionalFieldDependencies = {
+  const conditionalFieldDependencies: Partial<
+    Record<ContactFormFieldName, ContactFormFieldName[]>
+  > = {
     userType: ["organizationName"],
     role: ["otherRoleDetails"],
     siteType: ["otherSiteType"],
