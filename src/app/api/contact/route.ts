@@ -2,6 +2,12 @@ import nodemailer from "nodemailer"
 import { NextResponse } from "next/server"
 
 import { generateEmailTemplate } from "./generateEmailTemplate"
+import {
+  coerceContactFormData,
+  contactFormSchema,
+  getContactFormFieldErrors,
+  normalizeContactFormData,
+} from "@/lib/contactFormSchema"
 
 export const runtime = "nodejs"
 
@@ -29,7 +35,21 @@ export async function POST(request: Request) {
       )
     }
 
-    const body = await request.json()
+    const body = normalizeContactFormData(
+      coerceContactFormData(await request.json()),
+    )
+    const validation = contactFormSchema.safeParse(body)
+
+    if (!validation.success) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "Please correct the highlighted fields and try again.",
+          fieldErrors: getContactFormFieldErrors(validation.error),
+        },
+        { status: 400 },
+      )
+    }
 
     const {
       fullName,
@@ -62,20 +82,7 @@ export async function POST(request: Request) {
       referrerOrganization,
       referrerContact,
       projectDescription,
-    } = body
-
-    if (
-      !fullName ||
-      !workEmail ||
-      !phoneNumber ||
-      !projectLocation ||
-      !projectDescription
-    ) {
-      return NextResponse.json(
-        { ok: false, error: "Missing required validation fields" },
-        { status: 400 },
-      )
-    }
+    } = validation.data
 
     const { emailSubject, htmlContent } = generateEmailTemplate({
       fullName,

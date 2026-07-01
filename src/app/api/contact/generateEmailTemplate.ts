@@ -1,35 +1,6 @@
-type ContactEmailPayload = {
-  fullName: string
-  userType?: string
-  organizationName?: string
-  role?: string
-  otherRoleDetails?: string
-  workEmail: string
-  phoneNumber: string
-  website?: string
-  projectLocation: string
-  servicesNeeded?: string[]
-  projectType?: string
-  siteType?: string
-  otherSiteType?: string
-  scaleAccessControl?: string
-  scaleAutomatedEntrances?: string
-  scaleCarParkingLanes?: string
-  scaleCarParkingSpaces?: string
-  scaleCarParkingPayments?: string
-  scaleTollLanes?: string
-  scaleSecurityScreening?: string
-  dailyTraffic?: string
-  estimatedBudget?: string
-  budgetStatus?: string
-  timeline?: string
-  decisionRole?: string
-  isReferred?: string
-  referrerName?: string
-  referrerOrganization?: string
-  referrerContact?: string
-  projectDescription: string
-}
+import type { ContactFormData } from "@/lib/contactFormSchema"
+
+type ContactEmailPayload = ContactFormData
 
 const escapeHtml = (value: unknown) =>
   String(value ?? "")

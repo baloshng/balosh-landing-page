@@ -19,6 +19,8 @@ type CustomSelectProps = {
   onChange: (event: FieldChangeEvent) => void
   required?: boolean
   className?: string
+  ariaDescribedBy?: string
+  ariaInvalid?: boolean
 }
 
 export function CustomSelect({
@@ -29,6 +31,8 @@ export function CustomSelect({
   onChange,
   required = false,
   className = "",
+  ariaDescribedBy,
+  ariaInvalid = false,
 }: CustomSelectProps) {
   const [open, setOpen] = useState(false)
   const rootRef = useRef<HTMLDivElement>(null)
@@ -63,6 +67,7 @@ export function CustomSelect({
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={placeholder}
+        aria-describedby={ariaDescribedBy}
       >
         <span className="custom-select-value">
           {selectedOption?.label ?? placeholder}
@@ -82,6 +87,8 @@ export function CustomSelect({
         className="custom-select-native"
         tabIndex={-1}
         aria-hidden="true"
+        aria-describedby={ariaDescribedBy}
+        aria-invalid={ariaInvalid || undefined}
       >
         <option value="" />
         {options.map((option) => (

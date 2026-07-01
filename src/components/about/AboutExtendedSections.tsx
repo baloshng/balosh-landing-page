@@ -105,14 +105,14 @@ const leadershipTeam = [
   {
     title: "Toyin Akintayo",
     role: "Human Resources Manager",
-    image: "/assets/headshots/web/leadership-1.jpg",
+    image: "/assets/headshots/web/leadership-2.jpg",
     profile:
       `As the Human Resources Manager at Balosh Integrated Services Limited, Toyin Akintayo oversees the development and implementation of people-focused initiatives that support business growth and operational excellence. Passionate about building high-performing teams and sustainable workplace cultures, Toyin leads initiatives in talent acquisition, employee engagement, performance management, compliance, and organizational development.`,
   },
   {
     title: "Nwokolo Claris Jachinma",
     role: "Customer Relations Lead",
-    image: "/assets/headshots/web/leadership-2.jpg",
+    image: "/assets/headshots/web/leadership-1.jpg",
     profile:
       `Nwokolo Claris Jachinma is the Customer Relations Lead at Balosh Integrated Services Limited, where she oversees client engagement and relationship management, ensuring the consistent delivery of exceptional customer experiences and seamless communication between the organization and its clientele, fostering strong relationships built on trust, responsiveness, and service excellence. Beyond customer relations, Claris plays a strategic role in driving operational coordination and supporting the successful execution of projects across the organization. She champions initiatives that enhance service delivery, strengthen stakeholder satisfaction, and promote process efficiency. With a strong commitment to professionalism, continuous improvement, and operational effectiveness, Claris is instrumental in advancing Balosh's business objectives and reinforcing its reputation as a trusted and customer-focused service provider.`,
   },
