@@ -9,12 +9,76 @@ import { projects } from "@/data/projects"
 const CIRCLE_RADIUS = 70
 const CIRCUMFERENCE = 2 * Math.PI * CIRCLE_RADIUS
 
+const MIN_PROGRESS = 93
+const MAX_PROGRESS = 98
+
 const proofStats = [
-  { label: "Of operational excellence", value: "20+ Years", progress: 96 },
-  { label: "Daily check-ins across Nigeria", value: "200,000+", progress: 98 },
-  { label: "Skilled professionals nationwide", value: "250+", progress: 93 },
-  { label: "Served across Nigeria", value: "7 Sectors", progress: 95 },
+  { label: "Of operational excellence", value: "20+ Years" },
+  { label: "Yearly check-ins across Nigeria", value: "73M+" },
+  { label: "Skilled professionals nationwide", value: "250+" },
+  { label: "Served across Nigeria", value: "7 Sectors" },
 ]
+  .map((item) => ({
+    ...item,
+    numericValue: parseStatValue(item.value),
+  }))
+  .map((item, _, stats) => ({
+    ...item,
+    progress: calculateProgress(item.numericValue, stats),
+  }))
+
+function parseStatValue(value: string) {
+  const match = value.match(/(\d[\d,.]*)(?:\s*([KMB]))?/i)
+
+  if (!match) {
+    return 0
+  }
+
+  const numericPortion = Number.parseFloat(match[1].replaceAll(",", ""))
+  const multiplier = match[2]?.toUpperCase()
+
+  if (Number.isNaN(numericPortion)) {
+    return 0
+  }
+
+  switch (multiplier) {
+    case "K":
+      return numericPortion * 1_000
+    case "M":
+      return numericPortion * 1_000_000
+    case "B":
+      return numericPortion * 1_000_000_000
+    default:
+      return numericPortion
+  }
+}
+
+function calculateProgress(
+  value: number,
+  stats: Array<{ numericValue: number }>
+) {
+  const numericValues = stats
+    .map((item) => item.numericValue)
+    .filter((numericValue) => numericValue > 0)
+
+  if (numericValues.length === 0) {
+    return MIN_PROGRESS
+  }
+
+  const minValue = Math.min(...numericValues)
+  const maxValue = Math.max(...numericValues)
+
+  if (minValue === maxValue) {
+    return MAX_PROGRESS
+  }
+
+  const minLog = Math.log10(minValue)
+  const maxLog = Math.log10(maxValue)
+  const valueLog = Math.log10(Math.max(value, 1))
+  const scale = (valueLog - minLog) / (maxLog - minLog)
+
+  return MIN_PROGRESS + scale * (MAX_PROGRESS - MIN_PROGRESS)
+}
 
 const featuredCaseStudies = [
   {

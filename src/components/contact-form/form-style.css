@@ -57,6 +57,19 @@ textarea {
   outline: none;
 }
 
+.contact-form-input-error,
+.custom-select.is-invalid .custom-select-trigger {
+  border-color: #d92d20;
+}
+
+.contact-form-input-error:focus,
+.contact-form-input-error:hover,
+.custom-select.is-invalid .custom-select-trigger:focus,
+.custom-select.is-invalid .custom-select-trigger:hover {
+  border-color: #d92d20;
+  box-shadow: 0 0 0 3px rgba(217, 45, 32, 0.12);
+}
+
 .custom-select-value {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -191,6 +204,18 @@ textarea {
 .checkbox-input {
   width: 20px;
   height: 20px;
+}
+
+.contact-form-error-summary {
+  border: 1px solid rgba(217, 45, 32, 0.14);
+}
+
+.contact-form-error {
+  margin-top: 8px;
+  color: #b42318;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 .contact-form-input::placeholder,
