@@ -61,42 +61,46 @@ export default function SolutionDetailContentSection({
                   ))}
                 </ul>
               </div>
-              <div className="space24" />
-              <div className="heading6 solution-equipment-heading">
-                <h5>
-                  <Image
-                    src="/assets/img/icons/finger2.svg"
-                    alt=""
-                    width={20}
-                    height={20}
-                    className="inline-block align-middle"
-                  />
-                  Relevant Equipment
-                </h5>
-                <h3>Equipment in this Category</h3>
-              </div>
-              <div className="space16" />
-              <div className="about-page-pillars">
-                {solution.equipment.map((item) => (
-                  <article
-                    className="about-page-pillar-card solution-equipment-card"
-                    key={item.title}
-                  >
-                    {item.image ? (
-                      <div className="solution-equipment-card-image">
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          width={800}
-                          height={440}
-                          sizes="(max-width: 768px) 100vw, 400px"
-                        />
-                      </div>
-                    ) : null}
-                    <h3>{item.title}</h3>
-                  </article>
-                ))}
-              </div>
+              {solution.equipment.length > 0 ? (
+                <>
+                  <div className="space24" />
+                  <div className="heading6 solution-equipment-heading">
+                    <h5>
+                      <Image
+                        src="/assets/img/icons/finger2.svg"
+                        alt=""
+                        width={20}
+                        height={20}
+                        className="inline-block align-middle"
+                      />
+                      Relevant Equipment
+                    </h5>
+                    <h3>Equipment in this Category</h3>
+                  </div>
+                  <div className="space16" />
+                  <div className="about-page-pillars">
+                    {solution.equipment.map((item) => (
+                      <article
+                        className="about-page-pillar-card solution-equipment-card"
+                        key={item.title}
+                      >
+                        {item.image ? (
+                          <div className="solution-equipment-card-image">
+                            <Image
+                              src={item.image}
+                              alt={item.title}
+                              width={800}
+                              height={440}
+                              sizes="(max-width: 768px) 100vw, 400px"
+                            />
+                          </div>
+                        ) : null}
+                        <h3>{item.title}</h3>
+                      </article>
+                    ))}
+                  </div>
+                </>
+              ) : null}
               <div className="space24" />
             </div>
           </div>

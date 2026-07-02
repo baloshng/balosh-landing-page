@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { ProjectItem } from "@/data/projects"
 import { projectCoverImageUrl } from "@/lib/projectCoverImage"
+import ProjectVideoEmbed from "./ProjectVideoEmbed"
 
 type ProjectDetailContentSectionProps = {
   project: ProjectItem
@@ -17,14 +18,22 @@ export default function ProjectDetailContentSection({
           <div className="col-lg-8 m-auto">
             <div className="service-right-single-area">
               <div className="img1">
-                <Image
-                  src={heroSrc}
-                  alt={project.title}
-                  width={1200}
-                  height={675}
-                  className="h-auto w-full object-cover"
-                  sizes="(max-width: 768px) 100vw, 1200px"
-                />
+                {project.detailEmbed?.type === "youtube" ? (
+                  <ProjectVideoEmbed
+                    permalink={project.detailEmbed.permalink}
+                    provider={project.detailEmbed.type}
+                    title={`${project.title} video`}
+                  />
+                ) : (
+                  <Image
+                    src={heroSrc}
+                    alt={project.title}
+                    width={1200}
+                    height={675}
+                    className="h-auto w-full object-cover"
+                    sizes="(max-width: 768px) 100vw, 1200px"
+                  />
+                )}
               </div>
               <div className="space24" />
               <h2>{project.title}</h2>

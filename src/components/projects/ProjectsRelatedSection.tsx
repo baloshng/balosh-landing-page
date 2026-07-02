@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ProjectItem } from "@/data/projects"
 import { projectCoverImageUrl } from "@/lib/projectCoverImage"
+import ProjectVideoEmbed from "./ProjectVideoEmbed"
 
 type ProjectsRelatedSectionProps = {
   projects: ProjectItem[]
@@ -24,15 +25,30 @@ export default function ProjectsRelatedSection({ projects }: ProjectsRelatedSect
           {projects.map((item) => (
             <div className="col-lg-4 col-md-6" key={item.id}>
               <div className="project-boxarea-inner">
-                <div className="img1">
-                  <Image
-                    src={projectCoverImageUrl(item.slug)}
-                    alt={item.title}
-                    width={1200}
-                    height={675}
-                    className="h-auto w-full object-cover"
-                    sizes="(max-width: 768px) 100vw, 400px"
-                  />
+                <div
+                  className={
+                    item.detailEmbed?.type === "youtube"
+                      ? "img1 project-list-video-media"
+                      : "img1"
+                  }
+                >
+                  {item.detailEmbed?.type === "youtube" ? (
+                    <ProjectVideoEmbed
+                      permalink={item.detailEmbed.permalink}
+                      provider={item.detailEmbed.type}
+                      title={`${item.title} video cover`}
+                      variant="cover"
+                    />
+                  ) : (
+                    <Image
+                      src={projectCoverImageUrl(item.slug)}
+                      alt={item.title}
+                      width={1200}
+                      height={675}
+                      className="h-auto w-full object-cover"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  )}
                 </div>
                 <div className="content-area">
                   <div className="all-content">

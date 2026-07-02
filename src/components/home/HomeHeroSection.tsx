@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import { heroSlides } from "@/data/heroSlides"
 
 export default function HomeHeroSection() {
@@ -20,18 +19,18 @@ export default function HomeHeroSection() {
           </div>
           <div className="container relative z-2">
             <div className="row justify-content-center">
-              <div className="col-lg-8">
+              <div className="col-xl-9 col-lg-10">
                 <div className="header-main-content heading5 text-center home-hero-content">
                   <h1 className="text-anime-style-3">{slide.title}</h1>
                   <p>{slide.description}</p>
-                  <div className="btn-area hero-cta-grid">
+                  {/* <div className="btn-area hero-cta-grid">
                     <Link href="/solutions" className="header-btn4">
                       Explore Our Solutions <i className="fa-solid fa-arrow-right" />
                     </Link>
                     <Link href="/#contact" className="header-btn1">
                       Schedule a Site Assessment <i className="fa-solid fa-arrow-right" />
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

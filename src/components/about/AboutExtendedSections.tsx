@@ -96,26 +96,47 @@ const teamCulture = [
 
 const leadershipTeam = [
   {
-    title: "Strategic Leadership",
-    role: "Management Team",
-    image: "/assets/headshots/web/leadership-1.jpg",
-    profile:
-      "Sets the clear vision and strategic direction that guide Balosh's growth, credibility, and culture.",
-  },
-  {
-    title: "Delivery Leadership",
-    role: "Operations Team",
-    image: "/assets/headshots/web/leadership-2.jpg",
-    profile:
-      "Keeps project delivery, support, and service standards aligned across demanding client environments.",
-  },
-  {
-    title: "Technical Leadership",
-    role: "Systems Team",
+    title: "Ayodeji Fari",
+    role: "Chief of Staff",
     image: "/assets/headshots/web/leadership-3.jpg",
     profile:
-      "Applies deep industry expertise to system design, integration, installation, and long-term reliability.",
+      `Ayodeji Fari serves as the Chief of Staff at Balosh Integrated Services, where she also provides oversight for the Accounting Department. With over a decade of dedicated service to the organization, she has demonstrated exceptional leadership, professionalism, and a deep understanding of the business, steadily progressing through various roles to become a key member of the executive team. Her extensive institutional knowledge, strategic insight, and strong operational expertise enable her to drive organizational effectiveness while ensuring sound financial oversight. Through her commitment to excellence and continuous growth, Ayodeji plays a vital role in supporting the company’s leadership, strengthening internal operations, and contributing to the sustained success of the organization.`,
   },
+  {
+    title: "Toyin Akintayo",
+    role: "Human Resources Manager",
+    image: "/assets/headshots/web/leadership-2.jpg",
+    profile:
+      `As the Human Resources Manager at Balosh Integrated Services Limited, Toyin Akintayo oversees the development and implementation of people-focused initiatives that support business growth and operational excellence. Passionate about building high-performing teams and sustainable workplace cultures, Toyin leads initiatives in talent acquisition, employee engagement, performance management, compliance, and organizational development.`,
+  },
+  {
+    title: "Nwokolo Claris Jachinma",
+    role: "Customer Relations Lead",
+    image: "/assets/headshots/web/leadership-1.jpg",
+    profile:
+      `Nwokolo Claris Jachinma is the Customer Relations Lead at Balosh Integrated Services Limited, where she oversees client engagement and relationship management, ensuring the consistent delivery of exceptional customer experiences and seamless communication between the organization and its clientele, fostering strong relationships built on trust, responsiveness, and service excellence. Beyond customer relations, Claris plays a strategic role in driving operational coordination and supporting the successful execution of projects across the organization. She champions initiatives that enhance service delivery, strengthen stakeholder satisfaction, and promote process efficiency. With a strong commitment to professionalism, continuous improvement, and operational effectiveness, Claris is instrumental in advancing Balosh's business objectives and reinforcing its reputation as a trusted and customer-focused service provider.`,
+  },
+  {
+    title: "Eloghosa Isaac Okundaye",
+    role: "Strategic Partner and Operations Professional",
+    image: "/assets/headshots/web/silhouette.png",
+    profile:
+      `Eloghosa Isaac Okundaye is a Strategic Partner and Operations Professional at Balosh Integrated Services, driving the alignment of business strategy, operational execution, and client success. He partners with leadership and key stakeholders to deliver innovative security and access management solutions that enhance operational efficiency, strengthen customer value, and support sustainable business growth.`,
+  },
+  {
+    title: "Godstime Onaburekhalen",
+    role: "Senior Technical Support Engineer",
+    image: "/assets/headshots/web/silhouette.png",
+    profile:
+      `Godstime Onaburekhalen is a Senior Technical Support Engineer at Balosh Integrated Services, with extensive expertise in access control systems and security technologies. Renowned for his strong technical knowledge and calm, analytical approach, he excels at diagnosing complex issues and delivering effective, reliable solutions. His ability to navigate challenges with clarity and precision ensures optimal system performance, exceptional client support, and the consistent delivery of high-quality technical services.`,
+  },
+  {
+    title: "Lateef Adeyemo",
+    role: "Technical Support Lead",
+    image: "/assets/headshots/web/silhouette.png",
+    profile:
+      `Lateef Adeyemo is the Technical Support Lead at Balosh Integrated Services, bringing a wealth of technical expertise, leadership, and a strong commitment to service excellence. His solution-driven mindset enable him to approach complex issues with confidence, while his willingness to invest the necessary time and effort ensures lasting, effective outcomes. Through his leadership, technical proficiency, and unwavering commitment to quality, Lateef plays a pivotal role in driving operational efficiency, maintaining high service standards, and supporting the successful delivery of security and automation solutions.`,
+  }
 ]
 
 const differenceItems = [
