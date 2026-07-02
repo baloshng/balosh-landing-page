@@ -1268,6 +1268,15 @@ body.homepage3-body
   #home.carousel-area
   .hero3-section-area
   .home-hero-content
+  h1 {
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+
+body.homepage3-body
+  #home.carousel-area
+  .hero3-section-area
+  .home-hero-content
   h1,
 body.homepage3-body
   #home.carousel-area
@@ -1366,6 +1375,28 @@ body.homepage3-body
     animation: none !important;
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (max-width: 374px) {
+  body.homepage3-body
+    #home.carousel-area
+    .hero3-section-area
+    .home-hero-content
+    h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 340px) {
+  body.homepage3-body
+    #home.carousel-area
+    .hero3-section-area
+    .home-hero-content
+    h1 {
+    font-size: 26px;
+    line-height: 32px;
   }
 }
 
