@@ -7,7 +7,6 @@ const whoWeAreParagraphs = [
   "Since 2005, Balosh Integrated Services Limited has built its reputation on three uncompromising pillars: reliability, credibility, and quiet dominance.",
   "We operate end-to-end: design, development, installation, and ongoing support, all in-house, with no middlemen and no gaps in accountability. From the terminals that move millions to the institutions that govern a nation, the names that define Nigeria's most critical spaces have one thing in common: Balosh.",
   "For 21 years, Nigeria's airports, government institutions, major retail destinations, corporate campuses, and critical national infrastructure have entrusted their security and access operations to us. That trust is not given lightly, and we have never taken it for granted.",
-  "For 21+ years, Nigeria's airports, government institutions, major retail destinations, corporate campuses, and critical national infrastructure have entrusted their security and access operations to us. That trust is not given lightly, and we have never taken it for granted.",
   "We don't rely on advertising. We let our work speak for itself.",
   "We are builders, operators, and long-term partners, trusted by the organisations that cannot afford to get access control and security wrong.",
 ]
@@ -104,12 +103,6 @@ const leadershipTeam = [
       `Ayodeji Fari serves as the Chief of Staff at Balosh Integrated Services, where she also provides oversight for the Accounting Department. With over a decade of dedicated service to the organization, she has demonstrated exceptional leadership, professionalism, and a deep understanding of the business, steadily progressing through various roles to become a key member of the executive team. Her extensive institutional knowledge, strategic insight, and strong operational expertise enable her to drive organizational effectiveness while ensuring sound financial oversight. Through her commitment to excellence and continuous growth, Ayodeji plays a vital role in supporting the company’s leadership, strengthening internal operations, and contributing to the sustained success of the organization.`,
   },
   {
-    title: "Toyin Akintayo",
-    role: "Human Resources Manager",
-    image: "/assets/headshots/web/leadership-2.jpg",
-    profile: `As the Human Resources Manager at Balosh Integrated Services Limited, Toyin Akintayo oversees the development and implementation of people-focused initiatives that support business growth and operational excellence. Passionate about building high-performing teams and sustainable workplace cultures, Toyin leads initiatives in talent acquisition, employee engagement, performance management, compliance, and organizational development.`,
-  },
-  {
     title: "Nwokolo Claris Jachinma",
     role: "Customer Relations Lead",
     image: "/assets/headshots/web/leadership-2.jpg",
@@ -169,7 +162,7 @@ const differenceItems = [
   {
     title: "A Reputation Earned Through Results",
     description:
-      "For over 21+ years, our clients have become our strongest advocates, driven by consistent performance and the trust built through every project.",
+      "For over 21 years, our clients have become our strongest advocates, driven by consistent performance and the trust built through every project.",
   },
   {
     title: "Built for the Long Term",
