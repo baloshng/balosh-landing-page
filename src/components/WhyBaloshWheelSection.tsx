@@ -2,7 +2,7 @@ const whyBaloshItems = [
   {
     title: "Proven Track Record",
     description:
-      "21+ years of experience, Balosh has developed solutions for every unique environment.",
+      "21 years of experience, Balosh has developed solutions for every unique environment.",
     iconClass: "fa-solid fa-award",
   },
   {
@@ -29,9 +29,9 @@ const whyBaloshItems = [
     iconClass: "fa-solid fa-share-nodes",
   },
   {
-    title: "40M+ Passages / Year",
+    title: "109M+ Check-ins / Year",
     description:
-      "Balosh is used to check-in more than 60,000 times everyday, for every unique environment.",
+      "Balosh is used to check-in more than 300,000 times everyday, for every unique environment.",
     iconClass: "fa-solid fa-door-open",
   },
 ]
