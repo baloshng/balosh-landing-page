@@ -2,7 +2,7 @@ const whyBaloshItems = [
   {
     title: "Proven Track Record",
     description:
-      "20+ years of experience, Balosh has developed solutions for every unique environment.",
+      "21+ years of experience, Balosh has developed solutions for every unique environment.",
     iconClass: "fa-solid fa-award",
   },
   {
@@ -25,8 +25,7 @@ const whyBaloshItems = [
   },
   {
     title: "90% Referrals",
-    description:
-      "We have no sales team but our work speaks for us.",
+    description: "We have no sales team but our work speaks for us.",
     iconClass: "fa-solid fa-share-nodes",
   },
   {
@@ -61,7 +60,11 @@ export default function WhyBaloshWheelSection({
           data-aos-duration="1100"
           data-aos-delay="120"
         >
-          <svg className="why-balosh-wheel-track" viewBox="0 0 100 100" aria-hidden>
+          <svg
+            className="why-balosh-wheel-track"
+            viewBox="0 0 100 100"
+            aria-hidden
+          >
             <circle
               className="why-balosh-wheel-base-ring"
               cx="50"
