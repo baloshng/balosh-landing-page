@@ -118,7 +118,7 @@ const leadershipTeam = [
   {
     title: "Eloghosa Isaac Okundaye",
     role: "Strategic Partner and Operations Professional",
-    image: "/assets/headshots/web/silhouette.png",
+    image: "/assets/headshots/web/leadership-4.png",
     profile:
       `Eloghosa Isaac Okundaye is a Strategic Partner and Operations Professional at Balosh Integrated Services, driving the alignment of business strategy, operational execution, and client success. He partners with leadership and key stakeholders to deliver innovative security and access management solutions that enhance operational efficiency, strengthen customer value, and support sustainable business growth.`,
   },
