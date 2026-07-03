@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer"
 import { NextResponse } from "next/server"
+import { z } from "zod"
 
 import { generateEmailTemplate } from "./generateEmailTemplate"
 import {
@@ -10,6 +11,19 @@ import {
 } from "@/lib/contactFormSchema"
 
 export const runtime = "nodejs"
+
+const homeCtaSchema = z.object({
+  email: z.string().trim().min(1).email(),
+  source: z.literal("home_cta"),
+})
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
 
 function getSmtpConfig() {
   const host = process.env.SMTP_HOST?.trim()
@@ -25,6 +39,54 @@ function getSmtpConfig() {
   return { host, port, user, password, recipient }
 }
 
+async function sendHomeCtaEmail(
+  body: unknown,
+  smtp: NonNullable<ReturnType<typeof getSmtpConfig>>,
+) {
+  const validation = homeCtaSchema.safeParse(body)
+
+  if (!validation.success) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "Please correct the highlighted fields and try again.",
+      },
+      { status: 400 },
+    )
+  }
+
+  const safeEmail = escapeHtml(validation.data.email)
+  const transport = nodemailer.createTransport({
+    host: smtp.host,
+    port: smtp.port,
+    secure: smtp.port === 465,
+    auth: {
+      user: smtp.user,
+      pass: smtp.password,
+    },
+  })
+
+  await transport.sendMail({
+    from: {
+      name: "Balosh Evaluation System",
+      address: smtp.user,
+    },
+    to: smtp.recipient,
+    replyTo: validation.data.email,
+    subject: "New Consultation Request from Website",
+    html: `
+      <p>A new consultation request has arrived through the Balosh website.</p>
+      <p><strong>Email address</strong></p>
+      <p><a href="mailto:${safeEmail}">${safeEmail}</a></p>
+    `,
+  })
+
+  return NextResponse.json({
+    ok: true,
+    message: "Contact email sent successfully.",
+  })
+}
+
 export async function POST(request: Request) {
   try {
     const smtp = getSmtpConfig()
@@ -35,8 +97,18 @@ export async function POST(request: Request) {
       )
     }
 
+    const requestBody = await request.json()
+    if (
+      requestBody &&
+      typeof requestBody === "object" &&
+      "source" in requestBody &&
+      requestBody.source === "home_cta"
+    ) {
+      return sendHomeCtaEmail(requestBody, smtp)
+    }
+
     const body = normalizeContactFormData(
-      coerceContactFormData(await request.json()),
+      coerceContactFormData(requestBody),
     )
     const validation = contactFormSchema.safeParse(body)
 
