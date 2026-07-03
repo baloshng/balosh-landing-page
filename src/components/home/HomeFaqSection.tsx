@@ -289,6 +289,16 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
           ],
         },
       ],
+      outro: (
+        <>
+          <h4 className="faq-nested-heading">Need More Assistance?</h4>
+          <p>
+            If you have additional questions, our support team is always ready
+            to assist you with product recommendations, technical support, and
+            project consultations.
+          </p>
+        </>
+      ),
     },
   },
 ]
@@ -321,15 +331,17 @@ function FaqAnswer({
   return (
     <div className="faq-answer-rich">
       {answer.intro ? <AnswerText>{answer.intro}</AnswerText> : null}
-      <button
-        type="button"
-        className="faq-show-more"
-        aria-expanded={isExpanded}
-        aria-controls={contentId}
-        onClick={onToggleExpanded}
-      >
-        {isExpanded ? "Show Less" : "Show More"}
-      </button>
+      {!isExpanded ? (
+        <button
+          type="button"
+          className="faq-show-more"
+          aria-expanded={isExpanded}
+          aria-controls={contentId}
+          onClick={onToggleExpanded}
+        >
+          Show More
+        </button>
+      ) : null}
       <div id={contentId} hidden={!isExpanded}>
         <ul className="faq-nested-list">
           {answer.groups.map((group) => (
@@ -344,6 +356,15 @@ function FaqAnswer({
           ))}
         </ul>
         {answer.outro ? <AnswerText>{answer.outro}</AnswerText> : null}
+        <button
+          type="button"
+          className="faq-show-more"
+          aria-expanded={isExpanded}
+          aria-controls={contentId}
+          onClick={onToggleExpanded}
+        >
+          Show Less
+        </button>
       </div>
     </div>
   )
