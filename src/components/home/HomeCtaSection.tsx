@@ -83,13 +83,13 @@ export default function HomeCtaSection() {
                         required
                       />
                       <button type="submit" disabled={loading}>
-                        {loading ? "Sending..." : "Request Consultation"}{" "}
+                        {loading ? "Sending..." : "Subscribe to our newsletter"}{" "}
                         <i className="fa-solid fa-arrow-right" />
                       </button>
                     </form>
                     {status === "success" && (
                       <p className="home-cta-status home-cta-status--success">
-                        Request sent. We&apos;ll get back to you soon.
+                        Subscription successful. Thank you for subscribing to our newsletter.
                       </p>
                     )}
                     {status === "error" && (

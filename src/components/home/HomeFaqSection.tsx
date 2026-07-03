@@ -94,7 +94,7 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
     answer: {
       intro: (
         <p>
-          You can report a fault using the details below, or contact us{" "}
+          You can report a fault using the details below, or contact us{" "} by clicking{" "}
           <Link className="faq-answer-link" href="/contact-form">
             here
           </Link>
@@ -103,7 +103,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
       ),
       groups: [
         {
-          heading: "You can report a fault by:",
           items: [
             "Calling our support team",
             "Sending an email",
@@ -112,7 +111,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
           ],
         },
         {
-          heading: "Please include:",
           items: [
             "Company Name",
             "Site Location",
@@ -285,9 +283,10 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
       outro: (
         <>
           <p>
-            If you have additional questions, our support team is always ready
-            to assist you with product recommendations, technical support, and
-            project consultations.
+            If you have additional
+            questions, our support team is always ready to assist you with
+            product recommendations, technical support, and project
+            consultations.
           </p>
         </>
       ),
@@ -336,12 +335,14 @@ function FaqAnswer({
       ) : null}
       <div id={contentId} hidden={!isExpanded}>
         <ul className="faq-nested-list">
-          {answer.groups.map((group) => (
-            <li key={group.heading}>
-              <h4 className="faq-nested-heading">{group.heading}</h4>
+          {answer.groups.map((group, index) => (
+            <li key={group.heading ?? `faq-group-${answerId}-${index}`}>
+              {group.heading ? (
+                <h4 className="faq-nested-heading">{group.heading}</h4>
+              ) : null}
               <ul>
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
+                {group.items.map((item, itemIndex) => (
+                  <li key={`${answerId}-${index}-${itemIndex}-${item}`}>{item}</li>
                 ))}
               </ul>
             </li>
