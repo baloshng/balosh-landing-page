@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Fragment, useState, type ReactElement } from "react"
 
 type FaqListGroup = {
-  heading: string
+  heading?: string
   items: string[]
 }
 
@@ -28,7 +28,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
         "Balosh Integrated Services specializes in electronic security and access control solutions, including:",
       groups: [
         {
-          heading: "Services",
           items: [
             "Access Control Systems",
             "Biometric Time & Attendance Systems",
@@ -60,7 +59,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
       intro: "We provide solutions for:",
       groups: [
         {
-          heading: "Industries",
           items: [
             "Corporate Offices",
             "Banks & Financial Institutions",
@@ -96,7 +94,7 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
     answer: {
       intro: (
         <p>
-          You can report a fault using the details below, or contact us{" "}
+          You can report a fault using the details below, or contact us{" "} by clicking{" "}
           <Link className="faq-answer-link" href="/contact-form">
             here
           </Link>
@@ -105,7 +103,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
       ),
       groups: [
         {
-          heading: "You can report a fault by:",
           items: [
             "Calling our support team",
             "Sending an email",
@@ -114,7 +111,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
           ],
         },
         {
-          heading: "Please include:",
           items: [
             "Company Name",
             "Site Location",
@@ -134,7 +130,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
         "Videos help our engineers diagnose the issue before visiting your site. This allows us to:",
       groups: [
         {
-          heading: "Benefits",
           items: [
             "Prepare the correct tools and spare parts",
             "Resolve minor issues remotely where possible",
@@ -158,7 +153,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
       intro: "Yes. Our solutions can integrate with:",
       groups: [
         {
-          heading: "Supported integrations",
           items: [
             "CCTV Systems",
             "Fire Alarm Systems",
@@ -180,7 +174,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
       intro: "Our systems support:",
       groups: [
         {
-          heading: "Authentication methods",
           items: [
             "Fingerprint Recognition",
             "Facial Recognition",
@@ -256,7 +249,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
         "Simply contact our sales team or support with your project requirements, including:",
       groups: [
         {
-          heading: "Project requirements",
           items: [
             "Type of facility",
             "Number of access points",
@@ -277,7 +269,6 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
       intro: "Balosh Integrated Services is committed to delivering:",
       groups: [
         {
-          heading: "Why clients choose us",
           items: [
             "Professional installation",
             "High-quality security solutions",
@@ -291,11 +282,11 @@ const FAQ_ITEMS: { id: string; question: string; answer: FaqAnswer }[] = [
       ],
       outro: (
         <>
-          <h4 className="faq-nested-heading">Need More Assistance?</h4>
           <p>
-            If you have additional questions, our support team is always ready
-            to assist you with product recommendations, technical support, and
-            project consultations.
+            If you have additional
+            questions, our support team is always ready to assist you with
+            product recommendations, technical support, and project
+            consultations.
           </p>
         </>
       ),
@@ -344,12 +335,14 @@ function FaqAnswer({
       ) : null}
       <div id={contentId} hidden={!isExpanded}>
         <ul className="faq-nested-list">
-          {answer.groups.map((group) => (
-            <li key={group.heading}>
-              <h4 className="faq-nested-heading">{group.heading}</h4>
+          {answer.groups.map((group, index) => (
+            <li key={group.heading ?? `faq-group-${answerId}-${index}`}>
+              {group.heading ? (
+                <h4 className="faq-nested-heading">{group.heading}</h4>
+              ) : null}
               <ul>
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
+                {group.items.map((item, itemIndex) => (
+                  <li key={`${answerId}-${index}-${itemIndex}-${item}`}>{item}</li>
                 ))}
               </ul>
             </li>

@@ -67,7 +67,7 @@ export const projects: ProjectItem[] = [
     excerpt:
       "Balosh delivered access control for the Zenith Bank Tech Fair 2025, managing secure entry for over attendees.",
       description: [
-        "Balosh Integrated Services provided access control solutions for the Zenith Bank Tech Fair 2025, managing entry for attendees.",
+        "Balosh Integrated Services provided access control solutions for the Zenith Bank Tech Fair 2025, managing 10,000+ entries for attendees.",
         "The deployment included controlled entry systems and verification processes to ensure secure and organized crowd movement throughout the event.",
         "This project demonstrates Balosh's capability in handling large scale, high traffic events with precision and efficiency.",
       ],
