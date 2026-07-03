@@ -47,7 +47,7 @@ const valuePillars = [
 const journeyParagraphs = [
   "Founded in 2005, Balosh Integrated Services began with a clear focus: to bring structure, reliability, and control to environments where it matters most.",
   "Over the past two decades, that focus has driven our growth into a trusted leader in access control and infrastructure systems, delivering solutions across Nigeria's most critical and high-traffic environments.",
-  "Today, our systems support over 200,000 daily check-ins across Nigeria, reflecting the scale, reliability, and operational confidence our clients depend on. Backed by a team of over 100 skilled professionals nationwide, we continue to deliver consistent performance across sectors.",
+  "Today, our systems support over 300,000+ daily check-ins across Nigeria, reflecting the scale, reliability, and operational confidence our clients depend on. Backed by a team of over 250+ skilled professionals nationwide, we continue to deliver consistent performance across sectors.",
   "Our evolution has been shaped by a commitment to building systems that work in real conditions. By developing and deploying OEM hardware tailored specifically for the Nigerian environment, we ensure durability, efficiency, and long-term value across every deployment.",
   "As Balosh continues to grow, one thing remains constant: a commitment to delivering solutions that perform consistently, reliably, and at scale.",
 ]
