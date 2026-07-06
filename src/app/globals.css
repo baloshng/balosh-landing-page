@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --why-balosh-orange: #ff7a00;
 }
 
 @theme inline {
@@ -1268,9 +1269,16 @@ body.homepage3-body
   #home.carousel-area
   .hero3-section-area
   .home-hero-content
-  h1 {
+  h1,
+body.homepage3-body
+  #home.carousel-area
+  .hero3-section-area
+  .home-hero-content
+  h1 * {
   white-space: nowrap;
   letter-spacing: 0;
+  color: var(--why-balosh-orange) !important;
+  -webkit-text-fill-color: var(--why-balosh-orange) !important;
 }
 
 body.homepage3-body
