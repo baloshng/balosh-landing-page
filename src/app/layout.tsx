@@ -108,6 +108,23 @@ export default function RootLayout({
             min-height: 0 !important;
             overflow: visible;
           }
+          body.homepage3-body #home.carousel-area .hero3-section-area .header-main-content h1 {
+            color: var(--why-balosh-orange) !important;
+            -webkit-text-fill-color: var(--why-balosh-orange) !important;
+          }
+          body.homepage3-body
+            #home.carousel-area
+            .hero3-section-area
+            .header-main-content
+            h1,
+          body.homepage3-body
+            #home.carousel-area
+            .hero3-section-area
+            .header-main-content
+            h1 * {
+            color: var(--why-balosh-orange) !important;
+            -webkit-text-fill-color: var(--why-balosh-orange) !important;
+          }
           body.homepage3-body
             #project.testimonial3-section-area
             .testimonial-author-slider.owl-carousel

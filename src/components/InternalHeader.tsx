@@ -109,7 +109,7 @@ export default function InternalHeader() {
                             whiteSpace: "nowrap",
                           }}
                         >
-                          ...we open important doors
+                          ...we open important doors!
                         </span>
                       </Link>
                     </div>
@@ -254,7 +254,7 @@ export default function InternalHeader() {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    ...we open important doors
+                    ...we open important doors!
                   </span>
                 </Link>
               </div>
@@ -303,7 +303,7 @@ export default function InternalHeader() {
                   whiteSpace: "nowrap",
                 }}
               >
-                ...we open important doors
+                ...we open important doors!
               </span>
             </Link>
           </div>

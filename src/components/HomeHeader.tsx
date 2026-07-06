@@ -137,7 +137,7 @@ export default function HomeHeader() {
                             whiteSpace: "nowrap",
                           }}
                         >
-                          ...we open important doors
+                          ...we open important doors!
                         </span>
                       </Link>
                     </div>
@@ -276,7 +276,7 @@ export default function HomeHeader() {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    ...we open important doors
+                    ...we open important doors!
                   </span>
                 </Link>
               </div>
@@ -325,7 +325,7 @@ export default function HomeHeader() {
                   whiteSpace: "nowrap",
                 }}
               >
-                ...we open important doors
+                ...we open important doors!   
               </span>
             </Link>
           </div>

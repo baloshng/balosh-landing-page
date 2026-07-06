@@ -16,12 +16,40 @@ export default function HomeHeroSection() {
               loading={index === 0 ? "eager" : "lazy"}
               fetchPriority={index === 0 ? "high" : "auto"}
             />
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "rgba(0, 0, 0, 0.42)",
+                pointerEvents: "none",
+              }}
+            />
           </div>
           <div className="container relative z-2">
             <div className="row justify-content-center">
               <div className="col-xl-9 col-lg-10">
                 <div className="header-main-content heading5 text-center home-hero-content">
-                  <h1 className="text-anime-style-3">{slide.title}</h1>
+                  <h1
+                    className="text-anime-style-3"
+                    style={{ color: "var(--why-balosh-orange)" }}
+                  >
+                    {slide.id === "important-doors" ? (
+                      <>
+                        ...We open{" "}
+                        <span
+                          style={{
+                            color: "var(--why-balosh-orange)",
+                            WebkitTextFillColor: "var(--why-balosh-orange)",
+                          }}
+                        >
+                          important doors!
+                        </span>
+                      </>
+                    ) : (
+                      slide.title
+                    )}
+                  </h1>
                   <p>{slide.description}</p>
                   {/* <div className="btn-area hero-cta-grid">
                     <Link href="/solutions" className="header-btn4">
