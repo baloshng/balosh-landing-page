@@ -20,7 +20,7 @@ const whyBaloshItems = [
   {
     title: "Customer Satisfaction",
     description:
-      "We are yet to lose a customer, We must be doing something right.",
+      "We are yet to lose a customer, so we must be doing something right.",
     iconClass: "fa-solid fa-thumbs-up",
   },
   {

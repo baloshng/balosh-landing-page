@@ -42,13 +42,6 @@ export const aboutNavigationLinks: AboutNavigationLink[] = [
       "The engineers, technicians, developers, and support specialists behind Balosh delivery.",
   },
   {
-    id: "balosh-difference",
-    title: "The Balosh Difference",
-    href: "/about#balosh-difference",
-    description:
-      "The operating advantages that make leaders choose Balosh for critical environments.",
-  },
-  {
     id: "balosh-leadership",
     title: "Meet the Team",
     href: "/about#balosh-leadership",

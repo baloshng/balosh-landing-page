@@ -15,7 +15,7 @@ const MAX_PROGRESS = 98
 const proofStats = [
   { label: "Of operational excellence", value: "21 Years" },
   { label: "Daily check-ins across Nigeria", value: "300,000+" },
-  { label: "Skilled professionals nationwide", value: "250+" },
+  { label: "Workforce worldwide", value: "250+" },
   { label: "Served across Nigeria", value: "7 Sectors" },
 ]
   .map((item) => ({
@@ -84,7 +84,7 @@ const featuredCaseStudies = [
   {
     slug: "zenith-bank-plc",
     result:
-      "Balosh delivered access control for the Zenith Bank Tech Fair 2025, managing secure entry for over attendees.",
+      "Balosh delivered access control for the Zenith Bank Tech Fair 2025, managing secure entry for over 10,000 attendees.",
   },
   {
     slug: "ikoyi-club-access-control-upgrade",

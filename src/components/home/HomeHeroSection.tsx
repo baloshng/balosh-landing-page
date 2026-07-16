@@ -36,7 +36,7 @@ export default function HomeHeroSection() {
                   >
                     {slide.id === "important-doors" ? (
                       <>
-                        ...We open{" "}
+                        ...we open{" "}
                         <span
                           style={{
                             color: "var(--why-balosh-orange)",

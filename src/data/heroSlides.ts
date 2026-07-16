@@ -12,7 +12,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: "important-doors",
     bannerSrc: "/assets/img/logo/banner1.jpg",
-    title: "...We open important doors!",
+    title: "...we open important doors!",
     description: "Securing and managing Nigeria's most critical spaces since 2005.",
   },
 ]
