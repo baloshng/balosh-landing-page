@@ -13,10 +13,10 @@ const MIN_PROGRESS = 93
 const MAX_PROGRESS = 98
 
 const proofStats = [
-  { label: "Of operational excellence", value: "21 Years" },
+  { label: "of Operational excellence", value: "21 Years" },
   { label: "Daily check-ins across Nigeria", value: "300,000+" },
-  { label: "Workforce worldwide", value: "250+" },
-  { label: "Served across Nigeria", value: "7 Sectors" },
+  { label: "Workforce nationwide", value: "250+" },
+  { label: "served across Nigeria", value: "7 Sectors" },
 ]
   .map((item) => ({
     ...item,
