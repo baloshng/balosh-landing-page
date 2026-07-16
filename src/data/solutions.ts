@@ -165,12 +165,12 @@ export const solutions: SolutionItem[] = [
   {
     id: 6,
     slug: "cross-cutting-capabilities",
-    title: "Cross cutting Capabilities",
+    title: "Cross Cutting Capabilities",
     eyebrow: "Lifecycle Support",
     excerpt:
       "Software, rental, maintenance, and integration capabilities that support flexible, connected operations.",
     description: [
-      "Cross cutting Capabilities support flexible, connected operations across the full solution lifecycle, from software and equipment availability to platform interoperability.",
+      "Cross Cutting Capabilities support flexible, connected operations across the full solution lifecycle, from software and equipment availability to platform interoperability.",
     ],
     features: [
       "Custom Software Development with tailored applications, dashboards, and integrations built in house",

@@ -72,7 +72,7 @@ const journeyHighlights = [
     iconClass: "fa-solid fa-chart-line",
   },
   {
-    title: "250+ Skilled Professionals",
+    title: "250+ workforce",
     description:
       "A nationwide team supports consistent delivery, service, and long-term performance.",
     iconClass: "fa-solid fa-users",
@@ -136,39 +136,6 @@ const leadershipTeam = [
     profile:
       `Lateef Adeyemo is the Technical Support Lead at Balosh Integrated Services, bringing a wealth of technical expertise, leadership, and a strong commitment to service excellence. His solution-driven mindset enable him to approach complex issues with confidence, while his willingness to invest the necessary time and effort ensures lasting, effective outcomes. Through his leadership, technical proficiency, and unwavering commitment to quality, Lateef plays a pivotal role in driving operational efficiency, maintaining high service standards, and supporting the successful delivery of security and automation solutions.`,
   }
-]
-
-const differenceItems = [
-  {
-    title: "Built for Nigeria's Realities",
-    description:
-      "Our systems are engineered to perform in demanding conditions, from power variability to large-scale, complex environments. We don't adapt foreign solutions; we build for where we operate.",
-  },
-  {
-    title: "End-to-End Accountability",
-    description:
-      "We manage every stage in-house: hardware, software, installation, and ongoing support, ensuring seamless delivery and a single point of accountability.",
-  },
-  {
-    title: "Proprietary OEM Hardware",
-    description:
-      "Our solutions are powered by hardware designed specifically for Nigerian conditions, offering durability, faster parts access, and flexible customisation.",
-  },
-  {
-    title: "Global Technology, Local Expertise",
-    description:
-      "We combine world-class technology partnerships with deep local knowledge to deliver solutions that truly work where it matters most.",
-  },
-  {
-    title: "A Reputation Earned Through Results",
-    description:
-      "For over 21 years, our clients have become our strongest advocates, driven by consistent performance and the trust built through every project.",
-  },
-  {
-    title: "Built for the Long Term",
-    description:
-      "We don't just deliver projects; we build lasting partnerships. Your uptime, reliability, and long-term success remain our priority long after installation.",
-  },
 ]
 
 export default function AboutExtendedSections() {
@@ -476,9 +443,9 @@ export default function AboutExtendedSections() {
                   data-aos-duration="1050"
                   data-aos-delay="180"
                 >
-                  Because at Balosh, &quot;we open important doors&quot;, and
-                  the people behind those doors matter just as much as the
-                  systems themselves.
+                  At Balosh, &quot;we open important doors!&quot; The people
+                  behind those doors matter just as much as the systems
+                  themselves.
                 </p>
                 <p
                   data-aos="fade-right"
@@ -536,60 +503,6 @@ export default function AboutExtendedSections() {
               </div>
 
               <div className="space20" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="about3-section-area sp1 about-page-section"
-        id="balosh-difference"
-      >
-        <div className="container">
-          <div className="row align-items-center gy-4">
-            <div className="col-lg-5">
-              <div className="heading6">
-                <h5 data-aos="fade-right" data-aos-duration="800">
-                  <Image
-                    src="/assets/img/icons/finger2.svg"
-                    alt=""
-                    width={20}
-                    height={20}
-                    className="inline-block align-middle"
-                  />
-                  The Balosh Difference
-                </h5>
-                <h2
-                  data-aos="fade-right"
-                  data-aos-duration="950"
-                  data-aos-delay="80"
-                >
-                  Why Leaders Choose Balosh
-                </h2>
-                <p
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
-                  data-aos-delay="140"
-                >
-                  There are many vendors, but there is only one Balosh.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-7">
-              <div className="about-page-pillars">
-                {differenceItems.map((item, index) => (
-                  <article
-                    className="about-page-pillar-card"
-                    key={item.title}
-                    data-aos="fade-left"
-                    data-aos-duration="950"
-                    data-aos-delay={100 + index * 70}
-                  >
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </article>
-                ))}
-              </div>
             </div>
           </div>
         </div>

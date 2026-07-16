@@ -134,7 +134,7 @@ export default function Footer() {
             <div className="space50" />
             <div className="col-lg-12 m-auto">
               <div className="copyright text-center">
-                <p>© Copyright 2026 - Balosh. All Right Reserved</p>
+                <p>© Copyright 2026 - Balosh. All rights reserved.</p>
               </div>
             </div>
           </div>
